@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="线性代数    引言 集合和映射 关系和分类 常见代数系统   第一章&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;向量空间 §1&amp;ensp;&amp;ensp;向量空间 1.1 向量空间 1.2 $F^n$与$F^\infty$ 1.3 $F^S$   §2&amp;ensp;&amp;ensp;子空间 2.1 子空间的定义 2.2 子空间的条件 2.3 子集的和 2.4 直和   §3&amp;ensp;&amp;ensp;有限维">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性代数">
+<meta property="og:url" content="http://example.com/2022/05/18/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E5%89%AF%E6%9C%AC/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="线性代数    引言 集合和映射 关系和分类 常见代数系统   第一章&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;向量空间 §1&amp;ensp;&amp;ensp;向量空间 1.1 向量空间 1.2 $F^n$与$F^\infty$ 1.3 $F^S$   §2&amp;ensp;&amp;ensp;子空间 2.1 子空间的定义 2.2 子空间的条件 2.3 子集的和 2.4 直和   §3&amp;ensp;&amp;ensp;有限维">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-18T01:41:38.540Z">
+<meta property="article:author" content="Andy Xiang">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="Linear Algebra">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/18/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E5%89%AF%E6%9C%AC/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'cn'
+  };
+</script>
+
+  <title>线性代数 | Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-目录">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>目录</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/18/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E5%89%AF%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andy Xiang">
+      <meta itemprop="description" content="日々私たちが过ごしている日常というのは、実は奇迹の连続なのかもしれん。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          线性代数
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-05-18 00:00:00 / Modified: 09:41:38" itemprop="dateCreated datePublished" datetime="2022-05-18T00:00:00+08:00">2022-05-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <center><font size="6"><font color="orange">线性代数</font></font></center>
+
+<!-- toc -->
+<ul>
+<li><a href="#引言">引言</a><ul>
+<li><a href="#集合和映射">集合和映射</a></li>
+<li><a href="#关系和分类">关系和分类</a></li>
+<li><a href="#常见代数系统">常见代数系统</a></li>
+</ul>
+</li>
+<li><a href="#第一章enspenspenspensp向量空间">第一章&ensp;&ensp;&ensp;&ensp;向量空间</a><ul>
+<li><a href="#1enspensp向量空间">§1&ensp;&ensp;向量空间</a><ul>
+<li><a href="#11-向量空间">1.1 向量空间</a></li>
+<li><a href="#12-fn与finfty">1.2 $F^n$与$F^\infty$</a></li>
+<li><a href="#13-fs">1.3 $F^S$</a></li>
+</ul>
+</li>
+<li><a href="#2enspensp子空间">§2&ensp;&ensp;子空间</a><ul>
+<li><a href="#21-子空间的定义">2.1 子空间的定义</a></li>
+<li><a href="#22-子空间的条件">2.2 子空间的条件</a></li>
+<li><a href="#23-子集的和">2.3 子集的和</a></li>
+<li><a href="#24-直和">2.4 直和</a></li>
+</ul>
+</li>
+<li><a href="#3enspensp有限维向量空间">§3&ensp;&ensp;有限维向量空间</a><ul>
+<li><a href="#31-张成空间">3.1 张成空间</a></li>
+<li><a href="#32-线性无关">3.2 线性无关</a></li>
+</ul>
+</li>
+<li><a href="#4enspensp基与维数">§4&ensp;&ensp;基与维数</a><ul>
+<li><a href="#41-基">4.1 基</a></li>
+<li><a href="#42-坐标">4.2 坐标</a></li>
+<li><a href="#43-维数">4.3 维数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第二章enspenspenspensp线性映射">第二章&ensp;&ensp;&ensp;&ensp;线性映射</a><ul>
+<li><a href="#1enspensp线性映射">§1&ensp;&ensp;线性映射</a><ul>
+<li><a href="#11-线性映射">1.1 线性映射</a></li>
+<li><a href="#12-线性映射的乘积">1.2 线性映射的乘积</a></li>
+<li><a href="#13-线性映射的矩阵表示">1.3 线性映射的矩阵表示</a></li>
+</ul>
+</li>
+<li><a href="#2enspensp核与值域">§2&ensp;&ensp;核与值域</a><ul>
+<li><a href="#21-核与值域">2.1 核与值域</a></li>
+<li><a href="#22-线性映射基本定理">2.2 线性映射基本定理</a></li>
+</ul>
+</li>
+<li><a href="#4enspensp向量空间的同构">§4&ensp;&ensp;向量空间的同构</a><ul>
+<li><a href="#41-可逆的线性映射">4.1 可逆的线性映射</a></li>
+<li><a href="#42-同构的向量空间">4.2 同构的向量空间</a></li>
+</ul>
+</li>
+<li><a href="#5enspensp向量空间的积和商">§5&ensp;&ensp;向量空间的积和商</a><ul>
+<li><a href="#51-向量空间的积">5.1 向量空间的积</a></li>
+<li><a href="#52-向量空间的积和直和">5.2 向量空间的积和直和</a></li>
+<li><a href="#53-仿射子集">5.3 仿射子集</a></li>
+<li><a href="#54-商空间">5.4 商空间</a></li>
+</ul>
+</li>
+<li><a href="#6enspensp线性泛函">§6&ensp;&ensp;线性泛函</a><ul>
+<li><a href="#61-线性泛函">6.1 线性泛函</a></li>
+<li><a href="#62-对偶空间">6.2 对偶空间</a></li>
+<li><a href="#63-对偶映射">6.3 对偶映射</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第三章enspenspenspensp矩阵">第三章&ensp;&ensp;&ensp;&ensp;矩阵</a><ul>
+<li><a href="#1enspensp矩阵的运算">§1&ensp;&ensp;矩阵的运算</a></li>
+<li><a href="#2enspensp相似矩阵">§2&ensp;&ensp;相似矩阵</a></li>
+<li><a href="#2enspensp实矩阵">§2&ensp;&ensp;实矩阵</a></li>
+<li><a href="#3enspensp复矩阵">§3&ensp;&ensp;复矩阵</a></li>
+<li><a href="#4enspensp矩阵间的等价关系">§4&ensp;&ensp;矩阵间的等价关系</a></li>
+<li><a href="#5enspensp矩阵函数">§5&ensp;&ensp;矩阵函数</a></li>
+</ul>
+</li>
+<li><a href="#第四章enspenspenspensp内积空间">第四章&ensp;&ensp;&ensp;&ensp;内积空间</a><ul>
+<li><a href="#1enspensp内积与范数">§1&ensp;&ensp;内积与范数</a><ul>
+<li><a href="#11-内积">1.1 内积</a></li>
+<li><a href="#12-范数">1.2 范数</a></li>
+<li><a href="#13-度量">1.3 度量</a></li>
+<li><a href="#14-标准正交基">1.4 标准正交基</a></li>
+<li><a href="#15-格拉姆-施密特正交化过程">1.5 格拉姆-施密特正交化过程</a></li>
+<li><a href="#16-标准正交基间的基变换">1.6 标准正交基间的基变换</a></li>
+<li><a href="#17-内积空间上的线性泛函">1.7 内积空间上的线性泛函</a></li>
+</ul>
+</li>
+<li><a href="#2enspensp正交补">§2&ensp;&ensp;正交补</a><ul>
+<li><a href="#21-正交补">2.1 正交补</a></li>
+<li><a href="#22-正交投影">2.2 正交投影</a></li>
+</ul>
+</li>
+<li><a href="#3enspensp欧氏空间">§3&ensp;&ensp;欧氏空间</a><ul>
+<li><a href="#31-正交变换">3.1 正交变换</a></li>
+<li><a href="#32-正交变换群">3.2 正交变换群</a></li>
+<li><a href="#33-对称变换">3.3 对称变换</a></li>
+</ul>
+</li>
+<li><a href="#4enspensp酉空间">§4&ensp;&ensp;酉空间</a><ul>
+<li><a href="#41-幺正变换">4.1 幺正变换</a></li>
+</ul>
+</li>
+<li><a href="#5enspensp闵可夫斯基空间">§5&ensp;&ensp;闵可夫斯基空间</a><ul>
+<li><a href="#51">5.1</a></li>
+</ul>
+</li>
+<li><a href="#6enspensp辛空间">§6&ensp;&ensp;辛空间</a><ul>
+<li><a href="#61">6.1</a></li>
+</ul>
+</li>
+<li><a href="#7enspensp希尔伯特空间">§7&ensp;&ensp;希尔伯特空间</a><ul>
+<li><a href="#71">7.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#第六章enspenspenspensp算子的本征值">第六章&ensp;&ensp;&ensp;&ensp;算子的本征值</a><ul>
+<li><a href="#1enspensp不变子空间">§1&ensp;&ensp;不变子空间</a><ul>
+<li><a href="#11-不变子空间">1.1 不变子空间</a></li>
+<li><a href="#12-一维不变子空间">1.2 一维不变子空间</a></li>
+<li><a href="#13-二维不变子空间">1.3 二维不变子空间</a></li>
+</ul>
+</li>
+<li><a href="#2enspensp本征值">§2&ensp;&ensp;本征值</a><ul>
+<li><a href="#21-本征值">2.1 本征值</a></li>
+<li><a href="#22">2.2</a></li>
+</ul>
+</li>
+<li><a href="#3enspensp算子的多项式">§3&ensp;&ensp;算子的多项式</a></li>
+<li><a href="#4enspensp本征空间">§4&ensp;&ensp;本征空间</a></li>
+<li><a href="#5enspensp对角化">§5&ensp;&ensp;对角化</a></li>
+</ul>
+</li>
+<li><a href="#第七章enspenspenspensp内积空间上的算子">第七章&ensp;&ensp;&ensp;&ensp;内积空间上的算子</a><ul>
+<li><a href="#1enspensp伴随与厄米算子">§1&ensp;&ensp;伴随与厄米算子</a></li>
+<li><a href="#2enspensp正规算子">§2&ensp;&ensp;正规算子</a></li>
+<li><a href="#3enspensp谱定理">§3&ensp;&ensp;谱定理</a></li>
+<li><a href="#4enspensp正算子">§4&ensp;&ensp;正算子</a></li>
+<li><a href="#5enspensp等距同构">§5&ensp;&ensp;等距同构</a></li>
+<li><a href="#6enspensp极分解">§6&ensp;&ensp;极分解</a></li>
+<li><a href="#7enspensp奇异值分解">§7&ensp;&ensp;奇异值分解</a></li>
+</ul>
+</li>
+<li><a href="#第八章enspenspenspensp复向量空间上的算子">第八章&ensp;&ensp;&ensp;&ensp;复向量空间上的算子</a><ul>
+<li><a href="#1enspensp算子幂的零空间">§1&ensp;&ensp;算子幂的零空间</a></li>
+<li><a href="#2enspensp广义本征向量">§2&ensp;&ensp;广义本征向量</a></li>
+<li><a href="#3enspensp幂零算子">§3&ensp;&ensp;幂零算子</a></li>
+<li><a href="#4enspensp复向量空间上算子的刻画">§4&ensp;&ensp;复向量空间上算子的刻画</a></li>
+<li><a href="#5enspensp若尔当形">§5&ensp;&ensp;若尔当形</a></li>
+</ul>
+</li>
+<li><a href="#第九章enspenspenspensp实向量空间上的算子">第九章&ensp;&ensp;&ensp;&ensp;实向量空间上的算子</a><ul>
+<li><a href="#1enspensp复化">§1&ensp;&ensp;复化</a></li>
+<li><a href="#2enspensp实向量空间上的正规算子">§2&ensp;&ensp;实向量空间上的正规算子</a></li>
+</ul>
+</li>
+<li><a href="#第十章enspenspenspensp线性代数">第十章&ensp;&ensp;&ensp;&ensp;线性代数</a><ul>
+<li><a href="#1enspensp双线性函数">§1&ensp;&ensp;双线性函数</a></li>
+<li><a href="#2enspensp二次型">§2&ensp;&ensp;二次型</a></li>
+<li><a href="#3enspensp正定二次型">§3&ensp;&ensp;正定二次型</a></li>
+<li><a href="#4enspensp厄米型">§4&ensp;&ensp;厄米型</a></li>
+<li><a href="#5enspensp多重线性映射">§5&ensp;&ensp;多重线性映射</a></li>
+<li><a href="#6enspensp张量积">§6&ensp;&ensp;张量积</a></li>
+<li><a href="#7enspensp张量">§7&ensp;&ensp;张量</a></li>
+<li><a href="#8enspensp外代数">§8&ensp;&ensp;外代数</a></li>
+<li><a href="#9enspensp克利福德代数">§9&ensp;&ensp;克利福德代数</a></li>
+<li><a href="#10enspensp格拉斯曼代数">§10&ensp;&ensp;格拉斯曼代数</a></li>
+</ul>
+</li>
+<li><a href="#第十一章enspenspenspensp线性方程组">第十一章&ensp;&ensp;&ensp;&ensp;线性方程组</a><ul>
+<li><a href="#1enspensp高斯消元法">§1&ensp;&ensp;高斯消元法</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h1><span id="引言">引言</span></h1><h2><span id="集合和映射">集合和映射</span></h2><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>集合</strong>：把一些明确的、彼此有区别的、具体的或抽象的事物看作一个整体，称之为集合。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>组和长度</strong>：设$n$为非负整数，则长度为$n$的组是指由$n$个有顺序的元素构成的对象，形如</p>
+<script type="math/tex; mode=display">(x_1,x_2,\cdots,x_n)</script><p>两个组相等当且仅当它们的长度相等，所含元素相同且顺序相同。</p>
+<p>以上给出了我们将会用到一些基础对象。为了研究集合之间的关系，我们还需给出一些有关映射的定义。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>集合的直积</strong>：设$A$和$B$都是集合，其直积$A\times B$为有序组的集合</p>
+<script type="math/tex; mode=display">C=A\times B=\{(a,b)|a\in A,b\in B\}</script><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>单射、满射和双射</strong>：设有集合$A$和$B$，映射$f:A\to B$，</p>
+<ol>
+<li>若对于$B$内所有元素都有一个$A$中的元素与之对应，即$f(A)=B$，则称$f$是一个满射，或称其为满的；</li>
+<li>若$f(a)=f(b)$当且仅当$a=b$，则称$f$是一个单射，或称之为单的；</li>
+<li>若映射$f$既是满的又是单的，则称$f$是一个双射。</li>
+</ol>
+<h2><span id="关系和分类">关系和分类</span></h2><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>关系</strong>：定义在集合$A$上一个关系是指一种判断法则，由此判断$A\times A$内的元素是满足该关系还是不满足该关系。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>次序关系</strong>：集合$X$上的一个关系，若满足<br>(a) $\forall a\in X,a\sim a$<br>(b) $a\sim b\ \&amp;\ b\sim a\Rightarrow a=b$<br>(c) $a\sim b\ \&amp;\ b\sim c\Rightarrow a\sim c$<br>则称$\sim$是一个次序关系，记作$\leq$。定义有次序关系的集合称为有序集合，记作$(X,\leq)$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>等价关系</strong>：集合$X$上的一个关系，若满足<br>(a) 自反律：$\forall a\in X,a\sim a$<br>(b) 对称律：$a\sim b\ \Rightarrow b\sim a$<br>(c) 传递律：$a\sim b\ \&amp;\ b\sim c\Rightarrow a\sim c$<br>则称$\sim$是一个等价关系，记作$=$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>集合的分类</strong>：集合$X$的一个分类，是指这样一个子集族$u$：<br>(a) $A,B\in u\Rightarrow A=B\ \mathrm{or}\ A\bigcap B=\varnothing$<br>(b) $\underset{A\in u}{\bigcup}A=X$</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>等价关系和分类</strong>：集合$X$上的一个分类给出$X$上的一个等价关系，同时$X$上的一个等价关系也给出一个分类。因此，分类又称为<strong>等价类</strong>。</p>
+<h2><span id="常见代数系统">常见代数系统</span></h2><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>代数运算</strong>：集合$A$上的一个代数运算是指一个映射$f:A\times A\to A$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>群</strong>：设有非空集合$G$，我们称之为群，若其中定义有一种代数运算，称为群乘法，满足<br>(a) 封闭性：$\forall a,b \in G,ab\in G$<br>(b) 结合律：$\forall a,b,c\in G,a(bc)=(ab)c$<br>(c) 存在单位元：$\exist e \in G,使得\forall a\in G 有ea = ae = a $<br>(d) 存在逆元：$\forall a\in G,\exist a^{-1}\in G使得aa^{-1}=e$<br>以上四个条件称为<strong>群公理</strong>。若群乘法还满足交换律：$\forall a,b\in G,ab=ba$，则称为<strong>阿贝尔群</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>群的同态</strong>：设有群$G,G’$，若存在一个映射$f:G\to G’$满足</p>
+<script type="math/tex; mode=display">\forall a,b\in G,f(ab)=f(a)f(b)</script><p>则称$G’$与$G$同态，$f$称为它们的同态映射。</p>
+<p>&ensp;&ensp;&ensp;&ensp;同态映射实际上是在群间保群乘法的映射。可以视作在映射是保持了系统的代数结构。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>群的同构</strong>：设$f$是群$G$和$G’$的同态映射。若$f$还是一个双射，则称$G$和$G’$同构，$f$是它们的同构映射。</p>
+<p>&ensp;&ensp;&ensp;&ensp;若两个群同构，则意味着它们的对应元素相同，群乘法也相同，所以两个同构的群实际上是同一个群。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>半群</strong>：</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>环</strong>：</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>域</strong>：</p>
+<h1><span id="第一章enspenspenspensp向量空间">第一章&ensp;&ensp;&ensp;&ensp;向量空间</span></h1><h2><span id="1enspensp向量空间">§1&ensp;&ensp;向量空间</span></h2><h3><span id="11-向量空间">1.1 向量空间</span></h3><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>向量空间</strong>：设有数域$F$，$V$是一个非空集合。若$V$上定义有两种代数运算，满足<br>(a) 加法封闭性：$\forall a,b\in V,a+b=c\in V$；<br>(b) 数乘封闭性：$\forall\lambda\in F,a\in V,\lambda a\in V$；<br>(c) 加法结合律：$\forall a,b,c\in V,a+(b+c)=(a+b)+c$；<br>(d) 加法交换律：$\forall a,b\in V,ab\in V$；<br>(e) 存在零元：$\exist 0\in V,使得\forall a \in V有a+0=a$；<br>(f) 存在逆元：$\forall a\in V,\exist b\in V使得a+b=0$；<br>(g) 存在单位元：$\forall a\in V,\exist 1\in F使得1a=a$；<br>(h) 数乘结合律：$\forall \mu,\nu\in F,a\in V,\mu(\nu a)=(\mu\nu)a$；<br>(i) 数乘分配律1：$\forall\lambda\in F,a,b\in V,\lambda(a+b)=\lambda a+\lambda b$；<br>(j) 数乘分配律2:$\forall \mu,\nu\in F,a\in V,(\mu+\nu)a=\mu a+\nu a$；</p>
+<p>&ensp;&ensp;&ensp;&ensp;可以证明以下四个定理：<br>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>零元唯一</strong></p>
+<p><font color="orange">证明：</font>设$0$和$0’$都是向量空间$V$的零元，则$\forall a\in V:$</p>
+<script type="math/tex; mode=display">a+0=a=a+0'\Longrightarrow 0=0'\square</script><p>因此我们可以无歧义地使用$0$这个记号来标记向量空间中的零元。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>逆元唯一</strong></p>
+<p><font color="orange">证明：</font>设$a\in V$，$\exist\ b,b’\in V$都是$a$的逆元，则</p>
+<script type="math/tex; mode=display">b+a=0=a+b'\Longrightarrow b=b'</script><p>因此我们可以无歧义地使用$a^{-1}$这个记号来标记向量的逆元。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>数0与任意向量相乘都可以得到零元</strong></p>
+<p><font color="orange">证明：</font>设$a\in V,\lambda\in F$</p>
+<script type="math/tex; mode=display">0a=[\lambda+(-\lambda)]a=\lambda a+(-\lambda a)=0</script><p>根据上下文应该可以分辨$0$是代表向量还是数。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>任意数与零元相乘得到零元</strong></p>
+<p><font color="orange">证明：</font>设$\lambda\in F,a\in V$</p>
+<script type="math/tex; mode=display">\lambda 0=\lambda [a+(-a)]=\lambda a+(-\lambda a)=0</script><h3><span id="12-fn与finfty">1.2 $F^n$与$F^\infty$</span></h3><p>&ensp;&ensp;&ensp;&ensp;$F^n$是一个向量空间，如果我们定义组之间的加法和数乘为<br>(1)加法：$(x_1,\cdots,x_n)+(y_1,\cdots,y_n)=(x_1+y_1,\cdots,x_n+y_n)$；<br>(2)数乘：$\lambda\in F,\lambda(x_1,x_2,\cdots,x_n)=(\lambda x_1,\lambda x_2,\cdots,\lambda x_n)$<br>易证上述定义的代数运算满足向量空间的要求。同理，$F^\infty$也是一个向量空间。</p>
+<h3><span id="13-fs">1.3 $F^S$</span></h3><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>$F^S$</strong>：设$S$是一个集合，$F^S$表示所有从$S$到$F$的映射的集合。</p>
+<p>&ensp;&ensp;&ensp;&ensp;$F^S$上的加法和数乘定义如下：<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>$F^S$上的加法</strong>：$\forall f,g\in F^S$，规定它们的和$f+g$是这样的映射：</p>
+<script type="math/tex; mode=display">(f+g)(x)=f(x)+g(x),x\in S</script><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>加法单位元</strong>：$o:S\to F$</p>
+<script type="math/tex; mode=display">o(x)=0,\forall x\in S</script><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>加法逆元</strong>：$-f:S\to F$</p>
+<script type="math/tex; mode=display">(-f)(x)=-f(x),x \in S</script><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>数乘</strong>：对于$\lambda\in F，f\in F^S$，规定它们的乘积$\lambda f$是这样的映射：</p>
+<script type="math/tex; mode=display">(\lambda f)(x)=\lambda f(x),x\in S</script><p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>$F^S$是一个向量空间。</strong></p>
+<h2><span id="2enspensp子空间">§2&ensp;&ensp;子空间</span></h2><h3><span id="21-子空间的定义">2.1 子空间的定义</span></h3><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>子空间</strong>：设$U$是向量空间$V$的一个子集，若$U$在相同的加法和数乘的定义下也是一个向量空间，则称$U$是$V$的一个子空间。</p>
+<h3><span id="22-子空间的条件">2.2 子空间的条件</span></h3><p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>子空间的条件</strong>：向量空间$V$的子集$U$是它的子空间当且仅当$U$满足下三个条件：<br>（i）加法单位元：$0\in U,0$是$V$的加法单位元；<br>（ii）加法封闭性：$\forall a,b\in U,a+b\in U$；<br>（iii）数乘封闭性：$\forall\lambda\in F,a\in U,\lambda a\in U$。</p>
+<p><font color="orange">证明：</font>（1）交换律：$\forall x,y\in U,$ 所以 $x,y\in V\to x+y=y+x$。<br>（2）结合律：同理（1）。<br>（3）加法单位元：由（i）。<br>（4）加法逆元：$\forall u\in U,-u=(-1)u\in U$，由（iii）可得。<br>（5）乘法单位元：$U$和$V$的数乘定义相同。<br>（6）分配性质：同理（5）。</p>
+<p>$\{0\}$是$V$最小的子空间，$V$是最大的子空间。</p>
+<h3><span id="23-子集的和">2.3 子集的和</span></h3><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>子集的和</strong>：设$U_1,\cdots,U_m\subset V$，则它们的和定义为</p>
+<script type="math/tex; mode=display">\{u_1+\cdots+u_m:u_i\in U_i\}</script><p>记作$U_1+\cdots+U_m$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>子空间的和是子空间。</strong></p>
+<p><font color="orange">证明：</font>设$U_1,\cdots,U_m\subset V$是$V$的子空间，记$U=U_1+\cdots+U_m$。<br>（1）加法单位元：$\forall U_i,0\in U$，则$0+\cdots+0=0\in U$。<br>（2）加法封闭性：$\forall a,b\in U,a=u_1+\cdots+u_m,b=v_1+\cdots+v_m$，则$a+b=(u_1+\cdots+u_m)+(v_1+\cdots+v_m)=(u_1+v_1)+\cdots+(u_m+v_m)$，因为每个 $U_i$都对加法封闭，所以$u_i+v_i\in U_i,a+b\in U$。<br>（3）数乘封闭性：同理由每个$U_i$的数乘封闭性可得。</p>
+<p>&ensp;&ensp;&ensp;&ensp;一般而言，子空间的并不是子空间。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>子空间的和是包含这些子空间的最小子空间。</strong></p>
+<p><font color="orange">证明：</font>因为子空间包含其中所有元素的有限和，所以任何包含$U_1,\cdots,U_m$的子空间一定包含所有$u_1+\cdots+u_m$，即一定包含$U$。而 $U$不含有任何额外的元素。所以$U$是包含所有$U_1,\cdots,U_m$的最小子空间。</p>
+<h3><span id="24-直和">2.4 直和</span></h3><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>直和</strong>：设$U_1,\cdots,U_m$是$V$的子空间。若它们的和$U_1+\cdots+U_m$中的任一元素都可唯一表示成 $u_1+\cdot u_m$，则称这个和为直和，记作$U_1\oplus\cdots\oplus U_m$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>直和的条件</strong>：设$U_1,\cdots,U_m$是$V$的子空间。$U_1+\cdots+U_m$是直和$\Longleftrightarrow$$0$表示成$u_1+\cdots+u_m$的唯一方式是$u_1=\cdots=u_m=0$。</p>
+<p><font color="orange">证明：</font>充分性：易证。<br>必要性：假设$u\in U$有两种表示方式$u=u_1+\cdots+u_m=v_1+\cdots+v_m$，则</p>
+<script type="math/tex; mode=display">\begin{align*}
+&u-u=(u_1-v_1)+\cdots+(u_m-v_m)=0\\
+&\Longrightarrow u_i=v_i
+\end{align*}</script><p>即表示方法唯一。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>两个子空间的直和</strong>：$U+ W$是直和$\Longleftrightarrow U\cap W=\{0\}。$</p>
+<p><font color="orange">证明：</font>充分性：设$U+W$是直和。若$v\in U\cap W$,则$0=v+(-v)$，有$v\in U,-v\in W$。由于$0$的唯一表示是$v=-v=0$，所以$U\cap W=\{0\}$。<br>必要性：设$U\cap W=\{0\}$。设$u\in U,w\in W,u+w=0$。则$u=-w\in W\to u\in W$，所以$u\in U\cap W,u=0$。因此,$w=-u=0$，$0$的表示方法唯一。所以$U+W$是直和。</p>
+<h2><span id="3enspensp有限维向量空间">§3&ensp;&ensp;有限维向量空间</span></h2><h3><span id="31-张成空间">3.1 张成空间</span></h3><p>&ensp;&ensp;&ensp;&ensp;为了区分数和向量的标号，向量的标号带括号，但爱因斯坦求和约定不变。<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>线性组合</strong>：$V$中一组向量$\{a_{(i)}\}$的线性组合是形如$\lambda^i a_{(i)}$的向量。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>张成空间</strong>：$V$中一组向量$\{a_{(i)}\}$的所🈶️线性组合构成的集合称为$\{a_{(i)}\}$的张成空间，记为 $\mathrm{span}(a_{(i)})$。即</p>
+<script type="math/tex; mode=display">\mathrm{span}(a_{(i)})=\{\lambda^ia_{(i)},\lambda\in F\}</script><p>空向量组$\{\}$的张成空间为$\{0\}$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>一组向量的张成空间是包含这组向量的最小子空间</strong></p>
+<p><font color="orange">证明：</font>$V$中一组向量$\{a_{(i)}\}$。<br>（1）先证明$\mathrm{span}(a_{(i)})$是子空间。显然$\mathrm{span}(a_{(i)})$和$V$有同样的加法、数乘运算。</p>
+<script type="math/tex; mode=display">0=0a_{(1)}+\cdots+0a_{(m)}\in\mathrm{span}(a_{(i)})</script><p>即$\mathrm{span}(a_{(i)})$中有加法单位元。</p>
+<script type="math/tex; mode=display">\lambda^i a_{(i)}+\mu^i a_{(i)}=(\lambda^i+\mu^i)a_{(i)}\in\mathrm{span}(a_{(i)})</script><script type="math/tex; mode=display">\mu(\lambda^i a_{(i)})=(\mu\lambda^i) a_{(i)}\in\mathrm{span}(a_{(i)})</script><p>即$\mathrm{span}(a_{(i)})$对加法和数乘封闭。所以$\mathrm{span}(a_{(i)})$是$V$的子空间。</p>
+<p>（2）再证明其为最小子空间。所有包含这组向量的子空间必定包含它们的所有线性组合，所以必定包含$\mathrm{span}(a_{(i)})$。而$\mathrm{span}(a_{(i)})$不含任何额外的元素。所以$\mathrm{span}(a_{(i)})$是包含这组向量的最小子空间。</p>
+<p>&ensp;&ensp;&ensp;&ensp;若$\mathrm{span}(a_{(i)})=V$，则说$\{a_{(i)}\}$张成$V$。<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>有限维向量空间</strong>：如果一个向量空间可以由其中的某个向量组张成，则说这个向量空间是有限维的。这个向量组称为这个向量空间的张成组。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>无限维向量空间</strong>：如果一个向量空间不是有限维的，即无法由任一向量组张成，则是无限维的。</p>
+<h3><span id="32-线性无关">3.2 线性无关</span></h3><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>向量组线性无关</strong>：设有向量组$\{a_{(i)}\}$。若$\lambda^i a_{(i)}=0$当且仅当$\lambda^i=0$，则说该向量组线性无关。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>向量组线性相关</strong>：如果一个向量组不是线性无关的，则是线性相关的。</p>
+<h2><span id="4enspensp基与维数">§4&ensp;&ensp;基与维数</span></h2><h3><span id="41-基">4.1 基</span></h3><h3><span id="42-坐标">4.2 坐标</span></h3><h3><span id="43-维数">4.3 维数</span></h3><h1><span id="第二章enspenspenspensp线性映射">第二章&ensp;&ensp;&ensp;&ensp;线性映射</span></h1><h2><span id="1enspensp线性映射">§1&ensp;&ensp;线性映射</span></h2><h3><span id="11-线性映射">1.1 线性映射</span></h3><h3><span id="12-线性映射的乘积">1.2 线性映射的乘积</span></h3><h3><span id="13-线性映射的矩阵表示">1.3 线性映射的矩阵表示</span></h3><h2><span id="2enspensp核与值域">§2&ensp;&ensp;核与值域</span></h2><h3><span id="21-核与值域">2.1 核与值域</span></h3><h3><span id="22-线性映射基本定理">2.2 线性映射基本定理</span></h3><h2><span id="4enspensp向量空间的同构">§4&ensp;&ensp;向量空间的同构</span></h2><h3><span id="41-可逆的线性映射">4.1 可逆的线性映射</span></h3><h3><span id="42-同构的向量空间">4.2 同构的向量空间</span></h3><h2><span id="5enspensp向量空间的积和商">§5&ensp;&ensp;向量空间的积和商</span></h2><h3><span id="51-向量空间的积">5.1 向量空间的积</span></h3><h3><span id="52-向量空间的积和直和">5.2 向量空间的积和直和</span></h3><h3><span id="53-仿射子集">5.3 仿射子集</span></h3><h3><span id="54-商空间">5.4 商空间</span></h3><h2><span id="6enspensp线性泛函">§6&ensp;&ensp;线性泛函</span></h2><h3><span id="61-线性泛函">6.1 线性泛函</span></h3><h3><span id="62-对偶空间">6.2 对偶空间</span></h3><h3><span id="63-对偶映射">6.3 对偶映射</span></h3><h1><span id="第三章enspenspenspensp矩阵">第三章&ensp;&ensp;&ensp;&ensp;矩阵</span></h1><h2><span id="1enspensp矩阵的运算">§1&ensp;&ensp;矩阵的运算</span></h2><h2><span id="2enspensp相似矩阵">§2&ensp;&ensp;相似矩阵</span></h2><h2><span id="2enspensp实矩阵">§2&ensp;&ensp;实矩阵</span></h2><h2><span id="3enspensp复矩阵">§3&ensp;&ensp;复矩阵</span></h2><h2><span id="4enspensp矩阵间的等价关系">§4&ensp;&ensp;矩阵间的等价关系</span></h2><h2><span id="5enspensp矩阵函数">§5&ensp;&ensp;矩阵函数</span></h2><h1><span id="第四章enspenspenspensp内积空间">第四章&ensp;&ensp;&ensp;&ensp;内积空间</span></h1><h2><span id="1enspensp内积与范数">§1&ensp;&ensp;内积与范数</span></h2><h3><span id="11-内积">1.1 内积</span></h3><p>&ensp;&ensp;&ensp;&ensp;三维空间中的内积指的是矢量间的点积</p>
+<script type="math/tex; mode=display">\{x_1,y_1,z_1\}\cdot\{x_2,y_2,z_2\}=x_1x_2+y_1y_2+z_1z_2</script><p>而在一般的向量空间上，我们将其推广。<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>内积（dot product）</strong>：内积是一个映射：$V\times V\to F$作为上述运算的推广，记作$(v,u)\in F,a,b\in V$。这个映射满足：<br>（i）$\forall a\in V,(a,a)\geq 0$；<br>（ii）$\forall a\in V,(a,a)=0$当且仅当$a=0$；<br>（iii）$\forall a,b,c\in V,(a,c)+(b,c)=(a+b,c)$；<br>（vi）$\forall a,b\in V,\lambda\in F,(\lambda a,b)=\lambda(a,b)$；<br>（v）$\forall a,b\in V,(a,b)=\overline{(b,a)}$。<br>在定义了内积后，$V$称为<strong>内积空间</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;（i）$(a,0)=(0,a)=0$；<br>（ii）$(a,b+c)=(a,b)+(a,c)$；<br>（iii）$(a,\lambda b)=\bar{\lambda}(a,b)$</p>
+<p><font color="orange">证明：</font><br>（i）$\forall a,b\in V,(0,a)=(b-b,a)=(b,a)-(b,a)=0,(0,a)=\overline{(a,0)}=0=(a,0)$。<br>（ii）$(a,b+c)=\overline{(b+c,a)}=\overline{(b,a)}+\overline{(c,a)}=(a,b)+(a,c)$。<br>（iii）$(a,\lambda b)=\overline{(\lambda b,a)}=\overline{\lambda(b,a)}=\bar{\lambda}(a,b)$</p>
+<p>&ensp;&ensp;&ensp;&ensp;根据内积的定义，我们可以构造一个线性泛函$T：b\in V,\forall a\in V,Ta=(a,b)\in F$。证明从略。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>正交（orthogonality）</strong>：正交是内积空间中两个向量间的一个关系。若对于$a,b\in V$，有$(a,b)=0$，则说向量$a,b$正交，记作$a\perp b$。</p>
+<h3><span id="12-范数">1.2 范数</span></h3><p>&ensp;&ensp;&ensp;&ensp;三维空间中的矢量具有“长度”这一特征量，或称为“模”：</p>
+<script type="math/tex; mode=display">|\{x,y,z\}|=\sqrt{x^2+y^2+z^2}</script><p>范数正是这一概念的推广，它赋予每个向量“长度”这一概念。<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>范数（norm）</strong>：范数是一个函数$||\cdot||:V\to R$，向量的范数记作$||a||$。它满足：<br>（i）$\forall a\in V,||a||\geq 0$；<br>（ii）$\forall a\in V,\lambda \in F,||\lambda a||=|\lambda|\ ||a||$；<br>（iii）$\forall a,b\in v,||a+b||\leq|a|+|b|$，$a$是$b$的正实数倍时取等。<br>其中第三个条件称为<strong>三角不等式</strong>。定义有范数的向量空间称为赋范空间。</p>
+<p>如果向量空间上定义有内积，那么通常可以定义对应的范数。<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>内积空间上的范数</strong>：$\forall a\in V,||a||=\sqrt{(a,a)}$。</p>
+<p><font color="orange">证明：</font>验证上述定义确实是一个合适的范数。<br>（i）$(a,a)\geq 0,||a||=\sqrt{(a,a)}\geq 0$；<br>（ii）$||\lambda a||=\sqrt{(\lambda a,\lambda a)}=\sqrt{\lambda \overline{\lambda}}\sqrt{(a,a)}=|\lambda|\ ||a||$；<br>（iii）</p>
+<script type="math/tex; mode=display">\begin{align*}
+    ||a+b||^2&=(a+b,a+b)\\
+    &=(a,a)+(b,b)+(a,b)+(b,a)\\
+    &=(a,a)+(b,b)+2\mathrm{Re}(a,b)\\
+    &\leq (a,a)+(b,b)+2|(a,b)|\\
+    &\leq (a,a)+(b,b)+2||a||\ ||b||\\
+    &=\left(||a||+||b||\right)^2
+\end{align*}</script><p>所以$||a+b||\leq||a||+||b||$。其中第二个不等号的成立依赖于称为<strong>柯西-施瓦茨不等式</strong>的定理。该定理的证明见下文。$b$是$a$的正实数倍，设$b=\lambda a,\lambda&gt;0$，则</p>
+<script type="math/tex; mode=display">\begin{align*} 
+    ||a+b||&=||(1+\lambda)a||\\
+    &=|1+\lambda|\ ||a||\\
+    &=(1+\lambda)||a||\\
+    ||a||+||b||&=||a||+|\lambda|\ ||a||\\
+    &=(1+|\lambda|)||a||\\
+    &=(1+\lambda)||a||=||a+b||
+\end{align*}</script><p>这样定义的范数称为<strong>由内积诱导的范数</strong>。但范数不一定可以诱导出内积，除非这个范数满足如下等式：<br>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>平行四边形等式</strong>：$a,b\in V$</p>
+<script type="math/tex; mode=display">||a+b||^2+||a-b||^2=2\left(||a||^2+||b||^2\right)</script><p>为什么有这个条件范数就可以诱导出内积的证明从略。下面证明由内积诱导出的范数（由于我们后面用到的范数都是由内积诱导出的范数，所以以下简称范数）满足平行四边形等式。</p>
+<p><font color="orange">证明：</font></p>
+<script type="math/tex; mode=display">\begin{align*} 
+    ||a+b||^2&=(a+b,a+b)=(a,a)+(b,b)+(a,b)+(b,a)\\
+    ||a-b||^2&=(a-b,a-b)=(a,a)+(b,b)-(a,b)-(b,a)\\
+    ||a+b||^2&+||a-b||^2=2\left[(a,a)+(b,b)\right]=2\left(||a||^2+||b||^2\right)
+\end{align*}</script><p>除了平行四边形等式之外，范数还满足几个（不）等式。<br>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>勾股定理</strong>：和它的名字一致，这个定理正是一般的勾股定理的推广。设$a,b\in V,a\perp b$，则有</p>
+<script type="math/tex; mode=display">||a+b||^2=||a||^2+||b||^2</script><p><font color="orange">证明：</font>设$a \perp b$，则</p>
+<script type="math/tex; mode=display">\begin{align*}
+    ||a+b||^2&=(a+b,a+b)\\
+    &=(a,a)+(b,b)+(a,b)+(b,a)\\
+    &=(a,a)+(b,b)\\
+    &=||a||^2+||b||^2
+\end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>柯西-施瓦茨不等式</strong>：设$a,b\in V$，则有</p>
+<script type="math/tex; mode=display">|(a,b)|\leq ||a||\ ||b||</script><p>当$a$是$b$的实数倍时取等。</p>
+<p><font color="orange">证明：</font>在证明这个不等式之前，先介绍<strong>正交分解</strong>的操作。设$a,b\in V,b\neq 0$。令$k=\frac{(a,b)}{||b||^2},c=a-kb$，则有$a=kb+c$且$(c,b)=0$，因为</p>
+<script type="math/tex; mode=display">(c,b)=(a-kb,b)=(a,b)-\frac{(a,b)}{||b||^2}(b,b)=0</script><p>于是</p>
+<script type="math/tex; mode=display">\begin{align*}
+    ||a||^2&=||kb+c||^2\\
+    &=(kb+c,kb+c)\\
+    &=(kb,kb)+(c,c)\\
+    &=\frac{|(a,b)|^2}{||b||^2}+||c||^2\\
+    &\leq  \frac{|(a,b)|^2}{||b||^2}\\
+    \to |(a,b)|&\leq ||a||\ ||b||
+\end{align*}</script><h3><span id="13-度量">1.3 度量</span></h3><p>&ensp;&ensp;&ensp;&ensp;三维空间中两点的距离为</p>
+<script type="math/tex; mode=display">d=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}</script><p>度量是这一概念的推广，它赋予向量空间“距离”。<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>度量</strong>：设$a,b\in V$，度量是函数$d(a,b):V\times V\to R$，满足<br>（i）$d(a,b)\geq 0$；<br>（ii）$d(a,b)=d(b,a)$；<br>（iii）$d(a,b)\leq d(a,c)+d(c,b)$，当$a-c$是$c-b$的实数倍时取等。<br>第三个条件也称为<strong>三角不等式</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;赋范空间中可以自然诱导度量。<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>赋范空间空间中的度量</strong>：$\forall a,b\in V,d(a,b)=||a-b||$。</p>
+<p><font color="orange">证明：</font>验证上述度量的定义是合适的。<br>（i）$d(a,b)=||a-b||\geq 0$。<br>（ii）$d(a,b)=||a-b||=|-1|\ ||b-a||=||b-a||=d(b,a)$。<br>（iii）</p>
+<script type="math/tex; mode=display">\begin{align*}
+    d(a,b)&=||a-b|| \\
+    d(a,c)+d(c,b)&=||a-c||+||c-b||\\
+    &\geq||(a-c)+(c-b)||\\
+    &=||a-b||=d(a,b)
+\end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;由内积自然诱导出范数后，可以再诱导出内积空间的度量。<br>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>内积空间上的度量</strong>：$\forall a,b\in V,d(a,b)=||a-b||=\sqrt{(a-b,a-b)}$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;设$\{\epsilon_{(i)}\}$为内积空间的一个基，向量$a,b$在这个基下的坐标矩阵为$A,B$，则内积可写为</p>
+<script type="math/tex; mode=display">(a,b)=a^i\bar{b}_j(\epsilon_{(i)},\epsilon_{(j)})=B^\dagger GA</script><p>其中的矩阵$G$称为内积空间在这个基下的<strong>度量矩阵</strong></p>
+<script type="math/tex; mode=display">G=\begin{bmatrix}
+(\epsilon_{(1)},\epsilon_{(1)})&\cdots&(\epsilon_{(n)},\epsilon_{(1)})\\
+\vdots&\ddots&\vdots\\
+(\epsilon_{(1)},\epsilon_{(n)})&\cdots&(\epsilon_{(n)},\epsilon_{(n)})
+\end{bmatrix}</script><h3><span id="14-标准正交基">1.4 标准正交基</span></h3><p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>标准正交组</strong>：标准正交组是由范数为1、互相正交的向量构成的组。即</p>
+<script type="math/tex; mode=display">\{\epsilon_{(i)}|(\epsilon_{(i)},\epsilon_{(j)})=\delta_{ij}\}</script><p>&ensp;&ensp;&ensp;&ensp;推论&ensp;&ensp;设向量$a=a^i\epsilon_{(i)}$，其中的$\epsilon_{(i)}$为标准正交组，则有</p>
+<script type="math/tex; mode=display">||a||^2=|a_1|^2+\cdots+|a_p|^2</script><p><font color="orange">证明：</font>反复使用勾股定理</p>
+<script type="math/tex; mode=display">\begin{align*}
+    ||a||^2&=||a^1\epsilon_{(1)}+\cdots+a^p\epsilon_{(p)}||^2\\
+    &=|a_1|^2||\epsilon_{(1)}||^2+||a^2\epsilon_{(2)}+\cdots+a^p\epsilon_{(p)}||^2\\
+    &=\cdots=|a_1|^2+\cdots+|a_p|^2
+\end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;定理&ensp;&ensp;<strong>正交组都是线性无关组</strong></p>
+<p><font color="orange">证明：</font>设$\{\epsilon_{(i)}\}$是一个标准正交组，设$a^i\epsilon_{(i)}=0$。则$(a^i\epsilon_{(i)},\epsilon_{(i)})=a^i(\epsilon_{(i)},\epsilon_{(i)})=a^i||\epsilon_{(i)}||^2=0$，所以该正交组是线性无关组。</p>
+<p>&ensp;&ensp;&ensp;&ensp;定义&ensp;&ensp;<strong>标准正交基</strong>：一个长度为$\mathrm{dim}V$的标准正交组构成内积空间$V$的一个基，称为标准正交基。</p>
+<p>&ensp;&ensp;&ensp;&ensp;推论&ensp;&ensp;一个向量在标准正交基下的可写为</p>
+<script type="math/tex; mode=display">a=(a,\epsilon_{(i)})\epsilon_{(i)}</script><p><font color="orange">证明：</font>设$a=a^i\epsilon_{(i)}$，则$ (a,\epsilon_{(i)})=a^i(\epsilon_{(i)},\epsilon_{(i)})=a^i $。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在标准正交基下，内积具有简单的形式。设$a=a^i\epsilon_{(i)},b=b^j\epsilon_{(j)}$，则</p>
+<script type="math/tex; mode=display">\begin{align*}
+    (a,b)&=a^i\bar{b}_j(\epsilon_{(i)},\epsilon_{(j)})\\
+    &=a^i\bar{b}_j\delta_{ij}\\
+    &=a^i\bar{b}_i
+\end{align*}</script><h3><span id="15-格拉姆-施密特正交化过程">1.5 格拉姆-施密特正交化过程</span></h3><p>&ensp;&ensp;&ensp;&ensp;对于向量空间内任意一个基，可以通过格拉姆-施密特正交化过程构造出一个标准正交基。过程如下。</p>
+<p>&ensp;&ensp;&ensp;&ensp;对基$\{a_{(i)}\}$，第一步，先构造正交基$\{b_{(i)}\}$，再进行标准化。</p>
+<script type="math/tex; mode=display">\begin{align*}
+    b_{(1)}&=a_{(1)}\\
+    b_{(2)}&=a_{(2)}-\frac{(a_{(2)},b_{(1)})}{(b_{(1)},b_{(1)})}b_{(1)}\\
+    &\vdots\\
+    b_{(i)}&=a_{(i)}-\sum_{j=1}^{i-1}\frac{(a_{(i)},b_{(j)})}{(b_{(j)},b_{(j)})}b_{(j)}
+\end{align*}</script><p>再进行标准化：$\epsilon_{(i)}=\frac{b_{(i)}}{||b_{(i)}||}$。则$\{\epsilon_{(i)}\}$是一个标准正交基。</p>
+<p><font color="orange">证明：</font>仅证明$b_{(i)}$与$b_{(j)}(i&gt;j)$正交。</p>
+<script type="math/tex; mode=display">\begin{align*}
+    (b_{(i)},b_{(j)})&=\left(a_{(i)}-\sum_{k=1}^{i-1}\frac{(a_{(i)},b_{(k)})}{(b_{(k)},b_{(k)})}b_{(k)},b_{(j)}\right)\\
+    &=(a_{(i)},b_{(j)})-\sum_{k=1}^{i-1}\frac{(a_{(i)},b_{(k)})}{(b_{(k)},b_{(k)})}(b_{(k)},b_{(j)})\\
+    &=(a_{(i)},b_{(j)})-\frac{(a_{(i)},b_{(j)})}{(b_{(j)},b_{(j)})}(b_{(j)},b_{(j)})\\
+    &=0
+\end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;推论&ensp;&ensp;<strong>每个有限维内积空间都有标准正交基</strong></p>
+<p><font color="orange">证明：</font>有限维内积空间都有一个基，对其使用标准正交化过程即得一个标准正交基。</p>
+<p>&ensp;&ensp;&ensp;&ensp;推论&ensp;&ensp;<strong>每个标准正交组都可以扩充为一个标准正交基</strong></p>
+<p><font color="orange">证明：</font>每个标准正交组都是线性无关组，而线性无关组都可以扩充为一个基，对这个基使用标准正交化过程即得一个标准正交基。而标准正交化过程对标准正交组无影响，则该标准正交基包含原标准正交组，即由原标准正交组扩充而成。</p>
+<h3><span id="16-标准正交基间的基变换">1.6 标准正交基间的基变换</span></h3><p>&ensp;&ensp;&ensp;&ensp;设有两组标准正交基$\{\eta_{(i)}\},\{\epsilon_{(i)}\}$，它们之间满足</p>
+<script type="math/tex; mode=display">\eta_{(i)}=T_i^j\epsilon_{(j)}</script><p>$T_i^j$为二者的基变换。易得基变换的矩阵表示在基$\{\epsilon_{(i)}\}$下写为</p>
+<script type="math/tex; mode=display">\begin{bmatrix}
+(\eta_{(1)},\epsilon_{(1)})&\cdots&(\eta_{(1)},\epsilon_{(n)})\\
+\vdots&\ddots&\vdots\\
+(\eta_{(n)},\epsilon_{(1)})&\cdots&(\eta_{(n)},\epsilon_{(n)})
+\end{bmatrix}</script><h3><span id="17-内积空间上的线性泛函">1.7 内积空间上的线性泛函</span></h3><h2><span id="2enspensp正交补">§2&ensp;&ensp;正交补</span></h2><h3><span id="21-正交补">2.1 正交补</span></h3><h3><span id="22-正交投影">2.2 正交投影</span></h3><h2><span id="3enspensp欧氏空间">§3&ensp;&ensp;欧氏空间</span></h2><h3><span id="31-正交变换">3.1 正交变换</span></h3><h3><span id="32-正交变换群">3.2 正交变换群</span></h3><h3><span id="33-对称变换">3.3 对称变换</span></h3><h2><span id="4enspensp酉空间">§4&ensp;&ensp;酉空间</span></h2><h3><span id="41-幺正变换">4.1 幺正变换</span></h3><h2><span id="5enspensp闵可夫斯基空间">§5&ensp;&ensp;闵可夫斯基空间</span></h2><h3><span id="51">5.1</span></h3><h2><span id="6enspensp辛空间">§6&ensp;&ensp;辛空间</span></h2><h3><span id="61">6.1</span></h3><h2><span id="7enspensp希尔伯特空间">§7&ensp;&ensp;希尔伯特空间</span></h2><h3><span id="71">7.1</span></h3><h1><span id="第六章enspenspenspensp算子的本征值">第六章&ensp;&ensp;&ensp;&ensp;算子的本征值</span></h1><h2><span id="1enspensp不变子空间">§1&ensp;&ensp;不变子空间</span></h2><h3><span id="11-不变子空间">1.1 不变子空间</span></h3><h3><span id="12-一维不变子空间">1.2 一维不变子空间</span></h3><h3><span id="13-二维不变子空间">1.3 二维不变子空间</span></h3><h2><span id="2enspensp本征值">§2&ensp;&ensp;本征值</span></h2><h3><span id="21-本征值">2.1 本征值</span></h3><h3><span id="22">2.2</span></h3><h2><span id="3enspensp算子的多项式">§3&ensp;&ensp;算子的多项式</span></h2><h2><span id="4enspensp本征空间">§4&ensp;&ensp;本征空间</span></h2><h2><span id="5enspensp对角化">§5&ensp;&ensp;对角化</span></h2><h1><span id="第七章enspenspenspensp内积空间上的算子">第七章&ensp;&ensp;&ensp;&ensp;内积空间上的算子</span></h1><h2><span id="1enspensp伴随与厄米算子">§1&ensp;&ensp;伴随与厄米算子</span></h2><h2><span id="2enspensp正规算子">§2&ensp;&ensp;正规算子</span></h2><h2><span id="3enspensp谱定理">§3&ensp;&ensp;谱定理</span></h2><h2><span id="4enspensp正算子">§4&ensp;&ensp;正算子</span></h2><h2><span id="5enspensp等距同构">§5&ensp;&ensp;等距同构</span></h2><h2><span id="6enspensp极分解">§6&ensp;&ensp;极分解</span></h2><h2><span id="7enspensp奇异值分解">§7&ensp;&ensp;奇异值分解</span></h2><h1><span id="第八章enspenspenspensp复向量空间上的算子">第八章&ensp;&ensp;&ensp;&ensp;复向量空间上的算子</span></h1><h2><span id="1enspensp算子幂的零空间">§1&ensp;&ensp;算子幂的零空间</span></h2><h2><span id="2enspensp广义本征向量">§2&ensp;&ensp;广义本征向量</span></h2><h2><span id="3enspensp幂零算子">§3&ensp;&ensp;幂零算子</span></h2><h2><span id="4enspensp复向量空间上算子的刻画">§4&ensp;&ensp;复向量空间上算子的刻画</span></h2><h2><span id="5enspensp若尔当形">§5&ensp;&ensp;若尔当形</span></h2><h1><span id="第九章enspenspenspensp实向量空间上的算子">第九章&ensp;&ensp;&ensp;&ensp;实向量空间上的算子</span></h1><h2><span id="1enspensp复化">§1&ensp;&ensp;复化</span></h2><h2><span id="2enspensp实向量空间上的正规算子">§2&ensp;&ensp;实向量空间上的正规算子</span></h2><h1><span id="第十章enspenspenspensp线性代数">第十章&ensp;&ensp;&ensp;&ensp;线性代数</span></h1><h2><span id="1enspensp双线性函数">§1&ensp;&ensp;双线性函数</span></h2><h2><span id="2enspensp二次型">§2&ensp;&ensp;二次型</span></h2><h2><span id="3enspensp正定二次型">§3&ensp;&ensp;正定二次型</span></h2><h2><span id="4enspensp厄米型">§4&ensp;&ensp;厄米型</span></h2><h2><span id="5enspensp多重线性映射">§5&ensp;&ensp;多重线性映射</span></h2><h2><span id="6enspensp张量积">§6&ensp;&ensp;张量积</span></h2><h2><span id="7enspensp张量">§7&ensp;&ensp;张量</span></h2><h2><span id="8enspensp外代数">§8&ensp;&ensp;外代数</span></h2><h2><span id="9enspensp克利福德代数">§9&ensp;&ensp;克利福德代数</span></h2><h2><span id="10enspensp格拉斯曼代数">§10&ensp;&ensp;格拉斯曼代数</span></h2><h1><span id="第十一章enspenspenspensp线性方程组">第十一章&ensp;&ensp;&ensp;&ensp;线性方程组</span></h1><h2><span id="1enspensp高斯消元法">§1&ensp;&ensp;高斯消元法</span></h2>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Math/" rel="tag"># Math</a>
+              <a href="/tags/Linear-Algebra/" rel="tag"># Linear Algebra</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/17/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">集合和映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">关系和分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">常见代数系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">第一章    向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">§1  向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1 向量空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.1.2.</span> <span class="nav-text">1.2 $F^n$与$F^\infty$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.1.3.</span> <span class="nav-text">1.3 $F^S$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">§2  子空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.1 子空间的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2 子空间的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.3 子集的和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.4 直和</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">§3  有限维向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.3.1.</span> <span class="nav-text">3.1 张成空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.3.2.</span> <span class="nav-text">3.2 线性无关</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">§4  基与维数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.4.1.</span> <span class="nav-text">4.1 基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.4.2.</span> <span class="nav-text">4.2 坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.4.3.</span> <span class="nav-text">4.3 维数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">第二章    线性映射</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">§1  线性映射</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.1.</span> <span class="nav-text">1.1 线性映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.2.</span> <span class="nav-text">1.2 线性映射的乘积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.3.</span> <span class="nav-text">1.3 线性映射的矩阵表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">§2  核与值域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.1 核与值域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.2 线性映射基本定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.3.</span> <span class="nav-text">§4  向量空间的同构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.3.1.</span> <span class="nav-text">4.1 可逆的线性映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.3.2.</span> <span class="nav-text">4.2 同构的向量空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.4.</span> <span class="nav-text">§5  向量空间的积和商</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.4.1.</span> <span class="nav-text">5.1 向量空间的积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.4.2.</span> <span class="nav-text">5.2 向量空间的积和直和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.4.3.</span> <span class="nav-text">5.3 仿射子集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.4.4.</span> <span class="nav-text">5.4 商空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.5.</span> <span class="nav-text">§6  线性泛函</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.5.1.</span> <span class="nav-text">6.1 线性泛函</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.5.2.</span> <span class="nav-text">6.2 对偶空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.5.3.</span> <span class="nav-text">6.3 对偶映射</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">第三章    矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.1.</span> <span class="nav-text">§1  矩阵的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.2.</span> <span class="nav-text">§2  相似矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.3.</span> <span class="nav-text">§2  实矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.4.</span> <span class="nav-text">§3  复矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.5.</span> <span class="nav-text">§4  矩阵间的等价关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.6.</span> <span class="nav-text">§5  矩阵函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">第四章    内积空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">§1  内积与范数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.1.</span> <span class="nav-text">1.1 内积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.2.</span> <span class="nav-text">1.2 范数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.3.</span> <span class="nav-text">1.3 度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.4.</span> <span class="nav-text">1.4 标准正交基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.5.</span> <span class="nav-text">1.5 格拉姆-施密特正交化过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.6.</span> <span class="nav-text">1.6 标准正交基间的基变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.7.</span> <span class="nav-text">1.7 内积空间上的线性泛函</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.2.</span> <span class="nav-text">§2  正交补</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.2.1.</span> <span class="nav-text">2.1 正交补</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.2.2.</span> <span class="nav-text">2.2 正交投影</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.3.</span> <span class="nav-text">§3  欧氏空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.1.</span> <span class="nav-text">3.1 正交变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.2.</span> <span class="nav-text">3.2 正交变换群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.3.</span> <span class="nav-text">3.3 对称变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.4.</span> <span class="nav-text">§4  酉空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.4.1.</span> <span class="nav-text">4.1 幺正变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text">§5  闵可夫斯基空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.5.1.</span> <span class="nav-text">5.1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.6.</span> <span class="nav-text">§6  辛空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.6.1.</span> <span class="nav-text">6.1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.7.</span> <span class="nav-text">§7  希尔伯特空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.7.1.</span> <span class="nav-text">7.1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">第六章    算子的本征值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.1.</span> <span class="nav-text">§1  不变子空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.1.</span> <span class="nav-text">1.1 不变子空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.2.</span> <span class="nav-text">1.2 一维不变子空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.3.</span> <span class="nav-text">1.3 二维不变子空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.2.</span> <span class="nav-text">§2  本征值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.2.1.</span> <span class="nav-text">2.1 本征值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.2.2.</span> <span class="nav-text">2.2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.3.</span> <span class="nav-text">§3  算子的多项式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.4.</span> <span class="nav-text">§4  本征空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.5.</span> <span class="nav-text">§5  对角化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">第七章    内积空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.1.</span> <span class="nav-text">§1  伴随与厄米算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.2.</span> <span class="nav-text">§2  正规算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.3.</span> <span class="nav-text">§3  谱定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.4.</span> <span class="nav-text">§4  正算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.5.</span> <span class="nav-text">§5  等距同构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.6.</span> <span class="nav-text">§6  极分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.7.</span> <span class="nav-text">§7  奇异值分解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">第八章    复向量空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.1.</span> <span class="nav-text">§1  算子幂的零空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.2.</span> <span class="nav-text">§2  广义本征向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.3.</span> <span class="nav-text">§3  幂零算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.4.</span> <span class="nav-text">§4  复向量空间上算子的刻画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.5.</span> <span class="nav-text">§5  若尔当形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">第九章    实向量空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.1.</span> <span class="nav-text">§1  复化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.2.</span> <span class="nav-text">§2  实向量空间上的正规算子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text">第十章    线性代数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.1.</span> <span class="nav-text">§1  双线性函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.2.</span> <span class="nav-text">§2  二次型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.3.</span> <span class="nav-text">§3  正定二次型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.4.</span> <span class="nav-text">§4  厄米型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.5.</span> <span class="nav-text">§5  多重线性映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.6.</span> <span class="nav-text">§6  张量积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.7.</span> <span class="nav-text">§7  张量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.8.</span> <span class="nav-text">§8  外代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.9.</span> <span class="nav-text">§9  克利福德代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.10.</span> <span class="nav-text">§10  格拉斯曼代数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">11.</span> <span class="nav-text">第十一章    线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.1.</span> <span class="nav-text">§1  高斯消元法</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Andy Xiang</p>
+  <div class="site-description" itemprop="description">日々私たちが过ごしている日常というのは、実は奇迹の连続なのかもしれん。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Andy Xiang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

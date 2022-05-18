@@ -1,236 +1,595 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
-    <link rel="alternate icon" type="image/png" href="/img/favicon.png">
-    <title>Hexo | </title>
-    
-<link rel="stylesheet" href="/css/reset.css">
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/main.css">
 
-    
-<link rel="stylesheet" href="/css/markdown.css">
 
-    
-<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="电磁学      第一章&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;真空静电学  §1&amp;ensp;&amp;ensp;静电场 §2&amp;ensp;&amp;ensp;静电场的散度和旋度 §3&amp;ensp;&amp;ensp;电势 §4&amp;ensp;&amp;ensp;几种典型带电导体的电场、电势分布 §5&amp;ensp;&amp;ensp;电偶极子 §6&amp;ensp;&amp;ensp;泊松方程和拉普拉斯方程    第二章&amp;ensp;&amp;ensp;&amp;e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="http://example.com/2022/04/10/%E7%94%B5%E7%A3%81%E5%AD%A6%E7%9A%84%E5%89%AF%E6%9C%AC/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="电磁学      第一章&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;真空静电学  §1&amp;ensp;&amp;ensp;静电场 §2&amp;ensp;&amp;ensp;静电场的散度和旋度 §3&amp;ensp;&amp;ensp;电势 §4&amp;ensp;&amp;ensp;几种典型带电导体的电场、电势分布 §5&amp;ensp;&amp;ensp;电偶极子 §6&amp;ensp;&amp;ensp;泊松方程和拉普拉斯方程    第二章&amp;ensp;&amp;ensp;&amp;e">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-04-10T09:50:54.000Z">
+<meta property="article:modified_time" content="2022-05-18T01:34:40.323Z">
+<meta property="article:author" content="Andy Xiang">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/04/10/%E7%94%B5%E7%A3%81%E5%AD%A6%E7%9A%84%E5%89%AF%E6%9C%AC/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'cn'
+  };
+</script>
+
+  <title> | Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head>
-    <body>
-        <div class="paper">
-            <div class="paper-main">
-                
-                    <div class="post-header">
-    <a class="logo" href="/">Hexo</a>
-    <a class="go-home" href="/">
-        <svg width="8" height="14" viewBox="0 0 8 14">
-            <path d="M7 1L1 7l6 6" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blog</h1>
+      <span class="logo-line-after"><i></i></span>
     </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
-                
-                <div class="post-main">
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-目录">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>目录</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
-        <div class="post-main-title">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
             
-        </div>
-        <div class="post-meta">
-            2022-04-10
-        </div>
-    
 
-    <div class="post-md">
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/10/%E7%94%B5%E7%A3%81%E5%AD%A6%E7%9A%84%E5%89%AF%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andy Xiang">
+      <meta itemprop="description" content="日々私たちが过ごしている日常というのは、実は奇迹の连続なのかもしれん。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-04-10 17:50:54" itemprop="dateCreated datePublished" datetime="2022-04-10T17:50:54+08:00">2022-04-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-18 09:34:40" itemprop="dateModified" datetime="2022-05-18T09:34:40+08:00">2022-05-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
         <center> <font size="8"><font color="red"> 电磁学 </font></font></center>
 
 <!-- toc -->
-
 <ul>
-<li><a href="#center-%E7%AC%AC%E4%B8%80%E7%AB%A0enspenspenspensp%E7%9C%9F%E7%A9%BA%E9%9D%99%E7%94%B5%E5%AD%A6-center"><center> 第一章&ensp;&ensp;&ensp;&ensp;真空静电学 </center></a><ul>
-<li><a href="#1enspensp%E9%9D%99%E7%94%B5%E5%9C%BA">§1&ensp;&ensp;静电场</a></li>
-<li><a href="#2enspensp%E9%9D%99%E7%94%B5%E5%9C%BA%E7%9A%84%E6%95%A3%E5%BA%A6%E5%92%8C%E6%97%8B%E5%BA%A6">§2&ensp;&ensp;静电场的散度和旋度</a></li>
-<li><a href="#3enspensp%E7%94%B5%E5%8A%BF">§3&ensp;&ensp;电势</a></li>
-<li><a href="#4enspensp%E5%87%A0%E7%A7%8D%E5%85%B8%E5%9E%8B%E5%B8%A6%E7%94%B5%E5%AF%BC%E4%BD%93%E7%9A%84%E7%94%B5%E5%9C%BA-%E7%94%B5%E5%8A%BF%E5%88%86%E5%B8%83">§4&ensp;&ensp;几种典型带电导体的电场、电势分布</a></li>
-<li><a href="#5enspensp%E7%94%B5%E5%81%B6%E6%9E%81%E5%AD%90">§5&ensp;&ensp;电偶极子</a></li>
-<li><a href="#6enspensp%E6%B3%8A%E6%9D%BE%E6%96%B9%E7%A8%8B%E5%92%8C%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B">§6&ensp;&ensp;泊松方程和拉普拉斯方程</a></li>
+<li><a href="#center-第一章enspenspenspensp真空静电学-center"><center> 第一章&ensp;&ensp;&ensp;&ensp;真空静电学 </center></a><ul>
+<li><a href="#1enspensp静电场">§1&ensp;&ensp;静电场</a></li>
+<li><a href="#2enspensp静电场的散度和旋度">§2&ensp;&ensp;静电场的散度和旋度</a></li>
+<li><a href="#3enspensp电势">§3&ensp;&ensp;电势</a></li>
+<li><a href="#4enspensp几种典型带电导体的电场-电势分布">§4&ensp;&ensp;几种典型带电导体的电场、电势分布</a></li>
+<li><a href="#5enspensp电偶极子">§5&ensp;&ensp;电偶极子</a></li>
+<li><a href="#6enspensp泊松方程和拉普拉斯方程">§6&ensp;&ensp;泊松方程和拉普拉斯方程</a></li>
 </ul>
 </li>
-<li><a href="#center-%E7%AC%AC%E4%BA%8C%E7%AB%A0enspenspenspensp%E4%BB%8B%E8%B4%A8%E4%B8%AD%E7%9A%84%E9%9D%99%E7%94%B5%E5%AD%A6-center"><center> 第二章&ensp;&ensp;&ensp;&ensp;介质中的静电学 </center></a><ul>
-<li><a href="#7enspensp%E7%94%B5%E5%9C%BA%E5%AF%B9%E7%94%B5%E8%8D%B7%E4%BD%93%E7%B3%BB%E7%9A%84%E4%BD%9C%E7%94%A8">§7&ensp;&ensp;电场对电荷体系的作用</a></li>
-<li><a href="#8enspensp%E9%9D%99%E7%94%B5%E5%9C%BA%E4%B8%AD%E7%9A%84%E5%AF%BC%E4%BD%93">§8&ensp;&ensp;静电场中的导体</a></li>
-<li><a href="#9enspensp%E7%94%B5%E5%AE%B9%E5%92%8C%E7%94%B5%E5%AE%B9%E5%99%A8">§9&ensp;&ensp;电容和电容器</a></li>
-<li><a href="#10enspensp%E5%A4%96%E7%94%B5%E5%9C%BA%E4%B8%AD%E7%9A%84%E7%94%B5%E4%BB%8B%E8%B4%A8%E7%9A%84%E6%9E%81%E5%8C%96">§10&ensp;&ensp;外电场中的电介质的极化</a></li>
-<li><a href="#11enspensp%E6%9E%81%E5%8C%96%E7%94%B5%E8%8D%B7%E7%9A%84%E7%94%B5%E5%9C%BA">§11&ensp;&ensp;极化电荷的电场</a></li>
-<li><a href="#12enspensp%E6%9E%81%E5%8C%96%E5%BC%BA%E5%BA%A6%E7%9F%A2%E9%87%8F%E5%92%8C%E7%94%B5%E5%9C%BA%E7%9A%84%E5%85%B3%E7%B3%BB">§12&ensp;&ensp;极化强度矢量和电场的关系</a></li>
-<li><a href="#13enspensp%E7%94%B5%E4%BB%8B%E8%B4%A8%E4%B8%8E%E7%94%B5%E5%AE%B9%E5%99%A8">§13&ensp;&ensp;电介质与电容器</a></li>
-<li><a href="#14enspensp%E7%94%B5%E4%BB%8B%E8%B4%A8%E4%B8%AD%E9%9D%99%E7%94%B5%E5%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86">§14&ensp;&ensp;电介质中静电场的基本定理</a></li>
-<li><a href="#15enspensp%E8%BE%B9%E5%80%BC%E5%85%B3%E7%B3%BB">§15&ensp;&ensp;边值关系</a></li>
+<li><a href="#center-第二章enspenspenspensp介质中的静电学-center"><center> 第二章&ensp;&ensp;&ensp;&ensp;介质中的静电学 </center></a><ul>
+<li><a href="#7enspensp电场对电荷体系的作用">§7&ensp;&ensp;电场对电荷体系的作用</a></li>
+<li><a href="#8enspensp静电场中的导体">§8&ensp;&ensp;静电场中的导体</a></li>
+<li><a href="#9enspensp电容和电容器">§9&ensp;&ensp;电容和电容器</a></li>
+<li><a href="#10enspensp外电场中的电介质的极化">§10&ensp;&ensp;外电场中的电介质的极化</a></li>
+<li><a href="#11enspensp极化电荷的电场">§11&ensp;&ensp;极化电荷的电场</a></li>
+<li><a href="#12enspensp极化强度矢量和电场的关系">§12&ensp;&ensp;极化强度矢量和电场的关系</a></li>
+<li><a href="#13enspensp电介质与电容器">§13&ensp;&ensp;电介质与电容器</a></li>
+<li><a href="#14enspensp电介质中静电场的基本定理">§14&ensp;&ensp;电介质中静电场的基本定理</a></li>
+<li><a href="#15enspensp边值关系">§15&ensp;&ensp;边值关系</a></li>
 </ul>
 </li>
-<li><a href="#center-%E7%AC%AC%E4%B8%89%E7%AB%A0enspenspenspensp%E9%9D%99%E7%94%B5%E8%83%BD-center"><center> 第三章&ensp;&ensp;&ensp;&ensp;静电能 </center></a><ul>
-<li><a href="#16enspensp%E7%9C%9F%E7%A9%BA%E4%B8%AD%E7%9A%84%E7%82%B9%E7%94%B5%E8%8D%B7%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E8%83%BD">§16&ensp;&ensp;真空中的点电荷间的相互作用能</a></li>
-<li><a href="#17enspensp%E8%BF%9E%E7%BB%AD%E7%94%B5%E8%8D%B7%E5%88%86%E5%B8%83%E7%9A%84%E9%9D%99%E7%94%B5%E8%83%BD">§17&ensp;&ensp;连续电荷分布的静电能</a></li>
+<li><a href="#center-第三章enspenspenspensp静电能-center"><center> 第三章&ensp;&ensp;&ensp;&ensp;静电能 </center></a><ul>
+<li><a href="#16enspensp真空中的点电荷间的相互作用能">§16&ensp;&ensp;真空中的点电荷间的相互作用能</a></li>
+<li><a href="#17enspensp连续电荷分布的静电能">§17&ensp;&ensp;连续电荷分布的静电能</a></li>
 </ul>
 </li>
-<li><a href="#center-%E7%AC%AC%E5%9B%9B%E7%AB%A0enspenspenspensp%E9%9D%99%E7%A3%81%E5%9C%BA-center"><center> 第四章&ensp;&ensp;&ensp;&ensp;静磁场 </center></a><ul>
-<li><a href="#18enspensp-%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8A%9B">§18&ensp;&ensp; 洛伦兹力</a></li>
-<li><a href="#19enspensp%E7%94%B5%E6%B5%81%E4%B8%8E%E7%94%B5%E6%B5%81%E5%AF%86%E5%BA%A6">§19&ensp;&ensp;电流与电流密度</a></li>
-<li><a href="#20enspensp%E6%AF%95%E5%A5%A5-%E8%90%A8%E4%BC%90%E5%B0%94%E5%AE%9A%E5%BE%8B">§20&ensp;&ensp;毕奥-萨伐尔定律</a></li>
-<li><a href="#21enspensppmbb%E7%9A%84%E6%95%A3%E5%BA%A6%E4%B8%8E%E6%97%8B%E5%BA%A6">§21&ensp;&ensp;$\pmb{B}$的散度与旋度</a></li>
-<li><a href="#22enspensp%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6">§22&ensp;&ensp;边界条件</a></li>
-<li><a href="#23enspensp%E7%A3%81%E7%9F%A2%E5%8A%BF">§23&ensp;&ensp;磁矢势</a></li>
-<li><a href="#24enspensp%E7%A3%81%E5%81%B6%E6%9E%81%E5%AD%90">§24&ensp;&ensp;磁偶极子</a></li>
+<li><a href="#center-第四章enspenspenspensp静磁场-center"><center> 第四章&ensp;&ensp;&ensp;&ensp;静磁场 </center></a><ul>
+<li><a href="#18enspensp-洛伦兹力">§18&ensp;&ensp; 洛伦兹力</a></li>
+<li><a href="#19enspensp电流与电流密度">§19&ensp;&ensp;电流与电流密度</a></li>
+<li><a href="#20enspensp毕奥-萨伐尔定律">§20&ensp;&ensp;毕奥-萨伐尔定律</a></li>
+<li><a href="#21enspensppmbb的散度与旋度">§21&ensp;&ensp;$\pmb{B}$的散度与旋度</a></li>
+<li><a href="#22enspensp边界条件">§22&ensp;&ensp;边界条件</a></li>
+<li><a href="#23enspensp磁矢势">§23&ensp;&ensp;磁矢势</a></li>
+<li><a href="#24enspensp磁偶极子">§24&ensp;&ensp;磁偶极子</a></li>
 </ul>
 </li>
-<li><a href="#center-%E7%AC%AC%E4%BA%94%E7%AB%A0enspenspenspensp%E4%BB%8B%E8%B4%A8%E4%B8%AD%E7%9A%84%E7%A3%81%E5%9C%BA-center"><center> 第五章&ensp;&ensp;&ensp;&ensp;介质中的磁场 </center></a><ul>
-<li><a href="#25enspensp%E9%A1%BA%E7%A3%81%E4%BD%93-%E6%8A%97%E7%A3%81%E4%BD%93">§25&ensp;&ensp;顺磁体、抗磁体</a></li>
-<li><a href="#26enspensp%E9%93%81%E7%A3%81%E4%BD%93">§26&ensp;&ensp;铁磁体</a></li>
-<li><a href="#27enspensp%E7%A3%81%E5%8C%96%E5%BC%BA%E5%BA%A6">§27&ensp;&ensp;磁化强度</a></li>
-<li><a href="#28enspensp%E7%A3%81%E4%BB%8B%E8%B4%A8%E4%B8%AD%E7%9A%84%E9%9D%99%E7%A3%81%E5%9C%BA">§28&ensp;&ensp;磁介质中的静磁场</a></li>
-<li><a href="#29enspensp%E7%BA%BF%E6%80%A7%E4%BB%8B%E8%B4%A8">§29&ensp;&ensp;线性介质</a></li>
+<li><a href="#center-第五章enspenspenspensp介质中的磁场-center"><center> 第五章&ensp;&ensp;&ensp;&ensp;介质中的磁场 </center></a><ul>
+<li><a href="#25enspensp顺磁体-抗磁体">§25&ensp;&ensp;顺磁体、抗磁体</a></li>
+<li><a href="#26enspensp铁磁体">§26&ensp;&ensp;铁磁体</a></li>
+<li><a href="#27enspensp磁化强度">§27&ensp;&ensp;磁化强度</a></li>
+<li><a href="#28enspensp磁介质中的静磁场">§28&ensp;&ensp;磁介质中的静磁场</a></li>
+<li><a href="#29enspensp线性介质">§29&ensp;&ensp;线性介质</a></li>
 </ul>
 </li>
-<li><a href="#%E9%9D%99%E7%94%B5%E5%AD%A6-%E9%9D%99%E7%A3%81%E5%AD%A6%E7%9A%84%E6%80%BB%E7%BB%93%E4%B8%8E%E5%AF%B9%E6%AF%94">静电学、静磁学的总结与对比</a></li>
+<li><a href="#静电学-静磁学的总结与对比">静电学、静磁学的总结与对比</a></li>
 </ul>
 <!-- tocstop -->
-
-<h1><span id="第一章enspenspenspensp真空静电学"><center> 第一章&ensp;&ensp;&ensp;&ensp;真空静电学 </center></span></h1><h2><span id="1enspensp静电场">§1&ensp;&ensp;静电场</span></h2><p>&ensp;&ensp;&ensp;&ensp;设真空中一个静止的点电荷$q$，其位矢为$\pmb{r}’$，检验电荷$Q$的位矢为$\pmb{r}$，则二者之间的作用力由库伦定律给出<br>$$\pmb{F}=\frac{1}{4\pi\epsilon_0}\frac{qQ}{|\pmb{r}-\pmb{r}’|^3}(\pmb{r}-\pmb{r}’)\tag{1.1}$$</p>
-<p>其中$\pmb{r}’-\pmb{r}$为由$Q$指向$q$的间隔矢量。常数$\epsilon_0$是真空介电常数，国际单位制下的值为<br>$$\epsilon_0=8.85\times10^{-12}\mathrm{C^2\cdot N^{-1}\cdot m^{-2}}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;当空间中存在多个电荷时，检验电荷所受的电场力与这些电荷单独存在时所受的力的矢量和相等，这就是电场的经典叠加原理<br>$$\pmb{F}=\frac{Q}{4\pi\epsilon_0}\sum_{i=1}^n\frac{q_i}{|\pmb{r}-\pmb{r}_i’|^3}(\pmb{r}-\pmb{r}_i’)\tag{1.2}$$</p>
-<p>$$\pmb{E}=\frac{1}{4\pi\epsilon_0}\sum_{i=1}^n\frac{q_i}{|\pmb{r}-\pmb{r}_i’|^3}(\pmb{r}-\pmb{r}_i’)\tag{1.3}$$</p>
-<p>上式对分立的电荷分布成立，对于连续电荷分布而言，上式改写为<br>$$\pmb{E}=\frac{1}{4\pi\epsilon_0}\int\frac{\mathrm{d}q(\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^3}(\pmb{r}-\pmb{r}’)\tag{1.4}$$</p>
-<p>要明确是对$\pmb{r}’$积分。在线、面、体电荷分布时，有<br>$$ E=\frac{1}{4\pi\epsilon_0}\int\frac{\lambda(\pmb{r}’)(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^3}\mathrm{d}l’\tag{1.5} $$</p>
-<p>$$ E=\frac{1}{4\pi\epsilon_0}\iint\frac{\sigma(\pmb{r}’)(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^3}\mathrm{d}S’\tag{1.6} $$</p>
-<p>$$ E=\frac{1}{4\pi\epsilon_0}\iiint\frac{\rho(\pmb{r}’)(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^3}\mathrm{d}V’\tag{1.7} $$</p>
-<h2><span id="2enspensp静电场的散度和旋度">§2&ensp;&ensp;静电场的散度和旋度</span></h2><p>&ensp;&ensp;&ensp;&ensp;直接来求:<br>$$\begin{align*}<br>    \nabla\cdot\pmb{E}=\frac{1}{4\pi\epsilon_0}\nabla\cdot\iiint\frac{\rho(\pmb{r}’)(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^3}\mathrm{d}V’\tag{2.1}<br>\end{align*}$$    </p>
-<p>注意到这里的散度算符是对$\pmb{r}$求导，而积分是对$\pmb{r}’$，所以二者可以交换<br>$$\begin{align*}<br>    \nabla\cdot\pmb{E}&amp;=\frac{1}{4\pi\epsilon_0}\iiint\rho(\pmb{r’})\mathrm{d}V’\nabla\cdot\frac{(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^3}\<br>    &amp;=\frac{1}{\epsilon_0}\iiint\rho(\pmb{r’})\delta^3(\pmb{r}-\pmb{r}’)\mathrm{d}V’\<br>    &amp;=\frac{\rho(\pmb{r})}{\epsilon_0}\tag{2.2}<br>\end{align*}$$   </p>
-<p>上述推导基于狄拉克函数的性质:$\nabla\cdot\frac{\hat{\pmb{r}}}{r^2}=4\pi\delta^3(\pmb{r})$和选择性$\int f(x)\delta(x)=f(0)$。我们得到<br>$$\nabla\cdot\pmb{E}=\rho/\epsilon_0\tag{2.3}$$</p>
-<p>它称为<strong>高斯定理的微分形式</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;将其两边对体积积分可得高斯定理的积分形式<br>$$\iiint\mathrm{d}V\nabla\cdot\pmb{E}=\oiint\pmb{E}\cdot\mathrm{d}\pmb{S}=\frac{1}{\epsilon_0}\iiint\rho\mathrm{d}V=\frac{Q}{\epsilon_0}\tag{2.4}$$</p>
-<p>上式可表述为：一封闭曲面上的电通量等于该曲面内所有电荷的代数和于真空介电常数的比值。<br>&ensp;&ensp;&ensp;&ensp;再来计算电场的旋度<br>$$\begin{align*}<br>    \nabla\times\pmb{E}=\frac{1}{4\pi\epsilon_0}\iiint\rho\mathrm{d}V’\nabla\times\frac{(\pmb{r}’-\pmb{r})}{|\pmb{r}’-\pmb{r}|^3}=0\tag{2.5}<br>\end{align*}$$</p>
-<p>这个式子称为静电场的<strong>环路定理的微分形式</strong>。将其在一曲面上积分得到积分形式<br>$$ \iint (\nabla\times\pmb{E})\cdot\mathrm{d}\pmb{S}=\oint \pmb{E}\cdot\mathrm{d}\pmb{l}=0\tag{2.6}$$</p>
-<p>这说明电场沿任意闭合回路的曲线积分为0，即电场的任意曲线积分与路径无关。或者说，静电场是一个保守场。</p>
-<h2><span id="3enspensp电势">§3&ensp;&ensp;电势</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们得到了静电场是一种保守场。根据斯托克斯公式，一个矢量的旋度在一个曲面上的积分可化作该矢量沿曲面上一封闭曲线的回路积分，即<br>$$\iint\nabla\times\pmb{E}\cdot\mathrm{d}\pmb{S}=\oint\pmb{E}\cdot\mathrm{d}\pmb{l}=0\tag{3.1}$$</p>
-<p>这个结果称为静电场的环路定理。电场力所做的功可表示为<br>$$\begin{align*}<br>    A&amp;=q\int_a^b\pmb{E}\cdot\mathrm{d}\pmb{l}\<br>    &amp;=\frac{qQ}{4\pi\epsilon_0}\int_{r_P}^{r_Q}\frac{1}{r^2}\mathrm{d}r\<br>    &amp;=\frac{qQ}{4\pi\epsilon_0}(\frac{1}{r_P}-\frac{1}{r_Q})\tag{3.2}<br>\end{align*}$$</p>
-<p>所以，电场力做功只与电荷的初末位置有关，而与具体路径无关。如果我们再次来考虑一个封闭回路，易得沿该回路一周电场力做功为0。这与式(3.1)是一致的。</p>
-<p>&ensp;&ensp;&ensp;&ensp;一个旋度为$0$的矢量总可以表示为一个标量的梯度:<br>$$\pmb{E}=-\nabla\phi\tag{3.3}$$</p>
-<p>(负号为一个习惯)其中的标量$\phi$为一新的物理量，称为电势。我们可以向电势加上一个任意常数而不改变电场。因此电势的值本身是无意义的，只有电势差是有意义的。将式(3.3)代入做功的表达式中：<br>$$\begin{align*}<br>    A&amp;=q\int_{r_Q}^{r_P}\nabla\phi\cdot\mathrm{d}\pmb{l}\<br>    &amp;=q(\phi_P-\phi_Q)\tag{3.4}<br>\end{align*}$$</p>
-<p>我们定义由电场做功而改变的能量为电势能，则<br>$$\Delta W=W_Q-W_P=-A=q(\phi_Q-\phi_P)\tag{3.5}$$</p>
-<p>所以<br>$$W_P=q\phi_P+\mathrm{const}\tag{3.6}$$</p>
-<p>同样，电势能的值也依赖于零点的选取.</p>
-<p>&ensp;&ensp;&ensp;&ensp;将式(3.3)积分可得电势的表达式，积分上限取为无穷远处。取无穷远处为零势点。即<br>$$\int^\infty_{\pmb{r}}\pmb{E}\cdot\mathrm{d}\pmb{l}=\int_\infty^{\pmb{r}}\nabla\phi\cdot\mathrm{d}\pmb{l}\tag{3.7}$$</p>
-<p>右边等于<br>$$\mathrm{RHS}=\phi(\pmb{r})-\phi(\infty)=\phi(r)\tag{3.8}$$</p>
-<p>左边等于<br>$$\begin{align*}<br>    \mathrm{LHS}&amp;=\frac{Q}{4\pi\epsilon_0}\int^\infty_{\pmb{r}}\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2}\cdot \mathrm{d}\pmb{l}\<br>    &amp;=-\frac{Q}{4\pi\epsilon_0}\frac{1}{|\pmb{r}-\pmb{r}’|}\bigg|^\infty_r\<br>    &amp;=\frac{Q}{4\pi\epsilon_0}\frac{1}{|\pmb{r}-\pmb{r}’|}\tag{3.9}<br>\end{align*}$$</p>
-<p>所以<br>$$\phi(r)=\frac{Q}{4\pi\epsilon_0}\frac{1}{|\pmb{r}-\pmb{r}’|}\tag{3.10}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;由于电场满足叠加原理，容易证明电势同样满足叠加原理，即<br>$$\phi=\frac{1}{4\pi\epsilon_0}\sum_{i=1}^n\frac{q_i}{|\pmb{r}-\pmb{r}_i|}\tag{3.11}$$</p>
-<p>或<br>$$\phi=\frac{1}{4\pi\epsilon_0}\int\frac{\mathrm{d}q}{|\pmb{r}-\pmb{r}’|}\tag{3.12}$$</p>
-<p>对于线、面、体电荷分布，电势为<br>$$ \phi=\frac{1}{4\pi\epsilon_0}\int \frac{\lambda \mathrm{d}l’}{|\pmb{r}-\pmb{r}’|\tag{3.13}}$$</p>
-<p>$$ \phi=\frac{1}{4\pi\epsilon_0}\iint \frac{\sigma \mathrm{d}S’}{|\pmb{r}-\pmb{r}’|\tag{3.13}}$$</p>
-<p>$$ \phi=\frac{1}{4\pi\epsilon_0}\iiint \frac{\rho \mathrm{d}V’}{|\pmb{r}-\pmb{r}’|\tag{3.13}}$$</p>
-<h2><span id="4enspensp几种典型带电导体的电场-电势分布">§4&ensp;&ensp;几种典型带电导体的电场、电势分布</span></h2><p>&ensp;&ensp;&ensp;&ensp;（1）均匀带电球体.设其电荷体密度为$\rho$，半径为$R$。由高斯定理可得空间中的电场分布为<br>$$\pmb{E}=\left{\begin{align*}<br>    &amp;\frac{\rho}{3\epsilon_0}\pmb{r} &amp;0&lt;r\leq R\<br>    &amp;\frac{\rho}{3\epsilon_0}\frac{R^3}{r^3}\pmb{r}  &amp;R&lt;r<br>\end{align*}\right.\tag{4.1}$$</p>
-<p>则空间中的电势分布为<br>$$\phi=\left{<br>    \begin{align*}<br>        &amp;\frac{\rho}{6\epsilon_0}(3R^2-r^2)&amp;0&lt;r\leq R\<br>        &amp;\frac{\rho}{3\epsilon_0}\frac{R^3}{r}&amp;R&lt;r<br>    \end{align*}<br>\right.\tag{4.2}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;（2）均匀带电球壳。设其电荷面密度为$\sigma$，半径为$R$。由高斯定理可得空间中的电场分布为<br>$$\pmb{E}=\left{\begin{align*}<br>    &amp;0&amp;0&lt;r\leq R\<br>    &amp;\frac{\sigma R^2}{\epsilon_0}\frac{\pmb{r}}{r^3} &amp;R&lt;r<br>\end{align*}\right.\tag{4.3}$$</p>
-<p>则空间中的电势分布为<br>$$\phi=\left{<br>    \begin{align*}<br>        &amp;\frac{\sigma R}{\epsilon_0}&amp;0&lt;r\leq R\<br>        &amp;\frac{\sigma R^2}{\epsilon_0r}&amp;R&lt;r<br>    \end{align*}<br>\right.\tag{4.4}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;（3）无限大带电平板。设其电荷面密度为$\sigma$。其两侧的电场分布为<br>$$\pmb{E}=\frac{\sigma}{2\epsilon_0}\tag{4.5}$$</p>
-<p>则电势为一定值。但此时不能取无穷远处电势为$0$，因为带电体同样延申到无穷远处.</p>
-<p>&ensp;&ensp;&ensp;&ensp;（4）无限长带电直杆。设其电荷线密度为$\lambda$。在柱坐标系中，其周围的电场必定只有$r$方向的分量，由高斯定理可得<br>$$\pmb{E}=\frac{\lambda}{2\pi\epsilon_0}\frac{\pmb{r}}{r^2}\tag{4.6}$$</p>
-<h2><span id="5enspensp电偶极子">§5&ensp;&ensp;电偶极子</span></h2><p>&ensp;&ensp;&ensp;&ensp;电偶极子是指两个电荷量相等、电性相反的点电荷。设它们的电荷量为$\pm q$，相距$d$。它在远处产生的电势为<br>$$\begin{align*}<br>    \phi&amp;=\frac{1}{4\pi\epsilon_0}\left(\frac{q}{r_+}-\frac{q}{r_-}\right)\<br>\end{align*}\tag{5.1}$$</p>
-<p>利用远场近似，将$r_+,r_-$展开为$d$的幂函数，保留到一次项<br>$$r_+=\sqrt{r^2+\frac{d^2}{4}-rd\cos\theta}\approx r-\frac{d}{2}\cos\theta\tag{5.2}$$<br>$$r_-=\sqrt{r^2+\frac{d^2}{4}+rd\cos\theta}\approx r+\frac{d}{2}\cos\theta\tag{5.3}$$</p>
-<p>于是<br>$$\begin{align*}<br>    \phi(\pmb{r})&amp;=\frac{q}{4\pi\epsilon_0}(\frac{1}{r-\frac{d}{2}\cos\theta}-\frac{1}{r+\frac{d}{2}\cos\theta})\<br>    &amp;\approx\frac{qd\cos\theta}{4\pi\epsilon_0r^2}<br>\end{align*}\tag{5.4}$$</p>
-<p>定义电偶极矩为$\pmb{p}=q\pmb{d}$，其方向为正电荷指向负电荷。所以上式可写为<br>$$\phi(\pmb{r})=\frac{1}{4\pi\epsilon_0}\frac{\pmb{p}\cdot\pmb{r}}{r^3}\tag{5.5}$$</p>
-<p>其电场为<br>$$\begin{align*}<br>    \pmb{E}&amp;=-\nabla\phi\<br>    &amp;=-\frac{1}{4\pi\epsilon_0}\nabla\left(\frac{\pmb{p}\cdot\pmb{r}}{r^3}\right)\tag{5.6}<br>\end{align*}$$</p>
-<p>其中<br>$$\begin{align*}<br>    \nabla\left(\frac{\pmb{p}\cdot\pmb{r}}{r^3}\right)&amp;=(\pmb{p}\cdot\pmb{r})\nabla\frac{1}{r^3}+\frac{1}{r^3}\nabla(\pmb{p}\cdot\pmb{r})\<br>    &amp;=-\frac{3\pmb{p}\cdot\pmb{r}}{r^4}\hat{\pmb{r}}+\frac{1}{r^3}\big[\pmb{p}\times(\nabla\times\pmb{r})\<br>    &amp;+\pmb{r}\times(\nabla\times\pmb{p})+(\pmb{p}\cdot\nabla)\pmb{r}+(\pmb{r}\cdot\nabla)\pmb{p}\big]\<br>    &amp;=-\frac{3(\pmb{p}\cdot\pmb{r})}{r^4}\hat{\pmb{r}}+\frac{\pmb{p}}{r^3}\tag{5.7}<br>\end{align*}$$</p>
-<p>代入得<br>$$\pmb{E}=-\frac{1}{4\pi\epsilon_0}\left(\frac{\pmb{p}}{r^3}-\frac{3(\pmb{p}\cdot\pmb{r})}{r^4}\hat{\pmb{r}}\right)\tag{5.8}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;我们再来看电偶极子在外电场中的受力和力矩。所受电场力为<br>$$\pmb{F}=q\pmb{E}(r_+)-q\pmb{E}(r_-)\tag{5.9}$$</p>
-<p>将电场按小量展开到一阶，略去高阶项<br>$$\begin{align*}<br>    \pmb{F}&amp;=q\big[\pmb{E}(\pmb{r})+\frac{\pmb{d}}{2}\cdot\nabla\pmb{E}-\pmb{E}(\pmb{r})+\frac{\pmb{d}}{2}\cdot\nabla\pmb{E}\big]\<br>    &amp;=\nabla(\pmb{p}\cdot\pmb{E})\tag{5.10}<br>\end{align*}$$</p>
-<p>可以看到，如果外场是均匀的，则电偶极子的合外力为0。再来看电场力相对原点的力矩<br>$$\begin{align*}<br>    \pmb{M}&amp;=q\pmb{r}<em>+\times\pmb{E}(r</em>+)-q\pmb{r}<em>-\times\pmb{E}(r</em>-)\<br>    &amp;=q(\pmb{r}+\frac{\pmb{d}}{2})\times[\pmb{E}+\frac{\pmb{d}}{2}\cdot\nabla\pmb{E}]-q(\pmb{r}-\frac{\pmb{d}}{2})[\pmb{E}-\frac{\pmb{d}}{2}\cdot\nabla\pmb{E}]\<br>    &amp;=q[\pmb{d}\times\pmb{E}+\pmb{r}\times(\pmb{d}\cdot\nabla)\pmb{E}]\<br>    &amp;=\pmb{p}\times\pmb{E}+(\nabla\cdot\pmb{p})(\pmb{r}\times\pmb{E})\tag{5.6}<br>\end{align*}$$</p>
-<p>电偶极矩通常是一个常矢量，所以<br>$$ \pmb{M}=\pmb{p}\times\pmb{E}\tag{5.7} $$</p>
-<h2><span id="6enspensp泊松方程和拉普拉斯方程">§6&ensp;&ensp;泊松方程和拉普拉斯方程</span></h2><p>&ensp;&ensp;&ensp;&ensp;静电学的基本问题就是对于给定的电荷分布解出空间中的电场分布。这个问题可以由库仑定律解决，但对于大多数的电荷分布，库仑定律要求的积分是不好算出的。更优的办法是先求出电势分布，再求电势的梯度来求出电场分布。一般的，我们将求解电势分布的过程表述为解某个二阶偏微分方程——即泊松方程<br>$$\nabla^2\phi=-\frac{\rho}{\epsilon_0}\tag{6.1}$$</p>
-<p>这个方程加上给定的边界条件等价于前面的各个积分。</p>
-<p>&ensp;&ensp;&ensp;&ensp;在$\rho=0$的区域，泊松方程约化为拉普拉斯方程<br>$$\nabla^2\phi=0\tag{6.2}$$</p>
-<h1><span id="第二章enspenspenspensp介质中的静电学"><center> 第二章&ensp;&ensp;&ensp;&ensp;介质中的静电学 </center></span></h1><h2><span id="7enspensp电场对电荷体系的作用">§7&ensp;&ensp;电场对电荷体系的作用</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们知道，处于外场中的电荷体系的受力为<br>$$\pmb{F}=\frac{1}{4\pi\epsilon_0}\iiint\rho(\pmb{r})\pmb{E}(\pmb{r})\mathrm{d}V\tag{7.1}$$</p>
-<p>力矩为<br>$$\pmb{M}=\frac{1}{4\pi\epsilon_0}\iiint\rho(\pmb{r})\pmb{r}\times\pmb{E}(\pmb{r})dV\tag{7.2}$$<br>但当我们试图计算电荷体系本身产生的电场对该体系的作用时，上述公式不再适用，因为由库仑定律得出的电场分布在存在电荷的几何点处会出现发散现象。</p>
+<h1><span id="第一章enspenspenspensp真空静电学"><center> 第一章&ensp;&ensp;&ensp;&ensp;真空静电学 </center></span></h1><h2><span id="1enspensp静电场">§1&ensp;&ensp;静电场</span></h2><p>&ensp;&ensp;&ensp;&ensp;设真空中一个静止的点电荷$q$，其位矢为$\pmb{r}’$，检验电荷$Q$的位矢为$\pmb{r}$，则二者之间的作用力由库伦定律给出</p>
+<script type="math/tex; mode=display">\pmb{F}=\frac{1}{4\pi\epsilon_0}\frac{qQ}{|\pmb{r}-\pmb{r}'|^3}(\pmb{r}-\pmb{r}')\tag{1.1}</script><p>其中$\pmb{r}’-\pmb{r}$为由$Q$指向$q$的间隔矢量。常数$\epsilon_0$是真空介电常数，国际单位制下的值为</p>
+<script type="math/tex; mode=display">\epsilon_0=8.85\times10^{-12}\mathrm{C^2\cdot N^{-1}\cdot m^{-2}}</script><p>&ensp;&ensp;&ensp;&ensp;当空间中存在多个电荷时，检验电荷所受的电场力与这些电荷单独存在时所受的力的矢量和相等，这就是电场的经典叠加原理</p>
+<script type="math/tex; mode=display">\pmb{F}=\frac{Q}{4\pi\epsilon_0}\sum_{i=1}^n\frac{q_i}{|\pmb{r}-\pmb{r}_i'|^3}(\pmb{r}-\pmb{r}_i')\tag{1.2}</script><script type="math/tex; mode=display">\pmb{E}=\frac{1}{4\pi\epsilon_0}\sum_{i=1}^n\frac{q_i}{|\pmb{r}-\pmb{r}_i'|^3}(\pmb{r}-\pmb{r}_i')\tag{1.3}</script><p>上式对分立的电荷分布成立，对于连续电荷分布而言，上式改写为</p>
+<script type="math/tex; mode=display">\pmb{E}=\frac{1}{4\pi\epsilon_0}\int\frac{\mathrm{d}q(\pmb{r}')}{|\pmb{r}-\pmb{r}'|^3}(\pmb{r}-\pmb{r}')\tag{1.4}</script><p>要明确是对$\pmb{r}’$积分。在线、面、体电荷分布时，有</p>
+<script type="math/tex; mode=display">E=\frac{1}{4\pi\epsilon_0}\int\frac{\lambda(\pmb{r}')(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^3}\mathrm{d}l'\tag{1.5}</script><script type="math/tex; mode=display">E=\frac{1}{4\pi\epsilon_0}\iint\frac{\sigma(\pmb{r}')(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^3}\mathrm{d}S'\tag{1.6}</script><script type="math/tex; mode=display">E=\frac{1}{4\pi\epsilon_0}\iiint\frac{\rho(\pmb{r}')(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^3}\mathrm{d}V'\tag{1.7}</script><h2><span id="2enspensp静电场的散度和旋度">§2&ensp;&ensp;静电场的散度和旋度</span></h2><p>&ensp;&ensp;&ensp;&ensp;直接来求:</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\cdot\pmb{E}=\frac{1}{4\pi\epsilon_0}\nabla\cdot\iiint\frac{\rho(\pmb{r}')(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^3}\mathrm{d}V'\tag{2.1}
+\end{align*}</script><p>注意到这里的散度算符是对$\pmb{r}$求导，而积分是对$\pmb{r}’$，所以二者可以交换</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\cdot\pmb{E}&=\frac{1}{4\pi\epsilon_0}\iiint\rho(\pmb{r'})\mathrm{d}V'\nabla\cdot\frac{(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^3}\\
+    &=\frac{1}{\epsilon_0}\iiint\rho(\pmb{r'})\delta^3(\pmb{r}-\pmb{r}')\mathrm{d}V'\\
+    &=\frac{\rho(\pmb{r})}{\epsilon_0}\tag{2.2}
+\end{align*}</script><p>上述推导基于狄拉克函数的性质:$\nabla\cdot\frac{\hat{\pmb{r}}}{r^2}=4\pi\delta^3(\pmb{r})$和选择性$\int f(x)\delta(x)=f(0)$。我们得到</p>
+<script type="math/tex; mode=display">\nabla\cdot\pmb{E}=\rho/\epsilon_0\tag{2.3}</script><p>它称为<strong>高斯定理的微分形式</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;将其两边对体积积分可得高斯定理的积分形式</p>
+<script type="math/tex; mode=display">\iiint\mathrm{d}V\nabla\cdot\pmb{E}=\oiint\pmb{E}\cdot\mathrm{d}\pmb{S}=\frac{1}{\epsilon_0}\iiint\rho\mathrm{d}V=\frac{Q}{\epsilon_0}\tag{2.4}</script><p>上式可表述为：一封闭曲面上的电通量等于该曲面内所有电荷的代数和于真空介电常数的比值。<br>&ensp;&ensp;&ensp;&ensp;再来计算电场的旋度</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\times\pmb{E}=\frac{1}{4\pi\epsilon_0}\iiint\rho\mathrm{d}V'\nabla\times\frac{(\pmb{r}'-\pmb{r})}{|\pmb{r}'-\pmb{r}|^3}=0\tag{2.5}
+\end{align*}</script><p>这个式子称为静电场的<strong>环路定理的微分形式</strong>。将其在一曲面上积分得到积分形式</p>
+<script type="math/tex; mode=display">\iint (\nabla\times\pmb{E})\cdot\mathrm{d}\pmb{S}=\oint \pmb{E}\cdot\mathrm{d}\pmb{l}=0\tag{2.6}</script><p>这说明电场沿任意闭合回路的曲线积分为0，即电场的任意曲线积分与路径无关。或者说，静电场是一个保守场。</p>
+<h2><span id="3enspensp电势">§3&ensp;&ensp;电势</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们得到了静电场是一种保守场。根据斯托克斯公式，一个矢量的旋度在一个曲面上的积分可化作该矢量沿曲面上一封闭曲线的回路积分，即</p>
+<script type="math/tex; mode=display">\iint\nabla\times\pmb{E}\cdot\mathrm{d}\pmb{S}=\oint\pmb{E}\cdot\mathrm{d}\pmb{l}=0\tag{3.1}</script><p>这个结果称为静电场的环路定理。电场力所做的功可表示为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    A&=q\int_a^b\pmb{E}\cdot\mathrm{d}\pmb{l}\\
+    &=\frac{qQ}{4\pi\epsilon_0}\int_{r_P}^{r_Q}\frac{1}{r^2}\mathrm{d}r\\
+    &=\frac{qQ}{4\pi\epsilon_0}(\frac{1}{r_P}-\frac{1}{r_Q})\tag{3.2}
+\end{align*}</script><p>所以，电场力做功只与电荷的初末位置有关，而与具体路径无关。如果我们再次来考虑一个封闭回路，易得沿该回路一周电场力做功为0。这与式(3.1)是一致的。</p>
+<p>&ensp;&ensp;&ensp;&ensp;一个旋度为$0$的矢量总可以表示为一个标量的梯度:</p>
+<script type="math/tex; mode=display">\pmb{E}=-\nabla\phi\tag{3.3}</script><p>(负号为一个习惯)其中的标量$\phi$为一新的物理量，称为电势。我们可以向电势加上一个任意常数而不改变电场。因此电势的值本身是无意义的，只有电势差是有意义的。将式(3.3)代入做功的表达式中：</p>
+<script type="math/tex; mode=display">\begin{align*}
+    A&=q\int_{r_Q}^{r_P}\nabla\phi\cdot\mathrm{d}\pmb{l}\\
+    &=q(\phi_P-\phi_Q)\tag{3.4}
+\end{align*}</script><p>我们定义由电场做功而改变的能量为电势能，则</p>
+<script type="math/tex; mode=display">\Delta W=W_Q-W_P=-A=q(\phi_Q-\phi_P)\tag{3.5}</script><p>所以</p>
+<script type="math/tex; mode=display">W_P=q\phi_P+\mathrm{const}\tag{3.6}</script><p>同样，电势能的值也依赖于零点的选取.</p>
+<p>&ensp;&ensp;&ensp;&ensp;将式(3.3)积分可得电势的表达式，积分上限取为无穷远处。取无穷远处为零势点。即 </p>
+<script type="math/tex; mode=display">\int^\infty_{\pmb{r}}\pmb{E}\cdot\mathrm{d}\pmb{l}=\int_\infty^{\pmb{r}}\nabla\phi\cdot\mathrm{d}\pmb{l}\tag{3.7}</script><p>右边等于</p>
+<script type="math/tex; mode=display">\mathrm{RHS}=\phi(\pmb{r})-\phi(\infty)=\phi(r)\tag{3.8}</script><p>左边等于</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \mathrm{LHS}&=\frac{Q}{4\pi\epsilon_0}\int^\infty_{\pmb{r}}\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2}\cdot \mathrm{d}\pmb{l}\\
+    &=-\frac{Q}{4\pi\epsilon_0}\frac{1}{|\pmb{r}-\pmb{r}'|}\bigg|^\infty_r\\
+    &=\frac{Q}{4\pi\epsilon_0}\frac{1}{|\pmb{r}-\pmb{r}'|}\tag{3.9}
+\end{align*}</script><p>所以</p>
+<script type="math/tex; mode=display">\phi(r)=\frac{Q}{4\pi\epsilon_0}\frac{1}{|\pmb{r}-\pmb{r}'|}\tag{3.10}</script><p>&ensp;&ensp;&ensp;&ensp;由于电场满足叠加原理，容易证明电势同样满足叠加原理，即</p>
+<script type="math/tex; mode=display">\phi=\frac{1}{4\pi\epsilon_0}\sum_{i=1}^n\frac{q_i}{|\pmb{r}-\pmb{r}_i|}\tag{3.11}</script><p>或</p>
+<script type="math/tex; mode=display">\phi=\frac{1}{4\pi\epsilon_0}\int\frac{\mathrm{d}q}{|\pmb{r}-\pmb{r}'|}\tag{3.12}</script><p>对于线、面、体电荷分布，电势为</p>
+<script type="math/tex; mode=display">\phi=\frac{1}{4\pi\epsilon_0}\int \frac{\lambda \mathrm{d}l'}{|\pmb{r}-\pmb{r}'|\tag{3.13}}</script><script type="math/tex; mode=display">\phi=\frac{1}{4\pi\epsilon_0}\iint \frac{\sigma \mathrm{d}S'}{|\pmb{r}-\pmb{r}'|\tag{3.13}}</script><script type="math/tex; mode=display">\phi=\frac{1}{4\pi\epsilon_0}\iiint \frac{\rho \mathrm{d}V'}{|\pmb{r}-\pmb{r}'|\tag{3.13}}</script><h2><span id="4enspensp几种典型带电导体的电场-电势分布">§4&ensp;&ensp;几种典型带电导体的电场、电势分布</span></h2><p>&ensp;&ensp;&ensp;&ensp;（1）均匀带电球体.设其电荷体密度为$\rho$，半径为$R$。由高斯定理可得空间中的电场分布为</p>
+<script type="math/tex; mode=display">\pmb{E}=\left\{\begin{align*}
+    &\frac{\rho}{3\epsilon_0}\pmb{r} &0<r\leq R\\ 
+    &\frac{\rho}{3\epsilon_0}\frac{R^3}{r^3}\pmb{r}  &R<r    
+\end{align*}\right.\tag{4.1}</script><p>则空间中的电势分布为</p>
+<script type="math/tex; mode=display">\phi=\left\{
+    \begin{align*}
+        &\frac{\rho}{6\epsilon_0}(3R^2-r^2)&0<r\leq R\\
+        &\frac{\rho}{3\epsilon_0}\frac{R^3}{r}&R<r
+    \end{align*}
+\right.\tag{4.2}</script><p>&ensp;&ensp;&ensp;&ensp;（2）均匀带电球壳。设其电荷面密度为$\sigma$，半径为$R$。由高斯定理可得空间中的电场分布为 </p>
+<script type="math/tex; mode=display">\pmb{E}=\left\{\begin{align*}
+    &0&0<r\leq R\\ 
+    &\frac{\sigma R^2}{\epsilon_0}\frac{\pmb{r}}{r^3} &R<r    
+\end{align*}\right.\tag{4.3}</script><p>则空间中的电势分布为</p>
+<script type="math/tex; mode=display">\phi=\left\{
+    \begin{align*}
+        &\frac{\sigma R}{\epsilon_0}&0<r\leq R\\
+        &\frac{\sigma R^2}{\epsilon_0r}&R<r
+    \end{align*}
+\right.\tag{4.4}</script><p>&ensp;&ensp;&ensp;&ensp;（3）无限大带电平板。设其电荷面密度为$\sigma$。其两侧的电场分布为</p>
+<script type="math/tex; mode=display">\pmb{E}=\frac{\sigma}{2\epsilon_0}\tag{4.5}</script><p>则电势为一定值。但此时不能取无穷远处电势为$0$，因为带电体同样延申到无穷远处.</p>
+<p>&ensp;&ensp;&ensp;&ensp;（4）无限长带电直杆。设其电荷线密度为$\lambda$。在柱坐标系中，其周围的电场必定只有$r$方向的分量，由高斯定理可得 </p>
+<script type="math/tex; mode=display">\pmb{E}=\frac{\lambda}{2\pi\epsilon_0}\frac{\pmb{r}}{r^2}\tag{4.6}</script><h2><span id="5enspensp电偶极子">§5&ensp;&ensp;电偶极子</span></h2><p>&ensp;&ensp;&ensp;&ensp;电偶极子是指两个电荷量相等、电性相反的点电荷。设它们的电荷量为$\pm q$，相距$d$。它在远处产生的电势为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \phi&=\frac{1}{4\pi\epsilon_0}\left(\frac{q}{r_+}-\frac{q}{r_-}\right)\\
+\end{align*}\tag{5.1}</script><p>利用远场近似，将$r_+,r_-$展开为$d$的幂函数，保留到一次项</p>
+<script type="math/tex; mode=display">r_+=\sqrt{r^2+\frac{d^2}{4}-rd\cos\theta}\approx r-\frac{d}{2}\cos\theta\tag{5.2}</script><script type="math/tex; mode=display">r_-=\sqrt{r^2+\frac{d^2}{4}+rd\cos\theta}\approx r+\frac{d}{2}\cos\theta\tag{5.3}</script><p>于是</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \phi(\pmb{r})&=\frac{q}{4\pi\epsilon_0}(\frac{1}{r-\frac{d}{2}\cos\theta}-\frac{1}{r+\frac{d}{2}\cos\theta})\\ 
+    &\approx\frac{qd\cos\theta}{4\pi\epsilon_0r^2}
+\end{align*}\tag{5.4}</script><p>定义电偶极矩为$\pmb{p}=q\pmb{d}$，其方向为正电荷指向负电荷。所以上式可写为</p>
+<script type="math/tex; mode=display">\phi(\pmb{r})=\frac{1}{4\pi\epsilon_0}\frac{\pmb{p}\cdot\pmb{r}}{r^3}\tag{5.5}</script><p>其电场为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{E}&=-\nabla\phi\\
+    &=-\frac{1}{4\pi\epsilon_0}\nabla\left(\frac{\pmb{p}\cdot\pmb{r}}{r^3}\right)\tag{5.6}
+\end{align*}</script><p>其中</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\left(\frac{\pmb{p}\cdot\pmb{r}}{r^3}\right)&=(\pmb{p}\cdot\pmb{r})\nabla\frac{1}{r^3}+\frac{1}{r^3}\nabla(\pmb{p}\cdot\pmb{r})\\
+    &=-\frac{3\pmb{p}\cdot\pmb{r}}{r^4}\hat{\pmb{r}}+\frac{1}{r^3}\big[\pmb{p}\times(\nabla\times\pmb{r})\\
+    &+\pmb{r}\times(\nabla\times\pmb{p})+(\pmb{p}\cdot\nabla)\pmb{r}+(\pmb{r}\cdot\nabla)\pmb{p}\big]\\
+    &=-\frac{3(\pmb{p}\cdot\pmb{r})}{r^4}\hat{\pmb{r}}+\frac{\pmb{p}}{r^3}\tag{5.7}
+\end{align*}</script><p>代入得</p>
+<script type="math/tex; mode=display">\pmb{E}=-\frac{1}{4\pi\epsilon_0}\left(\frac{\pmb{p}}{r^3}-\frac{3(\pmb{p}\cdot\pmb{r})}{r^4}\hat{\pmb{r}}\right)\tag{5.8}</script><p>&ensp;&ensp;&ensp;&ensp;我们再来看电偶极子在外电场中的受力和力矩。所受电场力为</p>
+<script type="math/tex; mode=display">\pmb{F}=q\pmb{E}(r_+)-q\pmb{E}(r_-)\tag{5.9}</script><p>将电场按小量展开到一阶，略去高阶项</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{F}&=q\big[\pmb{E}(\pmb{r})+\frac{\pmb{d}}{2}\cdot\nabla\pmb{E}-\pmb{E}(\pmb{r})+\frac{\pmb{d}}{2}\cdot\nabla\pmb{E}\big]\\
+    &=\nabla(\pmb{p}\cdot\pmb{E})\tag{5.10}
+\end{align*}</script><p>可以看到，如果外场是均匀的，则电偶极子的合外力为0。再来看电场力相对原点的力矩</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{M}&=q\pmb{r}_+\times\pmb{E}(r_+)-q\pmb{r}_-\times\pmb{E}(r_-)\\
+    &=q(\pmb{r}+\frac{\pmb{d}}{2})\times[\pmb{E}+\frac{\pmb{d}}{2}\cdot\nabla\pmb{E}]-q(\pmb{r}-\frac{\pmb{d}}{2})[\pmb{E}-\frac{\pmb{d}}{2}\cdot\nabla\pmb{E}]\\
+    &=q[\pmb{d}\times\pmb{E}+\pmb{r}\times(\pmb{d}\cdot\nabla)\pmb{E}]\\
+    &=\pmb{p}\times\pmb{E}+(\nabla\cdot\pmb{p})(\pmb{r}\times\pmb{E})\tag{5.6}
+\end{align*}</script><p>电偶极矩通常是一个常矢量，所以</p>
+<script type="math/tex; mode=display">\pmb{M}=\pmb{p}\times\pmb{E}\tag{5.7}</script><h2><span id="6enspensp泊松方程和拉普拉斯方程">§6&ensp;&ensp;泊松方程和拉普拉斯方程</span></h2><p>&ensp;&ensp;&ensp;&ensp;静电学的基本问题就是对于给定的电荷分布解出空间中的电场分布。这个问题可以由库仑定律解决，但对于大多数的电荷分布，库仑定律要求的积分是不好算出的。更优的办法是先求出电势分布，再求电势的梯度来求出电场分布。一般的，我们将求解电势分布的过程表述为解某个二阶偏微分方程——即泊松方程</p>
+<script type="math/tex; mode=display">\nabla^2\phi=-\frac{\rho}{\epsilon_0}\tag{6.1}</script><p>这个方程加上给定的边界条件等价于前面的各个积分。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在$\rho=0$的区域，泊松方程约化为拉普拉斯方程</p>
+<script type="math/tex; mode=display">\nabla^2\phi=0\tag{6.2}</script><h1><span id="第二章enspenspenspensp介质中的静电学"><center> 第二章&ensp;&ensp;&ensp;&ensp;介质中的静电学 </center></span></h1><h2><span id="7enspensp电场对电荷体系的作用">§7&ensp;&ensp;电场对电荷体系的作用</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们知道，处于外场中的电荷体系的受力为</p>
+<script type="math/tex; mode=display">\pmb{F}=\frac{1}{4\pi\epsilon_0}\iiint\rho(\pmb{r})\pmb{E}(\pmb{r})\mathrm{d}V\tag{7.1}</script><p>力矩为</p>
+<script type="math/tex; mode=display">\pmb{M}=\frac{1}{4\pi\epsilon_0}\iiint\rho(\pmb{r})\pmb{r}\times\pmb{E}(\pmb{r})dV\tag{7.2}</script><p>但当我们试图计算电荷体系本身产生的电场对该体系的作用时，上述公式不再适用，因为由库仑定律得出的电场分布在存在电荷的几何点处会出现发散现象。</p>
 <h2><span id="8enspensp静电场中的导体">§8&ensp;&ensp;静电场中的导体</span></h2><p>&ensp;&ensp;&ensp;&ensp;静电场中的导体有如下几个特点：<br>&ensp;&ensp;&ensp;&ensp;（1）外加的电场会使导体表面出现感应电荷，感应电荷产生的附加电场$\pmb{E}’=-\pmb{E}$，即导体内部的电场为0。<br>&ensp;&ensp;&ensp;&ensp;（2）由于导体内部的电场处处为0，所以导体内部的电势差处处为0，即导体时等势体。<br>&ensp;&ensp;&ensp;&ensp;（3）导体内部的电荷密度处处为0。可以通过（1）和高斯定理得到。<br>&ensp;&ensp;&ensp;&ensp;（4）导体的感应电荷只出现在导体表面，满足$\sigma_e=\epsilon_0 E$。其中$E$是导体表面外侧的场强大小.<br>&ensp;&ensp;&ensp;&ensp;（5）如果导体中存在空腔且空腔中存在电荷分布，则内表面上也会出现感应电荷。我们在导体外构造一个半径为$r$的高斯球面。由于导体上的感应电荷的和为0，则该高斯面上的电通量正比于导体所包含的电荷量，且电场分布与点电荷电场分布一致。这称为<strong>静电屏蔽</strong>现象。</p>
-<h2><span id="9enspensp电容和电容器">§9&ensp;&ensp;电容和电容器</span></h2><p>&ensp;&ensp;&ensp;&ensp;对于一个孤立的球形导体，假设其带电量为$Q$，半径为R，则其电势为$\phi=Q/4\pi\epsilon_0R$。可以看到，其带电量和电势之间存在一个只与其几何性质有关的比例系数<br>$$C=\frac{Q}{\phi}=4\pi\epsilon_0R\tag{9.1}$$<br>该比例系数称为该球形导体的<strong>电容</strong>。电容表示使一个导体升高单位电势所需的电荷量。利用导体的电容属性，我们可以制作电容器来储存电荷。</p>
-<p>&ensp;&ensp;&ensp;&ensp;实际的电容器通常由两块十分靠近又互相绝缘的导体板组成。<br>&ensp;&ensp;&ensp;&ensp;（1）平行板电容器。两块面积为$S$的金属板，距离为$d$。两板各自带电量$\pm Q$。则电荷面密度为$\sigma=Q/S$。如果忽略两金属板的边际效应，即将金属板当成无限大平板处理，则两板间电场为均匀电场，大小为<br>$$E=2\frac{\sigma}{2\epsilon_0}=\frac{Q}{\epsilon_0 S}\tag{9.2}$$</p>
-<p>板间电压为<br>$$U=Ed=\frac{Qd}{\epsilon_0S}\tag{9.3}$$</p>
-<p>则平行板电容器的电容为<br>$$C=\frac{Q}{U}=\frac{\epsilon_0S}{d}\tag{9.4}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;（2）两同心导体球壳，其半径分别为$R_A$和$R_B$，分别带电$\pm Q$。由高斯定理易得两球壳间的电场分布为<br>$$\pmb{E}=\frac{Q}{4\pi\epsilon_0 r^2}\tag{9.5}$$</p>
-<p>则两球壳间的电势差为<br>$$U=\int_{R_A}^{R_B}E\mathrm{d}r=\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{R_A}-\frac{1}{R_B}\right)\tag{9.6}$$</p>
-<p>则该种电容器的电容为<br>$$C=\frac{Q}{U}=4\pi\epsilon_0\frac{R_AR_B}{R_B-R_A}\tag{9.7}$$</p>
-<p>在$R_B\to\infty$，$R_A$保持有限值时，$C\to4\pi\epsilon_0 R_A$，这与孤立球形电容器的电容公式一致。</p>
-<p>&ensp;&ensp;&ensp;&ensp;（3）两同轴圆柱形导体壳。设其半径分别为$R_A$和$R_B$，柱长为$l$，沿母线方向的电荷线密度为$\lambda$。如果$l\gg(R_B-R_A)$，我们就可以忽略其边际效应。按高斯定理，两导体间场强为<br>$$E=\frac{\lambda R_A}{\epsilon_0r}\tag{9.8}$$</p>
-<p>则电势差为<br>$$U=\int_{R_A}^{R_B}E\mathrm{d}r=\frac{\lambda R_A}{\epsilon_0}\ln\frac{R_B}{R_A}\tag{9.9}$$</p>
-<p>则电容为<br>$$C=\frac{2\pi R_A l\lambda }{\frac{\lambda R_A}{\epsilon_0}\ln\frac{R_B}{R_A}}=\frac{2\pi \epsilon_0l}{\ln\frac{R_B}{R_A}}\tag{9.10}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;多个电容器连接时，总的电容满足</p>
+<h2><span id="9enspensp电容和电容器">§9&ensp;&ensp;电容和电容器</span></h2><p>&ensp;&ensp;&ensp;&ensp;对于一个孤立的球形导体，假设其带电量为$Q$，半径为R，则其电势为$\phi=Q/4\pi\epsilon_0R$。可以看到，其带电量和电势之间存在一个只与其几何性质有关的比例系数</p>
+<script type="math/tex; mode=display">C=\frac{Q}{\phi}=4\pi\epsilon_0R\tag{9.1}</script><p>该比例系数称为该球形导体的<strong>电容</strong>。电容表示使一个导体升高单位电势所需的电荷量。利用导体的电容属性，我们可以制作电容器来储存电荷。</p>
+<p>&ensp;&ensp;&ensp;&ensp;实际的电容器通常由两块十分靠近又互相绝缘的导体板组成。<br>&ensp;&ensp;&ensp;&ensp;（1）平行板电容器。两块面积为$S$的金属板，距离为$d$。两板各自带电量$\pm Q$。则电荷面密度为$\sigma=Q/S$。如果忽略两金属板的边际效应，即将金属板当成无限大平板处理，则两板间电场为均匀电场，大小为</p>
+<script type="math/tex; mode=display">E=2\frac{\sigma}{2\epsilon_0}=\frac{Q}{\epsilon_0 S}\tag{9.2}</script><p>板间电压为</p>
+<script type="math/tex; mode=display">U=Ed=\frac{Qd}{\epsilon_0S}\tag{9.3}</script><p>则平行板电容器的电容为</p>
+<script type="math/tex; mode=display">C=\frac{Q}{U}=\frac{\epsilon_0S}{d}\tag{9.4}</script><p>&ensp;&ensp;&ensp;&ensp;（2）两同心导体球壳，其半径分别为$R_A$和$R_B$，分别带电$\pm Q$。由高斯定理易得两球壳间的电场分布为</p>
+<script type="math/tex; mode=display">\pmb{E}=\frac{Q}{4\pi\epsilon_0 r^2}\tag{9.5}</script><p>则两球壳间的电势差为</p>
+<script type="math/tex; mode=display">U=\int_{R_A}^{R_B}E\mathrm{d}r=\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{R_A}-\frac{1}{R_B}\right)\tag{9.6}</script><p>则该种电容器的电容为</p>
+<script type="math/tex; mode=display">C=\frac{Q}{U}=4\pi\epsilon_0\frac{R_AR_B}{R_B-R_A}\tag{9.7}</script><p>在$R_B\to\infty$，$R_A$保持有限值时，$C\to4\pi\epsilon_0 R_A$，这与孤立球形电容器的电容公式一致。</p>
+<p>&ensp;&ensp;&ensp;&ensp;（3）两同轴圆柱形导体壳。设其半径分别为$R_A$和$R_B$，柱长为$l$，沿母线方向的电荷线密度为$\lambda$。如果$l\gg(R_B-R_A)$，我们就可以忽略其边际效应。按高斯定理，两导体间场强为</p>
+<script type="math/tex; mode=display">E=\frac{\lambda R_A}{\epsilon_0r}\tag{9.8}</script><p>则电势差为 </p>
+<script type="math/tex; mode=display">U=\int_{R_A}^{R_B}E\mathrm{d}r=\frac{\lambda R_A}{\epsilon_0}\ln\frac{R_B}{R_A}\tag{9.9}</script><p>则电容为 </p>
+<script type="math/tex; mode=display">C=\frac{2\pi R_A l\lambda }{\frac{\lambda R_A}{\epsilon_0}\ln\frac{R_B}{R_A}}=\frac{2\pi \epsilon_0l}{\ln\frac{R_B}{R_A}}\tag{9.10}</script><p>&ensp;&ensp;&ensp;&ensp;多个电容器连接时，总的电容满足</p>
 <ol>
-<li><p>$n$个电容器串联：<br>$$\frac{1}{C}=\sum_{i=1}^n\frac{1}{C_i}\tag{9.11}$$</p>
-</li>
-<li><p>$n$个电容器并联：<br>$$C=\sum_{i=1}^nC_i\tag{9.12}$$</p>
-</li>
+<li><p>$n$个电容器串联：</p>
+<script type="math/tex; mode=display">\frac{1}{C}=\sum_{i=1}^n\frac{1}{C_i}\tag{9.11}</script></li>
+<li><p>$n$个电容器并联：</p>
+<script type="math/tex; mode=display">C=\sum_{i=1}^nC_i\tag{9.12}</script></li>
 </ol>
 <h2><span id="10enspensp外电场中的电介质的极化">§10&ensp;&ensp;外电场中的电介质的极化</span></h2><p>&ensp;&ensp;&ensp;&ensp;对于绝缘的电介质，会在外场的作用下产生极化电荷，并在电介质内部产生去极化电场。与导体不同的是，感应电荷所产生的电场的效应是使得导体内部的电场完全消失，而极化电荷产生的去极化电场只能做到减弱电介质中的电场。由于组成电介质的分子、原子不同，产生极化的原因也不同。</p>
 <p>&ensp;&ensp;&ensp;&ensp;组成电介质的分子有两种：无极分子和有极分子。由于分子由带正负电荷的原子组成，平均来说，分子中存在由于原子电荷产生的正负电荷中心。对于部分分子，其正负电荷中心完全重合，在不外加电场的情况下可以完全看作一个不带电体。而另一部分分子的正负电荷中心并不完全重合，所以对外界表现为一个电偶极子。</p>
 <p>&ensp;&ensp;&ensp;&ensp;我们首先来讨论无极分子的极化。在外场的作用下，它的正负电荷中心会发生相对位移，导致其在电场方向上产生一个电偶极矩。宏观来看，无数个电偶极子首尾相连，则在电介质内部净电荷为$0$，只在电介质与外电场垂直的表面上出现电荷。这种极化称为<strong>位移极化</strong>，其效应是使得电介质表面上出现束缚面电荷$\sigma_e$。</p>
-<p>&ensp;&ensp;&ensp;&ensp;其次是有极分子的极化。虽然单个的分子具有电偶极矩，但大量的分子由于做无规则的热运动，其宏观的电偶极矩为零。在外加电场的影响下，每个分子受到一个力矩，最终的效果会使分子全体的电偶极矩有一个取向，沿外电场的方向。这个极化称为<strong>取向极化</strong>，其效果是使得电介质中产生一个体分布的电偶极矩。当然，存在取向极化的电介质中也会存在位移极化，但取向极化的效应比位移极化的效应大得多，大致在一个数量级左右。我们定义一个物理量：<strong>极化强度矢量</strong>$\pmb{P}$来描述电极化现象<br>$$\pmb{P}=\frac{\mathrm{d}\pmb{p}}{\mathrm{d}V}\tag{10.1}$$</p>
-<p>即单位体积中的电偶极矩。</p>
-<h2><span id="11enspensp极化电荷的电场">§11&ensp;&ensp;极化电荷的电场</span></h2><p>&ensp;&ensp;&ensp;&ensp;在理解了电介质在外加电场中产生的极化电荷的来源后，我们来研究其极化电荷所产生的电场.不过我们先来求其电势，再通过散度定理就可以得到电场分布.设电介质中的极化强度矢量为$\pmb{P}$<br>    $$\begin{align*}<br>        \phi&amp;=\frac{1}{4\pi\epsilon_0}\int_V\frac{(\pmb{r}’-\pmb{r})\cdot\mathrm{d}\pmb{p}}{|\pmb{r}’-\pmb{r}|^3}\<br>        &amp;=\frac{1}{4\pi\epsilon_0}\int_V\frac{(\pmb{r}’-\pmb{r})\cdot\pmb{P}(\pmb{r})}{|\pmb{r}’-\pmb{r}|^3}\mathrm{d}\tau<br>    \end{align*}$$<br>注意到<br>    $$\frac{\pmb{r}’-\pmb{r}}{|\pmb{r}’-\pmb{r}|^3}=\nabla\frac{1}{|\pmb{r}’-\pmb{r}|}$$<br>则通过分部积分和散度定理，上面的体积分可以化为<br>$$\begin{align*}<br>    \phi&amp;=\frac{1}{4\pi\epsilon_0}\int_V\pmb{P}\cdot\nabla\frac{1}{|\pmb{r}’-\pmb{r}|}\mathrm{d}\tau\<br>    &amp;=\frac{1}{4\pi\epsilon_0}\int_V\nabla\cdot\left(\frac{\pmb{P}}{|\pmb{r}’-\pmb{r}|}\right)\mathrm{d}\tau -\frac{1}{4\pi\epsilon_0}\int_V\frac{\nabla\cdot\pmb{P}}{|\pmb{r}’-\pmb{r}|}\mathrm{d}\tau\<br>    &amp;=\frac{1}{4\pi\epsilon_0}\left(\oint_{\partial V}\frac{\pmb{P}\cdot\hat{\pmb{n}}}{|\pmb{r}’-\pmb{r}|}\mathrm{d}S’-\int_V\frac{\nabla\cdot\pmb{P}}{|\pmb{r}’-\pmb{r}|}\mathrm{d}V’\right)\tag{11.1}<br>\end{align*}$$<br>其中，第一项可认为是由一个面电荷分布所产生的电势<br>    $$\sigma_e=\pmb{P}\cdot\hat{\pmb{n}}\tag{11.2}$$<br>$\hat{\pmb{n}}$为电介质表面的外法向单位矢量.第二项可看作一个体电荷分布所产生的电势<br>    $$\rho_e=-\nabla\cdot\pmb{P}\tag{11.3}$$<br>实际上，这个结论是与我们前面对极化的分析是一致的，前者就是束缚面电荷，后者是束缚体电荷.</p>
+<p>&ensp;&ensp;&ensp;&ensp;其次是有极分子的极化。虽然单个的分子具有电偶极矩，但大量的分子由于做无规则的热运动，其宏观的电偶极矩为零。在外加电场的影响下，每个分子受到一个力矩，最终的效果会使分子全体的电偶极矩有一个取向，沿外电场的方向。这个极化称为<strong>取向极化</strong>，其效果是使得电介质中产生一个体分布的电偶极矩。当然，存在取向极化的电介质中也会存在位移极化，但取向极化的效应比位移极化的效应大得多，大致在一个数量级左右。我们定义一个物理量：<strong>极化强度矢量</strong>$\pmb{P}$来描述电极化现象</p>
+<script type="math/tex; mode=display">\pmb{P}=\frac{\mathrm{d}\pmb{p}}{\mathrm{d}V}\tag{10.1}</script><p>即单位体积中的电偶极矩。</p>
+<h2><span id="11enspensp极化电荷的电场">§11&ensp;&ensp;极化电荷的电场</span></h2><p>&ensp;&ensp;&ensp;&ensp;在理解了电介质在外加电场中产生的极化电荷的来源后，我们来研究其极化电荷所产生的电场.不过我们先来求其电势，再通过散度定理就可以得到电场分布.设电介质中的极化强度矢量为$\pmb{P}$</p>
+<pre><code>$$\begin&#123;align*&#125;
+    \phi&amp;=\frac&#123;1&#125;&#123;4\pi\epsilon_0&#125;\int_V\frac&#123;(\pmb&#123;r&#125;&#39;-\pmb&#123;r&#125;)\cdot\mathrm&#123;d&#125;\pmb&#123;p&#125;&#125;&#123;|\pmb&#123;r&#125;&#39;-\pmb&#123;r&#125;|^3&#125;\\
+    &amp;=\frac&#123;1&#125;&#123;4\pi\epsilon_0&#125;\int_V\frac&#123;(\pmb&#123;r&#125;&#39;-\pmb&#123;r&#125;)\cdot\pmb&#123;P&#125;(\pmb&#123;r&#125;)&#125;&#123;|\pmb&#123;r&#125;&#39;-\pmb&#123;r&#125;|^3&#125;\mathrm&#123;d&#125;\tau
+\end&#123;align*&#125;$$
+</code></pre><p>注意到 </p>
+<pre><code>$$\frac&#123;\pmb&#123;r&#125;&#39;-\pmb&#123;r&#125;&#125;&#123;|\pmb&#123;r&#125;&#39;-\pmb&#123;r&#125;|^3&#125;=\nabla\frac&#123;1&#125;&#123;|\pmb&#123;r&#125;&#39;-\pmb&#123;r&#125;|&#125;$$
+</code></pre><p>则通过分部积分和散度定理，上面的体积分可以化为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \phi&=\frac{1}{4\pi\epsilon_0}\int_V\pmb{P}\cdot\nabla\frac{1}{|\pmb{r}'-\pmb{r}|}\mathrm{d}\tau\\
+    &=\frac{1}{4\pi\epsilon_0}\int_V\nabla\cdot\left(\frac{\pmb{P}}{|\pmb{r}'-\pmb{r}|}\right)\mathrm{d}\tau -\frac{1}{4\pi\epsilon_0}\int_V\frac{\nabla\cdot\pmb{P}}{|\pmb{r}'-\pmb{r}|}\mathrm{d}\tau\\
+    &=\frac{1}{4\pi\epsilon_0}\left(\oint_{\partial V}\frac{\pmb{P}\cdot\hat{\pmb{n}}}{|\pmb{r}'-\pmb{r}|}\mathrm{d}S'-\int_V\frac{\nabla\cdot\pmb{P}}{|\pmb{r}'-\pmb{r}|}\mathrm{d}V'\right)\tag{11.1}
+\end{align*}</script><p>其中，第一项可认为是由一个面电荷分布所产生的电势</p>
+<pre><code>$$\sigma_e=\pmb&#123;P&#125;\cdot\hat&#123;\pmb&#123;n&#125;&#125;\tag&#123;11.2&#125;$$
+</code></pre><p>$\hat{\pmb{n}}$为电介质表面的外法向单位矢量.第二项可看作一个体电荷分布所产生的电势</p>
+<pre><code>$$\rho_e=-\nabla\cdot\pmb&#123;P&#125;\tag&#123;11.3&#125;$$
+</code></pre><p>实际上，这个结论是与我们前面对极化的分析是一致的，前者就是束缚面电荷，后者是束缚体电荷.</p>
 <h2><span id="12enspensp极化强度矢量和电场的关系">§12&ensp;&ensp;极化强度矢量和电场的关系</span></h2><p>&ensp;&ensp;&ensp;&ensp;某一点的$\pmb{P}$是由该点的总电场$E=E_0+E’$决定的，其中$E_0$是自由电荷产生的电荷，$E’$是极化电荷产生的退极化电场.$\pmb{P}$和$\pmb{E}$的关系就是该电介质的极化规律.大致分为下面几类：</p>
 <ol>
-<li><p>各向同性电介质.该种电介质极化后内部的$\pmb{P}$和$\pmb{E}$的方向相同，大小成正比<br>$$ \pmb{P}=\chi_e\epsilon_0\pmb{E} \tag{12.1}$$<br>其中$\chi_e$称为极化率，由电介质的性质决定.当$\pmb{E}$较小时，极化率与$\pmb{E}$无关，则介质属于线性介质.当$\pmb{E}$很大时，极化率与$\pmb{E}$有关，介质转变为非线性介质.另外，对于存在取向极化的介质来说，如水、氨等，它们的极化率通常还和温度有关.</p>
+<li><p>各向同性电介质.该种电介质极化后内部的$\pmb{P}$和$\pmb{E}$的方向相同，大小成正比</p>
+<script type="math/tex; mode=display">\pmb{P}=\chi_e\epsilon_0\pmb{E} \tag{12.1}</script><p>其中$\chi_e$称为极化率，由电介质的性质决定.当$\pmb{E}$较小时，极化率与$\pmb{E}$无关，则介质属于线性介质.当$\pmb{E}$很大时，极化率与$\pmb{E}$有关，介质转变为非线性介质.另外，对于存在取向极化的介质来说，如水、氨等，它们的极化率通常还和温度有关.</p>
 </li>
-<li><p>各向异性电介质.在该种介质中，$\pmb{P}$和$\pmb{E}$的关系很复杂，极化率不再是一个标量，而是一个三阶张量<br>$$ P_i=\epsilon_0\chi_i^jE_j \tag{12.2}$$<br>一些晶体材料，如石英，就属于各向异性电介质.对于线性介质，极化率张量与$\pmb{E}$无关，且为对称张量<br>$$ \chi_i^j=\chi_j^i \tag{12.3}$$</p>
-</li>
+<li><p>各向异性电介质.在该种介质中，$\pmb{P}$和$\pmb{E}$的关系很复杂，极化率不再是一个标量，而是一个三阶张量</p>
+<script type="math/tex; mode=display">P_i=\epsilon_0\chi_i^jE_j \tag{12.2}</script><p>一些晶体材料，如石英，就属于各向异性电介质.对于线性介质，极化率张量与$\pmb{E}$无关，且为对称张量</p>
+<script type="math/tex; mode=display">\chi_i^j=\chi_j^i \tag{12.3}</script></li>
 <li><p>铁电体</p>
 </li>
 </ol>
-<h2><span id="13enspensp电介质与电容器">§13&ensp;&ensp;电介质与电容器</span></h2><p>&ensp;&ensp;&ensp;&ensp;在平行板电容器中充满极化率为$\chi_e$的各向同性线性电介质，两板上所带电荷的大小为$Q$.则在电介质与极板的接触面上会产生自由面电荷$\sigma_e$.有以下几个方程<br>$$ \begin{align*}<br>    E&amp;=E_0+E’\<br>    E_0&amp;=\sigma_0/\epsilon_0\<br>    &amp;=Q/\epsilon_0S\<br>    E’&amp;=-\sigma_e/\epsilon_0\<br>    &amp;=-P/\epsilon_0\<br>    &amp;=-\chi_eE<br>\end{align*} $$<br>解得<br>$$ E=\frac{Q}{(1+\chi_e)\epsilon_0S} \tag{13.1}$$<br>$$ \sigma_e=\chi_e\epsilon_0E=\frac{\chi_e}{1+\chi_e}\frac{Q}{S} \tag{13.2}$$<br>电容器的电容为<br>$$ \begin{align*}<br>    U&amp;=\int_0^dE\mathrm{d}r=\frac{Qd}{(1+\chi_e)\epsilon_0S}\<br>    C&amp;=\frac{Q}{U}=(1+\chi_e)\frac{\epsilon_0S}{d}\tag{13.3}<br>\end{align*} $$<br>定义介质的<strong>介电常数</strong>$\epsilon=(1+\chi_e)\epsilon_0$.</p>
+<h2><span id="13enspensp电介质与电容器">§13&ensp;&ensp;电介质与电容器</span></h2><p>&ensp;&ensp;&ensp;&ensp;在平行板电容器中充满极化率为$\chi_e$的各向同性线性电介质，两板上所带电荷的大小为$Q$.则在电介质与极板的接触面上会产生自由面电荷$\sigma_e$.有以下几个方程</p>
+<script type="math/tex; mode=display">\begin{align*}
+    E&=E_0+E'\\
+    E_0&=\sigma_0/\epsilon_0\\
+    &=Q/\epsilon_0S\\
+    E'&=-\sigma_e/\epsilon_0\\
+    &=-P/\epsilon_0\\
+    &=-\chi_eE
+\end{align*}</script><p>解得</p>
+<script type="math/tex; mode=display">E=\frac{Q}{(1+\chi_e)\epsilon_0S} \tag{13.1}</script><script type="math/tex; mode=display">\sigma_e=\chi_e\epsilon_0E=\frac{\chi_e}{1+\chi_e}\frac{Q}{S} \tag{13.2}</script><p>电容器的电容为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    U&=\int_0^dE\mathrm{d}r=\frac{Qd}{(1+\chi_e)\epsilon_0S}\\
+    C&=\frac{Q}{U}=(1+\chi_e)\frac{\epsilon_0S}{d}\tag{13.3}
+\end{align*}</script><p>定义介质的<strong>介电常数</strong>$\epsilon=(1+\chi_e)\epsilon_0$.</p>
 <p>&ensp;&ensp;&ensp;&ensp;可见，在电容器中充入电介质会使得电容器的电容增加.当储存的电荷量一致时，电容更大的电容器具有更强的耐压能力.</p>
-<h2><span id="14enspensp电介质中静电场的基本定理">§14&ensp;&ensp;电介质中静电场的基本定理</span></h2><p>&ensp;&ensp;&ensp;&ensp;与真空中的静电场所满足的高斯定理和环路定理类似的，我们来推到电介质中静电场所满足的基本定理.<br>$$ \begin{align*}<br>    \nabla\cdot\pmb{E}&amp;=\nabla\cdot\pmb{E}_0+\nabla\cdot\pmb{E}’\<br>    &amp;=\frac{\rho_0}{\epsilon_0}-\frac{\nabla\cdot\pmb{P}}{\epsilon_0}\<br>    &amp;=\frac{\rho+\rho_e}{\epsilon_0}\tag{14.1}<br>\end{align*} $$<br>可见，将高斯定理中出现的电荷改写为自由电荷和极化电荷的总和，就得到了介质中的高斯定理.</p>
-<p>&ensp;&ensp;&ensp;&ensp;引入辅助矢量电位移矢量$\pmb{D}=\epsilon_0\pmb{E}+\pmb{P}$，那么就有<br>$$ \nabla\cdot\pmb{D}=\rho_0\tag{14.2} $$<br>对于前面所提到的线性各向异性介质，我们有<br>$$ \pmb{D}=\epsilon\pmb{E} \tag{14.3}$$<br>使用电位移矢量的好处是高斯定理中只出现自由电荷，计算会较为简便.</p>
+<h2><span id="14enspensp电介质中静电场的基本定理">§14&ensp;&ensp;电介质中静电场的基本定理</span></h2><p>&ensp;&ensp;&ensp;&ensp;与真空中的静电场所满足的高斯定理和环路定理类似的，我们来推到电介质中静电场所满足的基本定理.</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\cdot\pmb{E}&=\nabla\cdot\pmb{E}_0+\nabla\cdot\pmb{E}'\\
+    &=\frac{\rho_0}{\epsilon_0}-\frac{\nabla\cdot\pmb{P}}{\epsilon_0}\\
+    &=\frac{\rho+\rho_e}{\epsilon_0}\tag{14.1}
+\end{align*}</script><p>可见，将高斯定理中出现的电荷改写为自由电荷和极化电荷的总和，就得到了介质中的高斯定理.</p>
+<p>&ensp;&ensp;&ensp;&ensp;引入辅助矢量电位移矢量$\pmb{D}=\epsilon_0\pmb{E}+\pmb{P}$，那么就有</p>
+<script type="math/tex; mode=display">\nabla\cdot\pmb{D}=\rho_0\tag{14.2}</script><p>对于前面所提到的线性各向异性介质，我们有</p>
+<script type="math/tex; mode=display">\pmb{D}=\epsilon\pmb{E} \tag{14.3}</script><p>使用电位移矢量的好处是高斯定理中只出现自由电荷，计算会较为简便.</p>
 <h2><span id="15enspensp边值关系">§15&ensp;&ensp;边值关系</span></h2><p>&ensp;&ensp;&ensp;&ensp;在研究电介质中的电场分布时，如果碰到介质的交界面时，$\pmb{E}$通常会发生突变.以下假设两种介质的介电常数分别为$\epsilon_1$和$\epsilon_2$，界面上有大小为$\sigma_e$的极化面电荷和$\sigma_0$的自由面电荷.</p>
-<p>&ensp;&ensp;&ensp;&ensp;在界面处作一圆柱形的高斯盒.取底面积趋于0的极限，可保证侧面与界面处处垂直.根据高斯定理<br>$$ \nabla\cdot\pmb{D}=(\pmb{D}_2-\pmb{D}_1)\cdot\hat{\pmb{n}}=\sigma_0\tag{15.1}$$<br>或<br>$$ \hat{\pmb{n}}\cdot(\pmb{E}_2-\pmb{E}_1)=\frac{\sigma_e}{\epsilon_0} \tag{15.2}$$<br>&ensp;&ensp;&ensp;&ensp;再构造一个无限小矩形回路，短边与界面垂直.根据环路定理<br>$$ \nabla\times(\pmb{E}_2-\pmb{E}_1)=0 $$<br>在边界处，散度可化为<br>$$ \hat{\pmb{n}}\times(\pmb{E}_2-\pmb{E}_1)=0\tag{15.3} $$</p>
-<h1><span id="第三章enspenspenspensp静电能"><center> 第三章&ensp;&ensp;&ensp;&ensp;静电能 </center></span></h1><h2><span id="16enspensp真空中的点电荷间的相互作用能">§16&ensp;&ensp;真空中的点电荷间的相互作用能</span></h2><p>&ensp;&ensp;&ensp;&ensp;设空间中$N$个点电荷分布，位矢为$q_i(i=1，\cdots，N)$，第$i$个电荷和第$j$个之间的间隔矢量记作$\pmb{r}<em>{ij}=-\pmb{r}</em>{ji}=\pmb{r}<em>j-\pmb{r}<em>i$.我们构建这个体系的过程可以看作从无穷远处一个个移入点电荷的过程.此时空间中已存在的电荷会对后来的电荷做功，因此这个体系储存了一定的能量.当移入第$j$个电荷时，前$j-1$个电荷对其做功<br>$$\begin{align*}<br>    W_j&amp;=\frac{q_j}{4\pi\epsilon_0}\sum</em>{i=1}^{j-1}\frac{q_j}{|\pmb{r}</em>{ij}|}\tag{16.1}<br>\end{align*}$$<br>再对所有的$j$求和<br>$$\begin{align*}<br>    W_e&amp;=\sum_{j=2}^N \frac{q_j}{4\pi\epsilon_0}\sum_{i=1}^{j-1}\frac{q_i}{|\pmb{r}<em>{ij}|}\<br>\end{align*}$$<br>可见，该相互作用能与电荷移入的顺序和路径无关，因为最后该能量只取决于空间中的电势分布.让我们将每两个电荷间的求和分为两半<br>$$\begin{align*}<br>    &amp;W_e=\frac{1}{8\pi\epsilon_0}\underset{(j\not=i)}{\sum</em>{i=1}^N \sum_{j=1}^N} \frac{q_iq_j}{|\pmb{r}_{ij}|} \tag{16.2}<br>\end{align*}$$</p>
-<h2><span id="17enspensp连续电荷分布的静电能">§17&ensp;&ensp;连续电荷分布的静电能</span></h2><p>&ensp;&ensp;&ensp;&ensp;首先讨论空间中只存在自由电荷的情况.设有体电荷分布$\rho(\pmb{r})$，将求和化为积分<br>$$ W_e =\frac{1}{2}\iiint_V\rho(\pmb{r})\phi’(\pmb{r})\mathrm{d}\tau\tag{17.1}$$<br>式中的电势是指除$\pmb{r}$处的电荷外所有电荷在该处所产生的电势的代数和。假设该处体积元为一球体，其上的电荷体密度可视作一常数。由球形均匀带电体球内的电势公式得<br>$$ \phi_{\mathrm{d}V}=\frac{\rho}{6\epsilon_0}(3R^2-r^2) $$<br>可见，当体积元的半径趋于0时，上式更快地趋于0，则<br>$$ \phi’(\pmb{r})=\phi(\pmb{r})-\phi_{dV}=\phi(\pmb{r}) \tag{17.2}$$<br>即式(17.1)中的电势可用该点的电势替代<br>$$ W_e=\frac{1}{2}\iiint_V\rho(\pmb{r})\phi(\pmb{r})\mathrm{d}\tau\tag{17.3} $$</p>
-<p>&ensp;&ensp;&ensp;&ensp;面电荷分布的情况类似。当我们关注一个面元在其自身处所产生的电场时，我们可以近似地使用无限大平面的电场公式。因为对于一个点来说，一个面元总是其高阶无穷大。所以它在自身处产生的电势为$\sigma a/2\epsilon_0$（$a$为面元的半径），该电势在$a\to 0$是同样快得趋于0。所以<br>$$ W_e=\frac{1}{2}\iint_S\sigma(\pmb{r})\phi(\pmb{r})\mathrm{d}a \tag{17.4}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;那对于线电荷分布来说呢？实际上，我们已经看到，对于体电荷分布来说，体元在其自身处产生的电势比其半径更快地趋于0；而对于面电荷分布，面元在其自身处所产生的电势与其半径一样快地趋于0。可以猜想，对于线电荷分布，线元在其自身处所产生的电势比起线度更慢地趋于0。与面元类似的，我们直接使用无限长带电棒的公式来计算<br>$$ E=\frac{\lambda}{2\pi\epsilon_0}\frac{1}{r} $$<br>$$ \begin{align*}<br>    \phi_{\mathrm{d}l}&amp;=\frac{\lambda}{2\pi\epsilon_0}\int_0^\infty \frac{\mathrm{d}r}{r}\<br>    &amp;=\frac{\lambda}{2\pi\epsilon_0}\ln r\Big|^\infty_0<br>\end{align*} $$<br>可见，线元在其自身处所产生的电势会按$\ln r$趋于无穷大。此外，我们甚至不能从总电势中减去线元本身产生的电势再来积分计算，这同样会出现发散的现象。</p>
-<h1><span id="第四章enspenspenspensp静磁场"><center> 第四章&ensp;&ensp;&ensp;&ensp;静磁场 </center></span></h1><h2><span id="18enspensp-洛伦兹力">§18&ensp;&ensp; 洛伦兹力</span></h2><p>&ensp;&ensp;&ensp;&ensp;两条平行放置的载流导线，如果电流方向相同，则会产生相互吸引的力，若方向相反，则会产生相互排斥的力。这与只存在电场的情况显然不同。这说明存在新的相互作用，称之为<strong>磁力</strong>。对应的有<strong>磁场</strong>。假如空间中同时存在电场和磁场，则一个运动电荷所收到的力为<br>$$ \pmb{F}=q(\pmb{E}+\pmb{v}\times\pmb{B})\tag{18.1} $$<br>这就是<strong>洛伦兹力定律</strong>。这是理论的一个基本原理，其正确性可由实验验证。</p>
-<p>&ensp;&ensp;&ensp;&ensp;由式（18.1）可以看出，磁力与粒子的速度时刻垂直，所以磁力并不能做功。即<br>$$ \mathrm{d}W=\pmb{F}_{\mathrm{mag}}\cdot\mathrm{d}\pmb{l}=q(\pmb{v}\times\pmb{B})\cdot\pmb{v}\mathrm{d}t=0 \tag{18.2} $$</p>
-<h2><span id="19enspensp电流与电流密度">§19&ensp;&ensp;电流与电流密度</span></h2><p>&ensp;&ensp;&ensp;&ensp;运动的电荷就会形成电流。电流的大小由单位时间内通过某一截面的总电荷量来衡量。如果导线中运动电荷的线密度为$\lambda$，其速度为$\pmb{v}$。电流实际上是一个矢量<br>$$ \pmb{I}=\lambda\pmb{v} \tag{19.1}$$<br>要注意的是，这里的$\lambda$是运动电荷的线密度。导线中可能存在更多的静止电荷，但它们对电流没有贡献，所以不计入我们这里所用的线密度。一条处于外磁场中的载流导线所受到的磁力为<br>$$ \begin{align*}<br>    \pmb{F}&amp;=\int(\pmb{v}\times\pmb{B})\mathrm{d}q\<br>    &amp;=\int (\pmb{v}\times\pmb{B})\lambda\mathrm{d}l\<br>    &amp;=\int(\pmb{I}\times\pmb{B})\mathrm{d}l\tag{19.2}<br>\end{align*}$$<br>如果电流的方向和$\mathrm{d}\pmb{l}$相同，则上式可以写为<br>$$ \pmb{F}=\int I(\mathrm{d}\pmb{l}\times\pmb{B})\tag{19.3}$$<br>由于一根载流导线上的电流通常是一个常量，则<br>$$ \pmb{F}=I\int\mathrm{d}\pmb{l}\times\pmb{B}\tag{19.4} $$<br>&ensp;&ensp;&ensp;&ensp;如果电流仅分布在介质表面上，我们就用<strong>面电流密度</strong>来描述。考虑一个宽度为$\mathrm{d}s$、与电流平行的宽带，如果带中的电流为$\mathrm{d} \pmb{I}$，则面电流密度为<br>$$ \pmb{K}=\frac{\mathrm{d}\pmb{I}}{\mathrm{d}s} \tag{19.5}$$<br>如果面运动电荷密度为$\sigma$，运动速度为$\pmb{v}$，则有<br>$$ \pmb{K}=\sigma\pmb{v}\tag{19.6} $$<br>面电流所受的磁场力为<br>$$ \pmb{F}=\iint (\pmb{K}\times\pmb{B})\mathrm{d}S\tag{19.7} $$<br>要注意的是，在有面电流密度存在时，$\pmb{B}$在介质面处也是不连续的。</p>
-<p>&ensp;&ensp;&ensp;&ensp;类似的，如果电流分布在三维空间中，我们就使用<strong>体电流密度</strong>来描述。考虑一个与该点电流方向垂直的无限小截面$\mathrm{d}S$，该点的电流为$\mathrm{d} \pmb{I}$，则体电流密度为<br>$$ \pmb{J}=\frac{\mathrm{d}\pmb{I}}{\mathrm{d}S} \tag{19.8}$$<br>同样地<br>$$ \pmb{J}=\rho\pmb{v} \tag{19.9}$$<br>其所受的磁场力为<br>$$ \pmb{F}=\iiint(\pmb{J}\times\pmb{B})\mathrm{d}V\tag{19.10} $$</p>
-<p>&ensp;&ensp;&ensp;&ensp;根据式（19.8），通过一个闭合曲面$S$的电流为<br>$$ I=\iint_S \pmb{J}\cdot\mathrm{d}\pmb{S}=\iiint_V(\nabla\cdot\pmb{J})\mathrm{d}V\tag{19.11}$$<br>后一个等号由高斯公式推出。由于电荷守恒定律，封闭曲面$S$上的电流代数和对应了其包围的体积$V$内的电荷的变化量，即<br>$$ I=-\frac{\mathrm{d}}{\mathrm{d}t}\iiint\rho \mathrm{d}V=\iiint(-\frac{\partial\rho}{\partial t})\mathrm{d}V\tag{19.12} $$<br>连立式（19.11）和（19.12），且它们对任意体积都成立，则有<br>$$ \nabla\cdot\pmb{J}+ \frac{\partial\rho}{\partial t}=0\tag{19.13}$$<br>这就是电荷守恒的数学表达式，称为<strong>连续性方程</strong>。</p>
-<h2><span id="20enspensp毕奥-萨伐尔定律">§20&ensp;&ensp;毕奥-萨伐尔定律</span></h2><p>&ensp;&ensp;&ensp;&ensp;当电流不随时间改变且各处的电荷密度也不变时，这种电流称为<strong>稳恒电流</strong>。这时连续性方程变为<br>$$ \nabla\cdot\pmb{J}=0\tag{20.1} $$</p>
-<p>&ensp;&ensp;&ensp;&ensp;一条稳恒线电流产生的磁场由<strong>毕奥-萨伐尔定律</strong>给出：<br>$$ \begin{align*}<br>    \pmb{B}(\pmb{r})&amp;=\frac{\mu_0}{4\pi}\int_L\frac{\pmb{I}\times(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^2} \mathrm{d}l’\<br>    &amp;=\frac{\mu_0}{4\pi}I\int_L\frac{\mathrm{d}\pmb{l}’\times(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^2}  \tag{20.2}<br>\end{align*}$$<br>其中的$\mu_0=4\pi\times10^{-7}\mathrm{N/A^2}$是一个新的普适常数，这是一个确定值，因为据此可以定义$\mathrm{A}$，$\mathrm{A}$又可定义$\mathrm{C}$。</p>
-<p>&ensp;&ensp;&ensp;&ensp;对于面电流分布和体电流分布，毕奥-萨伐尔定律分别为<br>$$ \pmb{B}(\pmb{r})=\frac{\mu_0}{4\pi}\iint\frac{\pmb{K}\times(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^2} \mathrm{d}S  \tag{20.3} $$<br>$$ \pmb{B}(\pmb{r})=\frac{\mu_0}{4\pi}\iiint\frac{\pmb{J}\times(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^2} \mathrm{d}V  \tag{20.4} $$<br>但是对于单运动电荷来说，并没有对应的公式。因为这时会产生辐射，或者相对论效应不可忽略。</p>
-<h2><span id="21enspensppmbb的散度与旋度">§21&ensp;&ensp;$\pmb{B}$的散度与旋度</span></h2><p>&ensp;&ensp;&ensp;&ensp;先来计算$\pmb{B}$的散度<br>$$ \begin{align*}<br>    \nabla\cdot\pmb{B}&amp;=\frac{\mu_0}{4\pi}\nabla\cdot\int_L\frac{\pmb{I}\times(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^2}\mathrm{d}l’\<br>    &amp;=\frac{\mu_0}{4\pi}\int_L\nabla\cdot\left(\pmb{I}\times\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2}\right) \mathrm{d}l’\<br>\end{align*} $$<br>其中<br>$$ \begin{align*}<br>    \nabla\cdot\left(\pmb{I}\times\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2}\right)&amp;=\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2}\cdot(\nabla\times \pmb{I})-\pmb{I}\cdot(\nabla\times\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2})\<br>    &amp;=0\tag{21.1}<br>\end{align*} $$<br>因为$\pmb{I}$与坐标$(x,y,z)$无关所以前者等于0。因此有<br>$$ \nabla\cdot\pmb{B}=0\tag{21.2} $$</p>
-<p>&ensp;&ensp;&ensp;&ensp;再来计算$\pmb{B}$的旋度。<br>$$ \begin{align*}<br>    \nabla\times\pmb{B}&amp;=\frac{\mu_0}{4\pi}\iiint_\Omega\nabla\times\left(\pmb{J}\times\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2}\right)\mathrm{d}V’<br>\end{align*} $$<br>其中<br>$$ \begin{align*}<br>    \nabla\times\left[\pmb{J}\times\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2}\right]&amp;=\pmb{J}(\nabla\cdot\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2})-(\pmb{J}\cdot\nabla)\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2}\<br>\end{align*} $$<br>第一项<br>$$ \pmb{J}(\nabla\cdot\frac{\pmb{r}-\pmb{r}’}{|\pmb{r}-\pmb{r}’|^2})=4\pi \pmb{J}\delta(\pmb{r}-\pmb{r}’) \tag{21.3}$$<br>考虑第二项的x坐标分量<br>$$ \begin{align*}<br>    (\pmb{J}\cdot\nabla)\frac{x-x’}{|\pmb{r}-\pmb{r}’|^3}&amp;=-(\pmb{J}\cdot\nabla’)\frac{x-x’}{|\pmb{r}-\pmb{r}’|^3}\<br>    &amp;=\frac{x-x’}{|\pmb{r}-\pmb{r}’|^3}(\nabla’\cdot \pmb{J})-\nabla’\cdot\left(\pmb{J}\frac{x-x’}{|\pmb{r}-\pmb{r}’|^3}\right)\<br>\end{align*}$$<br>因为稳恒电流电流的散度为0，所以<br>$$ (\pmb{J}\cdot\nabla)\frac{x-x’}{|\pmb{r}-\pmb{r}’|^3}=-\nabla’\cdot\left(\pmb{J}\frac{x-x’}{|\pmb{r}-\pmb{r}’|^3}\right) \tag{21.4}$$<br>所以<br>$$ \begin{align*}<br>    \nabla\times\pmb{B}&amp;=\frac{\mu_0}{4\pi}\iiint_V \left[ 4\pi \pmb{J}\delta(\pmb{r}-\pmb{r}’)+3\nabla’\cdot\left(\pmb{J}\frac{x-x’}{|\pmb{r}-\pmb{r}’|^3}\right)\right]\mathrm{d}V’\<br>    &amp;=\mu_0\pmb{J}+\frac{3\mu_0}{4\pi}\iint_{\partial V}\pmb{J}\frac{x-x’}{|\pmb{r}-\pmb{r}’|^3}\cdot \mathrm{d}\pmb{S}’\<br>    &amp;=\mu_0\pmb{J}\tag{21.5}<br>\end{align*} $$<br>我们将体积取为包含所有电流的区域，于是上式第二行第二项化作的面积分等于0，因为电流在边界面上为0.<br>使用斯托克斯定理，可以将它转化为积分形式<br>$$ \begin{align*}<br>    \iint_S(\nabla\times\pmb{B})\cdot\mathrm{d}\pmb{S}=\oint_{\partial S}\pmb{B}\cdot\mathrm{d}\pmb{l}&amp;=\mu_0\iint_S\pmb{J}\cdot\mathrm{d}\pmb{S}\tag{21.6}<br>\end{align*} $$<br>现在，$\iint_S\pmb{J}\cdot\mathrm{d}\pmb{S}$给出了穿过面$S$的所有电流的代数和$I$，所以<br>$$ \oint_{\partial S}\pmb{B}\cdot\mathrm{d}\pmb{l}=\mu_0 I \tag{21.7}$$<br>这就是<strong>安培定理的积分形式</strong>。</p>
-<h2><span id="22enspensp边界条件">§22&ensp;&ensp;边界条件</span></h2><p>&ensp;&ensp;&ensp;&ensp;与静电学类似的，磁场的边界条件为<br>$$ (\pmb{B}_2-\pmb{B}_1)\cdot\hat{\pmb{n}}=0\tag{22.1} $$</p>
-<p>$$ (\pmb{B}_2^{||}-\pmb{B}_1^{||})=\mu_0(\pmb{K}\times\hat{\pmb{n}}) \tag{22.2}$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;与标势相同，矢势在任何界面上都是连续的。但$\pmb{A}$的散度继承了磁场的不连续性：<br>$$ \frac{\partial \pmb{A}_2}{\partial \hat{\pmb{n}}}-\frac{\partial \pmb{A}_1}{\partial \hat{\pmb{n}}}=-\mu_0\pmb{K}\tag{22.3} $$</p>
-<h2><span id="23enspensp磁矢势">§23&ensp;&ensp;磁矢势</span></h2><p>&ensp;&ensp;&ensp;&ensp;与静电学类似地，由$\nabla\cdot\pmb{B}=0$我们可以引入一个矢量函数$\pmb{A}$，使$\pmb{B}=\nabla\times\pmb{A}$，因为一个矢量的旋度的散度总是等于0的。而对于安培定理<br>$$ \nabla\times\pmb{B}=\nabla\times(\nabla\times\pmb{A})=\nabla(\nabla\cdot\pmb{A})-\nabla^2\pmb{A} $$<br>注意到任意梯度的旋度都为0，所以我们可以向矢势上加上任意函数的梯度而不改变磁场，令$\pmb{A}\to\pmb{A}+\nabla\lambda$，其中<br>$$ \lambda=\nabla\cdot\pmb{A}\tag{23.1} $$<br>我们就得到了<br>$$ \nabla^2\pmb{A}=-\mu_0\pmb{J}\tag{23.2} $$<br>方程的解与毕奥-萨法尔定律类似<br>$$ \pmb{A}(\pmb{r})=\frac{\mu_0}{4\pi}\iiint \frac{\pmb{J}(\pmb{r}’)}{|\pmb{r}-\pmb{r}’|}\mathrm{d}V’\tag{23.3} $$<br>对于线电流和面电流<br>$$ \pmb{A}(\pmb{r})=\frac{\mu_0}{4\pi}\int\frac{\pmb{I}}{|\pmb{r}-\pmb{r}’|}\mathrm{d}l’\tag{23.4}$$<br>$$ \pmb{A}(\pmb{r})=\frac{\mu_0}{4\pi}\iint\frac{\pmb{K}}{|\pmb{r}-\pmb{r}’|}\mathrm{d}S’\tag{23.4} $$<br>&ensp;&ensp;&ensp;&ensp;我们知道标势也可以加上一个任意标量而不改变电场，现在矢势有类似的性质。这种性质称为<strong>规范对称性</strong>，这个被任意选取的标量函数称为<strong>规范</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在界面处作一圆柱形的高斯盒.取底面积趋于0的极限，可保证侧面与界面处处垂直.根据高斯定理</p>
+<script type="math/tex; mode=display">\nabla\cdot\pmb{D}=(\pmb{D}_2-\pmb{D}_1)\cdot\hat{\pmb{n}}=\sigma_0\tag{15.1}</script><p>或</p>
+<script type="math/tex; mode=display">\hat{\pmb{n}}\cdot(\pmb{E}_2-\pmb{E}_1)=\frac{\sigma_e}{\epsilon_0} \tag{15.2}</script><p>&ensp;&ensp;&ensp;&ensp;再构造一个无限小矩形回路，短边与界面垂直.根据环路定理</p>
+<script type="math/tex; mode=display">\nabla\times(\pmb{E}_2-\pmb{E}_1)=0</script><p>在边界处，散度可化为</p>
+<script type="math/tex; mode=display">\hat{\pmb{n}}\times(\pmb{E}_2-\pmb{E}_1)=0\tag{15.3}</script><h1><span id="第三章enspenspenspensp静电能"><center> 第三章&ensp;&ensp;&ensp;&ensp;静电能 </center></span></h1><h2><span id="16enspensp真空中的点电荷间的相互作用能">§16&ensp;&ensp;真空中的点电荷间的相互作用能</span></h2><p>&ensp;&ensp;&ensp;&ensp;设空间中$N$个点电荷分布，位矢为$q_i(i=1，\cdots，N)$，第$i$个电荷和第$j$个之间的间隔矢量记作$\pmb{r}_{ij}=-\pmb{r}_{ji}=\pmb{r}_j-\pmb{r}_i$.我们构建这个体系的过程可以看作从无穷远处一个个移入点电荷的过程.此时空间中已存在的电荷会对后来的电荷做功，因此这个体系储存了一定的能量.当移入第$j$个电荷时，前$j-1$个电荷对其做功</p>
+<script type="math/tex; mode=display">\begin{align*}
+    W_j&=\frac{q_j}{4\pi\epsilon_0}\sum_{i=1}^{j-1}\frac{q_j}{|\pmb{r}_{ij}|}\tag{16.1}
+\end{align*}</script><p>再对所有的$j$求和</p>
+<script type="math/tex; mode=display">\begin{align*}
+    W_e&=\sum_{j=2}^N \frac{q_j}{4\pi\epsilon_0}\sum_{i=1}^{j-1}\frac{q_i}{|\pmb{r}_{ij}|}\\
+\end{align*}</script><p>可见，该相互作用能与电荷移入的顺序和路径无关，因为最后该能量只取决于空间中的电势分布.让我们将每两个电荷间的求和分为两半</p>
+<script type="math/tex; mode=display">\begin{align*}
+    &W_e=\frac{1}{8\pi\epsilon_0}\underset{(j\not=i)}{\sum_{i=1}^N \sum_{j=1}^N} \frac{q_iq_j}{|\pmb{r}_{ij}|} \tag{16.2}
+\end{align*}</script><h2><span id="17enspensp连续电荷分布的静电能">§17&ensp;&ensp;连续电荷分布的静电能</span></h2><p>&ensp;&ensp;&ensp;&ensp;首先讨论空间中只存在自由电荷的情况.设有体电荷分布$\rho(\pmb{r})$，将求和化为积分</p>
+<script type="math/tex; mode=display">W_e =\frac{1}{2}\iiint_V\rho(\pmb{r})\phi'(\pmb{r})\mathrm{d}\tau\tag{17.1}</script><p>式中的电势是指除$\pmb{r}$处的电荷外所有电荷在该处所产生的电势的代数和。假设该处体积元为一球体，其上的电荷体密度可视作一常数。由球形均匀带电体球内的电势公式得</p>
+<script type="math/tex; mode=display">\phi_{\mathrm{d}V}=\frac{\rho}{6\epsilon_0}(3R^2-r^2)</script><p>可见，当体积元的半径趋于0时，上式更快地趋于0，则</p>
+<script type="math/tex; mode=display">\phi'(\pmb{r})=\phi(\pmb{r})-\phi_{dV}=\phi(\pmb{r}) \tag{17.2}</script><p>即式(17.1)中的电势可用该点的电势替代</p>
+<script type="math/tex; mode=display">W_e=\frac{1}{2}\iiint_V\rho(\pmb{r})\phi(\pmb{r})\mathrm{d}\tau\tag{17.3}</script><p>&ensp;&ensp;&ensp;&ensp;面电荷分布的情况类似。当我们关注一个面元在其自身处所产生的电场时，我们可以近似地使用无限大平面的电场公式。因为对于一个点来说，一个面元总是其高阶无穷大。所以它在自身处产生的电势为$\sigma a/2\epsilon_0$（$a$为面元的半径），该电势在$a\to 0$是同样快得趋于0。所以</p>
+<script type="math/tex; mode=display">W_e=\frac{1}{2}\iint_S\sigma(\pmb{r})\phi(\pmb{r})\mathrm{d}a \tag{17.4}</script><p>&ensp;&ensp;&ensp;&ensp;那对于线电荷分布来说呢？实际上，我们已经看到，对于体电荷分布来说，体元在其自身处产生的电势比其半径更快地趋于0；而对于面电荷分布，面元在其自身处所产生的电势与其半径一样快地趋于0。可以猜想，对于线电荷分布，线元在其自身处所产生的电势比起线度更慢地趋于0。与面元类似的，我们直接使用无限长带电棒的公式来计算</p>
+<script type="math/tex; mode=display">E=\frac{\lambda}{2\pi\epsilon_0}\frac{1}{r}</script><script type="math/tex; mode=display">\begin{align*}
+    \phi_{\mathrm{d}l}&=\frac{\lambda}{2\pi\epsilon_0}\int_0^\infty \frac{\mathrm{d}r}{r}\\
+    &=\frac{\lambda}{2\pi\epsilon_0}\ln r\Big|^\infty_0
+\end{align*}</script><p>可见，线元在其自身处所产生的电势会按$\ln r$趋于无穷大。此外，我们甚至不能从总电势中减去线元本身产生的电势再来积分计算，这同样会出现发散的现象。</p>
+<h1><span id="第四章enspenspenspensp静磁场"><center> 第四章&ensp;&ensp;&ensp;&ensp;静磁场 </center></span></h1><h2><span id="18enspensp-洛伦兹力">§18&ensp;&ensp; 洛伦兹力</span></h2><p>&ensp;&ensp;&ensp;&ensp;两条平行放置的载流导线，如果电流方向相同，则会产生相互吸引的力，若方向相反，则会产生相互排斥的力。这与只存在电场的情况显然不同。这说明存在新的相互作用，称之为<strong>磁力</strong>。对应的有<strong>磁场</strong>。假如空间中同时存在电场和磁场，则一个运动电荷所收到的力为</p>
+<script type="math/tex; mode=display">\pmb{F}=q(\pmb{E}+\pmb{v}\times\pmb{B})\tag{18.1}</script><p>这就是<strong>洛伦兹力定律</strong>。这是理论的一个基本原理，其正确性可由实验验证。</p>
+<p>&ensp;&ensp;&ensp;&ensp;由式（18.1）可以看出，磁力与粒子的速度时刻垂直，所以磁力并不能做功。即</p>
+<script type="math/tex; mode=display">\mathrm{d}W=\pmb{F}_{\mathrm{mag}}\cdot\mathrm{d}\pmb{l}=q(\pmb{v}\times\pmb{B})\cdot\pmb{v}\mathrm{d}t=0 \tag{18.2}</script><h2><span id="19enspensp电流与电流密度">§19&ensp;&ensp;电流与电流密度</span></h2><p>&ensp;&ensp;&ensp;&ensp;运动的电荷就会形成电流。电流的大小由单位时间内通过某一截面的总电荷量来衡量。如果导线中运动电荷的线密度为$\lambda$，其速度为$\pmb{v}$。电流实际上是一个矢量</p>
+<script type="math/tex; mode=display">\pmb{I}=\lambda\pmb{v} \tag{19.1}</script><p>要注意的是，这里的$\lambda$是运动电荷的线密度。导线中可能存在更多的静止电荷，但它们对电流没有贡献，所以不计入我们这里所用的线密度。一条处于外磁场中的载流导线所受到的磁力为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{F}&=\int(\pmb{v}\times\pmb{B})\mathrm{d}q\\
+    &=\int (\pmb{v}\times\pmb{B})\lambda\mathrm{d}l\\
+    &=\int(\pmb{I}\times\pmb{B})\mathrm{d}l\tag{19.2}
+\end{align*}</script><p>如果电流的方向和$\mathrm{d}\pmb{l}$相同，则上式可以写为</p>
+<script type="math/tex; mode=display">\pmb{F}=\int I(\mathrm{d}\pmb{l}\times\pmb{B})\tag{19.3}</script><p>由于一根载流导线上的电流通常是一个常量，则</p>
+<script type="math/tex; mode=display">\pmb{F}=I\int\mathrm{d}\pmb{l}\times\pmb{B}\tag{19.4}</script><p>&ensp;&ensp;&ensp;&ensp;如果电流仅分布在介质表面上，我们就用<strong>面电流密度</strong>来描述。考虑一个宽度为$\mathrm{d}s$、与电流平行的宽带，如果带中的电流为$\mathrm{d} \pmb{I}$，则面电流密度为</p>
+<script type="math/tex; mode=display">\pmb{K}=\frac{\mathrm{d}\pmb{I}}{\mathrm{d}s} \tag{19.5}</script><p>如果面运动电荷密度为$\sigma$，运动速度为$\pmb{v}$，则有</p>
+<script type="math/tex; mode=display">\pmb{K}=\sigma\pmb{v}\tag{19.6}</script><p>面电流所受的磁场力为</p>
+<script type="math/tex; mode=display">\pmb{F}=\iint (\pmb{K}\times\pmb{B})\mathrm{d}S\tag{19.7}</script><p>要注意的是，在有面电流密度存在时，$\pmb{B}$在介质面处也是不连续的。</p>
+<p>&ensp;&ensp;&ensp;&ensp;类似的，如果电流分布在三维空间中，我们就使用<strong>体电流密度</strong>来描述。考虑一个与该点电流方向垂直的无限小截面$\mathrm{d}S$，该点的电流为$\mathrm{d} \pmb{I}$，则体电流密度为</p>
+<script type="math/tex; mode=display">\pmb{J}=\frac{\mathrm{d}\pmb{I}}{\mathrm{d}S} \tag{19.8}</script><p>同样地</p>
+<script type="math/tex; mode=display">\pmb{J}=\rho\pmb{v} \tag{19.9}</script><p>其所受的磁场力为</p>
+<script type="math/tex; mode=display">\pmb{F}=\iiint(\pmb{J}\times\pmb{B})\mathrm{d}V\tag{19.10}</script><p>&ensp;&ensp;&ensp;&ensp;根据式（19.8），通过一个闭合曲面$S$的电流为</p>
+<script type="math/tex; mode=display">I=\iint_S \pmb{J}\cdot\mathrm{d}\pmb{S}=\iiint_V(\nabla\cdot\pmb{J})\mathrm{d}V\tag{19.11}</script><p>后一个等号由高斯公式推出。由于电荷守恒定律，封闭曲面$S$上的电流代数和对应了其包围的体积$V$内的电荷的变化量，即</p>
+<script type="math/tex; mode=display">I=-\frac{\mathrm{d}}{\mathrm{d}t}\iiint\rho \mathrm{d}V=\iiint(-\frac{\partial\rho}{\partial t})\mathrm{d}V\tag{19.12}</script><p>连立式（19.11）和（19.12），且它们对任意体积都成立，则有</p>
+<script type="math/tex; mode=display">\nabla\cdot\pmb{J}+ \frac{\partial\rho}{\partial t}=0\tag{19.13}</script><p>这就是电荷守恒的数学表达式，称为<strong>连续性方程</strong>。</p>
+<h2><span id="20enspensp毕奥-萨伐尔定律">§20&ensp;&ensp;毕奥-萨伐尔定律</span></h2><p>&ensp;&ensp;&ensp;&ensp;当电流不随时间改变且各处的电荷密度也不变时，这种电流称为<strong>稳恒电流</strong>。这时连续性方程变为</p>
+<script type="math/tex; mode=display">\nabla\cdot\pmb{J}=0\tag{20.1}</script><p>&ensp;&ensp;&ensp;&ensp;一条稳恒线电流产生的磁场由<strong>毕奥-萨伐尔定律</strong>给出：</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{B}(\pmb{r})&=\frac{\mu_0}{4\pi}\int_L\frac{\pmb{I}\times(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^2} \mathrm{d}l'\\
+    &=\frac{\mu_0}{4\pi}I\int_L\frac{\mathrm{d}\pmb{l}'\times(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^2}  \tag{20.2}
+\end{align*}</script><p>其中的$\mu_0=4\pi\times10^{-7}\mathrm{N/A^2}$是一个新的普适常数，这是一个确定值，因为据此可以定义$\mathrm{A}$，$\mathrm{A}$又可定义$\mathrm{C}$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;对于面电流分布和体电流分布，毕奥-萨伐尔定律分别为</p>
+<script type="math/tex; mode=display">\pmb{B}(\pmb{r})=\frac{\mu_0}{4\pi}\iint\frac{\pmb{K}\times(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^2} \mathrm{d}S  \tag{20.3}</script><script type="math/tex; mode=display">\pmb{B}(\pmb{r})=\frac{\mu_0}{4\pi}\iiint\frac{\pmb{J}\times(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^2} \mathrm{d}V  \tag{20.4}</script><p>但是对于单运动电荷来说，并没有对应的公式。因为这时会产生辐射，或者相对论效应不可忽略。</p>
+<h2><span id="21enspensppmbb的散度与旋度">§21&ensp;&ensp;$\pmb{B}$的散度与旋度</span></h2><p>&ensp;&ensp;&ensp;&ensp;先来计算$\pmb{B}$的散度</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\cdot\pmb{B}&=\frac{\mu_0}{4\pi}\nabla\cdot\int_L\frac{\pmb{I}\times(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^2}\mathrm{d}l'\\
+    &=\frac{\mu_0}{4\pi}\int_L\nabla\cdot\left(\pmb{I}\times\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2}\right) \mathrm{d}l'\\
+\end{align*}</script><p>其中</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\cdot\left(\pmb{I}\times\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2}\right)&=\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2}\cdot(\nabla\times \pmb{I})-\pmb{I}\cdot(\nabla\times\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2})\\
+    &=0\tag{21.1}
+\end{align*}</script><p>因为$\pmb{I}$与坐标$(x,y,z)$无关所以前者等于0。因此有</p>
+<script type="math/tex; mode=display">\nabla\cdot\pmb{B}=0\tag{21.2}</script><p>&ensp;&ensp;&ensp;&ensp;再来计算$\pmb{B}$的旋度。</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\times\pmb{B}&=\frac{\mu_0}{4\pi}\iiint_\Omega\nabla\times\left(\pmb{J}\times\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2}\right)\mathrm{d}V'
+\end{align*}</script><p>其中</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\times\left[\pmb{J}\times\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2}\right]&=\pmb{J}(\nabla\cdot\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2})-(\pmb{J}\cdot\nabla)\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2}\\
+\end{align*}</script><p>第一项</p>
+<script type="math/tex; mode=display">\pmb{J}(\nabla\cdot\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|^2})=4\pi \pmb{J}\delta(\pmb{r}-\pmb{r}') \tag{21.3}</script><p>考虑第二项的x坐标分量</p>
+<script type="math/tex; mode=display">\begin{align*}
+    (\pmb{J}\cdot\nabla)\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}&=-(\pmb{J}\cdot\nabla')\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}\\
+    &=\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}(\nabla'\cdot \pmb{J})-\nabla'\cdot\left(\pmb{J}\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}\right)\\
+\end{align*}</script><p>因为稳恒电流电流的散度为0，所以</p>
+<script type="math/tex; mode=display">(\pmb{J}\cdot\nabla)\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}=-\nabla'\cdot\left(\pmb{J}\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}\right) \tag{21.4}</script><p>所以</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\times\pmb{B}&=\frac{\mu_0}{4\pi}\iiint_V \left[ 4\pi \pmb{J}\delta(\pmb{r}-\pmb{r}')+3\nabla'\cdot\left(\pmb{J}\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}\right)\right]\mathrm{d}V'\\
+    &=\mu_0\pmb{J}+\frac{3\mu_0}{4\pi}\iint_{\partial V}\pmb{J}\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}\cdot \mathrm{d}\pmb{S}'\\
+    &=\mu_0\pmb{J}\tag{21.5}
+\end{align*}</script><p>我们将体积取为包含所有电流的区域，于是上式第二行第二项化作的面积分等于0，因为电流在边界面上为0.<br>使用斯托克斯定理，可以将它转化为积分形式</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \iint_S(\nabla\times\pmb{B})\cdot\mathrm{d}\pmb{S}=\oint_{\partial S}\pmb{B}\cdot\mathrm{d}\pmb{l}&=\mu_0\iint_S\pmb{J}\cdot\mathrm{d}\pmb{S}\tag{21.6}
+\end{align*}</script><p>现在，$\iint_S\pmb{J}\cdot\mathrm{d}\pmb{S}$给出了穿过面$S$的所有电流的代数和$I$，所以</p>
+<script type="math/tex; mode=display">\oint_{\partial S}\pmb{B}\cdot\mathrm{d}\pmb{l}=\mu_0 I \tag{21.7}</script><p>这就是<strong>安培定理的积分形式</strong>。</p>
+<h2><span id="22enspensp边界条件">§22&ensp;&ensp;边界条件</span></h2><p>&ensp;&ensp;&ensp;&ensp;与静电学类似的，磁场的边界条件为</p>
+<script type="math/tex; mode=display">(\pmb{B}_2-\pmb{B}_1)\cdot\hat{\pmb{n}}=0\tag{22.1}</script><script type="math/tex; mode=display">(\pmb{B}_2^{||}-\pmb{B}_1^{||})=\mu_0(\pmb{K}\times\hat{\pmb{n}}) \tag{22.2}</script><p>&ensp;&ensp;&ensp;&ensp;与标势相同，矢势在任何界面上都是连续的。但$\pmb{A}$的散度继承了磁场的不连续性：</p>
+<script type="math/tex; mode=display">\frac{\partial \pmb{A}_2}{\partial \hat{\pmb{n}}}-\frac{\partial \pmb{A}_1}{\partial \hat{\pmb{n}}}=-\mu_0\pmb{K}\tag{22.3}</script><h2><span id="23enspensp磁矢势">§23&ensp;&ensp;磁矢势</span></h2><p>&ensp;&ensp;&ensp;&ensp;与静电学类似地，由$\nabla\cdot\pmb{B}=0$我们可以引入一个矢量函数$\pmb{A}$，使$\pmb{B}=\nabla\times\pmb{A}$，因为一个矢量的旋度的散度总是等于0的。而对于安培定理</p>
+<script type="math/tex; mode=display">\nabla\times\pmb{B}=\nabla\times(\nabla\times\pmb{A})=\nabla(\nabla\cdot\pmb{A})-\nabla^2\pmb{A}</script><p>注意到任意梯度的旋度都为0，所以我们可以向矢势上加上任意函数的梯度而不改变磁场，令$\pmb{A}\to\pmb{A}+\nabla\lambda$，其中</p>
+<script type="math/tex; mode=display">\lambda=\nabla\cdot\pmb{A}\tag{23.1}</script><p>我们就得到了</p>
+<script type="math/tex; mode=display">\nabla^2\pmb{A}=-\mu_0\pmb{J}\tag{23.2}</script><p>方程的解与毕奥-萨法尔定律类似</p>
+<script type="math/tex; mode=display">\pmb{A}(\pmb{r})=\frac{\mu_0}{4\pi}\iiint \frac{\pmb{J}(\pmb{r}')}{|\pmb{r}-\pmb{r}'|}\mathrm{d}V'\tag{23.3}</script><p>对于线电流和面电流</p>
+<script type="math/tex; mode=display">\pmb{A}(\pmb{r})=\frac{\mu_0}{4\pi}\int\frac{\pmb{I}}{|\pmb{r}-\pmb{r}'|}\mathrm{d}l'\tag{23.4}</script><script type="math/tex; mode=display">\pmb{A}(\pmb{r})=\frac{\mu_0}{4\pi}\iint\frac{\pmb{K}}{|\pmb{r}-\pmb{r}'|}\mathrm{d}S'\tag{23.4}</script><p>&ensp;&ensp;&ensp;&ensp;我们知道标势也可以加上一个任意标量而不改变电场，现在矢势有类似的性质。这种性质称为<strong>规范对称性</strong>，这个被任意选取的标量函数称为<strong>规范</strong>。</p>
 <p>&ensp;&ensp;&ensp;&ensp;矢势与标势一样，都不是直接观测量。</p>
-<h2><span id="24enspensp磁偶极子">§24&ensp;&ensp;磁偶极子</span></h2><p>&ensp;&ensp;&ensp;&ensp;与静电学类似的，一个理想的无限小环形电流可以看作一个理想的磁偶极子。它在外磁场中的受力和力矩都有较简单的形式。设在原点处$xOy平面内$有一环形电流，大小为$I$，半径为 $R$，先来计算它在$\pmb{r}$处产生的的势<br>$$ \begin{align*}<br>    \pmb{A}&amp;=\frac{\mu_0}{4\pi}I\oint_L\frac{\mathrm{d}\pmb{l}’}{|\pmb{r}-\pmb{r}’|}\tag{24.1}\<br>\end{align*} $$<br>在远场近似下$r\gg r’$，有<br>$$ \frac{1}{|\pmb{r}-\pmb{r}’|}\approx\frac{1}{r}+\frac{\pmb{r}\cdot\pmb{r}’}{r^3}\tag{24.2}$$<br>代入<br>$$ \begin{align*}<br>    \pmb{A}&amp;=\frac{\mu_0I}{4\pi}\oint_L\left(\frac{1}{r}+\frac{\pmb{r}\cdot\pmb{r}’}{r^3}\right)\mathrm{d}\pmb{l}’\<br>    &amp;=\frac{\mu_0I}{4\pi r^3}\oint_L(\pmb{r}\cdot\pmb{r}’)\mathrm{d}\pmb{l}’\<br>    &amp;=\frac{\mu_0I}{4\pi r^3}\oint_L(xR\cos\theta+yR\sin\theta)(\hat{\pmb{z}}\times \pmb{r})\mathrm{d}\theta\<br>    &amp;=\frac{\mu_0R^2I}{4\pi r^3}\oint_L(x\cos\theta+y\sin\theta)(\cos\theta \hat{\pmb{y}}-\sin\theta\hat{\pmb{x}})\mathrm{d}\theta\<br>    &amp;=\frac{\mu_0R^2I}{4r^3}(-y\hat{\pmb{x}}+x\hat{\pmb{y}})\<br>    &amp;=\frac{\mu_0R^2I}{4r^3}\hat{\pmb{z}}\times \pmb{r}\tag{24.3}<br>\end{align*}  $$<br>我们定义该环形电流的<strong>磁偶极矩</strong>为<br>$$ \pmb{m}=SI\hat{\pmb{n}}=\pi R^2I\hat{\pmb{z}}\tag{24.4} $$<br>则式（24.3）可以改写为<br>$$ \pmb{A}=\frac{\mu_0}{4\pi}\frac{\pmb{m}\times\pmb{r}}{r^3} \tag{24.5}$$<br>进一步可求出空间中的磁场分布<br>$$ \begin{align*}<br>    \pmb{B}&amp;=\nabla\times \pmb{A}\<br>    &amp;=\frac{\mu_0}{4\pi}\nabla\times\left(\frac{\pmb{m}\times\pmb{r}}{r^3}\right)\<br>    &amp;=-\frac{\mu_0}{4\pi}\left[\frac{\pmb{m}}{r^3}-\frac{3(\pmb{m}\cdot\pmb{r})\hat{\pmb{r}}}{r^4}\right]\tag{24.6}<br>\end{align*} $$<br>可以看到，一个理想的磁偶极子的场的形式与一个理想的电偶极子的完全相同！这揭示了电磁场深层的统一性。类似的，一个磁偶极子在外磁场中的受力为<br>$$ \pmb{F}=\nabla(\pmb{m}\cdot\pmb{B})\tag{24.7} $$<br>所受力矩为<br>$$ \pmb{M}=\pmb{m}\times\pmb{B} \tag{24.8}$$</p>
-<h1><span id="第五章enspenspenspensp介质中的磁场"><center> 第五章&ensp;&ensp;&ensp;&ensp;介质中的磁场 </center></span></h1><h2><span id="25enspensp顺磁体-抗磁体">§25&ensp;&ensp;顺磁体、抗磁体</span></h2><p>&ensp;&ensp;&ensp;&ensp;在原子级别上，围绕原子旋转的电子和电子的自旋可以看作微小的环形电流。这些环形电流如此之小，以至于在宏观来看它们都是理想的磁偶极子。通常，由于原子（分子）的热运动，这些磁偶极子相互抵消。但在施加外磁场后，这些磁偶极子会出现有序的排列，介质因此显磁性，或称为<strong>磁化</strong>。</p>
+<h2><span id="24enspensp磁偶极子">§24&ensp;&ensp;磁偶极子</span></h2><p>&ensp;&ensp;&ensp;&ensp;与静电学类似的，一个理想的无限小环形电流可以看作一个理想的磁偶极子。它在外磁场中的受力和力矩都有较简单的形式。设在原点处$xOy平面内$有一环形电流，大小为$I$，半径为 $R$，先来计算它在$\pmb{r}$处产生的的势</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{A}&=\frac{\mu_0}{4\pi}I\oint_L\frac{\mathrm{d}\pmb{l}'}{|\pmb{r}-\pmb{r}'|}\tag{24.1}\\
+\end{align*}</script><p>在远场近似下$r\gg r’$，有</p>
+<script type="math/tex; mode=display">\frac{1}{|\pmb{r}-\pmb{r}'|}\approx\frac{1}{r}+\frac{\pmb{r}\cdot\pmb{r}'}{r^3}\tag{24.2}</script><p>代入</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{A}&=\frac{\mu_0I}{4\pi}\oint_L\left(\frac{1}{r}+\frac{\pmb{r}\cdot\pmb{r}'}{r^3}\right)\mathrm{d}\pmb{l}'\\
+    &=\frac{\mu_0I}{4\pi r^3}\oint_L(\pmb{r}\cdot\pmb{r}')\mathrm{d}\pmb{l}'\\
+    &=\frac{\mu_0I}{4\pi r^3}\oint_L(xR\cos\theta+yR\sin\theta)(\hat{\pmb{z}}\times \pmb{r})\mathrm{d}\theta\\
+    &=\frac{\mu_0R^2I}{4\pi r^3}\oint_L(x\cos\theta+y\sin\theta)(\cos\theta \hat{\pmb{y}}-\sin\theta\hat{\pmb{x}})\mathrm{d}\theta\\
+    &=\frac{\mu_0R^2I}{4r^3}(-y\hat{\pmb{x}}+x\hat{\pmb{y}})\\
+    &=\frac{\mu_0R^2I}{4r^3}\hat{\pmb{z}}\times \pmb{r}\tag{24.3}
+\end{align*}</script><p>我们定义该环形电流的<strong>磁偶极矩</strong>为 </p>
+<script type="math/tex; mode=display">\pmb{m}=SI\hat{\pmb{n}}=\pi R^2I\hat{\pmb{z}}\tag{24.4}</script><p>则式（24.3）可以改写为</p>
+<script type="math/tex; mode=display">\pmb{A}=\frac{\mu_0}{4\pi}\frac{\pmb{m}\times\pmb{r}}{r^3} \tag{24.5}</script><p>进一步可求出空间中的磁场分布</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{B}&=\nabla\times \pmb{A}\\
+    &=\frac{\mu_0}{4\pi}\nabla\times\left(\frac{\pmb{m}\times\pmb{r}}{r^3}\right)\\
+    &=-\frac{\mu_0}{4\pi}\left[\frac{\pmb{m}}{r^3}-\frac{3(\pmb{m}\cdot\pmb{r})\hat{\pmb{r}}}{r^4}\right]\tag{24.6}
+\end{align*}</script><p>可以看到，一个理想的磁偶极子的场的形式与一个理想的电偶极子的完全相同！这揭示了电磁场深层的统一性。类似的，一个磁偶极子在外磁场中的受力为</p>
+<script type="math/tex; mode=display">\pmb{F}=\nabla(\pmb{m}\cdot\pmb{B})\tag{24.7}</script><p>所受力矩为</p>
+<script type="math/tex; mode=display">\pmb{M}=\pmb{m}\times\pmb{B} \tag{24.8}</script><h1><span id="第五章enspenspenspensp介质中的磁场"><center> 第五章&ensp;&ensp;&ensp;&ensp;介质中的磁场 </center></span></h1><h2><span id="25enspensp顺磁体-抗磁体">§25&ensp;&ensp;顺磁体、抗磁体</span></h2><p>&ensp;&ensp;&ensp;&ensp;在原子级别上，围绕原子旋转的电子和电子的自旋可以看作微小的环形电流。这些环形电流如此之小，以至于在宏观来看它们都是理想的磁偶极子。通常，由于原子（分子）的热运动，这些磁偶极子相互抵消。但在施加外磁场后，这些磁偶极子会出现有序的排列，介质因此显磁性，或称为<strong>磁化</strong>。</p>
 <p>&ensp;&ensp;&ensp;&ensp;但与极化方向几乎与外电场方向相同的电极化相比，有些物质的磁化方向与外磁场方向相同，而另一些物质的磁化方向与外磁场相反。这两种物质分别称为<strong>顺磁体</strong>和<strong>抗磁体</strong>。</p>
 <p>&ensp;&ensp;&ensp;&ensp;由式（24.8），我们看到，外磁场对偶极子的力矩倾向于将偶极子拽向外磁场的方向，正是这个力矩导致了<strong>顺磁性</strong>。根据泡利不相容原理，成对的电子出现时必须要有相反的自旋，因此它们的磁矩也相反，这个效应有效降低了总体上的力矩。因此，顺磁性通常出现在拥有奇数电子的原子和分子中。其次，热运动会大大消除这种有序的排列倾向。</p>
-<p>&ensp;&ensp;&ensp;&ensp;电子除了自旋外，还围绕原子旋转。简单起见，我们将这个运动等效为一个匀速圆周运动，等效电流为<br>$$ I=\frac{e}{T}=\frac{ev}{2\pi R}\tag{25.1} $$<br>则电子的轨道磁偶极矩为<br>$$ \pmb{m}=-\frac{1}{2}evR\hat{z}\tag{25.2} $$<br>假设外磁场垂直于轨道平面，则电子受到的洛伦兹力为<br>$$ \begin{align*}<br>    \pmb{F}&amp;=-e(\pmb{E}+\pmb{v}\times \pmb{B})\<br>    &amp;=\left(\frac{e^2}{4\pi \epsilon_0R^2}+evB\right)\hat{\pmb{n}}\tag{25.3}<br>\end{align*} $$<br>洛伦兹力提供向心力<br>$$ \frac{e^2}{4\pi \epsilon_0R^2}+evB=\frac{m_ev^2}{R}\tag{25.4} $$<br>但在有外磁场的作用时，电子的速度应该具有一个微小的增量，所以<br>$$ evB=\frac{m_e}{R}(v’^2-v^2)\approx\frac{2m_ev}{R}\Delta v\tag{25.5}$$<br>即<br>$$ \Delta v=\frac{eBR}{2m_e}\tag{25.6} $$<br>这个速度的增量同时会改变磁矩<br>$$ \Delta \pmb{m}=-\frac{1}{2}eR\Delta v\hat{\pmb{z}}=-\frac{e^2R^2\pmb{B}}{4m_e} \tag{25.7}$$<br>注意，磁矩的改变量与磁场方向相反。这就是抗磁性的一个定性解释。由于抗磁性比顺磁性弱得多，所以抗磁性一般只能在不存在顺磁性的具有偶数个电子的原子中观察到。</p>
-<h2><span id="26enspensp铁磁体">§26&ensp;&ensp;铁磁体</span></h2><h2><span id="27enspensp磁化强度">§27&ensp;&ensp;磁化强度</span></h2><p>&ensp;&ensp;&ensp;&ensp;当存在外磁场时，磁介质被磁化，介质中的许多微小磁偶极子出现一定的有序排列。我们用矢量<strong>磁化强度</strong>来描述这种磁化<br>$$ \pmb{M}=\frac{\mathrm{d}\pmb{m}}{\mathrm{d}V} \tag{27.1}$$<br>即单位体积中的总磁偶极矩。</p>
-<p>&ensp;&ensp;&ensp;&ensp;当给定磁介质的磁化强度时，它在$\pmb{r}$处产生的磁矢势为<br>$$ \begin{align*}<br>    \pmb{A}(\pmb{r})&amp;=\frac{\mu_0}{4\pi}\iiint\frac{\pmb{M}(\pmb{r}’)\times(\pmb{r}-\pmb{r}’)}{|\pmb{r}-\pmb{r}’|^2} \mathrm{d}V’\<br>    &amp;=\frac{\mu_0}{4\pi}\iiint\pmb{M}(\pmb{r}’)\times\left(\nabla’\frac{1}{|\pmb{r}-\pmb{r}’|}\right) \mathrm{d}V’\<br>    &amp;=\frac{\mu_0}{4\pi}\iiint\left(\frac{\nabla’\times \pmb{M}}{|\pmb{r}-\pmb{r}’|}-\nabla\times\frac{\pmb{M}}{|\pmb{r}-\pmb{r}’|}\right)\mathrm{d}V’\<br>    &amp;=\frac{\mu_0}{4\pi}\iiint\frac{\nabla’\times \pmb{M}}{|\pmb{r}-\pmb{r}’|}\mathrm{d}V’+\frac{\mu_0}{4\pi}\oiint\frac{\pmb{M}\times \hat{\pmb{n}}}{|\pmb{r}-\pmb{r}’|}\mathrm{d}S’\tag{27.2}<br>\end{align*} $$<br>其中，第一项类似于体电流密度的效应，第二项类似于面电流密度的效应，即<br>$$ \pmb{J}_b=\nabla\times \pmb{M}\tag{27.3} $$<br>$$ \pmb{K}_b=\pmb{M}\times \hat{\pmb{n}}\tag{27.4} $$<br>分别称为束缚电流体密度和束缚电流面密度。</p>
-<h2><span id="28enspensp磁介质中的静磁场">§28&ensp;&ensp;磁介质中的静磁场</span></h2><p>&ensp;&ensp;&ensp;&ensp;当介质被磁化后，介质中出现磁化强度$\pmb{M}$，这时介质中的总电流为<br>$$ \pmb{J}=\pmb{J}_f+\pmb{J}_b\tag{28.1} $$<br>因此安培定理为<br>$$\begin{align*}<br>    \nabla\times \pmb{B}&amp;=\mu_0\pmb{J}\<br>    &amp;=\mu_0(\pmb{J}_f+\pmb{J}_b)\<br>    &amp;=\mu_0\pmb{J}_f+\mu_0\nabla\times \pmb{M}\tag{28.2}<br>\end{align*}$$</p>
-<p>上式可改写为<br>$$ \nabla\times\left(\frac{\pmb{B}}{\mu_0}-\pmb{M}\right)=\pmb{J}_f\tag{28.3} $$</p>
-<p>我们定义一个辅助物理量$\pmb{H}=\frac{\pmb{B}}{\mu_0}-\pmb{M}$，因此有<br>$$ \nabla\times\pmb{H}=\pmb{J}_f\tag{28.4} $$</p>
-<p>&ensp;&ensp;&ensp;&ensp;$\pmb{H}$的地位与静电学中的$\pmb{D}$类似，它们允许我们先由自由电荷（电流）求出一个辅助量，再根据介质的性质来求其他的物理量。</p>
-<p>&ensp;&ensp;&ensp;&ensp;通过式（22.1）和（22.2），$\pmb{H}$的边界条件为<br>$$ (\pmb{H}_2-\pmb{H}_1)\cdot\hat{\pmb{n}}=-(\pmb{M}_2-\pmb{M}_1)\cdot\hat{\pmb{n}}\tag{28.5} $$</p>
-<p>$$ \pmb{H}_2^{||}-\pmb{H}_1^{||}=\pmb{K}_f\times\hat{\pmb{n}}\tag{28.6} $$</p>
-<h2><span id="29enspensp线性介质">§29&ensp;&ensp;线性介质</span></h2><p>&ensp;&ensp;&ensp;&ensp;在多数各向同性磁介质中，磁化强度是和$\pmb{H}$成线性关系的，即<br>$$ \pmb{M}=\chi_m\pmb{H}\tag{29.1} $$</p>
-<p>其中的$\chi_m$称为<strong>磁化率</strong>。这样的介质即为线性介质。这时，磁介质中的磁场也和$\pmb{H}$成线性关系<br>$$ \pmb{B}=\mu_0(\pmb{M}+\pmb{H})=\mu_0(1+\chi_m)\pmb{H}=\mu \pmb{H}\tag{29.2} $$</p>
-<p>其中$\mu$称为介质的<strong>磁导率</strong>。其次，在各向同性线性介质中的体束缚电流密度也与自由电流密度成正比：<br>$$ \pmb{J}_b=\nabla\times\pmb{M}=\nabla\times(\chi_m\pmb{H})=\chi_m \pmb{J}_f\tag{29.3} $$<br>因此，如果介质中没有电流通过，则束缚电流只能分布在介质的表面上。</p>
-<p>&ensp;&ensp;&ensp;&ensp;如果介质是各向异性的，则磁化率是一个三阶张量<br>$$ M_i=\chi_{mi}^{\ \ \ j} H_j\tag{29.4} $$</p>
-<h1><span id="静电学-静磁学的总结与对比">静电学、静磁学的总结与对比</span></h1><table>
+<p>&ensp;&ensp;&ensp;&ensp;电子除了自旋外，还围绕原子旋转。简单起见，我们将这个运动等效为一个匀速圆周运动，等效电流为</p>
+<script type="math/tex; mode=display">I=\frac{e}{T}=\frac{ev}{2\pi R}\tag{25.1}</script><p>则电子的轨道磁偶极矩为</p>
+<script type="math/tex; mode=display">\pmb{m}=-\frac{1}{2}evR\hat{z}\tag{25.2}</script><p>假设外磁场垂直于轨道平面，则电子受到的洛伦兹力为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{F}&=-e(\pmb{E}+\pmb{v}\times \pmb{B})\\
+    &=\left(\frac{e^2}{4\pi \epsilon_0R^2}+evB\right)\hat{\pmb{n}}\tag{25.3}
+\end{align*}</script><p>洛伦兹力提供向心力</p>
+<script type="math/tex; mode=display">\frac{e^2}{4\pi \epsilon_0R^2}+evB=\frac{m_ev^2}{R}\tag{25.4}</script><p>但在有外磁场的作用时，电子的速度应该具有一个微小的增量，所以</p>
+<script type="math/tex; mode=display">evB=\frac{m_e}{R}(v'^2-v^2)\approx\frac{2m_ev}{R}\Delta v\tag{25.5}</script><p>即</p>
+<script type="math/tex; mode=display">\Delta v=\frac{eBR}{2m_e}\tag{25.6}</script><p>这个速度的增量同时会改变磁矩</p>
+<script type="math/tex; mode=display">\Delta \pmb{m}=-\frac{1}{2}eR\Delta v\hat{\pmb{z}}=-\frac{e^2R^2\pmb{B}}{4m_e} \tag{25.7}</script><p>注意，磁矩的改变量与磁场方向相反。这就是抗磁性的一个定性解释。由于抗磁性比顺磁性弱得多，所以抗磁性一般只能在不存在顺磁性的具有偶数个电子的原子中观察到。</p>
+<h2><span id="26enspensp铁磁体">§26&ensp;&ensp;铁磁体</span></h2><h2><span id="27enspensp磁化强度">§27&ensp;&ensp;磁化强度</span></h2><p>&ensp;&ensp;&ensp;&ensp;当存在外磁场时，磁介质被磁化，介质中的许多微小磁偶极子出现一定的有序排列。我们用矢量<strong>磁化强度</strong>来描述这种磁化</p>
+<script type="math/tex; mode=display">\pmb{M}=\frac{\mathrm{d}\pmb{m}}{\mathrm{d}V} \tag{27.1}</script><p>即单位体积中的总磁偶极矩。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当给定磁介质的磁化强度时，它在$\pmb{r}$处产生的磁矢势为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \pmb{A}(\pmb{r})&=\frac{\mu_0}{4\pi}\iiint\frac{\pmb{M}(\pmb{r}')\times(\pmb{r}-\pmb{r}')}{|\pmb{r}-\pmb{r}'|^2} \mathrm{d}V'\\
+    &=\frac{\mu_0}{4\pi}\iiint\pmb{M}(\pmb{r}')\times\left(\nabla'\frac{1}{|\pmb{r}-\pmb{r}'|}\right) \mathrm{d}V'\\
+    &=\frac{\mu_0}{4\pi}\iiint\left(\frac{\nabla'\times \pmb{M}}{|\pmb{r}-\pmb{r}'|}-\nabla\times\frac{\pmb{M}}{|\pmb{r}-\pmb{r}'|}\right)\mathrm{d}V'\\
+    &=\frac{\mu_0}{4\pi}\iiint\frac{\nabla'\times \pmb{M}}{|\pmb{r}-\pmb{r}'|}\mathrm{d}V'+\frac{\mu_0}{4\pi}\oiint\frac{\pmb{M}\times \hat{\pmb{n}}}{|\pmb{r}-\pmb{r}'|}\mathrm{d}S'\tag{27.2}
+\end{align*}</script><p>其中，第一项类似于体电流密度的效应，第二项类似于面电流密度的效应，即</p>
+<script type="math/tex; mode=display">\pmb{J}_b=\nabla\times \pmb{M}\tag{27.3}</script><script type="math/tex; mode=display">\pmb{K}_b=\pmb{M}\times \hat{\pmb{n}}\tag{27.4}</script><p>分别称为束缚电流体密度和束缚电流面密度。</p>
+<h2><span id="28enspensp磁介质中的静磁场">§28&ensp;&ensp;磁介质中的静磁场</span></h2><p>&ensp;&ensp;&ensp;&ensp;当介质被磁化后，介质中出现磁化强度$\pmb{M}$，这时介质中的总电流为</p>
+<script type="math/tex; mode=display">\pmb{J}=\pmb{J}_f+\pmb{J}_b\tag{28.1}</script><p>因此安培定理为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \nabla\times \pmb{B}&=\mu_0\pmb{J}\\
+    &=\mu_0(\pmb{J}_f+\pmb{J}_b)\\
+    &=\mu_0\pmb{J}_f+\mu_0\nabla\times \pmb{M}\tag{28.2}
+\end{align*}</script><p>上式可改写为</p>
+<script type="math/tex; mode=display">\nabla\times\left(\frac{\pmb{B}}{\mu_0}-\pmb{M}\right)=\pmb{J}_f\tag{28.3}</script><p>我们定义一个辅助物理量$\pmb{H}=\frac{\pmb{B}}{\mu_0}-\pmb{M}$，因此有</p>
+<script type="math/tex; mode=display">\nabla\times\pmb{H}=\pmb{J}_f\tag{28.4}</script><p>&ensp;&ensp;&ensp;&ensp;$\pmb{H}$的地位与静电学中的$\pmb{D}$类似，它们允许我们先由自由电荷（电流）求出一个辅助量，再根据介质的性质来求其他的物理量。</p>
+<p>&ensp;&ensp;&ensp;&ensp;通过式（22.1）和（22.2），$\pmb{H}$的边界条件为</p>
+<script type="math/tex; mode=display">(\pmb{H}_2-\pmb{H}_1)\cdot\hat{\pmb{n}}=-(\pmb{M}_2-\pmb{M}_1)\cdot\hat{\pmb{n}}\tag{28.5}</script><script type="math/tex; mode=display">\pmb{H}_2^{||}-\pmb{H}_1^{||}=\pmb{K}_f\times\hat{\pmb{n}}\tag{28.6}</script><h2><span id="29enspensp线性介质">§29&ensp;&ensp;线性介质</span></h2><p>&ensp;&ensp;&ensp;&ensp;在多数各向同性磁介质中，磁化强度是和$\pmb{H}$成线性关系的，即</p>
+<script type="math/tex; mode=display">\pmb{M}=\chi_m\pmb{H}\tag{29.1}</script><p>其中的$\chi_m$称为<strong>磁化率</strong>。这样的介质即为线性介质。这时，磁介质中的磁场也和$\pmb{H}$成线性关系</p>
+<script type="math/tex; mode=display">\pmb{B}=\mu_0(\pmb{M}+\pmb{H})=\mu_0(1+\chi_m)\pmb{H}=\mu \pmb{H}\tag{29.2}</script><p>其中$\mu$称为介质的<strong>磁导率</strong>。其次，在各向同性线性介质中的体束缚电流密度也与自由电流密度成正比：</p>
+<script type="math/tex; mode=display">\pmb{J}_b=\nabla\times\pmb{M}=\nabla\times(\chi_m\pmb{H})=\chi_m \pmb{J}_f\tag{29.3}</script><p>因此，如果介质中没有电流通过，则束缚电流只能分布在介质的表面上。</p>
+<p>&ensp;&ensp;&ensp;&ensp;如果介质是各向异性的，则磁化率是一个三阶张量</p>
+<script type="math/tex; mode=display">M_i=\chi_{mi}^{\ \ \ j} H_j\tag{29.4}</script><h1><span id="静电学-静磁学的总结与对比">静电学、静磁学的总结与对比</span></h1><div class="table-container">
+<table>
 <thead>
 <tr>
 <th></th>
@@ -238,92 +597,309 @@
 <th>静磁学</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>基本公式</td>
-<td>库伦定律 $$\pmb{F}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^3}\pmb{r}$$</td>
-<td>$$\pmb{F}=\int(\pmb{I}\times \pmb{B})\mathrm{d}l$$</td>
+<td>库伦定律 <script type="math/tex">\pmb{F}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^3}\pmb{r}</script></td>
+<td><script type="math/tex">\pmb{F}=\int(\pmb{I}\times \pmb{B})\mathrm{d}l</script></td>
 </tr>
 <tr>
 <td>场</td>
-<td>$$ \pmb{E}=\frac{1}{4\pi\epsilon_0}\iiint\frac{\rho \pmb{r}}{r^3}\mathrm{d}V $$</td>
-<td>毕奥-萨伐尔定律$$ \pmb{B}=\frac{\mu_0}{4\pi}\oint\frac{\pmb{I}\times \pmb{r}}{r^2}\mathrm{d}l $$</td>
+<td><script type="math/tex">\pmb{E}=\frac{1}{4\pi\epsilon_0}\iiint\frac{\rho \pmb{r}}{r^3}\mathrm{d}V</script></td>
+<td>毕奥-萨伐尔定律<script type="math/tex">\pmb{B}=\frac{\mu_0}{4\pi}\oint\frac{\pmb{I}\times \pmb{r}}{r^2}\mathrm{d}l</script></td>
 </tr>
 <tr>
 <td>散度&amp;旋度</td>
-<td>$$ \nabla\cdot \pmb{E}=\frac{\rho}{\epsilon_0} $$ $$ \nabla\times \pmb{E}=0 $$</td>
-<td>$$ \nabla\cdot\pmb{B}=0 $$ $$ \nabla\times \pmb{B}=\mu_0\pmb{J} $$</td>
+<td><script type="math/tex">\nabla\cdot \pmb{E}=\frac{\rho}{\epsilon_0}</script> <script type="math/tex">\nabla\times \pmb{E}=0</script></td>
+<td><script type="math/tex">\nabla\cdot\pmb{B}=0</script> <script type="math/tex">\nabla\times \pmb{B}=\mu_0\pmb{J}</script></td>
 </tr>
 <tr>
 <td>势</td>
-<td>$$ \pmb{E}=-\nabla \phi $$</td>
-<td>$$ \pmb{B}=\nabla\times \pmb{A} $$</td>
+<td><script type="math/tex">\pmb{E}=-\nabla \phi</script></td>
+<td><script type="math/tex">\pmb{B}=\nabla\times \pmb{A}</script></td>
 </tr>
 <tr>
 <td>边值关系</td>
-<td>$$ E_2^\perp-E_1^\perp=\frac{\sigma}{\epsilon_0} $$ $$ E_2^{\vert\vert}-E_1^{\vert\vert}=0 $$</td>
-<td>$$ B_2^\perp-B_1^\perp=0 $$ $$ B_2^{\vert\vert}-B_1^{\vert\vert}=K $$</td>
+<td><script type="math/tex">E_2^\perp-E_1^\perp=\frac{\sigma}{\epsilon_0}</script> <script type="math/tex">E_2^{\vert\vert}-E_1^{\vert\vert}=0</script></td>
+<td><script type="math/tex">B_2^\perp-B_1^\perp=0</script> <script type="math/tex">B_2^{\vert\vert}-B_1^{\vert\vert}=K</script></td>
 </tr>
 <tr>
 <td>偶极子</td>
-<td>$$ \pmb{p}=q\pmb{l} $$ $$ \pmb{F}=\nabla(\pmb{p}\cdot\pmb{E}) $$ $$ \pmb{L}=\pmb{p}\times \pmb{E} $$</td>
-<td>$$ \pmb{m}=I\pmb{S} $$ $$ \pmb{F}=\nabla(\pmb{m}\cdot\pmb{B}) $$ $$ \pmb{L}=\pmb{m}\times \pmb{B} $$</td>
+<td><script type="math/tex">\pmb{p}=q\pmb{l}</script> <script type="math/tex">\pmb{F}=\nabla(\pmb{p}\cdot\pmb{E})</script> <script type="math/tex">\pmb{L}=\pmb{p}\times \pmb{E}</script></td>
+<td><script type="math/tex">\pmb{m}=I\pmb{S}</script> <script type="math/tex">\pmb{F}=\nabla(\pmb{m}\cdot\pmb{B})</script> <script type="math/tex">\pmb{L}=\pmb{m}\times \pmb{B}</script></td>
 </tr>
 <tr>
 <td>介质极化</td>
-<td>$$ \pmb{P} $$</td>
-<td>$$ \pmb{M} $$</td>
+<td><script type="math/tex">\pmb{P}</script></td>
+<td><script type="math/tex">\pmb{M}</script></td>
 </tr>
 <tr>
 <td>束缚电荷（电流）</td>
-<td>$$ \rho_b=-\nabla\cdot\pmb{P} $$ $$ \sigma_b=\hat{\pmb{n}}\cdot\pmb{P} $$</td>
-<td>$$ \pmb{J}_b=\nabla\times \pmb{M} $$ $$ \pmb{K}_b=-\hat{\pmb{n}}\times \pmb{M} $$</td>
+<td><script type="math/tex">\rho_b=-\nabla\cdot\pmb{P}</script> <script type="math/tex">\sigma_b=\hat{\pmb{n}}\cdot\pmb{P}</script></td>
+<td><script type="math/tex">\pmb{J}_b=\nabla\times \pmb{M}</script> <script type="math/tex">\pmb{K}_b=-\hat{\pmb{n}}\times \pmb{M}</script></td>
 </tr>
 <tr>
 <td>辅助矢量</td>
-<td>电极化矢量 $$ \pmb{D}=\epsilon_0\pmb{E}+\pmb{P} $$</td>
-<td>$$ \pmb{H}=\frac{\pmb{B}}{\mu_0}-\pmb{M} $$</td>
+<td>电极化矢量 <script type="math/tex">\pmb{D}=\epsilon_0\pmb{E}+\pmb{P}</script></td>
+<td><script type="math/tex">\pmb{H}=\frac{\pmb{B}}{\mu_0}-\pmb{M}</script></td>
 </tr>
 <tr>
 <td></td>
-<td>$$ \nabla\cdot\pmb{D}=\rho_f $$ $$ \nabla\times \pmb{D}=\nabla\times \pmb{P} $$</td>
-<td>$$ \nabla\cdot\pmb{H}=-\nabla\cdot\pmb{M} $$ $$ \nabla\times \pmb{H}=\pmb{J}_f $$</td>
+<td><script type="math/tex">\nabla\cdot\pmb{D}=\rho_f</script> <script type="math/tex">\nabla\times \pmb{D}=\nabla\times \pmb{P}</script></td>
+<td><script type="math/tex">\nabla\cdot\pmb{H}=-\nabla\cdot\pmb{M}</script> <script type="math/tex">\nabla\times \pmb{H}=\pmb{J}_f</script></td>
 </tr>
 <tr>
 <td>线性介质</td>
-<td>$$ \pmb{P}=\chi_e\epsilon_0\pmb{E} $$ $$ \pmb{D}=\epsilon\pmb{E} $$ $$ \epsilon=(1+\chi_e)\epsilon_0 $$</td>
-<td>$$ \pmb{M}=\chi_m\pmb{H} $$ $$ \pmb{H}=\mu \pmb{B} $$ $$ \mu=(1+\chi_m)\mu_0 $$</td>
+<td><script type="math/tex">\pmb{P}=\chi_e\epsilon_0\pmb{E}</script> <script type="math/tex">\pmb{D}=\epsilon\pmb{E}</script> <script type="math/tex">\epsilon=(1+\chi_e)\epsilon_0</script></td>
+<td><script type="math/tex">\pmb{M}=\chi_m\pmb{H}</script> <script type="math/tex">\pmb{H}=\mu \pmb{B}</script> <script type="math/tex">\mu=(1+\chi_m)\mu_0</script></td>
 </tr>
 <tr>
 <td>边界条件</td>
-<td>$$ D_2^\perp-D_1^\perp=\sigma_f $$ $$ D_2^{\vert\vert}-D_1^{\vert\vert}=\hat{\pmb{n}}\cdot(\pmb{P}_2-\pmb{P}_1) $$</td>
-<td>$$ H_2^\perp-H_1^\perp=-\hat{\pmb{n}}\cdot(\pmb{M}_2-\pmb{M}_1) $$ $$ \pmb{H}_2^{\vert\vert}-\pmb{H}_1^{\vert\vert}=\pmb{K}_f\times\hat{\pmb{n}}$$</td>
+<td><script type="math/tex">D_2^\perp-D_1^\perp=\sigma_f</script> <script type="math/tex">D_2^{\vert\vert}-D_1^{\vert\vert}=\hat{\pmb{n}}\cdot(\pmb{P}_2-\pmb{P}_1)</script></td>
+<td><script type="math/tex">H_2^\perp-H_1^\perp=-\hat{\pmb{n}}\cdot(\pmb{M}_2-\pmb{M}_1)</script> <script type="math/tex">\pmb{H}_2^{\vert\vert}-\pmb{H}_1^{\vert\vert}=\pmb{K}_f\times\hat{\pmb{n}}</script></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
     </div>
 
-</div>
-                <div class="footer">
-    <span>Copyright © 2022 Hexo</span>
-    <span>Theme Designed By <a target="_blank" href="https://zheli.design/one-paper">這Li</a></span>
-</div>
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
 
 
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/04/10/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/17/hello-world/" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
 
 
-<script src="/js/highlight.min.js"></script>
 
-
-<script src="/js/highlightjs-line-numbers.js"></script>
-
+          </div>
+          
 
 <script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
-            </div>
         </div>
-    </body>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text"> 第一章    真空静电学 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">§1  静电场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">§2  静电场的散度和旋度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">§3  电势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.4.</span> <span class="nav-text">§4  几种典型带电导体的电场、电势分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.5.</span> <span class="nav-text">§5  电偶极子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.6.</span> <span class="nav-text">§6  泊松方程和拉普拉斯方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text"> 第二章    介质中的静电学 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">§7  电场对电荷体系的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">§8  静电场中的导体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">§9  电容和电容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">§10  外电场中的电介质的极化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.5.</span> <span class="nav-text">§11  极化电荷的电场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.6.</span> <span class="nav-text">§12  极化强度矢量和电场的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.7.</span> <span class="nav-text">§13  电介质与电容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.8.</span> <span class="nav-text">§14  电介质中静电场的基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.9.</span> <span class="nav-text">§15  边值关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text"> 第三章    静电能 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">§16  真空中的点电荷间的相互作用能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">§17  连续电荷分布的静电能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text"> 第四章    静磁场 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.1.</span> <span class="nav-text">§18   洛伦兹力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.2.</span> <span class="nav-text">§19  电流与电流密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.3.</span> <span class="nav-text">§20  毕奥-萨伐尔定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.4.</span> <span class="nav-text">§21  $\pmb{B}$的散度与旋度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.5.</span> <span class="nav-text">§22  边界条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.6.</span> <span class="nav-text">§23  磁矢势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.7.</span> <span class="nav-text">§24  磁偶极子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text"> 第五章    介质中的磁场 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">§25  顺磁体、抗磁体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.2.</span> <span class="nav-text">§26  铁磁体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.3.</span> <span class="nav-text">§27  磁化强度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.4.</span> <span class="nav-text">§28  磁介质中的静磁场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text">§29  线性介质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">静电学、静磁学的总结与对比</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Andy Xiang</p>
+  <div class="site-description" itemprop="description">日々私たちが过ごしている日常というのは、実は奇迹の连続なのかもしれん。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Andy Xiang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
 </html>
