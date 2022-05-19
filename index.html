@@ -152,7 +152,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/18/%E7%94%B5%E7%A3%81%E5%AD%A6/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/18/HEXO+Github%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -166,7 +166,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/05/18/%E7%94%B5%E7%A3%81%E5%AD%A6/" class="post-title-link" itemprop="url">电磁学</a>
+            <a href="/2022/05/18/HEXO+Github%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">Hexo+Github创建博客</a>
         </h2>
 
         <div class="post-meta">
@@ -175,10 +175,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2022-05-18 00:00:00 / Modified: 22:56:54" itemprop="dateCreated datePublished" datetime="2022-05-18T00:00:00+08:00">2022-05-18</time>
+              <time title="Created: 2022-05-18 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-18T00:00:00+08:00">2022-05-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-19 12:32:44" itemprop="dateModified" datetime="2022-05-19T12:32:44+08:00">2022-05-19</time>
+              </span>
 
           
 
@@ -191,65 +197,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <center> <font size="8"><font color="red"> 电磁学 </font></font></center>
+          <h1><span id="hexogithub创建博客">Hexo+Github创建博客</span></h1><p>&ensp;&ensp;&ensp;&ensp;花了两天时间创建了现在这个博客，现在写一篇Blog记录下过程和遇到的问题。Github提供了免费的域名 github.io，只需向仓库中放入html文件就可以生成一个网页。Hexo是一个快速、简洁且高效的博客框架，渲染markdown文件快速生成html文件，再使用git来将Hexo生成html文件上传至仓库。</p>
+<h2><span id="系统介绍">系统介绍</span></h2><p>&ensp;&ensp;&ensp;&ensp;我使用的系统是macOS Monterey 12.3.1，Hexo 5.4.2，git 2.36.1，npm 8.5.5 </p>
+<h2><span id="创建github网页">创建github网页</span></h2><p>&ensp;&ensp;&ensp;&ensp;先注册一个github网站账号，以Name为例。在仓库（Repositories）中创建第一个仓库：Name.github.io。仓库名的形式需要如此（我因为已经创建过这个名字的仓库所以会报错）。对于免费账户，仓库需要创建为public。README文件可以勾选也可以不勾选。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在创建好仓库后，进入仓库页面。现在要先做两个准备工作。先新建一个分支命名为master，并设置为default。其次，进入Settings页面，拉到最下面后，在左边一栏找到Github Page选项。</p>
 
-<!-- toc -->
-<ul>
-<li><a href="#center-第一章enspenspenspensp真空静电学-center"><center> 第一章&ensp;&ensp;&ensp;&ensp;真空静电学 </center></a><ul>
-<li><a href="#1enspensp静电场">§1&ensp;&ensp;静电场</a></li>
-<li><a href="#2enspensp静电场的散度和旋度">§2&ensp;&ensp;静电场的散度和旋度</a></li>
-<li><a href="#3enspensp电势">§3&ensp;&ensp;电势</a></li>
-<li><a href="#4enspensp几种典型带电导体的电场-电势分布">§4&ensp;&ensp;几种典型带电导体的电场、电势分布</a></li>
-<li><a href="#5enspensp电偶极子">§5&ensp;&ensp;电偶极子</a></li>
-<li><a href="#6enspensp泊松方程和拉普拉斯方程">§6&ensp;&ensp;泊松方程和拉普拉斯方程</a></li>
-</ul>
-</li>
-<li><a href="#center-第二章enspenspenspensp介质中的静电学-center"><center> 第二章&ensp;&ensp;&ensp;&ensp;介质中的静电学 </center></a><ul>
-<li><a href="#7enspensp电场对电荷体系的作用">§7&ensp;&ensp;电场对电荷体系的作用</a></li>
-<li><a href="#8enspensp静电场中的导体">§8&ensp;&ensp;静电场中的导体</a></li>
-<li><a href="#9enspensp电容和电容器">§9&ensp;&ensp;电容和电容器</a></li>
-<li><a href="#10enspensp外电场中的电介质的极化">§10&ensp;&ensp;外电场中的电介质的极化</a></li>
-<li><a href="#11enspensp极化电荷的电场">§11&ensp;&ensp;极化电荷的电场</a></li>
-<li><a href="#12enspensp极化强度矢量和电场的关系">§12&ensp;&ensp;极化强度矢量和电场的关系</a></li>
-<li><a href="#13enspensp电介质与电容器">§13&ensp;&ensp;电介质与电容器</a></li>
-<li><a href="#14enspensp电介质中静电场的基本定理">§14&ensp;&ensp;电介质中静电场的基本定理</a></li>
-<li><a href="#15enspensp边值关系">§15&ensp;&ensp;边值关系</a></li>
-</ul>
-</li>
-<li><a href="#center-第三章enspenspenspensp静电能-center"><center> 第三章&ensp;&ensp;&ensp;&ensp;静电能 </center></a><ul>
-<li><a href="#16enspensp真空中的点电荷间的相互作用能">§16&ensp;&ensp;真空中的点电荷间的相互作用能</a></li>
-<li><a href="#17enspensp连续电荷分布的静电能">§17&ensp;&ensp;连续电荷分布的静电能</a></li>
-</ul>
-</li>
-<li><a href="#center-第四章enspenspenspensp静磁场-center"><center> 第四章&ensp;&ensp;&ensp;&ensp;静磁场 </center></a><ul>
-<li><a href="#18enspensp-洛伦兹力">§18&ensp;&ensp; 洛伦兹力</a></li>
-<li><a href="#19enspensp电流与电流密度">§19&ensp;&ensp;电流与电流密度</a></li>
-<li><a href="#20enspensp毕奥-萨伐尔定律">§20&ensp;&ensp;毕奥-萨伐尔定律</a></li>
-<li><a href="#21enspensppmbb的散度与旋度">§21&ensp;&ensp;$\pmb{B}$的散度与旋度</a></li>
-<li><a href="#22enspensp边界条件">§22&ensp;&ensp;边界条件</a></li>
-<li><a href="#23enspensp磁矢势">§23&ensp;&ensp;磁矢势</a></li>
-<li><a href="#24enspensp磁偶极子">§24&ensp;&ensp;磁偶极子</a></li>
-</ul>
-</li>
-<li><a href="#center-第五章enspenspenspensp介质中的磁场-center"><center> 第五章&ensp;&ensp;&ensp;&ensp;介质中的磁场 </center></a><ul>
-<li><a href="#25enspensp顺磁体-抗磁体">§25&ensp;&ensp;顺磁体、抗磁体</a></li>
-<li><a href="#26enspensp铁磁体">§26&ensp;&ensp;铁磁体</a></li>
-<li><a href="#27enspensp磁化强度">§27&ensp;&ensp;磁化强度</a></li>
-<li><a href="#28enspensp磁介质中的静磁场">§28&ensp;&ensp;磁介质中的静磁场</a></li>
-<li><a href="#29enspensp线性介质">§29&ensp;&ensp;线性介质</a></li>
-</ul>
-</li>
-<li><a href="#静电学-静磁学的总结与对比">静电学、静磁学的总结与对比</a></li>
-</ul>
-<!-- tocstop -->
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/05/18/%E7%94%B5%E7%A3%81%E5%AD%A6/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -291,10 +243,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2022-05-18 00:00:00 / Modified: 22:39:25" itemprop="dateCreated datePublished" datetime="2022-05-18T00:00:00+08:00">2022-05-18</time>
+              <time title="Created: 2022-05-18 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-18T00:00:00+08:00">2022-05-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-19 12:59:48" itemprop="dateModified" datetime="2022-05-19T12:59:48+08:00">2022-05-19</time>
+              </span>
 
           
 
@@ -510,6 +468,128 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/18/%E7%94%B5%E7%A3%81%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andy Xiang">
+      <meta itemprop="description" content="日々私たちが过ごしている日常というのは、実は奇迹の连続なのかもしれん。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/18/%E7%94%B5%E7%A3%81%E5%AD%A6/" class="post-title-link" itemprop="url">电磁学</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-18 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-18T00:00:00+08:00">2022-05-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-19 12:54:13" itemprop="dateModified" datetime="2022-05-19T12:54:13+08:00">2022-05-19</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <center> <font size="8"><font color="red"> 电磁学 </font></font></center>
+
+<!-- toc -->
+<ul>
+<li><a href="#center-第一章enspenspenspensp真空静电学-center"><center> 第一章&ensp;&ensp;&ensp;&ensp;真空静电学 </center></a><ul>
+<li><a href="#1enspensp静电场">§1&ensp;&ensp;静电场</a></li>
+<li><a href="#2enspensp静电场的散度和旋度">§2&ensp;&ensp;静电场的散度和旋度</a></li>
+<li><a href="#3enspensp电势">§3&ensp;&ensp;电势</a></li>
+<li><a href="#4enspensp几种典型带电导体的电场-电势分布">§4&ensp;&ensp;几种典型带电导体的电场、电势分布</a></li>
+<li><a href="#5enspensp电偶极子">§5&ensp;&ensp;电偶极子</a></li>
+<li><a href="#6enspensp泊松方程和拉普拉斯方程">§6&ensp;&ensp;泊松方程和拉普拉斯方程</a></li>
+</ul>
+</li>
+<li><a href="#center-第二章enspenspenspensp介质中的静电学-center"><center> 第二章&ensp;&ensp;&ensp;&ensp;介质中的静电学 </center></a><ul>
+<li><a href="#7enspensp电场对电荷体系的作用">§7&ensp;&ensp;电场对电荷体系的作用</a></li>
+<li><a href="#8enspensp静电场中的导体">§8&ensp;&ensp;静电场中的导体</a></li>
+<li><a href="#9enspensp电容和电容器">§9&ensp;&ensp;电容和电容器</a></li>
+<li><a href="#10enspensp外电场中的电介质的极化">§10&ensp;&ensp;外电场中的电介质的极化</a></li>
+<li><a href="#11enspensp极化电荷的电场">§11&ensp;&ensp;极化电荷的电场</a></li>
+<li><a href="#12enspensp极化强度矢量和电场的关系">§12&ensp;&ensp;极化强度矢量和电场的关系</a></li>
+<li><a href="#13enspensp电介质与电容器">§13&ensp;&ensp;电介质与电容器</a></li>
+<li><a href="#14enspensp电介质中静电场的基本定理">§14&ensp;&ensp;电介质中静电场的基本定理</a></li>
+<li><a href="#15enspensp边值关系">§15&ensp;&ensp;边值关系</a></li>
+</ul>
+</li>
+<li><a href="#center-第三章enspenspenspensp静电能-center"><center> 第三章&ensp;&ensp;&ensp;&ensp;静电能 </center></a><ul>
+<li><a href="#16enspensp真空中的点电荷间的相互作用能">§16&ensp;&ensp;真空中的点电荷间的相互作用能</a></li>
+<li><a href="#17enspensp连续电荷分布的静电能">§17&ensp;&ensp;连续电荷分布的静电能</a></li>
+</ul>
+</li>
+<li><a href="#center-第四章enspenspenspensp静磁场-center"><center> 第四章&ensp;&ensp;&ensp;&ensp;静磁场 </center></a><ul>
+<li><a href="#18enspensp-洛伦兹力">§18&ensp;&ensp; 洛伦兹力</a></li>
+<li><a href="#19enspensp电流与电流密度">§19&ensp;&ensp;电流与电流密度</a></li>
+<li><a href="#20enspensp毕奥-萨伐尔定律">§20&ensp;&ensp;毕奥-萨伐尔定律</a></li>
+<li><a href="#21enspensppmbb的散度与旋度">§21&ensp;&ensp;$\pmb{B}$的散度与旋度</a></li>
+<li><a href="#22enspensp边界条件">§22&ensp;&ensp;边界条件</a></li>
+<li><a href="#23enspensp磁矢势">§23&ensp;&ensp;磁矢势</a></li>
+<li><a href="#24enspensp磁偶极子">§24&ensp;&ensp;磁偶极子</a></li>
+</ul>
+</li>
+<li><a href="#center-第五章enspenspenspensp介质中的磁场-center"><center> 第五章&ensp;&ensp;&ensp;&ensp;介质中的磁场 </center></a><ul>
+<li><a href="#25enspensp顺磁体-抗磁体">§25&ensp;&ensp;顺磁体、抗磁体</a></li>
+<li><a href="#26enspensp铁磁体">§26&ensp;&ensp;铁磁体</a></li>
+<li><a href="#27enspensp磁化强度">§27&ensp;&ensp;磁化强度</a></li>
+<li><a href="#28enspensp磁介质中的静磁场">§28&ensp;&ensp;磁介质中的静磁场</a></li>
+<li><a href="#29enspensp线性介质">§29&ensp;&ensp;线性介质</a></li>
+</ul>
+</li>
+<li><a href="#静电学-静磁学的总结与对比">静电学、静磁学的总结与对比</a></li>
+</ul>
+<!-- tocstop -->
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/05/18/%E7%94%B5%E7%A3%81%E5%AD%A6/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -541,7 +621,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-18 22:48:35" itemprop="dateModified" datetime="2022-05-18T22:48:35+08:00">2022-05-18</time>
+                <time title="Modified: 2022-05-19 12:54:18" itemprop="dateModified" datetime="2022-05-19T12:54:18+08:00">2022-05-19</time>
               </span>
 
           
@@ -724,7 +804,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -815,61 +895,6 @@
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
