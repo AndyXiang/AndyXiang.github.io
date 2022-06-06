@@ -20,22 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="热物理概念笔记    第一章&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;温度与玻尔兹曼因子 §1&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;热量与热容 §2&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;热平衡 §3&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;宏观态和微观态 §4&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;温度的一个统计定义 §5&amp;ensp;&amp;ensp;&amp;ensp;">
+  <meta name="description" content="前言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="热物理概念笔记">
-<meta property="og:url" content="http://example.com/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:url" content="http://example.com/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0%E7%9A%84%E5%89%AF%E6%9C%AC/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="热物理概念笔记    第一章&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;温度与玻尔兹曼因子 §1&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;热量与热容 §2&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;热平衡 §3&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;宏观态和微观态 §4&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;温度的一个统计定义 §5&amp;ensp;&amp;ensp;&amp;ensp;">
+<meta property="og:description" content="前言">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-19T04:54:18.658Z">
+<meta property="article:modified_time" content="2022-06-06T15:16:48.885Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Phys">
 <meta property="article:tag" content="热力学">
 <meta property="article:tag" content="统计力学">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://example.com/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0%E7%9A%84%E5%89%AF%E6%9C%AC/">
 
 
 <script id="page-configurations">
@@ -158,7 +158,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0%E7%9A%84%E5%89%AF%E6%9C%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-19 12:54:18" itemprop="dateModified" datetime="2022-05-19T12:54:18+08:00">2022-05-19</time>
+                <time title="Modified: 2022-06-06 23:16:48" itemprop="dateModified" datetime="2022-06-06T23:16:48+08:00">2022-06-06</time>
               </span>
 
           
@@ -202,89 +202,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <center><font size="6"><font color="orange">热物理概念笔记</font></font></center>
-
-<!-- toc -->
-<ul>
-<li><a href="#center第一章enspenspenspensp温度与玻尔兹曼因子center"><center>第一章&ensp;&ensp;&ensp;&ensp;温度与玻尔兹曼因子</center></a><ul>
-<li><a href="#1enspenspenspensp热量与热容">§1&ensp;&ensp;&ensp;&ensp;热量与热容</a></li>
-<li><a href="#2enspenspenspensp热平衡">§2&ensp;&ensp;&ensp;&ensp;热平衡</a></li>
-<li><a href="#3enspenspenspensp宏观态和微观态">§3&ensp;&ensp;&ensp;&ensp;宏观态和微观态</a></li>
-<li><a href="#4enspenspenspensp温度的一个统计定义">§4&ensp;&ensp;&ensp;&ensp;温度的一个统计定义</a></li>
-<li><a href="#5enspenspenspensp系综">§5&ensp;&ensp;&ensp;&ensp;系综</a></li>
-<li><a href="#6enspenspenspensp正则系综">§6&ensp;&ensp;&ensp;&ensp;正则系综</a></li>
-</ul>
-</li>
-<li><a href="#center第二章enspenspenspensp麦克斯韦-玻尔兹曼分布center"><center>第二章&ensp;&ensp;&ensp;&ensp;麦克斯韦-玻尔兹曼分布</center></a><ul>
-<li><a href="#7enspenspenspensp速度分布">§7&ensp;&ensp;&ensp;&ensp;速度分布</a></li>
-<li><a href="#8enspenspenspensp速率分布">§8&ensp;&ensp;&ensp;&ensp;速率分布</a></li>
-</ul>
-</li>
-<li><a href="#center第三章enspenspenspensp压强center"><center>第三章&ensp;&ensp;&ensp;&ensp;压强</center></a><ul>
-<li><a href="#9enspenspenspensp分子的分布">§9&ensp;&ensp;&ensp;&ensp;分子的分布</a></li>
-<li><a href="#10enspenspenspensp理想气体定律">§10&ensp;&ensp;&ensp;&ensp;理想气体定律</a></li>
-<li><a href="#11enspenspenspensp道尔顿分压定律">§11&ensp;&ensp;&ensp;&ensp;道尔顿分压定律</a></li>
-</ul>
-</li>
-<li><a href="#center第四章enspenspenspensp分子泻流center"><center>第四章&ensp;&ensp;&ensp;&ensp;分子泻流</center></a><ul>
-<li><a href="#12enspenspenspensp通量">§12&ensp;&ensp;&ensp;&ensp;通量</a></li>
-<li><a href="#13enspenspenspensp泻流">§13&ensp;&ensp;&ensp;&ensp;泻流</a></li>
-<li><a href="#14enspenspenspensp克努森流动knudsen-flow">§14&ensp;&ensp;&ensp;&ensp;克努森流动（Knudsen flow）</a></li>
-</ul>
-</li>
-<li><a href="#center第五章enspenspenspensp平均自由程和碰撞center"><center>第五章&ensp;&ensp;&ensp;&ensp;平均自由程和碰撞</center></a><ul>
-<li><a href="#15enspenspenspensp平均自由程">§15&ensp;&ensp;&ensp;&ensp;平均自由程</a></li>
-</ul>
-</li>
-<li><a href="#center第六章enspenspenspensp气体的输运性质center"><center>第六章&ensp;&ensp;&ensp;&ensp;气体的输运性质</center></a><ul>
-<li><a href="#16enspenspenspensp黏性">§16&ensp;&ensp;&ensp;&ensp;黏性</a></li>
-<li><a href="#17enspenspenspensp热传导">§17&ensp;&ensp;&ensp;&ensp;热传导</a></li>
-<li><a href="#18enspenspenspensp扩散">§18&ensp;&ensp;&ensp;&ensp;扩散</a></li>
-</ul>
-</li>
-<li><a href="#center第七章enspenspenspensp热力学第一定律center"><center>第七章&ensp;&ensp;&ensp;&ensp;热力学第一定律</center></a><ul>
-<li><a href="#19enspenspenspensp态函数">§19&ensp;&ensp;&ensp;&ensp;态函数</a></li>
-<li><a href="#20enspenspenspensp热力学第一定律">§20&ensp;&ensp;&ensp;&ensp;热力学第一定律</a></li>
-<li><a href="#21enspenspenspensp能均分定理">§21&ensp;&ensp;&ensp;&ensp;能均分定理</a></li>
-<li><a href="#22enspenspenspensp理想气体的热容">§22&ensp;&ensp;&ensp;&ensp;理想气体的热容</a></li>
-<li><a href="#23enspenspenspensp等温过程-等压过程和等容过程">§23&ensp;&ensp;&ensp;&ensp;等温过程、等压过程和等容过程</a></li>
-<li><a href="#24enspenspenspensp理想气体的绝热过程">§24&ensp;&ensp;&ensp;&ensp;理想气体的绝热过程</a></li>
-<li><a href="#25enspenspenspensp理想气体的多方过程">§25&ensp;&ensp;&ensp;&ensp;理想气体的多方过程</a></li>
-</ul>
-</li>
-<li><a href="#center第八章enspenspenspensp热力学第二定律center"><center>第八章&ensp;&ensp;&ensp;&ensp;热力学第二定律</center></a><ul>
-<li><a href="#26enspenspenspensp平衡态">§26&ensp;&ensp;&ensp;&ensp;平衡态</a></li>
-<li><a href="#27enspenspenspensp可逆与不可逆过程">§27&ensp;&ensp;&ensp;&ensp;可逆与不可逆过程</a></li>
-<li><a href="#28enspenspenspensp热力学第二定律">§28&ensp;&ensp;&ensp;&ensp;热力学第二定律</a></li>
-<li><a href="#29enspenspenspensp热机和卡诺热机">§29&ensp;&ensp;&ensp;&ensp;热机和卡诺热机</a></li>
-<li><a href="#30enspenspenspensp克劳修斯定理">§30&ensp;&ensp;&ensp;&ensp;克劳修斯定理</a></li>
-<li><a href="#31enspenspenspensp熵">§31&ensp;&ensp;&ensp;&ensp;熵</a></li>
-</ul>
-</li>
-<li><a href="#center第九章enspenspenspensp热力学的应用center"><center>第九章&ensp;&ensp;&ensp;&ensp;热力学的应用</center></a><ul>
-<li><a href="#32enspenspenspensp热力学势">§32&ensp;&ensp;&ensp;&ensp;热力学势</a></li>
-<li><a href="#33enspensp麦克斯韦关系">§33&ensp;&ensp;麦克斯韦关系</a></li>
-<li><a href="#34enspensp热力学第三定律">§34&ensp;&ensp;热力学第三定律</a></li>
-</ul>
-</li>
-<li><a href="#center第十章enspenspenspensp统计力学center"><center>第十章&ensp;&ensp;&ensp;&ensp;统计力学</center></a><ul>
-<li><a href="#35enspensp配分函数">§35&ensp;&ensp;配分函数</a></li>
-<li><a href="#36enspensp理想气体的统计力学">§36&ensp;&ensp;理想气体的统计力学</a></li>
-<li><a href="#37enspensp化学势">§37&ensp;&ensp;化学势</a></li>
-<li><a href="#38enspensp光子">§38&ensp;&ensp;光子</a></li>
-<li><a href="#39enspensp声子">§39&ensp;&ensp;声子</a></li>
-</ul>
-</li>
-<li><a href="#center第十一章enspenspenspensp超越理想气体center"><center>第十一章&ensp;&ensp;&ensp;&ensp;超越理想气体</center></a><ul>
-<li><a href="#40enspensp实际气体">§40&ensp;&ensp;实际气体</a></li>
-<li><a href="#41enspensp真实气体的唯象研究">§41&ensp;&ensp;真实气体的唯象研究</a></li>
-<li><a href="#42enspensp节流过程">§42&ensp;&ensp;节流过程</a></li>
-<li><a href="#43enspensp相变">§43&ensp;&ensp;相变</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-<span id="more"></span>
+        <h1><span id="前言">前言</span></h1><span id="more"></span>
 <h1><span id="第一章enspenspenspensp温度与玻尔兹曼因子"><center>第一章&ensp;&ensp;&ensp;&ensp;温度与玻尔兹曼因子</center></span></h1><h2><span id="1enspenspenspensp热量与热容">§1&ensp;&ensp;&ensp;&ensp;热量与热容</span></h2><p><strong>热量</strong>是转移的热量。<strong>热容</strong>衡量了使一种物质升高一定温度所需的热量</p>
 <script type="math/tex; mode=display">C=\frac{\mathrm{d}Q}{\mathrm{d}T} \tag{1.1}</script><p><strong>比热容</strong>是单位质量的热容</p>
 <script type="math/tex; mode=display">c=\frac{\mathrm{d}Q}{m\mathrm{d}T} \tag{1.2}</script><p><strong>摩尔热容</strong>是$1\mathrm{mol}$物质的热容</p>
@@ -628,20 +546,13 @@
 
 ## §29&ensp;&ensp;&ensp;&ensp;热机和卡诺热机
 
-&ensp;&ensp;&ensp;&ensp;**热机**定义为一个运行与循环过程、将热量转化为功的系统。热机中的工质在两个热源间进行循环过程。假设高温热源的温度为$T_1$,低温热源的温度为$T_2$，工质从高温热源吸热$Q_1$，在低温热源放热$Q_2$（$Q_1>0$,$Q_2<0$），对外做功$a$，定义该热机的**效率**为$\eta$ $$\eta="\frac{A}{Q_1}=1+\frac{Q_1}{Q_2}\tag{28.1}$$" 如果一个热机所经历的所有过程都是可逆的，则称该热机是一个可逆热机。 &ensp;&ensp;&ensp;&ensp;**卡诺热机**建立在**卡诺循环**之上。卡诺循环由两个等温过程与两个绝热过程组成。 <center> ![卡诺循环](热力学笔记/卡诺热机.png) 
+&ensp;&ensp;&ensp;&ensp;热机是工作在两个热源之间，从一个热源吸热并向另一个热源放热，最后向外做功的机器。假设高温热源的温度为$T_1$,低温热源的温度为$T_2$，工质从高温热源吸热$Q_1$，在低温热源放热$Q_2$（$Q_1>0$,$Q_2<0$），对外做功$a$，定义该热机的**效率**为$\eta$ $$\eta="\frac{A}{Q_1}=1+\frac{Q_1}{Q_2}\tag{28.1}$$" 如果一个热机所经历的所有过程都是可逆的，则称该热机是一个可逆热机。 &ensp;&ensp;&ensp;&ensp;**卡诺热机**建立在**卡诺循环**之上。卡诺循环由两个等温过程与两个绝热过程组成。 ![卡诺循环](pic 卡诺热机.png) 则 $$q_1="A_{12}=\nu" rt_1\ln\frac{v_1}{v_2}\tag{28.2}$$ $$q_2="A_{34}=\nu" rt_2\ln\frac{v_4}{v_3}\tag{28.3}$$ $$\begin{align*} \eta&="1+\frac{Q_1}{Q_2}\\" &="1-\frac{T_1}{T_2}\frac{\ln" v_1 v_2}{\ln v_3 v_4}\\ \end{align*}$$ &ensp;&ensp;&ensp;&ensp;**卡诺定理**告诉我们，卡诺热机实际上是效率最高的热机（高低温热源不变）。 &ensp;&ensp;&ensp;&ensp;我们可以假设有这样的一个热机e，它的效率高于卡诺热机。我们将它与逆向运行的卡诺热机（卡诺热机显然是可逆热机）连接在一起， <center> ![卡诺定理证明](Markdown/pic/卡诺定理.png) 
 
-<p>则</p>
-<script type="math/tex; mode=display">Q_1=A_{12}=\nu RT_1\ln\frac{V_1}{V_2}\tag{28.2}</script><script type="math/tex; mode=display">Q_2=A_{34}=\nu RT_2\ln\frac{V_4}{V_3}\tag{28.3}</script><script type="math/tex; mode=display">\begin{align*}
-    \eta&=1+\frac{Q_1}{Q_2}\\
-    &=1-\frac{T_1}{T_2}\frac{\ln V_1/V_2}{\ln V_3/V_4}\\
-    &=1-\frac{T_1}{T_2}\tag{28.4}
-\end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;<strong>卡诺定理</strong>告诉我们，卡诺热机实际上是效率最高的热机（高低温热源不变）。</p>
-<p>&ensp;&ensp;&ensp;&ensp;我们可以假设有这样的一个热机E，它的效率高于卡诺热机。我们将它与逆向运行的卡诺热机（卡诺热机显然是可逆热机）连接在一起，<br>    <center> ![卡诺定理证明](热力学笔记/卡诺定理.png) </center></p>
 <p>由于$\eta_E&gt;\eta_{卡诺}$，则有</p>
 <script type="math/tex; mode=display">\frac{W}{Q'_1}>\frac{W}{Q_1}\tag{28.5}</script><p>即</p>
 <script type="math/tex; mode=display">Q_1'<Q_1\tag{28.6}</script><p>由热力学第一定律</p>
 <script type="math/tex; mode=display">W=Q_1'+Q_2'=Q_2+Q_1\tag{28.7}</script><p>则有</p>
-<script type="math/tex; mode=display">Q_2'-Q_2=Q_1-Q_1'>0\tag{28.8}</script><p>这意味着这个复合系统的效应是既向高温热源放热同时又向低温放热，而没有其他因素向热机输入能量。这违反了能量守恒定律。因此假设不成立。卡诺定理得证。</p>
+<script type="math/tex; mode=display">Q_2'-Q_2=Q_1-Q_1'>0\tag{28.8}</script><p>这意味着这个复合系统的效应是从低温热源吸热并向高温热源放热，但没有产生其他影响。这违反了热力学第二定律。因此假设不成立。卡诺定理得证。</p>
 <p>&ensp;&ensp;&ensp;&ensp;卡诺定理的一个推论是：工作在两个热源间的所有可逆热机的效率都相同，等于卡诺热机的效率。证明过程类似。</p>
 <p>&ensp;&ensp;&ensp;&ensp;下面我们来证明热力学第二定律的克劳修斯表述和开尔文表述的等价性。先假设一个热机A违反了热力学第二定律的开尔文表述，将其与逆向的卡诺热机连接起来，所以</p>
 <script type="math/tex; mode=display">Q_1+Q_2=W=Q_1'\tag{28.9}</script><script type="math/tex; mode=display">Q_2-Q_1'=-Q_1\tag{28.10}</script><p>因此这个联合系统从低温热源净吸热$Q_1$，再向高温热源净放热$-Q_1$，这违反了热力学第二定律的克劳修斯表述。因此克劳修斯表述$\Longrightarrow$开尔文表述</p>
@@ -665,22 +576,29 @@
 <script type="math/tex; mode=display">DQ=T\mathrm{d}S</script><p>和</p>
 <script type="math/tex; mode=display">DW=p\mathrm{d}V</script><p>所以</p>
 <script type="math/tex; mode=display">\mathrm{d}U=DQ-DW=T\mathrm{d}S-p\mathrm{d}V\tag{31.4}</script><p>而由于式(31.4)中各量都是态函数，因此对于不可逆过程式(31.4)也成立。于是有</p>
-<script type="math/tex; mode=display">T=\left(\frac{\partial U}{\partial S}\right)_V\tag{31.5}</script><script type="math/tex; mode=display">p=-\left(\frac{\partial U}{\partial V}\right)_S\tag{31.6}</script><p>&ensp;&ensp;&ensp;&ensp;我们也可以由统计的方式来定义熵。由式(31.5)和式(4.2)</p>
-<script type="math/tex; mode=display">\frac{1}{T}=\left(\frac{\partial S}{\partial U}\right)_V=\frac{\mathrm{d}(k_B\ln \Omega)}{\mathrm{d}E}</script><p>所以我们可以将熵定义为</p>
-<script type="math/tex; mode=display">S=k_B\ln \Omega \tag{31.7}</script><p>&ensp;&ensp;&ensp;&ensp;进一步地，我们假设一个系统有数个宏观态，第$i$个宏观态所包含的微观态数为$n_i$，有</p>
-<script type="math/tex; mode=display">N=\sum_i n_i \tag{31.8}</script><p>则系统总的熵为</p>
-<script type="math/tex; mode=display">S_总=k_B\ln N\tag{31.9}</script><p>它一部分来自于系统可以处于不同宏观态上的不确定性，另一部分来自于每个宏观态可以由不同微观态组成的不确定性，即</p>
-<script type="math/tex; mode=display">S_总=S+S_{微观} \tag{31.10}</script><p>系统处于某个宏观态上的概率为</p>
-<script type="math/tex; mode=display">P_i=\frac{n_i}{N} \tag{31.11}</script><p>则微观态的熵的期望值</p>
-<script type="math/tex; mode=display">\langle S_{微观}\rangle=\sum_i P_ik_B\ln n_i =k_B\sum_i P_i\ln n_i\tag{31.12}</script><p>所以</p>
+<script type="math/tex; mode=display">T=\left(\frac{\partial U}{\partial S}\right)_V\tag{31.5}</script><script type="math/tex; mode=display">p=-\left(\frac{\partial U}{\partial V}\right)_S\tag{31.6}</script><p>&ensp;&ensp;&ensp;&ensp;计算焦耳膨胀这个过程中的熵变是一个比较好的例子。焦耳膨胀是指这样的过程，气体由一个容器经过一个阀门进入另一个真空容器。整个系统与外界隔绝，因此不会有热量的转移。整个过程是不可逆的。<br>&ensp;&ensp;&ensp;&ensp;假设打开阀门前，气体的参数为$p_0,V_0,T_0$，打开阀门，系统稳定后，气体的参数为$p,V,T$。对于理想气体来说，由于系统和环境是热孤立的，且气体不做功，因此气体的内能不变，温度也就不变。所以有</p>
+<script type="math/tex; mode=display">p_0V_0=pV\tag{31.7}</script><p>&ensp;&ensp;&ensp;&ensp;很难直接计算这个过程中的熵变，因为气体在膨胀过程中处于非平衡态，压强和体积实际上时无法定义的。但由于熵是一个态函数，只与系统的初末状态有关。于是我们可以构造一个初末状态与焦耳膨胀的相同的过程，例如一个体积由$V_0$到$V$的等温膨胀过程。则</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \Delta S&=\int \mathrm{d}S\\
+    &=\frac{1}{T}\int_{V_0}^Vp\mathrm{d}V\\
+    &=R\int_{V_0}^V\frac{\mathrm{d}V}{V}\\
+    &=R\ln \frac{V}{V_0}\tag{31.8}   
+\end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;我们也可以由统计的方式来定义熵。由式(31.5)和式(4.2)</p>
+<script type="math/tex; mode=display">\frac{1}{T}=\left(\frac{\partial S}{\partial U}\right)_V=\frac{\mathrm{d}(k_B\ln \Omega)}{\mathrm{d}E}\tag{31.9}</script><p>所以我们可以将熵定义为</p>
+<script type="math/tex; mode=display">S=k_B\ln \Omega \tag{31.10}</script><p>&ensp;&ensp;&ensp;&ensp;进一步地，我们假设一个系统有数个宏观态，第$i$个宏观态所包含的微观态数为$n_i$，有</p>
+<script type="math/tex; mode=display">N=\sum_i n_i \tag{31.11}</script><p>则系统总的熵为</p>
+<script type="math/tex; mode=display">S_总=k_B\ln N\tag{31.12}</script><p>它一部分来自于系统可以处于不同宏观态上的不确定性，另一部分来自于每个宏观态可以由不同微观态组成的不确定性，即</p>
+<script type="math/tex; mode=display">S_总=S+S_{微观} \tag{31.13}</script><p>系统处于某个宏观态上的概率为</p>
+<script type="math/tex; mode=display">P_i=\frac{n_i}{N} \tag{31.14}</script><p>则微观态的熵的期望值</p>
+<script type="math/tex; mode=display">\langle S_{微观}\rangle=\sum_i P_ik_B\ln n_i =k_B\sum_i P_i\ln n_i\tag{31.15}</script><p>所以</p>
 <script type="math/tex; mode=display">\begin{align*}
         S&=S_总-\langle S_{微观}\rangle\\
         &=k_B\left(\ln N-\sum_i P_i\ln n_i\right)\\
         &=k_B\left(\sum_i P_i \ln N-\sum_i P_i \ln n_i\right)\\
         &=k_B\left(\sum_i P_i\ln \frac{N}{n_i}\right)\\
-        &=-k_B\sum_i P_i\ln P_i \tag{31.13}
+        &=-k_B\sum_i P_i\ln P_i \tag{31.16}
 \end{align*}</script><p>式(31.13)称为<strong>熵的吉布斯表达式</strong>。</p>
-<h1><span id="第九章enspenspenspensp热力学的应用"><center>第九章&ensp;&ensp;&ensp;&ensp;热力学的应用</center></span></h1><h2><span id="32enspenspenspensp热力学势">§32&ensp;&ensp;&ensp;&ensp;热力学势</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们知道态函数在描述系统的变化时非常有用，它只与系统的初末状态有关。现在我们通过将$p,V,S,T$的各种组合与内能$U$相加来构造一些新的态函数，并要求它们具有能量的量纲。这些新的态函数称为<strong>热力学势</strong>。有三种热力学势非常有用。</p>
+<h1><span id="第九章enspenspenspensp热力学的应用"><center>第九章&ensp;&ensp;&ensp;&ensp;热力学的应用</center></span></h1><h2><span id="32enspensp热力学势">§32&ensp;&ensp;热力学势</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们知道态函数在描述系统的变化时非常有用，它只与系统的初末状态有关。现在我们通过将$p,V,S,T$的各种组合与内能$U$相加来构造一些新的态函数，并要求它们具有能量的量纲。这些新的态函数称为<strong>热力学势</strong>。有三种热力学势非常有用。</p>
 <ol>
 <li><strong>焓$H$</strong><br>&ensp;&ensp;&ensp;&ensp;我们定义<strong>焓</strong>为<script type="math/tex; mode=display">H=U+pV\tag{32.1}</script></li>
 </ol>
@@ -715,32 +633,40 @@
 \end{align*}</script><p>即为亥姆霍兹自由能。若将自由变量变为$T,p$：</p>
 <script type="math/tex; mode=display">\begin{align*}
     \mathrm{d}U&=T\mathrm{d}S-p\mathrm{d}V\\
-    &=\mathrm{d}(TS)-\mathrm{d}S\mathrm{d}T+V\mathrm{d}p-\mathrm{d}(pV)\\
+    &=\mathrm{d}(TS)-S\mathrm{d}T+V\mathrm{d}p-\mathrm{d}(pV)\\
     \to \mathrm{d}G&=\mathrm{d}(U+pV-TS)\\
     &=\mathrm{d}(H-TS)\\
-    &=-\mathrm{d}S\mathrm{d}T+V\mathrm{d}p
+    &=-S\mathrm{d}T+V\mathrm{d}p
 \end{align*}</script><p>我们就得到了吉布斯自由能。</p>
 <h2><span id="33enspensp麦克斯韦关系">§33&ensp;&ensp;麦克斯韦关系</span></h2><p>&ensp;&ensp;&ensp;&ensp;上一节给出的四个热力学势都是态函数。而态函数的一个重要性质就是它们的二阶导数与求导顺序无关，例如</p>
 <script type="math/tex; mode=display">\frac{\partial }{\partial S}\left(\frac{\partial U}{\partial V}\right)_S=\frac{\partial }{\partial V}\left(\frac{\partial U}{\partial S}\right)_V\tag{33.1}</script><p>由上式我们就得到</p>
 <script type="math/tex; mode=display">\left(\frac{\partial T}{\partial V}\right)_S=-\left(\frac{\partial p}{\partial S}\right)_V \tag{33.2}</script><p>式（33.2）称为<strong>麦克斯韦关系</strong>。由其他三个热力学势同样可以得到三个麦克斯韦关系。</p>
 <script type="math/tex; mode=display">\left(\frac{\partial T}{\partial p}\right)_S=\left(\frac{\partial V}{\partial S}\right)_p\tag{33.3}</script><script type="math/tex; mode=display">\left(\frac{\partial S}{\partial V}\right)_T=\left(\frac{\partial p}{\partial T}\right)_V\tag{33.4}</script><script type="math/tex; mode=display">\left(\frac{\partial S}{\partial p}\right)_T=-\left(\frac{\partial V}{\partial T}\right)_p\tag{33.5}</script><p>运用上述麦克斯韦关系，可以解决热力学中的许多问题。</p>
-<h2><span id="34enspensp热力学第三定律">§34&ensp;&ensp;热力学第三定律</span></h2><h1><span id="第十章enspenspenspensp统计力学"><center>第十章&ensp;&ensp;&ensp;&ensp;统计力学</center></span></h1><h2><span id="35enspensp配分函数">§35&ensp;&ensp;配分函数</span></h2><h2><span id="36enspensp理想气体的统计力学">§36&ensp;&ensp;理想气体的统计力学</span></h2><h2><span id="37enspensp化学势">§37&ensp;&ensp;化学势</span></h2><h2><span id="38enspensp光子">§38&ensp;&ensp;光子</span></h2><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp超越理想气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;超越理想气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
+<h2><span id="34enspensp热力学第三定律">§34&ensp;&ensp;热力学第三定律</span></h2><h1><span id="第十章enspenspenspensp统计力学"><center>第十章&ensp;&ensp;&ensp;&ensp;统计力学</center></span></h1><h2><span id="35enspensp配分函数">§35&ensp;&ensp;配分函数</span></h2><h2><span id="36enspensp理想气体的统计力学">§36&ensp;&ensp;理想气体的统计力学</span></h2><h2><span id="37enspensp化学势">§37&ensp;&ensp;化学势</span></h2><h2><span id="38enspensp光子">§38&ensp;&ensp;光子</span></h2><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
 <script type="math/tex; mode=display">pV_m=RT \tag{40.1}</script><p>然而，实际气体的行为并不完全类似于此。首先，气体在低温或高压的情况下会液化，这是理想气体方程所无法描述的行为；而在极端高压的情况下，分子间的相互作用不再能够忽略。这促使我们去寻找更接近实际的气体模型。</p>
 <p>&ensp;&ensp;&ensp;&ensp;最常用的是<strong>范德瓦尔斯气体</strong>，它是最简单的实际气体模型。在理想气体的基础上，它增加了两个假设：（1）分子间存在微弱的吸引力；（2）分子的体积不可忽略。范德瓦尔斯气体的状态方程为</p>
 <script type="math/tex; mode=display">\left(p+\frac{a}{V_m^2}\right)(V_m-b)=RT\tag{40.2}</script><p>该方程中的$a$是分子间相互作用的参数，$b$是考虑了分子的有限体积的参数。</p>
 <p>&ensp;&ensp;&ensp;&ensp;当我们考虑分子间的吸引力时，气体对外界的压强应该小于不考虑时的压强。因为处于边界上预备与壁碰撞的分子，会因为内部气体分子的吸引而减速，碰撞所产生的冲量也会减小。而气体内部的压强应该与理想情况一致，因为内部分子均匀收到各个方向上的吸引力，等同于理想情况，即 $p=p_{理想}-\Delta p$。产生$\Delta p$的同时，吸引力做功，转化为势能。我们假设分子间作用力符合平方反比律。对单个分子，势能改变$\nu$次，而共有$\nu \mathrm{mol}$的分子，则</p>
 <script type="math/tex; mode=display">\Delta p \mathrm{d}V=-\frac{a\nu^2\mathrm{d}V}{V^2}\tag{40.3}</script><p>所以</p>
 <script type="math/tex; mode=display">p_{理想}=p+\Delta p=p+\frac{a}{V^2_m}\tag{40.4}</script><p>再考虑分子体积带来的影响$V_m\to V_m-b$，我们就得到</p>
-<script type="math/tex; mode=display">RT=p_{理想}(V_m-b)=\left(p+\frac{a}{V_m^2}\right)(V_m-b) \tag{40.5}</script><p>$1\mathrm{mol}$范德瓦尔斯气体的内能为</p>
-<script type="math/tex; mode=display">U_m=C_{V,m}T-\frac{a}{V_m}+\mathrm{const}\tag{40.6}</script><p>&ensp;&ensp;&ensp;&ensp;对于1$\mathrm{mol}$的范德瓦尔斯气体，将式（40.1）两边乘$V^2$</p>
-<script type="math/tex; mode=display">pV^3-(pb+RT)V^2+aV-ab=0\tag{40.7}</script><p>所以范德瓦尔斯气体的等温线是一条三次曲线。定义等温压缩率$\kappa_T=-\frac{1}{V}(\partial V/\partial p)_T$。对于理想气体，它总是正的。而对于范德瓦尔斯气体来说，存在一个区域，$\kappa_T$是负的。这意味着，这个区域中，当外界试图通过增大压强来压缩范氏气体时，反而会增大范氏气体的体积。当范氏气体的温度大于某一特定值时才会出现如上情况。这个温度称为<strong>临界温度</strong>。这个温度对应的等温线满足</p>
-<script type="math/tex; mode=display">\left(\frac{\partial p}{\partial V}\right)_T=0, \left(\frac{\partial^2 p}{\partial V^2}\right)_T=0\tag{40.8}</script><p>解之得</p>
-<script type="math/tex; mode=display">T_c=\frac{8a}{27Rb},p_c=\frac{a}{27b^2},V_c=3b\tag{40.9}</script><p>&ensp;&ensp;&ensp;&ensp;另一种非理想气体模型由<strong>狄特里奇</strong>给出，其状态方程为</p>
-<script type="math/tex; mode=display">p(V_m-b)=RT\mathrm{exp}\left(-\frac{a}{RTV_m}\right)\tag{40.10}</script><p>即</p>
-<script type="math/tex; mode=display">p_{理想}=p\mathrm{exp}\left(\frac{a}{RTV_m}\right)\tag{40.11}</script><p>狄特里奇气体比范德瓦尔斯气体更接近真实气体。</p>
+<script type="math/tex; mode=display">RT=p_{理想}(V_m-b)=\left(p+\frac{a}{V_m^2}\right)(V_m-b) \tag{40.5}</script><p>&ensp;&ensp;&ensp;&ensp;为了得到范德瓦尔斯气体的内能，写出内能的微分式</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \mathrm{d}U&=T\mathrm{d}S-p\mathrm{d}V\\
+    &=T\left[\left(\frac{\partial S}{\partial T}\right)_V\mathrm{d}T+\left(\frac{\partial S}{\partial V}\right)_T\mathrm{d}V\right]-p\mathrm{d}V\\
+    &=\left[T\left(\frac{\partial S}{\partial T}\right)_V\right]\mathrm{d}T+\left[T\left(\frac{\partial S}{\partial V}\right)_T-p\right]\mathrm{d}V\\
+    &=C_V\mathrm{d}T+\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]\mathrm{d}V\tag{40.6}   
+\end{align*}</script><p>对于范德瓦尔斯气体</p>
+<script type="math/tex; mode=display">T\left(\frac{\partial p}{\partial T}\right)_V-p=\frac{a}{V_m^2}\tag{40.7}</script><p>于是</p>
+<script type="math/tex; mode=display">\mathrm{d}U_m=C_{V,m}\mathrm{d}T+\frac{a\mathrm{d}V_m}{V_m^2}\tag{40.8}</script><p>将其积分就得到了</p>
+<script type="math/tex; mode=display">U_m=C_{V,m}T-\frac{a}{V_m}+\mathrm{const}\tag{40.8}</script><p>&ensp;&ensp;&ensp;&ensp;对于1$\mathrm{mol}$的范德瓦尔斯气体，将式（40.1）两边乘$V^2$</p>
+<script type="math/tex; mode=display">pV^3-(pb+RT)V^2+aV-ab=0\tag{40.9}</script><p>所以范德瓦尔斯气体的等温线是一条三次曲线。定义等温压缩率$\kappa_T=-\frac{1}{V}(\partial V/\partial p)_T$。对于理想气体，它总是正的。而对于范德瓦尔斯气体来说，存在一个区域，$\kappa_T$是负的。这意味着，这个区域中，当外界试图通过增大压强来压缩范氏气体时，反而会增大范氏气体的体积。当范氏气体的温度大于某一特定值时才会出现如上情况。这个温度称为<strong>临界温度</strong>。这个温度对应的等温线满足</p>
+<script type="math/tex; mode=display">\left(\frac{\partial p}{\partial V}\right)_T=0, \left(\frac{\partial^2 p}{\partial V^2}\right)_T=0\tag{40.10}</script><p>解之得</p>
+<script type="math/tex; mode=display">T_c=\frac{8a}{27Rb},p_c=\frac{a}{27b^2},V_c=3b\tag{40.11}</script><p>&ensp;&ensp;&ensp;&ensp;另一种非理想气体模型由<strong>狄特里奇</strong>给出，其状态方程为</p>
+<script type="math/tex; mode=display">p(V_m-b)=RT\mathrm{exp}\left(-\frac{a}{RTV_m}\right)\tag{40.12}</script><p>即</p>
+<script type="math/tex; mode=display">p_{理想}=p\mathrm{exp}\left(\frac{a}{RTV_m}\right)\tag{40.13}</script><p>狄特里奇气体比范德瓦尔斯气体更接近真实气体。</p>
 <p>&ensp;&ensp;&ensp;&ensp;与范德瓦尔斯气体类似的，狄特里奇气体同样有临界温度：</p>
-<script type="math/tex; mode=display">T_c=\frac{a}{4Rb},p_c=\frac{a}{4e^2b^2},V_c=2b\tag{40.12}</script><p>&ensp;&ensp;&ensp;&ensp;另一种建立真实气体模型的方法是取理想气体方程并用$1/V_m$的幂级数来修正它，即</p>
-<script type="math/tex; mode=display">\frac{pV_m}{RT}=1+\frac{B}{V_m}+\frac{C}{V_m^2}+\cdots\tag{40.13}</script><p>这个方法称为<strong>位力展开</strong>，其中的$B,C$称为位力系数。位力系数实际上还是温度的函数。</p>
+<script type="math/tex; mode=display">T_c=\frac{a}{4Rb},p_c=\frac{a}{4e^2b^2},V_c=2b\tag{40.14}</script><p>&ensp;&ensp;&ensp;&ensp;另一种建立真实气体模型的方法是取理想气体方程并用$1/V_m$的幂级数来修正它，即</p>
+<script type="math/tex; mode=display">\frac{pV_m}{RT}=1+\frac{B}{V_m}+\frac{C}{V_m^2}+\cdots\tag{40.15}</script><p>这个方法称为<strong>位力展开</strong>，其中的$B,C$称为位力系数。位力系数实际上还是温度的函数。</p>
 <h2><span id="41enspensp真实气体的唯象研究">§41&ensp;&ensp;真实气体的唯象研究</span></h2><p>&ensp;&ensp;&ensp;&ensp;对于一般的真实气体来说，它们的状态方程一般很难直接由理论导出，而是需要考实验来测定一些参数后才能给出唯象方程。假设状态方程为$f(p,V,T,S)=0$，而可以定义几个参数来帮助我们描述气体的行为。</p>
 <ol>
 <li><p>等体压强系数</p>
@@ -778,15 +704,60 @@
     \mathrm{d}V&=\left(\frac{\partial V}{\partial p}\right)_T\mathrm{d}p+\left(\frac{\partial V}{\partial T}\right)_p\mathrm{d}T\\
     &=-V\kappa_T\mathrm{d}p+V\beta_p\mathrm{d}T\tag{41.12}
 \end{align*}</script><p>解上述微分方程组就可以得到状态方程。</p>
-<h2><span id="42enspensp节流过程">§42&ensp;&ensp;节流过程</span></h2><p>&ensp;&ensp;&ensp;&ensp;<strong>节流过程</strong>是指这样一种定常流动过程，其中高压气体被迫通过一个节流阀或一个多孔塞，进入一个低压区。设高压区的压强为$p_1$，这时气体的体积为$V_1$，低压区的压强为$p_2$，这时气体的体积为$V_2$，则这个过程中气体内能的变化为</p>
-<script type="math/tex; mode=display">\Delta U=p_1V_1-p_2V_2=U_2-U_1\tag{42.1}</script><p>所以有</p>
-<script type="math/tex; mode=display">U_1+p_1V_1=U_2+p_2V_2\tag{42.2}</script><p>因此，节流过程中焓守恒。</p>
+<h2><span id="42enspensp冷却真实气体">§42&ensp;&ensp;冷却真实气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;在31节中，我们讨论了理想气体在焦耳膨胀过程中的变化。现在，我们来看看范德瓦尔斯气体在焦耳膨胀过程中的温度的变化。尽管范德瓦尔斯的内能依旧是不变的，但这时范德瓦尔斯气体的温度并不与内能成正比。我们定义<strong>焦耳系数</strong>：</p>
+<script type="math/tex; mode=display">\mu_J=\left(\frac{\partial T}{\partial V}\right)_U\tag{42.1}</script><p>利用麦克斯韦关系可知</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \mu_J&=-\left(\frac{\partial T}{\partial U}\right)_V\left(\frac{\partial U}{\partial V}\right)_T\\
+    &=-\frac{1}{C_V}\left(\frac{\partial U}{\partial V}\right)_T\\
+    &=-\frac{1}{C_V}\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]\tag{42.2}   
+\end{align*}</script><p>对于理想气体气体</p>
+<script type="math/tex; mode=display">T\left(\frac{\partial p}{\partial T}\right)_V-p=\frac{\nu RT}{V}-p=0\tag{42.3}</script><p>所以理想气体在焦耳膨胀中温度不变。这与我们之前的结论是相同的。而对于范德瓦尔斯气体来说</p>
+<script type="math/tex; mode=display">T\left(\frac{\partial p}{\partial T}\right)_V-p=\frac{a}{V_m^2}\tag{42.4}</script><p>因此范德瓦尔斯气体的焦耳系数总是负的。所以焦耳膨胀过程中范德瓦尔斯气体的温度最终会降低。</p>
+<p>&ensp;&ensp;&ensp;&ensp;从式（40.8）我们也可以得到这个结论。范德瓦尔斯气体的内能不变，而摩尔体积增大，于是范德瓦尔斯气体的温度必须降低。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在这之后，我们再来看另一种冷却气体的有效方法：<strong>节流过程</strong>，或称<strong>焦耳-汤姆逊膨胀</strong>、<strong>焦耳-开尔文膨胀</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;节流过程是指这样一种定常流动过程，其中高压气体被迫通过一个节流阀或一个多孔塞，进入一个低压区。设高压区的压强为$p_1$，这时气体的体积为$V_1$，低压区的压强为$p_2$，这时气体的体积为$V_2$，则这个过程中气体内能的变化为</p>
+<script type="math/tex; mode=display">\Delta U=p_1V_1-p_2V_2=U_2-U_1\tag{42.5}</script><p>所以有</p>
+<script type="math/tex; mode=display">U_1+p_1V_1=U_2+p_2V_2\tag{42.6}</script><p>因此，节流过程中焓守恒。</p>
 <p>&ensp;&ensp;&ensp;&ensp;为了描述节流过程中的温度的变化，定义<strong>焦耳-开尔文系数</strong>$\mu_{JK}$：</p>
 <script type="math/tex; mode=display">\begin{align*}
     \mu_{JK}&=\left(\frac{\partial T}{\partial p}\right)_H\\
     &=-\left(\frac{\partial T}{\partial H}\right)_p\left(\frac{\partial H}{\partial p}\right)_T\\
-    &=-\frac{1}{C_p+pV\beta_p}
-\end{align*}</script><h2><span id="43enspensp相变">§43&ensp;&ensp;相变</span></h2></0$），对外做功$a$，定义该热机的**效率**为$\eta$>
+    &=-\frac{1}{C_p}\left[T\left(\frac{\partial S}{\partial p}\right)_T+V\right]\\
+    &=\frac{1}{C_p}\left[T\left(\frac{\partial V}{\partial T}\right)_p-V\right]\tag{42.7}
+\end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;节流过程是导致温度升高还是降低取决于$\mu_{JK}$的正负。当满足关系</p>
+<script type="math/tex; mode=display">\left(\frac{\partial V}{\partial T}\right)_p=\frac{V}{T}\tag{42.8}</script><p>时，焦开系数为0。它将在$V-T$图上画出一条曲线，称为<strong>反转</strong>曲线。</p>
+<h1><span id="第十二章enspenspenspensp相变"><center>第十二章&ensp;&ensp;&ensp;&ensp;相变</center></span></h1><h2><span id="43enspensp物态与相">§43&ensp;&ensp;物态与相</span></h2><p>&ensp;&ensp;&ensp;&ensp;构成物质的分子的聚合状态称为物质的聚集态，简称<strong>物态</strong>。气态、液态和固态是常见的物态，其中液态和固态又称<strong>凝聚态</strong>，因为它们的密度远大于气态。还存在很多其他物态，例如等离子态，超密态等等。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在无外力的作用下，物理、化学性质完全相同，成分相同的均匀物质的聚集态称为<strong>相</strong>。通常的气体、液体只有一个相，但也有例外，例如某些物质的液态有液相和液晶相。而固体物质由于可以拥有许多不同的晶体构型，所以有许多的固相，例如冰有9种固相，铁有四种固相。在温度、压强不变的情况下，物质从一个相变为另一个相的过程称为<strong>相变</strong>。相变过程是物质结构发生突然变化的过程，因此也伴随着热力学量的突变。</p>
+<h2><span id="44enspensp相变">§44&ensp;&ensp;相变</span></h2><p>&ensp;&ensp;&ensp;&ensp;相变时物质的温度和压强不变，但熵和体积通常有变化，所以</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \mathrm{d}U&=\mathrm{D}Q-p\mathrm{d}V\neq0\tag{44.1}
+\end{align*}</script><p>我们称其中的热量为<strong>潜热</strong></p>
+<script type="math/tex; mode=display">L=(U_2-U_1)+p(V_2-V_1) \tag{44.2}</script><p>其中前者称为<strong>内潜热</strong>，后者称为<strong>外潜热</strong>。可以看出，这实际就是相变中的焓变</p>
+<script type="math/tex; mode=display">L=H_2-H_1\tag{44.3}</script><p>&ensp;&ensp;&ensp;&ensp;将发生相变的系统和一个热源视作一个孤立系统。这个孤立系统的熵变为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \mathrm{d}S&=\mathrm{d}S_s+\mathrm{d}S_e\\
+    &=\mathrm{d}S_s-\frac{\mathrm{d}H}{T}\\
+    &=-\frac{\mathrm{d}(H-TS)}{T}\\
+    &=-\frac{\mathrm{d}G}{T}\tag{44.4}
+\end{align*}</script><p>利用熵增原理，有</p>
+<script type="math/tex; mode=display">\mathrm{d}G\leq0\tag{44.5}</script><p>这就是相变的<strong>自由能判据</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在相变的基础上，还有<strong>二级相变</strong>的概念。发生二级相变时，没有潜热的吸放，只有热容、等温压缩系数等物理量发生变化。例如铁磁转变、液-气临界现象、超导转变、液氦超流转变等等。根据<strong>Enrenfest分类</strong>，自由能对温度的$n$阶导数不连续，对应着$n$级相变。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当发生两相之间的一级相变时，通常会出现两相共存的状态。这时两种相变同时发生：相A$\to$相B，相B$\to$相A。当两相共存到达平衡态时，两相的吉布斯自由能应相等。平衡态时，两相的体积、压强、温度、熵和分子数都不变，因此两相共存时液态和气态的化学势相等，即</p>
+<script type="math/tex; mode=display">\mu_A=\mu_B\tag{44.6}</script><p>改变体系的温度和压强，同时保持其两相平衡状态，我们可以得到两相平衡曲线，它由方程</p>
+<script type="math/tex; mode=display">\mu_A(T,p)=\mu_B(T,p)\tag{44.7}</script><p>给出。两边做微分</p>
+<script type="math/tex; mode=display">\mathrm{d}\mu=-\frac{S}{N}\mathrm{d}T+\frac{V}{N}\mathrm{d}p\tag{44.8}</script><p>所以有</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d}p}{\mathrm{d}T}=\frac{\frac{S_B}{N_B}-\frac{S_A}{N_A}}{\frac{V_A}{N_A}-\frac{V_B}{N_B}}\tag{44.9}</script><p>我们设物质的单粒子熵为$s$，单粒子体积为$v$，单粒子潜热为$l$则有</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d}p}{\mathrm{d}T}=\frac{s_B-s_A}{v_A-v_B}=\frac{l}{T(v_A-v_B)}\tag{44.10}</script><p>这个微分方程称为<strong>克劳修斯-克拉珀龙方程</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当出现三相平衡时，我们有方程</p>
+<script type="math/tex; mode=display">\mu_A=\mu_B=\mu_C\tag{44.11}</script><p>这时物质的压强和温度可以完全确定，这个状态称为物质的<strong>三相点</strong>。</p>
+<h2><span id="45enspensp气液相变">§45&ensp;&ensp;气液相变</span></h2><p>&ensp;&ensp;&ensp;&ensp;物质从液态变为气态的过程称为汽化，它有蒸发和沸腾两种形式。蒸发发生在任何温度下的液体表面，而沸腾则发生在沸腾状态下的整个液体中。由气态变为液态的过程称为凝结。</p>
+<p>&ensp;&ensp;&ensp;&ensp;液体表面的分子由于无规则的热运动，存在一些能量较高的分子可以逃离其他液体分子的吸引力而逸出并扩散到空间中去。这就是液体的蒸发。由于这个过程中，逃逸的分子需要克服吸引力做功，因此需要吸收热量，即蒸发吸热。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当气态的物质变得足够致密时，分子间的吸引力会使得局部分子聚合成为液滴，并逐渐增大，这就是凝结。在液体表面附近，气态分子的量由于蒸发现象的存在，可能会出现可以发生凝结的局部区域，因此蒸发和凝结通常是同时出现的。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当气液两相共存平衡时，两相界面处的蒸发和凝结同时发生，相互平衡。这时液面上方的气体压强称为<strong>饱和蒸气压</strong>。利用克劳修斯-克拉珀龙方程可以得到饱和蒸汽压随温度变化的曲线。我们不考虑潜热随温度变化，将气体视作理想气体，并忽略液相的单分子体积，即</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d}p}{\mathrm{d}T}=\frac{pl}{k_BT^2}\to \frac{\mathrm{d}p}{p}=\frac{l\mathrm{d}T}{k_BT^2}\tag{45.1}</script><p>解得</p>
+<script type="math/tex; mode=display">p=p_0e^{-\frac{l}{k_BT}} \tag{45.2}</script><p>事实上，气液相变的潜热与温度呈线性依赖关系</p>
+<script type="math/tex; mode=display">l=l_0+\frac{C_{m,pv}-C_{m,pl}}{N_A}T \tag{45.3}</script><p>其中$C_{m,pv}$表示蒸汽的等压摩尔热容，$C_{m,pl}$表示液体的，这时的饱和蒸气压为</p>
+<script type="math/tex; mode=display">p=p_0e^{\left(-\frac{l_0}{k_BT}+\frac{(C_{m,pv}-C_{m,pl})\ln T}{R}\right)} \tag{45.4}</script><h2><span id="46enspensp固液相变">§46&ensp;&ensp;固液相变</span></h2><h2><span id="47enspensp固气相变">§47&ensp;&ensp;固气相变</span></h2></0$），对外做功$a$，定义该热机的**效率**为$\eta$>
     </div>
 
     
@@ -807,8 +778,8 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/05/18/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="next" title="电磁学">
-      电磁学 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/18/HEXO+Github%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="Hexo+Github创建博客">
+      Hexo+Github创建博客 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -868,7 +839,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">第一章    温度与玻尔兹曼因子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">§1    热量与热容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">§2    热平衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">§3    宏观态和微观态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.4.</span> <span class="nav-text">§4    温度的一个统计定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.5.</span> <span class="nav-text">§5    系综</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.6.</span> <span class="nav-text">§6    正则系综</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">第二章    麦克斯韦-玻尔兹曼分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">§7    速度分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">§8    速率分布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">第三章    压强</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">§9    分子的分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">§10    理想气体定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.3.</span> <span class="nav-text">§11    道尔顿分压定律</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">第四章    分子泻流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.1.</span> <span class="nav-text">§12    通量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.2.</span> <span class="nav-text">§13    泻流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.3.</span> <span class="nav-text">§14    克努森流动（Knudsen flow）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">第五章    平均自由程和碰撞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">§15    平均自由程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">第六章    气体的输运性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.1.</span> <span class="nav-text">§16    黏性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.2.</span> <span class="nav-text">§17    热传导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.3.</span> <span class="nav-text">§18    扩散</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">第七章    热力学第一定律</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.1.</span> <span class="nav-text">§19    态函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.2.</span> <span class="nav-text">§20    热力学第一定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.3.</span> <span class="nav-text">§21    能均分定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.4.</span> <span class="nav-text">§22    理想气体的热容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.5.</span> <span class="nav-text">§23    等温过程、等压过程和等容过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.6.</span> <span class="nav-text">§24    理想气体的绝热过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.7.</span> <span class="nav-text">§25    理想气体的多方过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">第八章    热力学第二定律</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.1.</span> <span class="nav-text">§26    平衡态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.2.</span> <span class="nav-text">§27    可逆与不可逆过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.3.</span> <span class="nav-text">§28    热力学第二定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.4.</span> <span class="nav-text">§30    克劳修斯定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.5.</span> <span class="nav-text">§31    熵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">第九章    热力学的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.1.</span> <span class="nav-text">§32    热力学势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.2.</span> <span class="nav-text">§33  麦克斯韦关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.3.</span> <span class="nav-text">§34  热力学第三定律</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text">第十章    统计力学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.1.</span> <span class="nav-text">§35  配分函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.2.</span> <span class="nav-text">§36  理想气体的统计力学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.3.</span> <span class="nav-text">§37  化学势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.4.</span> <span class="nav-text">§38  光子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.5.</span> <span class="nav-text">§39  声子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">11.</span> <span class="nav-text">第十一章    超越理想气体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.1.</span> <span class="nav-text">§40  实际气体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.2.</span> <span class="nav-text">§41  真实气体的唯象研究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.3.</span> <span class="nav-text">§42  节流过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.4.</span> <span class="nav-text">§43  相变</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">第一章    温度与玻尔兹曼因子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">§1    热量与热容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">§2    热平衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">§3    宏观态和微观态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">§4    温度的一个统计定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.5.</span> <span class="nav-text">§5    系综</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.6.</span> <span class="nav-text">§6    正则系综</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">第二章    麦克斯韦-玻尔兹曼分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">§7    速度分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">§8    速率分布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">第三章    压强</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.1.</span> <span class="nav-text">§9    分子的分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.2.</span> <span class="nav-text">§10    理想气体定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.3.</span> <span class="nav-text">§11    道尔顿分压定律</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">第四章    分子泻流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">§12    通量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.2.</span> <span class="nav-text">§13    泻流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.3.</span> <span class="nav-text">§14    克努森流动（Knudsen flow）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">第五章    平均自由程和碰撞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.1.</span> <span class="nav-text">§15    平均自由程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">第六章    气体的输运性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.1.</span> <span class="nav-text">§16    黏性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.2.</span> <span class="nav-text">§17    热传导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.3.</span> <span class="nav-text">§18    扩散</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">第七章    热力学第一定律</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.1.</span> <span class="nav-text">§19    态函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.2.</span> <span class="nav-text">§20    热力学第一定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.3.</span> <span class="nav-text">§21    能均分定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.4.</span> <span class="nav-text">§22    理想气体的热容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.5.</span> <span class="nav-text">§23    等温过程、等压过程和等容过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.6.</span> <span class="nav-text">§24    理想气体的绝热过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.7.</span> <span class="nav-text">§25    理想气体的多方过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">第八章    热力学第二定律</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.1.</span> <span class="nav-text">§26    平衡态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.2.</span> <span class="nav-text">§27    可逆与不可逆过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.3.</span> <span class="nav-text">§28    热力学第二定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.4.</span> <span class="nav-text">§30    克劳修斯定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.5.</span> <span class="nav-text">§31    熵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text">第九章    热力学的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.1.</span> <span class="nav-text">§32  热力学势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.2.</span> <span class="nav-text">§33  麦克斯韦关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.3.</span> <span class="nav-text">§34  热力学第三定律</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">11.</span> <span class="nav-text">第十章    统计力学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.1.</span> <span class="nav-text">§35  配分函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.2.</span> <span class="nav-text">§36  理想气体的统计力学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.3.</span> <span class="nav-text">§37  化学势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.4.</span> <span class="nav-text">§38  光子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.5.</span> <span class="nav-text">§39  声子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">12.</span> <span class="nav-text">第十一章    真实气体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">12.1.</span> <span class="nav-text">§40  实际气体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">12.2.</span> <span class="nav-text">§41  真实气体的唯象研究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">12.3.</span> <span class="nav-text">§42  冷却真实气体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">13.</span> <span class="nav-text">第十二章    相变</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">13.1.</span> <span class="nav-text">§43  物态与相</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">13.2.</span> <span class="nav-text">§44  相变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">13.3.</span> <span class="nav-text">§45  气液相变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">13.4.</span> <span class="nav-text">§46  固液相变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">13.5.</span> <span class="nav-text">§47  固气相变</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -882,12 +853,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
