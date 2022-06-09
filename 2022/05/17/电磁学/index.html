@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-08T03:02:11.016Z">
+<meta property="article:modified_time" content="2022-06-09T14:47:34.052Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Phys">
 <meta property="article:tag" content="电磁学">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-08 11:02:11" itemprop="dateModified" datetime="2022-06-08T11:02:11+08:00">2022-06-08</time>
+                <time title="Modified: 2022-06-09 22:47:34" itemprop="dateModified" datetime="2022-06-09T22:47:34+08:00">2022-06-09</time>
               </span>
 
           
@@ -625,144 +625,147 @@
 </tbody>
 </table>
 </div>
-<h1><span id="第六章enspenspenspensp电磁感应"><center> 第六章&ensp;&ensp;&ensp;&ensp;电磁感应 </center></span></h1><h2><span id="30enspensp法拉第定律">§30&ensp;&ensp;法拉第定律</span></h2><p>&ensp;&ensp;&ensp;&ensp;法拉第电磁感应定律表述为：当空间中的磁场随时间变化时，一闭合回路中的电动势为该回路所包围的面内的磁通量的变化率，即</p>
-<script type="math/tex; mode=display">\mathscr{E}=-\frac{\mathrm{d} \Phi}{\mathrm{d} t} \tag{30.1}</script><p>这个电动势称为<strong>感生电动势</strong>。</p>
+<h1><span id="第六章enspenspenspensp稳恒电流"><center> 第六章&ensp;&ensp;&ensp;&ensp;稳恒电流 </center></span></h1><h2><span id="30enspensp稳恒电流">§30&ensp;&ensp;稳恒电流</span></h2><p>&ensp;&ensp;&ensp;&ensp;</p>
+<h2><span id="31enspensp欧姆定律及焦耳定律">§31&ensp;&ensp;欧姆定律及焦耳定律</span></h2><h2><span id="32enspensp基尔霍夫方程组">§32&ensp;&ensp;基尔霍夫方程组</span></h2><h1><span id="第六章enspenspenspensp电磁感应"><center> 第六章&ensp;&ensp;&ensp;&ensp;电磁感应 </center></span></h1><h2><span id="33enspensp法拉第定律">§33&ensp;&ensp;法拉第定律</span></h2><p>&ensp;&ensp;&ensp;&ensp;法拉第电磁感应定律表述为：当空间中的磁场随时间变化时，一闭合回路中的电动势为该回路所包围的面内的磁通量的变化率，即</p>
+<script type="math/tex; mode=display">\mathscr{E}=-\frac{\mathrm{d} \Phi}{\mathrm{d} t} \tag{33.1}</script><p>这个电动势称为<strong>感生电动势</strong>。</p>
 <p>&ensp;&ensp;&ensp;&ensp;由</p>
 <script type="math/tex; mode=display">\begin{align*}
     \mathscr{E}&=\oint_{\partial S}\pmb{E}\cdot\mathrm{d}\pmb{l} \\
-    &=\iint_S\nabla\times \pmb{E}\cdot\mathrm{d}\pmb{S}\tag{30.2}
+    &=\iint_S\nabla\times \pmb{E}\cdot\mathrm{d}\pmb{S}\tag{33.2}
 \end{align*}</script><p>以及</p>
 <script type="math/tex; mode=display">\begin{align*}
     -\frac{\mathrm{d} \Phi}{\mathrm{d} t}&=-\frac{\mathrm{d} }{\mathrm{d} t}\iint_S\pmb{B}\cdot\mathrm{d}\pmb{S}\\
-    &=-\iint_S\frac{\partial \pmb{B}}{\partial t}\cdot\mathrm{d}\pmb{S}\tag{30.3}
+    &=-\iint_S\frac{\partial \pmb{B}}{\partial t}\cdot\mathrm{d}\pmb{S}\tag{33.3}
 \end{align*}</script><p>所以有</p>
-<script type="math/tex; mode=display">\nabla\times \pmb{E}+\frac{\partial \pmb{B}}{\partial t}=0\tag{30.4}</script><p>这就是法拉第定律的微分形式。可见，若空间中的磁场不含时，则式（30.4）就退化为</p>
-<script type="math/tex; mode=display">\nabla\times \pmb{E}=0\tag{30.5}</script><p>&ensp;&ensp;&ensp;&ensp;借助楞次定律可以方便地得到回路中的电流方向。它表述为：<strong>感生电动势产生的电流反抗磁通的改变</strong>。即电流产生的磁通应与磁通的改变量相反。</p>
+<script type="math/tex; mode=display">\nabla\times \pmb{E}+\frac{\partial \pmb{B}}{\partial t}=0\tag{33.4}</script><p>这就是法拉第定律的微分形式。可见，若空间中的磁场不含时，则式（33.4）就退化为</p>
+<script type="math/tex; mode=display">\nabla\times \pmb{E}=0\tag{33.5}</script><p>&ensp;&ensp;&ensp;&ensp;借助楞次定律可以方便地得到回路中的电流方向。它表述为：<strong>感生电动势产生的电流反抗磁通的改变</strong>。即电流产生的磁通应与磁通的改变量相反。</p>
 <p>&ensp;&ensp;&ensp;&ensp;要注意的是，由于现在我们关注的是含时磁场，则我们在前两章中所发展的静磁学的理论理论上已经失效了。但通常我们继续使用静磁学，只要不考虑电磁波和电磁辐射，结果都是近似正确的。这种情况称为<strong>准静态</strong>，只要磁场变化得不太快，且考虑的场点离源点不太远。</p>
-<h2><span id="31enspensp电感">§31&ensp;&ensp;电感</span></h2><p>&ensp;&ensp;&ensp;&ensp;假设现在有两个静止的导线回路$S_1$和$S_2$，$S_1$中通有电流$I_1$。当$I_1$变化时，$S_2$中会有感生电动势并产生电流。可以想象，这时会有较复杂的耦合现象。利用磁矢势，将$S_1$在$S_2$回路中产生的磁通计算出来</p>
+<h2><span id="34enspensp电感">§34&ensp;&ensp;电感</span></h2><p>&ensp;&ensp;&ensp;&ensp;假设现在有两个静止的导线回路$S_1$和$S_2$，$S_1$中通有电流$I_1$。当$I_1$变化时，$S_2$中会有感生电动势并产生电流。可以想象，这时会有较复杂的耦合现象。利用磁矢势，将$S_1$在$S_2$回路中产生的磁通计算出来</p>
 <script type="math/tex; mode=display">\begin{align*}
     \Phi_2&=\iint_{S_2}\pmb{B}_1\cdot\mathrm{d}\pmb{S}_2\\
     &=\iint_{S_2}(\nabla\times \pmb{A}_1)\cdot\mathrm{d}\pmb{S}_2\\
-    &=\oint_{\partial S_2}\pmb{A}_1\cdot\mathrm{d}\pmb{l}_2\tag{31.1}
+    &=\oint_{\partial S_2}\pmb{A}_1\cdot\mathrm{d}\pmb{l}_2\tag{34.1}
 \end{align*}</script><p>其中，根据式（23.4）</p>
 <script type="math/tex; mode=display">\begin{align*}
-    \pmb{A}_1&=\frac{\mu_0}{4\pi}I_1\oint_{\partial S_1}\frac{\mathrm{d}\pmb{l}_1}{|\pmb{r}-\pmb{r}'|}   \tag{31.2}
+    \pmb{A}_1&=\frac{\mu_0}{4\pi}I_1\oint_{\partial S_1}\frac{\mathrm{d}\pmb{l}_1}{|\pmb{r}-\pmb{r}'|}   \tag{34.2}
 \end{align*}</script><p>所以</p>
 <script type="math/tex; mode=display">\begin{align*}
     \Phi_2&=\frac{\mu_0I_1}{4\pi}\oint_{\partial S_2}\left(\oint_{\partial S_1}\frac{\mathrm{d}\pmb{l}_1}{|\pmb{r}-\pmb{r}'|}\right)\cdot\mathrm{d}\pmb{l}_2\\
-    &=\frac{\mu_0I_1}{4\pi}\oint\oint\frac{\mathrm{d}\pmb{l}_1\cdot\mathrm{d}\pmb{l}_2}{|\pmb{r}-\pmb{r}'|}\tag{31.3}
-\end{align*}</script><p>可见，这个磁通仅仅与电流成正比，其比例系数是一个仅与回路几何因素有关的二重线积分，它称为这两个回路的<strong>互感系数</strong>。式（31.3）称为<strong>纽曼公式</strong>。</p>
-<script type="math/tex; mode=display">M=\frac{\mu_0}{4\pi}\oint\oint\frac{\mathrm{d}\pmb{l}_1\cdot\mathrm{d}\pmb{l}_2}{|\pmb{r}-\pmb{r}'|}\tag{31.4}</script><p>&ensp;&ensp;&ensp;&ensp;现在，法拉第定律可改写为</p>
-<script type="math/tex; mode=display">\mathscr{E}=-\frac{\mathrm{d}\Phi}{\mathrm{d}t}=-M\frac{\mathrm{d}I}{\mathrm{d}t} \tag{31.5}</script><p>&ensp;&ensp;&ensp;&ensp;当回路中的电流改变时，它不仅会在附近的回路中感应出电流，还会在这个回路本身中感应出电流，这时的磁通同样是与电流成正比的</p>
-<script type="math/tex; mode=display">\Phi=LI \tag{31.6}</script><p>其中的$L$称为回路的<strong>自感系数</strong>。自感电动势为</p>
-<script type="math/tex; mode=display">\mathscr{E}=-L\frac{\mathrm{d}I}{\mathrm{d}t}\tag{31.7}</script><p>由于这个电动势的效果时反抗电流的变化，因此也称为<strong>反电动势</strong>。</p>
-<h2><span id="32enspensp线圈的串-并联">§32&ensp;&ensp;线圈的串、并联</span></h2><p>&ensp;&ensp;&ensp;&ensp;设有线圈1和2，通的电流分别为$I_1$和$I_2$。则线圈的磁通既包括自感磁通也包括互感磁通。</p>
-<script type="math/tex; mode=display">\Phi_1=L_1I_1+MI_2\tag{32.1}</script><script type="math/tex; mode=display">\Phi_2=L_2I_2+MI_1\tag{32.2}</script><p>则感生电动势为</p>
-<script type="math/tex; mode=display">\mathscr{E}_1=-\left(L_1\frac{\mathrm{d} I_1}{\mathrm{d} t}+M\frac{\mathrm{d} I_2}{\mathrm{d} t}\right)\tag{32.3}</script><script type="math/tex; mode=display">\mathscr{E}_2=-\left(L_2\frac{\mathrm{d} I_2}{\mathrm{d} t}+M\frac{\mathrm{d} I_1}{\mathrm{d} t}\right)\tag{32.3}</script><p>我们取感生电动势的方向与磁通的方向满足右手定则。这时，自感系数$L_1$和$L_2$将为正值。而互感系数$M$取决于电流的方向。</p>
+    &=\frac{\mu_0I_1}{4\pi}\oint\oint\frac{\mathrm{d}\pmb{l}_1\cdot\mathrm{d}\pmb{l}_2}{|\pmb{r}-\pmb{r}'|}\tag{34.3}
+\end{align*}</script><p>可见，这个磁通仅仅与电流成正比，其比例系数是一个仅与回路几何因素有关的二重线积分，它称为这两个回路的<strong>互感系数</strong>。式（34.3）称为<strong>纽曼公式</strong>。</p>
+<script type="math/tex; mode=display">M=\frac{\mu_0}{4\pi}\oint\oint\frac{\mathrm{d}\pmb{l}_1\cdot\mathrm{d}\pmb{l}_2}{|\pmb{r}-\pmb{r}'|}\tag{34.4}</script><p>&ensp;&ensp;&ensp;&ensp;现在，法拉第定律可改写为</p>
+<script type="math/tex; mode=display">\mathscr{E}=-\frac{\mathrm{d}\Phi}{\mathrm{d}t}=-M\frac{\mathrm{d}I}{\mathrm{d}t} \tag{34.5}</script><p>&ensp;&ensp;&ensp;&ensp;当回路中的电流改变时，它不仅会在附近的回路中感应出电流，还会在这个回路本身中感应出电流，这时的磁通同样是与电流成正比的</p>
+<script type="math/tex; mode=display">\Phi=LI \tag{34.6}</script><p>其中的$L$称为回路的<strong>自感系数</strong>。自感电动势为</p>
+<script type="math/tex; mode=display">\mathscr{E}=-L\frac{\mathrm{d}I}{\mathrm{d}t}\tag{34.7}</script><p>由于这个电动势的效果时反抗电流的变化，因此也称为<strong>反电动势</strong>。</p>
+<h2><span id="35enspensp线圈的串-并联">§35&ensp;&ensp;线圈的串、并联</span></h2><p>&ensp;&ensp;&ensp;&ensp;设有线圈1和2，通的电流分别为$I_1$和$I_2$。则线圈的磁通既包括自感磁通也包括互感磁通。</p>
+<script type="math/tex; mode=display">\Phi_1=L_1I_1+MI_2\tag{35.1}</script><script type="math/tex; mode=display">\Phi_2=L_2I_2+MI_1\tag{35.2}</script><p>则感生电动势为</p>
+<script type="math/tex; mode=display">\mathscr{E}_1=-\left(L_1\frac{\mathrm{d} I_1}{\mathrm{d} t}+M\frac{\mathrm{d} I_2}{\mathrm{d} t}\right)\tag{35.3}</script><script type="math/tex; mode=display">\mathscr{E}_2=-\left(L_2\frac{\mathrm{d} I_2}{\mathrm{d} t}+M\frac{\mathrm{d} I_1}{\mathrm{d} t}\right)\tag{35.3}</script><p>我们取感生电动势的方向与磁通的方向满足右手定则。这时，自感系数$L_1$和$L_2$将为正值。而互感系数$M$取决于电流的方向。</p>
 <p>&ensp;&ensp;&ensp;&ensp;根据互感系数的正负，我们定义线圈的<strong>同名端</strong>和<strong>异名端</strong>：当电流从线圈的同名端流入时，互感系数为正值；从异名端流入时，互感系数为负值。</p>
 <ol>
-<li>线圈串联<br>&ensp;&ensp;&ensp;&ensp;线圈串联分为顺接和反接两种。异名端相接是顺接，同名端相接是反接。设流入的电流为$I$，则总电动势为<script type="math/tex; mode=display">\mathscr{E}=-(L_1+L_2+2M)\frac{\mathrm{d} I}{\mathrm{d} t}\tag{32.4}</script></li>
+<li>线圈串联<br>&ensp;&ensp;&ensp;&ensp;线圈串联分为顺接和反接两种。异名端相接是顺接，同名端相接是反接。设流入的电流为$I$，则总电动势为<script type="math/tex; mode=display">\mathscr{E}=-(L_1+L_2+2M)\frac{\mathrm{d} I}{\mathrm{d} t}\tag{35.4}</script></li>
 </ol>
 <p>则串联线圈的总自感为</p>
-<script type="math/tex; mode=display">L=L_1+L_2+2M\tag{32.5}</script><ol>
-<li>线圈并联<br>&ensp;&ensp;&ensp;&ensp;设流入的总电流为$I$，不考虑线圈的电阻。当电流发生变化时，两线圈的感生电动势相等，则<script type="math/tex; mode=display">L_1\frac{\mathrm{d} I_1}{\mathrm{d} t}+M\frac{\mathrm{d} I_2}{\mathrm{d} t}=L_2\frac{\mathrm{d} I_2}{\mathrm{d} t}+M\frac{\mathrm{d} I_1}{\mathrm{d} t}\tag{32.6}</script></li>
+<script type="math/tex; mode=display">L=L_1+L_2+2M\tag{35.5}</script><ol>
+<li>线圈并联<br>&ensp;&ensp;&ensp;&ensp;设流入的总电流为$I$，不考虑线圈的电阻。当电流发生变化时，两线圈的感生电动势相等，则<script type="math/tex; mode=display">L_1\frac{\mathrm{d} I_1}{\mathrm{d} t}+M\frac{\mathrm{d} I_2}{\mathrm{d} t}=L_2\frac{\mathrm{d} I_2}{\mathrm{d} t}+M\frac{\mathrm{d} I_1}{\mathrm{d} t}\tag{35.6}</script></li>
 </ol>
 <p>同时</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} I}{\mathrm{d} t}=\frac{\mathrm{d} I_1}{\mathrm{d} t}+\frac{\mathrm{d} I_2}{\mathrm{d} t} \tag{32.7}</script><p>解得</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} I_1}{\mathrm{d} t}=\frac{L_2-M}{L_1+L_2-2M}\frac{\mathrm{d} I}{\mathrm{d} t}\tag{32.8}</script><script type="math/tex; mode=display">\frac{\mathrm{d} I_2}{\mathrm{d} t}=\frac{L_1-M}{L_1+L_2-2M}\frac{\mathrm{d} I}{\mathrm{d} t}\tag{32.9}</script><p>于是</p>
-<script type="math/tex; mode=display">\mathscr{E}=-\frac{L_1L_2-M^2}{L_1+L_2-2M}\frac{\mathrm{d} I}{\mathrm{d} t}\tag{32.10}</script><p>自感系数为</p>
-<script type="math/tex; mode=display">L=\frac{L_1L_2-M^2}{L_1+L_2-2M}\tag{32.11}</script><p>由于自感系数不能是负的，则</p>
-<script type="math/tex; mode=display">|M|\leq\sqrt{L_1L_2}\tag{32.12}</script><p>或</p>
-<script type="math/tex; mode=display">M=k\sqrt{L_1L_2},-1\leq k\leq 1\tag{32.13}</script><p>其中$k$称为耦合系数。$k=0$代表无耦合，$k=\pm 1$代表理想耦合。</p>
-<p>&ensp;&ensp;&ensp;&ensp;对于无耦合的情况，式（32.5）和（32.11）变为</p>
-<script type="math/tex; mode=display">L=L_1+L_2\tag{32.14}</script><script type="math/tex; mode=display">L=\frac{L_1L_2}{L_1+L_2}\to \frac{1}{L}=\frac{1}{L_1}+\frac{1}{L_2}\tag{32.15}</script><p>说明不考虑互感时，自感系数的串、并联公式与电阻的串、并联公式相同。</p>
-<p>&ensp;&ensp;&ensp;&ensp;对于理想耦合，式（32.11）变为</p>
-<script type="math/tex; mode=display">L=\frac{L_1L_2-M^2}{L_1+L_2-2M}=0\tag{32.16}</script><p>说明两个自感系数不同的理想耦合线圈并联后的自感系数总为0。但当$L_1=L_2$时</p>
-<script type="math/tex; mode=display">L=\frac{L_0^2-M^2}{2(L_0-M)}=\frac{1}{2}(L_0+M)\tag{32.17}</script><h2><span id="33enspensp似稳电路和暂态过程">§33&ensp;&ensp;似稳电路和暂态过程</span></h2><p>&ensp;&ensp;&ensp;&ensp;这一节我们研究一种非稳恒电路。它除了包含电源和电阻，还包含电容、电感和互感元件，且流经电路的电路随时间缓慢变化。这种电路的基本方程和处理方法与稳恒电路类似，因此称为<strong>似稳电路</strong>。</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d} I}{\mathrm{d} t}=\frac{\mathrm{d} I_1}{\mathrm{d} t}+\frac{\mathrm{d} I_2}{\mathrm{d} t} \tag{35.7}</script><p>解得</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d} I_1}{\mathrm{d} t}=\frac{L_2-M}{L_1+L_2-2M}\frac{\mathrm{d} I}{\mathrm{d} t}\tag{35.8}</script><script type="math/tex; mode=display">\frac{\mathrm{d} I_2}{\mathrm{d} t}=\frac{L_1-M}{L_1+L_2-2M}\frac{\mathrm{d} I}{\mathrm{d} t}\tag{35.9}</script><p>于是</p>
+<script type="math/tex; mode=display">\mathscr{E}=-\frac{L_1L_2-M^2}{L_1+L_2-2M}\frac{\mathrm{d} I}{\mathrm{d} t}\tag{35.10}</script><p>自感系数为</p>
+<script type="math/tex; mode=display">L=\frac{L_1L_2-M^2}{L_1+L_2-2M}\tag{35.11}</script><p>由于自感系数不能是负的，则</p>
+<script type="math/tex; mode=display">|M|\leq\sqrt{L_1L_2}\tag{35.12}</script><p>或</p>
+<script type="math/tex; mode=display">M=k\sqrt{L_1L_2},-1\leq k\leq 1\tag{35.13}</script><p>其中$k$称为耦合系数。$k=0$代表无耦合，$k=\pm 1$代表理想耦合。</p>
+<p>&ensp;&ensp;&ensp;&ensp;对于无耦合的情况，式（35.5）和（35.11）变为</p>
+<script type="math/tex; mode=display">L=L_1+L_2\tag{35.14}</script><script type="math/tex; mode=display">L=\frac{L_1L_2}{L_1+L_2}\to \frac{1}{L}=\frac{1}{L_1}+\frac{1}{L_2}\tag{35.15}</script><p>说明不考虑互感时，自感系数的串、并联公式与电阻的串、并联公式相同。</p>
+<p>&ensp;&ensp;&ensp;&ensp;对于理想耦合，式（35.11）变为</p>
+<script type="math/tex; mode=display">L=\frac{L_1L_2-M^2}{L_1+L_2-2M}=0\tag{35.16}</script><p>说明两个自感系数不同的理想耦合线圈并联后的自感系数总为0。但当$L_1=L_2$时</p>
+<script type="math/tex; mode=display">L=\frac{L_0^2-M^2}{2(L_0-M)}=\frac{1}{2}(L_0+M)\tag{35.17}</script><h2><span id="36enspensp似稳电路和暂态过程">§36&ensp;&ensp;似稳电路和暂态过程</span></h2><p>&ensp;&ensp;&ensp;&ensp;这一节我们研究一种非稳恒电路。它除了包含电源和电阻，还包含电容、电感和互感元件，且流经电路的电路随时间缓慢变化。这种电路的基本方程和处理方法与稳恒电路类似，因此称为<strong>似稳电路</strong>。</p>
 <p>&ensp;&ensp;&ensp;&ensp;当电路中的电动势发生变化时，电路中的电流、电场分布会发生变化。这一变化是以光速传播的。因此，只要电路的尺寸远小于光速与电动势变化周期的乘积，即</p>
-<script type="math/tex; mode=display">l\ll cT \quad or \quad l\ll \frac{c}{f}\tag{33.1}</script><p>则可近似认为电路对电动势改变的响应不需要时间。这种情况下，稳恒电路的各个方程仍然适用。</p>
+<script type="math/tex; mode=display">l\ll cT \quad or \quad l\ll \frac{c}{f}\tag{36.1}</script><p>则可近似认为电路对电动势改变的响应不需要时间。这种情况下，稳恒电路的各个方程仍然适用。</p>
 <p>&ensp;&ensp;&ensp;&ensp;根据电荷守恒定律，并且我们忽略除了电容极板外的电荷累计，则有</p>
-<script type="math/tex; mode=display">\iint_S\pmb{J}\cdot\mathrm{d}\pmb{S}=0\tag{33.2}</script><p>于是沿任一回路电流处处相等，尽管这时电流通常是时间的函数。</p>
+<script type="math/tex; mode=display">\iint_S\pmb{J}\cdot\mathrm{d}\pmb{S}=0\tag{36.2}</script><p>于是沿任一回路电流处处相等，尽管这时电流通常是时间的函数。</p>
 <p>&ensp;&ensp;&ensp;&ensp;在含有电感、电容元件的单一回路中，如果我们提供一个阶跃电压信号，那么电流也会在两个稳态间变化。这个过程称为暂态过程。</p>
 <ol>
-<li>RL电路<br>&ensp;&ensp;&ensp;&ensp;电路中只含有电阻、电感元件，则有方程<script type="math/tex; mode=display">\mathscr{E}=IR+L\frac{\mathrm{d} I}{\mathrm{d} t}\tag{33.3}</script></li>
+<li>RL电路<br>&ensp;&ensp;&ensp;&ensp;电路中只含有电阻、电感元件，则有方程<script type="math/tex; mode=display">\mathscr{E}=IR+L\frac{\mathrm{d} I}{\mathrm{d} t}\tag{36.3}</script></li>
 </ol>
 <p>这个微分方程的解为</p>
-<script type="math/tex; mode=display">I=\frac{\mathscr{E}}{R}+I_0\mathrm{e}^{-\frac{R}{L}t} \tag{33.4}</script><p>我们设$t=0$时电流为$0$，那么有</p>
-<script type="math/tex; mode=display">I=\frac{\mathscr{E}}{R}(1-\mathrm{e}^{-\frac{R}{L}t})\tag{33.5}</script><p>这个式子表明，接通电源后，电流会逐渐增加至$\mathscr{E}/R$，增加快慢取决于比值</p>
-<script type="math/tex; mode=display">\tau_L=\frac{L}{R} \tag{33.6}</script><p>它称为电路的时间常数。$\tau_L$越小，电流增长得越快。类似的，如果设$t=0$时电流为$\mathscr{E}/R$，则电流会逐渐减小到0。</p>
-<script type="math/tex; mode=display">I=\frac{\mathscr{E}}{R}\mathrm{e}^{-\frac{R}{L}t}\tag{33.7}</script><ol>
-<li>RC电路<br>&ensp;&ensp;&ensp;&ensp;类似地，有方程<script type="math/tex; mode=display">IR+\frac{q}{C}=\mathscr{E}\tag{33.8}</script></li>
+<script type="math/tex; mode=display">I=\frac{\mathscr{E}}{R}+I_0\mathrm{e}^{-\frac{R}{L}t} \tag{36.4}</script><p>我们设$t=0$时电流为$0$，那么有</p>
+<script type="math/tex; mode=display">I=\frac{\mathscr{E}}{R}(1-\mathrm{e}^{-\frac{R}{L}t})\tag{36.5}</script><p>这个式子表明，接通电源后，电流会逐渐增加至$\mathscr{E}/R$，增加快慢取决于比值</p>
+<script type="math/tex; mode=display">\tau_L=\frac{L}{R} \tag{36.6}</script><p>它称为电路的时间常数。$\tau_L$越小，电流增长得越快。类似的，如果设$t=0$时电流为$\mathscr{E}/R$，则电流会逐渐减小到0。</p>
+<script type="math/tex; mode=display">I=\frac{\mathscr{E}}{R}\mathrm{e}^{-\frac{R}{L}t}\tag{36.7}</script><ol>
+<li>RC电路<br>&ensp;&ensp;&ensp;&ensp;类似地，有方程<script type="math/tex; mode=display">IR+\frac{q}{C}=\mathscr{E}\tag{36.8}</script></li>
 </ol>
 <p>化简为</p>
-<script type="math/tex; mode=display">\dot{q}+\frac{1}{RC}q=\frac{\mathscr{E}}{R} \tag{33.9}</script><p>设初始条件为$q\big|_{t=0}=0$，可得</p>
-<script type="math/tex; mode=display">q=C\mathscr{E}(1-\mathrm{e}^{-\frac{t}{RC}}) \tag{33.10}</script><p>对应的充电电流为</p>
-<script type="math/tex; mode=display">I=\frac{\mathscr{E}}{R}\mathrm{e}^{-\frac{t}{RC}}\tag{33.11}</script><p>同样的，充电的快慢取决于时间常数</p>
-<script type="math/tex; mode=display">\tau_C=RC\tag{33.12}</script><ol>
-<li>RCL电路<br>&ensp;&ensp;&ensp;&ensp;这时的方程为<script type="math/tex; mode=display">IR+\frac{q}{C}+L\frac{\mathrm{d} I}{\mathrm{d} t}=\mathscr{E}\tag{33.13}</script></li>
+<script type="math/tex; mode=display">\dot{q}+\frac{1}{RC}q=\frac{\mathscr{E}}{R} \tag{36.9}</script><p>设初始条件为$q\big|_{t=0}=0$，可得</p>
+<script type="math/tex; mode=display">q=C\mathscr{E}(1-\mathrm{e}^{-\frac{t}{RC}}) \tag{36.10}</script><p>对应的充电电流为</p>
+<script type="math/tex; mode=display">I=\frac{\mathscr{E}}{R}\mathrm{e}^{-\frac{t}{RC}}\tag{36.11}</script><p>同样的，充电的快慢取决于时间常数</p>
+<script type="math/tex; mode=display">\tau_C=RC\tag{36.12}</script><ol>
+<li>RCL电路<br>&ensp;&ensp;&ensp;&ensp;这时的方程为<script type="math/tex; mode=display">IR+\frac{q}{C}+L\frac{\mathrm{d} I}{\mathrm{d} t}=\mathscr{E}\tag{36.13}</script></li>
 </ol>
 <p>化简为</p>
-<script type="math/tex; mode=display">\ddot{q}+\frac{R}{L}\dot{q}+\frac{1}{LC}q=\frac{\mathscr{E}}{L}\tag{33.14}</script><p>这是一个阻尼振荡方程。设边界条件为$q\big|_{t=0}=0,I\big|_{t=0}=0$。它的解有三种，取决于$R、C、L$三者的相对大小。</p>
+<script type="math/tex; mode=display">\ddot{q}+\frac{R}{L}\dot{q}+\frac{1}{LC}q=\frac{\mathscr{E}}{L}\tag{36.14}</script><p>这是一个阻尼振荡方程。设边界条件为$q\big|_{t=0}=0,I\big|_{t=0}=0$。它的解有三种，取决于$R、C、L$三者的相对大小。</p>
 <ul>
-<li>弱阻尼状态（$R^2C-4L&lt;0$）<script type="math/tex; mode=display">q=q_0\left[1-\mathrm{e}^{-\beta t}\left(\cos \omega t+\frac{\beta}{\omega}\sin\omega t\right)\right] \tag{33.15}</script></li>
+<li>弱阻尼状态（$R^2C-4L&lt;0$）<script type="math/tex; mode=display">q=q_0\left[1-\mathrm{e}^{-\beta t}\left(\cos \omega t+\frac{\beta}{\omega}\sin\omega t\right)\right] \tag{36.15}</script></li>
 </ul>
 <p>其中</p>
 <script type="math/tex; mode=display">q_0=C\mathscr{E},\beta=\frac{R}{2L},\omega=\frac{1}{\sqrt{LC}}\sqrt{1-\frac{R^2C}{4L}}</script><p>这是一个阻尼振荡解。</p>
 <ul>
-<li>临界阻尼状态（$R^2C-4L=0$）<script type="math/tex; mode=display">q=q_0\left[1-\left(1+\beta t\right)\mathrm{e}^{-\beta t}\right] \tag{33.16}</script></li>
+<li>临界阻尼状态（$R^2C-4L=0$）<script type="math/tex; mode=display">q=q_0\left[1-\left(1+\beta t\right)\mathrm{e}^{-\beta t}\right] \tag{36.16}</script></li>
 </ul>
 <p>&ensp;&ensp;&ensp;&ensp;这时$q$随时间单调递增。</p>
 <ul>
-<li>过阻尼状态（$R^2C-4L&gt;0$）<script type="math/tex; mode=display">q=q_0\left\{1-\frac{\mathrm{e}^{-\beta t}}{2\gamma}[(\beta+\gamma)\mathrm{e}^{\gamma t}-(\beta-\gamma)\mathrm{e}^{-\gamma t}]\right\} \tag{33.17}</script></li>
+<li>过阻尼状态（$R^2C-4L&gt;0$）<script type="math/tex; mode=display">q=q_0\left\{1-\frac{\mathrm{e}^{-\beta t}}{2\gamma}[(\beta+\gamma)\mathrm{e}^{\gamma t}-(\beta-\gamma)\mathrm{e}^{-\gamma t}]\right\} \tag{36.17}</script></li>
 </ul>
 <p>其中</p>
 <script type="math/tex; mode=display">\gamma=\frac{1}{\sqrt{LC}}\sqrt{\frac{R^2C}{4L}-1}</script><p>这时的$q$也是单调递增的，但是比临界阻尼状态增大得要慢。</p>
-<h1><span id="第七章enspenspenspensp磁能"><center> 第七章&ensp;&ensp;&ensp;&ensp;磁能 </center></span></h1><h2><span id="34enspensp载流线圈的磁能">§34&ensp;&ensp;载流线圈的磁能</span></h2><p>&ensp;&ensp;&ensp;&ensp;先研究一个最简单的情况：单线圈回路。回路方程为</p>
-<script type="math/tex; mode=display">\mathscr{E}-IR-L\frac{\mathrm{d} I}{\mathrm{d} t}=0\tag{34.1}</script><p>化为</p>
-<script type="math/tex; mode=display">\mathscr{E}I\mathrm{d}t=I^2R\mathrm{d}t+\frac{1}{2}L\mathrm{d}I^2\tag{34.2}</script><p>上式左边是电路电源输入的元功，而左边第一项是电路中电阻产生的焦耳热，第二项是用于反抗线圈的反电动势所做的功，即线圈的磁能$W_m$。</p>
-<script type="math/tex; mode=display">W_m=\int_0^{I_0}\frac{1}{2}L\mathrm{d}I^2=\frac{1}{2}LI_0^2\tag{34.3}</script><p>上式表明磁能只取决于线圈的几何特征（$L$）以及初末时刻的电流状态，而与电流中间的变化过程无关。式（34.3）还可以写为</p>
-<script type="math/tex; mode=display">W_m=\frac{1}{2}I_0\Phi_0 \tag{34.4}</script><p>&ensp;&ensp;&ensp;&ensp;现在，我们来考虑$N$个线圈情况。现在，不仅要考虑线圈的自感，还要考虑线圈间的互感。在某一瞬间，第$i$个线圈反抗反电动势所做的元功为</p>
-<script type="math/tex; mode=display">\mathrm{d}A_{i}=L_iI_i\mathrm{d}I_i+\sum_{k=1(j\neq i)}^NM_{ji}I_i\mathrm{d}I_j\tag{34.5}</script><p>$N$个线圈做的总功为</p>
-<script type="math/tex; mode=display">\mathrm{d}A=\sum_{i=1}^NL_iI_i\mathrm{d}I_i+\sum_{i=1}^N\sum_{k=1(j\neq i)}^NM_{ji}I_i\mathrm{d}I_j\tag{34.6}</script><p>由于$M_{ij}=M_{ji}$，且交换$i,j$指标第二项不变，则第二项可化为</p>
+<h1><span id="第八章enspenspenspensp磁能"><center> 第八章&ensp;&ensp;&ensp;&ensp;磁能 </center></span></h1><h2><span id="37enspensp载流线圈的磁能">§37&ensp;&ensp;载流线圈的磁能</span></h2><p>&ensp;&ensp;&ensp;&ensp;先研究一个最简单的情况：单线圈回路。回路方程为</p>
+<script type="math/tex; mode=display">\mathscr{E}-IR-L\frac{\mathrm{d} I}{\mathrm{d} t}=0\tag{37.1}</script><p>化为</p>
+<script type="math/tex; mode=display">\mathscr{E}I\mathrm{d}t=I^2R\mathrm{d}t+\frac{1}{2}L\mathrm{d}I^2\tag{37.2}</script><p>上式左边是电路电源输入的元功，而左边第一项是电路中电阻产生的焦耳热，第二项是用于反抗线圈的反电动势所做的功，即线圈的磁能$W_m$。</p>
+<script type="math/tex; mode=display">W_m=\int_0^{I_0}\frac{1}{2}L\mathrm{d}I^2=\frac{1}{2}LI_0^2\tag{37.3}</script><p>上式表明磁能只取决于线圈的几何特征（$L$）以及初末时刻的电流状态，而与电流中间的变化过程无关。式（34.3）还可以写为</p>
+<script type="math/tex; mode=display">W_m=\frac{1}{2}I_0\Phi_0 \tag{37.4}</script><p>&ensp;&ensp;&ensp;&ensp;现在，我们来考虑$N$个线圈情况。现在，不仅要考虑线圈的自感，还要考虑线圈间的互感。在某一瞬间，第$i$个线圈反抗反电动势所做的元功为</p>
+<script type="math/tex; mode=display">\mathrm{d}A_{i}=L_iI_i\mathrm{d}I_i+\sum_{k=1(j\neq i)}^NM_{ji}I_i\mathrm{d}I_j\tag{37.5}</script><p>$N$个线圈做的总功为</p>
+<script type="math/tex; mode=display">\mathrm{d}A=\sum_{i=1}^NL_iI_i\mathrm{d}I_i+\sum_{i=1}^N\sum_{k=1(j\neq i)}^NM_{ji}I_i\mathrm{d}I_j\tag{37.6}</script><p>由于$M_{ij}=M_{ji}$，且交换$i,j$指标第二项不变，则第二项可化为</p>
 <script type="math/tex; mode=display">\begin{align*}
     \sum_{i=1}^N\sum_{k=1(j\neq i)}^NM_{ji}I_i\mathrm{d}I_j&=\frac{1}{2}\left(\underset{i\neq j}{\sum_{i,j=1}^N}M_{ji}I_i\mathrm{d}I_j+\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}I_j\mathrm{d}I_i\right)\\
-    &=\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}\mathrm{d}(I_iI_j)\tag{34.7}   
+    &=\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}\mathrm{d}(I_iI_j)\tag{37.7}   
 \end{align*}</script><p>于是</p>
-<script type="math/tex; mode=display">\mathrm{d}A=\frac{1}{2}\sum_{i=1}^NL_i\mathrm{d}I_i^2+\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}\mathrm{d}(I_iI_j)\tag{34.8}</script><p>积分可得</p>
-<script type="math/tex; mode=display">A=\frac{1}{2}\sum_{i=1}^NL_iI_i^2+\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}I_iI_j\tag{34.8}</script><p>于是体系在该时刻的磁能为</p>
-<script type="math/tex; mode=display">W_m=\frac{1}{2}\sum_{i=1}^NL_iI_i^2+\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}I_iI_j\tag{34.9}</script><p>其中，第一项是线圈的自能，第二项是线圈的互能。它同样与磁场的建立过程无关。</p>
-<p>&ensp;&ensp;&ensp;&ensp;式（34.9）同样可以用磁通改写为</p>
+<script type="math/tex; mode=display">\mathrm{d}A=\frac{1}{2}\sum_{i=1}^NL_i\mathrm{d}I_i^2+\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}\mathrm{d}(I_iI_j)\tag{37.8}</script><p>积分可得</p>
+<script type="math/tex; mode=display">A=\frac{1}{2}\sum_{i=1}^NL_iI_i^2+\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}I_iI_j\tag{37.8}</script><p>于是体系在该时刻的磁能为</p>
+<script type="math/tex; mode=display">W_m=\frac{1}{2}\sum_{i=1}^NL_iI_i^2+\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}M_{ij}I_iI_j\tag{37.9}</script><p>其中，第一项是线圈的自能，第二项是线圈的互能。它同样与磁场的建立过程无关。</p>
+<p>&ensp;&ensp;&ensp;&ensp;式（37.9）同样可以用磁通改写为</p>
 <script type="math/tex; mode=display">\begin{align*}
     W_m&=\frac{1}{2}\sum_{i=1}^N\Phi_{ii}I_i+\frac{1}{2}\underset{i\neq j}{\sum_{i,j=1}^N}\Phi_{ij}I_j\\
-    &=\frac{1}{2}\sum_{i=1}^N\Phi_iI_i\tag{34.10}   
+    &=\frac{1}{2}\sum_{i=1}^N\Phi_iI_i\tag{37.10}   
 \end{align*}</script><p>其中$\Phi_{ij}$为第$i$个线圈在第$j$个线圈处产生的磁通，$\Phi_i$为第$i$个线圈处的总磁通。</p>
-<h2><span id="35enspensp外场中的载流线圈的能量">§35&ensp;&ensp;外场中的载流线圈的能量</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们现在关注的是线圈与外场的相互作用能。由式（34.10）我们可以知道，线圈在外磁场中的能量应该正比于该外场在线圈处的磁通和线圈的电流，所以</p>
-<script type="math/tex; mode=display">W_m=I\iint_S\pmb{B}\cdot\mathrm{d}\pmb{S}\tag{35.1}</script><p>所以由$N$个线圈组成的系统在外场$\pmb{B}$中的能量为</p>
-<script type="math/tex; mode=display">W_m=\sum_{i=1}^NI_i\iint_{S_i}\pmb{B}(\pmb{r})\cdot\mathrm{d}\pmb{S}\tag{35.2}</script><p>&ensp;&ensp;&ensp;&ensp;假如该线圈足够小，使得外场在线圈处的磁场是常矢量，则$\pmb{B}$可从积分号中提出来</p>
+<h2><span id="38enspensp外场中的载流线圈的能量">§38&ensp;&ensp;外场中的载流线圈的能量</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们现在关注的是线圈与外场的相互作用能。由式（37.10）我们可以知道，线圈在外磁场中的能量应该正比于该外场在线圈处的磁通和线圈的电流，所以</p>
+<script type="math/tex; mode=display">W_m=I\iint_S\pmb{B}\cdot\mathrm{d}\pmb{S}\tag{38.1}</script><p>所以由$N$个线圈组成的系统在外场$\pmb{B}$中的能量为</p>
+<script type="math/tex; mode=display">W_m=\sum_{i=1}^NI_i\iint_{S_i}\pmb{B}(\pmb{r})\cdot\mathrm{d}\pmb{S}\tag{38.2}</script><p>&ensp;&ensp;&ensp;&ensp;假如该线圈足够小，使得外场在线圈处的磁场是常矢量，则$\pmb{B}$可从积分号中提出来</p>
 <script type="math/tex; mode=display">\begin{align*}
     W_m&=I\pmb{B}\cdot\iint_S\mathrm{d}\pmb{S}\\
     &=\pmb{B}\cdot(I\pmb{S})\\
-    &=\pmb{B}\cdot\pmb{m}\tag{35.3}  
+    &=\pmb{B}\cdot\pmb{m}\tag{38.3}  
 \end{align*}</script><p>$\pmb{m}$即为线圈的磁矩。</p>
-<p>&ensp;&ensp;&ensp;&ensp;由式（35.3）可以很简单地得到磁偶极子在外场中的受力</p>
-<script type="math/tex; mode=display">\pmb{F}=-\nabla W_m=-\nabla(\pmb{m}\cdot\pmb{B})\tag{35.4}</script><h2><span id="36enspensp磁场的能量密度">§36&ensp;&ensp;磁场的能量密度</span></h2><p>&ensp;&ensp;&ensp;&ensp;与在§17中做的那样，我们同样可以得到磁场的能量密度。从式（34.4）出发，利用斯托克斯公式</p>
+<p>&ensp;&ensp;&ensp;&ensp;由式（38.3）可以很简单地得到磁偶极子在外场中的受力</p>
+<script type="math/tex; mode=display">\pmb{F}=-\nabla W_m=-\nabla(\pmb{m}\cdot\pmb{B})\tag{38.4}</script><h2><span id="39enspensp磁场的能量密度">§39&ensp;&ensp;磁场的能量密度</span></h2><p>&ensp;&ensp;&ensp;&ensp;与在§17中做的那样，我们同样可以得到磁场的能量密度。从式（37.4）出发，利用斯托克斯公式</p>
 <script type="math/tex; mode=display">\begin{align*}
     W_m&=\frac{1}{2}I\iint_S\pmb{B}\cdot\mathrm{d}\pmb{S}\\
     &=\frac{1}{2}I\iint_S(\nabla\times \pmb{A})\cdot\mathrm{d}\pmb{S}\\
     &=\frac{1}{2}I\oint_{\partial S}\pmb{A}\cdot\mathrm{d}\pmb{l}\\
-    &=\frac{1}{2}\oint_{\partial S}\pmb{A}\cdot\pmb{I}\mathrm{d}l\tag{36.1}   
+    &=\frac{1}{2}\oint_{\partial S}\pmb{A}\cdot\pmb{I}\mathrm{d}l\tag{39.1}   
 \end{align*}</script><p>我们可以将其推广到体电流分布上</p>
 <script type="math/tex; mode=display">\begin{align*}
     W_m&=\frac{1}{2}\iiint_\Omega\pmb{A}\cdot\pmb{J}\mathrm{d}V\\
-    &=\frac{1}{2\mu_0}\iiint_\Omega\pmb{A}\cdot(\nabla\times \pmb{B})\mathrm{d}V\tag{36.2}   
+    &=\frac{1}{2\mu_0}\iiint_\Omega\pmb{A}\cdot(\nabla\times \pmb{B})\mathrm{d}V\tag{39.2}   
 \end{align*}</script><p>再作分部积分</p>
-<script type="math/tex; mode=display">\nabla\cdot(\pmb{A}\times\pmb{B})=\pmb{B}\cdot(\nabla\times \pmb{A})-\pmb{A}\cdot(\nabla\times \pmb{B})\tag{36.3}</script><script type="math/tex; mode=display">\begin{align*}
+<script type="math/tex; mode=display">\nabla\cdot(\pmb{A}\times\pmb{B})=\pmb{B}\cdot(\nabla\times \pmb{A})-\pmb{A}\cdot(\nabla\times \pmb{B})\tag{39.3}</script><script type="math/tex; mode=display">\begin{align*}
     W_m&=\frac{1}{2\mu_0}\iiint_\Omega\left[\pmb{B}\cdot(\nabla\times \pmb{A})-\nabla\cdot(\pmb{A}\times\pmb{B})\right]\mathrm{d}V\\
-    &=\frac{1}{2\mu_0}\left[\iiint_\Omega B^2\mathrm{d}V-\iint_{\partial\Omega}(\pmb{A}\times\pmb{B})\cdot \mathrm{d}\pmb{S} \right]\tag{36.4} 
-\end{align*}</script><p>上式中的积分区域$\Omega$可以是包含所有电流的有限空间，但我们也可以将其取为全空间，则其边界会远离所有电流分布。这时边界上的$\pmb{A}$和$\pmb{B}$都会趋于0，所以式（36.4）的第二项等于0，即</p>
-<script type="math/tex; mode=display">W_m=\iiint_\Omega\frac{B^2}{2\mu_0}\mathrm{d}V\tag{36.5}</script><p>于是我们就可以定义磁场的能量密度为</p>
-<script type="math/tex; mode=display">w_m=\frac{B^2}{2\mu_0}\tag{36.6}</script><p>&ensp;&ensp;&ensp;&ensp;对于磁介质，式（36.6）变为</p>
-<script type="math/tex; mode=display">w_m=\frac{1}{2}\pmb{B}\cdot\pmb{H} \tag{36.7}</script><h1><span id="第八章enspenspenspensp交流电路"><center> 第八章&ensp;&ensp;&ensp;&ensp;交流电路 </center></span></h1>
+    &=\frac{1}{2\mu_0}\left[\iiint_\Omega B^2\mathrm{d}V-\iint_{\partial\Omega}(\pmb{A}\times\pmb{B})\cdot \mathrm{d}\pmb{S} \right]\tag{39.4} 
+\end{align*}</script><p>上式中的积分区域$\Omega$可以是包含所有电流的有限空间，但我们也可以将其取为全空间，则其边界会远离所有电流分布。这时边界上的$\pmb{A}$和$\pmb{B}$都会趋于0，所以式（39.4）的第二项等于0，即</p>
+<script type="math/tex; mode=display">W_m=\iiint_\Omega\frac{B^2}{2\mu_0}\mathrm{d}V\tag{39.5}</script><p>于是我们就可以定义磁场的能量密度为</p>
+<script type="math/tex; mode=display">w_m=\frac{B^2}{2\mu_0}\tag{39.6}</script><p>&ensp;&ensp;&ensp;&ensp;对于磁介质，式（39.6）变为</p>
+<script type="math/tex; mode=display">w_m=\frac{1}{2}\pmb{B}\cdot\pmb{H} \tag{39.7}</script><h1><span id="第九章enspenspenspensp交流电路"><center> 第九章&ensp;&ensp;&ensp;&ensp;交流电路 </center></span></h1><h2><span id="40enspensp基本概念和描述方法">§40&ensp;&ensp;基本概念和描述方法</span></h2><p>&ensp;&ensp;&ensp;&ensp;当电路中的电源电动势随时间作周期变化时，电路中各段的电流和电压也随时间作周期变化，这种电路称为交流电路。</p>
+<p>&ensp;&ensp;&ensp;&ensp;交流电路不同于稳恒电路和</p>
+
     </div>
 
     
@@ -847,7 +850,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text"> 第一章    真空静电学 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">§1  静电场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">§2  静电场的散度和旋度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">§3  电势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">§4  几种典型带电导体的电场、电势分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.5.</span> <span class="nav-text">§5  电偶极子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.6.</span> <span class="nav-text">§6  泊松方程和拉普拉斯方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text"> 第二章    介质中的静电学 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">§7  电场对电荷体系的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">§8  静电场中的导体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.3.</span> <span class="nav-text">§9  电容和电容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.4.</span> <span class="nav-text">§10  外电场中的电介质的极化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.5.</span> <span class="nav-text">§11  极化电荷的电场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.6.</span> <span class="nav-text">§12  极化强度矢量和电场的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.7.</span> <span class="nav-text">§13  电介质与电容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.8.</span> <span class="nav-text">§14  电介质中静电场的基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.9.</span> <span class="nav-text">§15  边值关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text"> 第三章    静电能 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.1.</span> <span class="nav-text">§16  真空中的点电荷间的相互作用能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.2.</span> <span class="nav-text">§17  连续电荷分布的静电能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text"> 第四章    静磁场 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">§18   洛伦兹力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.2.</span> <span class="nav-text">§19  电流与电流密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.3.</span> <span class="nav-text">§20  毕奥-萨伐尔定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.4.</span> <span class="nav-text">§21  $\pmb{B}$的散度与旋度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text">§22  边界条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.6.</span> <span class="nav-text">§23  磁矢势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.7.</span> <span class="nav-text">§24  磁偶极子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text"> 第五章    介质中的磁场 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.1.</span> <span class="nav-text">§25  顺磁体、抗磁体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.2.</span> <span class="nav-text">§26  铁磁体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.3.</span> <span class="nav-text">§27  磁化强度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.4.</span> <span class="nav-text">§28  磁介质中的静磁场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.5.</span> <span class="nav-text">§29  线性介质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">静电学、静磁学的总结与对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text"> 第六章    电磁感应 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.1.</span> <span class="nav-text">§30  法拉第定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.2.</span> <span class="nav-text">§31  电感</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.3.</span> <span class="nav-text">§32  线圈的串、并联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.4.</span> <span class="nav-text">§33  似稳电路和暂态过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text"> 第七章    磁能 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.1.</span> <span class="nav-text">§34  载流线圈的磁能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.2.</span> <span class="nav-text">§35  外场中的载流线圈的能量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.3.</span> <span class="nav-text">§36  磁场的能量密度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text"> 第八章    交流电路 </span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text"> 第一章    真空静电学 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">§1  静电场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">§2  静电场的散度和旋度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">§3  电势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">§4  几种典型带电导体的电场、电势分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.5.</span> <span class="nav-text">§5  电偶极子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.6.</span> <span class="nav-text">§6  泊松方程和拉普拉斯方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text"> 第二章    介质中的静电学 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">§7  电场对电荷体系的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">§8  静电场中的导体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.3.</span> <span class="nav-text">§9  电容和电容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.4.</span> <span class="nav-text">§10  外电场中的电介质的极化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.5.</span> <span class="nav-text">§11  极化电荷的电场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.6.</span> <span class="nav-text">§12  极化强度矢量和电场的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.7.</span> <span class="nav-text">§13  电介质与电容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.8.</span> <span class="nav-text">§14  电介质中静电场的基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.9.</span> <span class="nav-text">§15  边值关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text"> 第三章    静电能 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.1.</span> <span class="nav-text">§16  真空中的点电荷间的相互作用能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.2.</span> <span class="nav-text">§17  连续电荷分布的静电能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text"> 第四章    静磁场 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">§18   洛伦兹力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.2.</span> <span class="nav-text">§19  电流与电流密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.3.</span> <span class="nav-text">§20  毕奥-萨伐尔定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.4.</span> <span class="nav-text">§21  $\pmb{B}$的散度与旋度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text">§22  边界条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.6.</span> <span class="nav-text">§23  磁矢势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.7.</span> <span class="nav-text">§24  磁偶极子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text"> 第五章    介质中的磁场 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.1.</span> <span class="nav-text">§25  顺磁体、抗磁体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.2.</span> <span class="nav-text">§26  铁磁体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.3.</span> <span class="nav-text">§27  磁化强度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.4.</span> <span class="nav-text">§28  磁介质中的静磁场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.5.</span> <span class="nav-text">§29  线性介质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">静电学、静磁学的总结与对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text"> 第六章    稳恒电流 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.1.</span> <span class="nav-text">§30  稳恒电流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.2.</span> <span class="nav-text">§31  欧姆定律及焦耳定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.3.</span> <span class="nav-text">§32  基尔霍夫方程组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text"> 第六章    电磁感应 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.1.</span> <span class="nav-text">§33  法拉第定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.2.</span> <span class="nav-text">§34  电感</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.3.</span> <span class="nav-text">§35  线圈的串、并联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.4.</span> <span class="nav-text">§36  似稳电路和暂态过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text"> 第八章    磁能 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.1.</span> <span class="nav-text">§37  载流线圈的磁能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.2.</span> <span class="nav-text">§38  外场中的载流线圈的能量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.3.</span> <span class="nav-text">§39  磁场的能量密度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">11.</span> <span class="nav-text"> 第九章    交流电路 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.1.</span> <span class="nav-text">§40  基本概念和描述方法</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
