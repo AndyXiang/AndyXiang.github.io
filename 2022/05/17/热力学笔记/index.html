@@ -29,7 +29,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/.com//卡诺热机.png">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-09T03:19:59.839Z">
+<meta property="article:modified_time" content="2022-06-09T04:56:29.645Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Phys">
 <meta property="article:tag" content="热力学">
@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-09 11:19:59" itemprop="dateModified" datetime="2022-06-09T11:19:59+08:00">2022-06-09</time>
+                <time title="Modified: 2022-06-09 12:56:29" itemprop="dateModified" datetime="2022-06-09T12:56:29+08:00">2022-06-09</time>
               </span>
 
           
@@ -556,7 +556,7 @@
 </div>
 <h2><span id="22enspenspenspensp理想气体的热容">§22&ensp;&ensp;&ensp;&ensp;理想气体的热容</span></h2><p>&ensp;&ensp;&ensp;&ensp;对于理想气体，其分子间的势能可以忽略，因此内能$U$与分子平均动能成正比，而分子平均动能又与温度$T$成正比，则理想气体的内能只与温度有关，而与体积无关(分子量一定时)。由能均分定理可知，理想气体的内能</p>
 <script type="math/tex; mode=display">U=\frac{i}{2}Nk_BT\tag{22.1}</script><p>&ensp;&ensp;&ensp;&ensp;由理想气体方程可得</p>
-<script type="math/tex; mode=display">\left(\frac{\partial V}{\partial T}\right)_p=\frac{Nk_B}{p}=\frac{\nu R}{p}\tag{22.2}$$ $$\left(\frac{\partial U}{\partial V}\right)_T=0\tag{22.3}</script><p>其中$R$为普适气体常数。代入式$(20.6)$得 </p>
+<script type="math/tex; mode=display">\left(\frac{\partial V}{\partial T}\right)_p=\frac{Nk_B}{p}=\frac{\nu R}{p}\tag{22.2}</script><script type="math/tex; mode=display">\left(\frac{\partial U}{\partial V}\right)_T=0\tag{22.3}</script><p>其中$R$为普适气体常数。代入式$(20.6)$得 </p>
 <script type="math/tex; mode=display">\begin{align*}
     C_{p,m}&=\frac{1}{\nu}\left\{\left(\frac{\partial U}{\partial T}\right)_V+\left[\left(\frac{\partial U}{\partial V}\right)_T+p\right]\left(\frac{\partial V}{\partial T}\right)_p\right\}\\
     &=C_{V,m}+R\tag{22.4}
@@ -792,16 +792,37 @@
     g(k)\mathrm{d}k&=\frac{\frac{1}{8}\times4\pi k^2\mathrm{d}k}{\left(\frac{\pi}{L}\right)^3}\\
     &=\frac{L^3k^2\mathrm{d}k}{2\pi^2}\tag{36.3}  
 \end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;因此理想气体的单分子配分函数为</p>
-<script type="math/tex; mode=display">Z=\int_0^\infty e^{-\beta E(k)}g(k)\mathrm{d}k \tag{36.4}</script><p>其中，根据量子力学</p>
+<script type="math/tex; mode=display">Z_0=\int_0^\infty e^{-\beta E(k)}g(k)\mathrm{d}k \tag{36.4}</script><p>其中，根据量子力学</p>
 <script type="math/tex; mode=display">E(k)=\frac{\hbar^2k^2}{2m}\tag{36.5}</script><p>所以</p>
 <script type="math/tex; mode=display">\begin{align*}
-    Z&=\frac{L^3}{2\pi^2}\int_0^\infty k^2e^{-\frac{\hbar^2 \beta}{2m}k^2}\mathrm{d}k \\
+    Z_0&=\frac{L^3}{2\pi^2}\int_0^\infty k^2e^{-\frac{\hbar^2 \beta}{2m}k^2}\mathrm{d}k \\
     &=\frac{L^3}{\hbar^3}\left(\frac{mk_BT}{2\pi}\right)^\frac{3}{2}  \tag{36.6}
 \end{align*}</script><p>我们称</p>
 <script type="math/tex; mode=display">n_Q=\frac{1}{\hbar^3}\left(\frac{mk_BT}{2\pi}\right)^\frac{3}{2}  \tag{36.7}</script><p>为<strong>量子密度</strong>。或定义<strong>热波长</strong></p>
-<script type="math/tex; mode=display">\lambda_{th}=n_Q^{-1/3}=\frac{h}{\sqrt{2\pi m k_BT}}\tag{36.8}</script><p>（这个式子很像分子通量的表达式）。</p>
-<p>&ensp;&ensp;&ensp;&ensp;现在我们来</p>
-<h2><span id="37enspensp化学势">§37&ensp;&ensp;化学势</span></h2><h2><span id="38enspensp光子">§38&ensp;&ensp;光子</span></h2><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
+<script type="math/tex; mode=display">\lambda_{th}=n_Q^{-1/3}=\frac{h}{\sqrt{2\pi m k_BT}}\tag{36.8}</script><p>（这个式子很像分子通量的表达式）于是</p>
+<script type="math/tex; mode=display">Z_0=\frac{V}{\lambda_{th}^3}\tag{36.9}</script><p>&ensp;&ensp;&ensp;&ensp;现在我们来写$N$个分子系统的配分函数。如开头所写，有</p>
+<script type="math/tex; mode=display">Z\propto Z_0^N\tag{36.10}</script><p>为了得到比例系数，我们要注意一点：理想气体分子是全同粒子。这意味着，如果交换两个粒子处于的（微观）态，那么系统处于的（宏观态）不会改变。我们假设理想气体的每个分子都处于不同的态上，这要求分子数密度$n$远大于量子密度$n_Q$，那么通过排列组合的知识可知，每个宏观态包含着$N!$个微观态，如果我们用某种方式去标记粒子。于是有</p>
+<script type="math/tex; mode=display">\begin{align*}
+    Z&=\frac{Z_0^N}{N!}\\
+    &=\frac{1}{N!}\left(\frac{V}{\lambda_{th}}\right)^N\\
+    &=\frac{V^N}{N!}\left(\frac{m}{2\pi\hbar^2}\right)^{\frac{3N}{2}}\beta^{-\frac{3N}{2}} \tag{36.11}  
+\end{align*}</script><p>&ensp;&ensp;&ensp;&ensp;终于得到理想气体的配分函数后，我们可以来求理想气体的各个态函数了。内能</p>
+<script type="math/tex; mode=display">\begin{align*}
+    U&=-\frac{\partial \ln Z}{\partial \beta}\\
+    &=\frac{3N}{2}\frac{\partial \ln \beta}{\partial \beta}\\
+    &=N\frac{3k_BT}{2}\tag{36.12}   
+\end{align*}</script><p>因此热容为$C_V=\frac{3}{2}Nk_B$，这与之前的结论一致。亥姆霍兹函数为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    F&=-\frac{1}{\beta}\ln Z\\
+    &=-k_BT\left[N\ln V-\ln N!+\frac{3N}{2}\left(\ln \frac{m}{2\pi \hbar^2}+\ln k_BT\right)\right]\tag{36.13} 
+\end{align*}</script><p>压强为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    p&=-\left(\frac{\partial F}{\partial V}\right)_T\\
+    &=\frac{Nk_BT}{V}  \tag{36.13} 
+\end{align*}</script><p>这正是理想气体状态方程。熵为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    &   
+\end{align*}</script><h2><span id="37enspensp化学势">§37&ensp;&ensp;化学势</span></h2><h2><span id="38enspensp光子">§38&ensp;&ensp;光子</span></h2><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
 <script type="math/tex; mode=display">pV_m=RT \tag{40.1}</script><p>然而，实际气体的行为并不完全类似于此。首先，气体在低温或高压的情况下会液化，这是理想气体方程所无法描述的行为；而在极端高压的情况下，分子间的相互作用不再能够忽略。这促使我们去寻找更接近实际的气体模型。</p>
 <p>&ensp;&ensp;&ensp;&ensp;最常用的是<strong>范德瓦尔斯气体</strong>，它是最简单的实际气体模型。在理想气体的基础上，它增加了两个假设：（1）分子间存在微弱的吸引力；（2）分子的体积不可忽略。范德瓦尔斯气体的状态方程为</p>
 <script type="math/tex; mode=display">\left(p+\frac{a}{V_m^2}\right)(V_m-b)=RT\tag{40.2}</script><p>该方程中的$a$是分子间相互作用的参数，$b$是考虑了分子的有限体积的参数。</p>
@@ -935,10 +956,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="next" title="线性代数">
-      线性代数 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/17/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="prev" title="电磁学笔记">
+      <i class="fa fa-chevron-left"></i> 电磁学笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/18/HEXO+Github%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="Hexo+Github创建博客">
+      Hexo+Github创建博客 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
