@@ -29,7 +29,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/.com//卡诺热机.png">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-09T04:56:29.645Z">
+<meta property="article:modified_time" content="2022-06-12T06:09:40.244Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Phys">
 <meta property="article:tag" content="热力学">
@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-09 12:56:29" itemprop="dateModified" datetime="2022-06-09T12:56:29+08:00">2022-06-09</time>
+                <time title="Modified: 2022-06-12 14:09:40" itemprop="dateModified" datetime="2022-06-12T14:09:40+08:00">2022-06-12</time>
               </span>
 
           
@@ -819,10 +819,26 @@
 <script type="math/tex; mode=display">\begin{align*}
     p&=-\left(\frac{\partial F}{\partial V}\right)_T\\
     &=\frac{Nk_BT}{V}  \tag{36.13} 
-\end{align*}</script><p>这正是理想气体状态方程。熵为</p>
+\end{align*}</script><p>这正是理想气体状态方程。</p>
+<h2><span id="37enspensp化学势">§37&ensp;&ensp;化学势</span></h2><p>&ensp;&ensp;&ensp;&ensp;现在让我们来关注一个粒子数可变的系统。如果向系统中加入一个粒子而不改变系统的体积和熵，而内能将改变一个量，那么这个改变量就称为化学势。因此这时内能的微分表达式应该改写为</p>
+<script type="math/tex; mode=display">\mathrm{d}U=T\mathrm{d}S-p\mathrm{d}V+\mu\mathrm{d}N  \tag{37.1}</script><p>于是化学势可写为</p>
+<script type="math/tex; mode=display">\mu=\left(\frac{\partial U}{\partial N}\right)_{S,V}\tag{37.2}</script><p>&ensp;&ensp;&ensp;&ensp;由式（37.1）我们可以看到，一个粒子数可变的体系的熵变可以写为</p>
+<script type="math/tex; mode=display">\mathrm{d}S=\frac{\mathrm{d}U}{T}+\frac{p\mathrm{d}V}{T}-\frac{\mu\mathrm{d}N}{T}\tag{37.3}</script><p>如果我们考虑两个可以交换热量和粒子的系统，总系统的熵变为</p>
 <script type="math/tex; mode=display">\begin{align*}
-    &   
-\end{align*}</script><h2><span id="37enspensp化学势">§37&ensp;&ensp;化学势</span></h2><h2><span id="38enspensp光子">§38&ensp;&ensp;光子</span></h2><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
+    \mathrm{d}S&=\mathrm{d}S_1+\mathrm{d}S_2\\
+    &=\frac{\mathrm{d}U}{T_1}-\frac{\mu_1\mathrm{d}N}{T_1}+\frac{(-\mathrm{d}U)}{T_2}-\frac{\mu_2(-\mathrm{d}N)}{T_2}\\
+    &=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)\mathrm{d}U-\left(\frac{\mu_1}{T_1}-\frac{\mu_2}{T_2}\right)\mathrm{d}N\tag{37.4}
+\end{align*}</script><p>如果二者的温度相同，那么由熵增原理可得</p>
+<script type="math/tex; mode=display">\mu_1>\mu_2\to \mathrm{d}N<0</script><script type="math/tex; mode=display">\mu_1<\mu_2\to \mathrm{d}N>0</script><p>即粒子从化学势高的系统流向化学势低的系统。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我们之前研究了满足玻尔兹曼分布的系统的配分函数，而玻尔兹曼分布只适用于正则系统。现在，我们来研究巨正则系统的配分函数。巨正则系统指与大热源、大粒子源连结的系统。    </p>
+<p>&ensp;&ensp;&ensp;&ensp;假设系统的内能和粒子数分别为$\epsilon,N$，而源的内能和粒子数为$U-\epsilon,\mathscr{N}-N$。假设$U\gg \epsilon,\mathscr{N}\gg N$。利用泰勒展开，将源的熵写为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    S(U-\epsilon,\mathscr{N}-N)&=S(U,\mathscr{N})-\epsilon\left(\frac{\partial S}{\partial U}\right)_{\mathscr{N},V}-N\left(\frac{\partial S}{\partial N}\right)_{U,V}\tag{37.5}   
+\end{align*}</script><p>利用式（37.3）可得</p>
+<script type="math/tex; mode=display">S(U-\epsilon,\mathscr{N}-N)=S(U,\mathscr{N})-\frac{\epsilon-\mu N}{T}\tag{37.6}</script><p>我们知道系统选择某一特定宏观态的概率正比于该宏观态得微观态数$\Omega$。由$S=k_B\ln\Omega$可得</p>
+<script type="math/tex; mode=display">P(\epsilon,N)\propto e^{\frac{S(U-\epsilon,\mathscr{N}-N)}{k_B}}\propto e^{\frac{\mu N-\epsilon}{k_BT}}\tag{37.7}</script><p>这称为<strong>吉布斯分布</strong>，这种情况下的系综称为巨正则系综。对应的配分函数称为<strong>巨配分函数</strong></p>
+<script type="math/tex; mode=display">\mathcal{Z}=\sum_{N=0}^\infty\sum_\alpha e^{\beta(\mu N-E_\alpha)} \tag{37.8}</script><p>它表示先对粒子数为$N$得系统的各个态求和，在对不同粒子数的系统求和。</p>
+<h2><span id="38enspensp光子">§38&ensp;&ensp;光子</span></h2><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
 <script type="math/tex; mode=display">pV_m=RT \tag{40.1}</script><p>然而，实际气体的行为并不完全类似于此。首先，气体在低温或高压的情况下会液化，这是理想气体方程所无法描述的行为；而在极端高压的情况下，分子间的相互作用不再能够忽略。这促使我们去寻找更接近实际的气体模型。</p>
 <p>&ensp;&ensp;&ensp;&ensp;最常用的是<strong>范德瓦尔斯气体</strong>，它是最简单的实际气体模型。在理想气体的基础上，它增加了两个假设：（1）分子间存在微弱的吸引力；（2）分子的体积不可忽略。范德瓦尔斯气体的状态方程为</p>
 <script type="math/tex; mode=display">\left(p+\frac{a}{V_m^2}\right)(V_m-b)=RT\tag{40.2}</script><p>该方程中的$a$是分子间相互作用的参数，$b$是考虑了分子的有限体积的参数。</p>
@@ -956,13 +972,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/05/17/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="prev" title="电磁学笔记">
-      <i class="fa fa-chevron-left"></i> 电磁学笔记
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/05/18/HEXO+Github%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="Hexo+Github创建博客">
-      Hexo+Github创建博客 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="next" title="线性代数">
+      线性代数 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
