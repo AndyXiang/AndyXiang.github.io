@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;本文以《线性代数应该这样学》为基础，同时参考了蓝以中先生的《高等代数简明教程》、崔建伟先生的《数学物理方法基础——线性代数》。出于整合自己的知识，写了这篇笔记。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-07T10:16:28.160Z">
+<meta property="article:modified_time" content="2022-06-15T08:03:54.360Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Math">
 <meta property="article:tag" content="Linear Algbra">
@@ -187,7 +187,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-07 18:16:28" itemprop="dateModified" datetime="2022-06-07T18:16:28+08:00">2022-06-07</time>
+                <time title="Modified: 2022-06-15 16:03:54" itemprop="dateModified" datetime="2022-06-15T16:03:54+08:00">2022-06-15</time>
               </span>
 
           
@@ -218,7 +218,7 @@
 <li><a href="#12-矩阵的线性运算">1.2 矩阵的线性运算</a></li>
 <li><a href="#13-矩阵的乘法">1.3 矩阵的乘法</a></li>
 <li><a href="#14-矩阵的转置">1.4 矩阵的转置</a></li>
-<li><a href="#15-矩阵的行列式和迹">1.5 矩阵的行列式和迹</a></li>
+<li><a href="#15-方阵的行列式和迹">1.5 方阵的行列式和迹</a></li>
 <li><a href="#16-分块矩阵">1.6 分块矩阵</a></li>
 </ul>
 </li>
@@ -233,10 +233,9 @@
 </ul>
 </li>
 <li><a href="#4enspensp矩阵间的等价关系">§4&ensp;&ensp;矩阵间的等价关系</a><ul>
-<li><a href="#41-矩阵的初等变换">4.1 矩阵的初等变换</a></li>
-<li><a href="#42-矩阵等价">4.2 矩阵等价</a></li>
-<li><a href="#43-矩阵相似">4.3 矩阵相似</a></li>
-<li><a href="#44-矩阵合同">4.4 矩阵合同</a></li>
+<li><a href="#41-矩阵等价">4.1 矩阵等价</a></li>
+<li><a href="#42-矩阵相似">4.2 矩阵相似</a></li>
+<li><a href="#43-矩阵合同">4.3 矩阵合同</a></li>
 </ul>
 </li>
 <li><a href="#5enspensp矩阵函数">§5&ensp;&ensp;矩阵函数</a></li>
@@ -308,7 +307,6 @@
 <li><a href="#14-标准正交基">1.4 标准正交基</a></li>
 <li><a href="#15-格拉姆-施密特正交化过程">1.5 格拉姆-施密特正交化过程</a></li>
 <li><a href="#16-标准正交基间的基变换">1.6 标准正交基间的基变换</a></li>
-<li><a href="#17-内积空间上的线性泛函">1.7 内积空间上的线性泛函</a></li>
 </ul>
 </li>
 <li><a href="#2enspensp正交补">§2&ensp;&ensp;正交补</a><ul>
@@ -317,9 +315,10 @@
 </ul>
 </li>
 <li><a href="#3enspensp欧氏空间">§3&ensp;&ensp;欧氏空间</a><ul>
-<li><a href="#31-正交变换">3.1 正交变换</a></li>
-<li><a href="#32-正交变换群">3.2 正交变换群</a></li>
-<li><a href="#33-对称变换">3.3 对称变换</a></li>
+<li><a href="#31-欧式空间">3.1 欧式空间</a></li>
+<li><a href="#32-正交变换">3.2 正交变换</a></li>
+<li><a href="#33-正交变换群">3.3 正交变换群</a></li>
+<li><a href="#34-对称变换">3.4 对称变换</a></li>
 </ul>
 </li>
 <li><a href="#4enspensp闵可夫斯基空间">§4&ensp;&ensp;闵可夫斯基空间</a><ul>
@@ -454,20 +453,136 @@
     \vdots & \ddots &\vdots\\
     a_{1n}&\cdots&a_{nn}
 \end{bmatrix}</script><p>$a_{ij}$指代矩阵第$i$行、第$j$列的元素。其中，$m=n$的矩阵也称为方阵。方阵中$i=j$的元素称为方阵<strong>主对角线</strong>上的元素，$i+j=n$的元素称为<strong>副对角线</strong>上的元素。</p>
-<h3><span id="12-矩阵的线性运算">1.2 矩阵的线性运算</span></h3><h3><span id="13-矩阵的乘法">1.3 矩阵的乘法</span></h3><h3><span id="14-矩阵的转置">1.4 矩阵的转置</span></h3><h3><span id="15-矩阵的行列式和迹">1.5 矩阵的行列式和迹</span></h3><h3><span id="16-分块矩阵">1.6 分块矩阵</span></h3><h2><span id="2enspensp可逆矩阵">§2&ensp;&ensp;可逆矩阵</span></h2><h3><span id="21-可逆矩阵">2.1 可逆矩阵</span></h3><h2><span id="3enspensp矩阵的秩">§3&ensp;&ensp;矩阵的秩</span></h2><h3><span id="31-向量组的秩">3.1 向量组的秩</span></h3><h3><span id="32-行秩和列秩">3.2 行秩和列秩</span></h3><h3><span id="33-矩阵的秩">3.3 矩阵的秩</span></h3><h2><span id="4enspensp矩阵间的等价关系">§4&ensp;&ensp;矩阵间的等价关系</span></h2><h3><span id="41-矩阵的初等变换">4.1 矩阵的初等变换</span></h3><h3><span id="42-矩阵等价">4.2 矩阵等价</span></h3><h3><span id="43-矩阵相似">4.3 矩阵相似</span></h3><h3><span id="44-矩阵合同">4.4 矩阵合同</span></h3><h2><span id="5enspensp矩阵函数">§5&ensp;&ensp;矩阵函数</span></h2><h1><span id="第二章enspenspenspensp向量空间">第二章&ensp;&ensp;&ensp;&ensp;向量空间</span></h1><h2><span id="1enspensp向量空间">§1&ensp;&ensp;向量空间</span></h2><h3><span id="11-向量空间">1.1 向量空间</span></h3><p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 2.1.1</font>&ensp;&ensp;<strong>向量空间</strong>：设有数域$F$，$V$是一个非空集合。若$V$上定义有两种代数运算，满足</p>
+<p>&ensp;&ensp;&ensp;&ensp;所有元素都是0的矩阵称为零矩阵。只有对角线上元素不为零的矩阵称为对角矩阵，常记作</p>
+<script type="math/tex; mode=display">\mathrm{diag}(a_1,\cdots,a_n)=\begin{bmatrix}
+    a_{11}&0&\cdots&0\\
+    0&a_{22}&\cdots&0\\
+    \vdots&\vdots&\ddots&\vdots\\
+    0&\cdots&0&a_{nn}
+\end{bmatrix}</script><p>对角元全为1的对角矩阵称为单位矩阵。</p>
+<p>&ensp;&ensp;&ensp;&ensp;若一个矩阵的对角线下方的元素全为0，则称为上三角矩阵。类似的，若上方的元素全为0，则称为下三角矩阵。</p>
+<h3><span id="12-矩阵的线性运算">1.2 矩阵的线性运算</span></h3><p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.2</font>&ensp;&ensp;<strong>同型矩阵</strong>：两个矩阵同型，若它们的行数和列数分别相等。</p>
+<p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.3</font>&ensp;&ensp;<strong>矩阵相等</strong>：两个矩阵相等，若它们是同型矩阵且对应位置的元素都相等，记为$A=B$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.4</font>&ensp;&ensp;<strong>矩阵的和</strong>：两个同型矩阵$A$和$B$的和定义为一个新的矩阵$A+B$，且与它们同型。$A+B$的对应元素为$A$和$B$对应元素的和，即</p>
+<script type="math/tex; mode=display">(A+B)_{ij}=A_{ij}+B_{ij}</script><p>只有同型矩阵才有和。</p>
+<p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.5</font>&ensp;&ensp;<strong>矩阵的数乘</strong>：一个数和一个矩阵的乘积定义为</p>
+<script type="math/tex; mode=display">(kA)_{ij}=kA_{ij}</script><p>即每个元素都乘$k$。</p>
+<h3><span id="13-矩阵的乘法">1.3 矩阵的乘法</span></h3><p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.6</font>&ensp;&ensp;<strong>矩阵乘法</strong>：设$A$和$B$分别为$m\times p$型矩阵和$p\times n$。则它们的乘积定义为$m\times n$型矩阵$C$，满足</p>
+<script type="math/tex; mode=display">C_{ij}=A_{ik}B_{kj}</script><p>&ensp;&ensp;&ensp;&ensp;只有当$A$的列数等于$B$的行数时，$AB$才有意义。其次，矩阵的乘法不满足交换律，即</p>
+<script type="math/tex; mode=display">AB\neq BA</script><p>如果$AB=BA$，则称$A$和$B$对易。</p>
+<p>&ensp;&ensp;&ensp;&ensp;<font color="red">定理 1.1.1</font>&ensp;&ensp;矩阵乘法满足如下性质（假设以下乘法都有意义）：</p>
 <ol>
-<li>加法封闭性：$\forall a,b\in V,a+b=c\in V$；</li>
-<li>数乘封闭性：$\forall\lambda\in F,a\in V,\lambda a\in V$；</li>
-<li>加法结合律：$\forall a,b,c\in V,a+(b+c)=(a+b)+c$；</li>
-<li>加法交换律：$\forall a,b\in V,ab\in V$；</li>
-<li>存在零元：$\exists 0\in V,$使得$\forall a \in V$有$a+0=a$；</li>
-<li>存在逆元：$\forall a\in V,\exists b\in V$使得$a+b=0$；</li>
-<li>存在单位元：$\forall a\in V,\exists 1\in F$使得$1a=a$；</li>
-<li>数乘结合律：$\forall \mu,\nu\in F,a\in V,\mu(\nu a)=(\mu\nu)a$；</li>
-<li>数乘分配律1：$\forall\lambda\in F,a,b\in V,\lambda(a+b)=\lambda a+\lambda b$；</li>
-<li>数乘分配律2:$\forall \mu,\nu\in F,a\in V,(\mu+\nu)a=\mu a+\nu a$；</li>
+<li>乘法结合律：$A(BC)=(AB)C$；</li>
+<li>左右分配律：$A(B+C)=AB+AC,(A+B)C=AC+BC$;</li>
+<li>设$k\in F$，则$k(AB)=(kA)B=A(kB)$。</li>
 </ol>
-<p>&ensp;&ensp;&ensp;&ensp;可以证明以下四个定理：<br>&ensp;&ensp;&ensp;&ensp;<font color="red">定理 2.1.1</font>&ensp;&ensp;<strong>零元唯一</strong></p>
+<font color="orange">证明：</font>1.
+$$\begin{align*}
+    [A(BC)]_{ij}&=A_{ik}(BC)_{kj}\\
+    &=A_{ik}B_{kl}C_{lj}\\
+    &=(AB)_{il}C_{lj}\\
+    &=[(AB)C]_{ij} \\
+    \to A(BC)&=(AB)C  
+\end{align*}$$
+
+2.    
+$$\begin{align*}
+    [A(B+C)]_{ij}&=A_{ik}(B+C)_{kj}\\
+    &=A_{ik}B_{kj}+A_{ik}C_{kj}\\
+    &=(AB)_{ij}+(AC)_{ij}\\
+    \to A(B+C)&=AB+AC\\
+    [(A+B)C]_{ij}&=(A+B)_{ik}C_{kj}\\
+    &=A_{ik}C_{kj}+B_{ik}C_{kj}\\
+    &=(AC)_{ij}+(BC)_{ij}\\
+    \to (A+B)C&=AC+BC   
+\end{align*}$$
+
+3. 易证。
+
+&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.7</font>&ensp;&ensp;**矩阵的幂**：设$A$为$n$阶方阵，则定义$A^k$为
+$$ A^k=\underbrace{A\cdots AA}_{k} $$
+
+&ensp;&ensp;&ensp;&ensp;<font color="red">定理 1.1.2</font>&ensp;&ensp;矩阵的幂满足：$A^pA^q=A^{p+q},(A^p)^q=A^{pq}$。
+
+### 1.4 矩阵的转置
+&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.8</font>&ensp;&ensp;**矩阵的转置**：$m\times n$型矩阵$A$的转置矩阵定义为一个$n\times m$型的矩阵，记作$A^t$，满足
+$$ (A^T)_{ij}=A_{ji} $$
+
+&ensp;&ensp;&ensp;&ensp;<font color="red">定理 1.1.3</font>&ensp;&ensp;矩阵的转置运算满足下列四条运算律：
+1. $(A^t)^t=A$；
+2. $(A+B)^t=A^t+B^t$；
+3. $(kA)^t=kA^t$；
+4. $(AB)^t=B^tA^t$。
+
+<font color="orange">证明：</font>前三条根据定义易证，下面证明第四条：
+$$\begin{align*}
+    [(AB)^t]_{ij}&=(AB)_{ji}\\
+    &=A_{jk}B_{ki}\\
+    &=(B^t)_{ik}(A^t)_{kj}\\
+    &=(B^tA^t)_{ij}\\
+    \to (AB)^t&=B^tA^t   
+\end{align*}$$
+
+&ensp;&ensp;&ensp;&ensp;<font color="red">推论 1.1.4</font>&ensp;&ensp;矩阵的转置满足
+$$ (A_1A_2\cdots A_n)^t=A_n^t\cdots A_{2}^tA_1^t $$
+
+<font color="orange">证明：</font>设$A=A_1,B=A_2\cdots A_n$，再由数学归纳法可得。
+
+&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.9</font>&ensp;&ensp;**对称矩阵**：对$n$阶方阵$A$，若有$A=A^t$，则称$A$为对称矩阵。
+
+&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.10</font>&ensp;&ensp;**反对称矩阵**：对$n$阶方阵$A$，若有$A=-A^t$，则称$A$为反对称矩阵。
+
+
+### 1.5 方阵的行列式和迹
+&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.11</font>&ensp;&ensp;**方阵的行列式**：设$A$为$n$阶方阵，则由$A$的元素按原来排列方式构成的行列式，称作方阵$A$的行列式，记作$|A|$或$\mathrm{det}A$。
+
+&ensp;&ensp;&ensp;&ensp;<font color="red">定理 1.1.5</font>&ensp;&ensp;方阵的行列式满足下列性质：
+1. $|A^t|=|A|$；
+2. $|kA|=k^n|A|$；
+3. $|AB|=|A||B|$；
+
+<font color="orange">证明：</font>前两条根据定义易证。下面证明第三条。
+
+
+&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 1.1.12</font>&ensp;&ensp;**方阵的迹**：设$A$为n阶方阵，则$A$的迹定义为$A$的主对角元的和，记作$\mathrm{tr}A$
+$$ \mathrm{tr}\ A=A_{ii} $$
+
+&ensp;&ensp;&ensp;&ensp;<font color="red">定理 1.1.6</font>&ensp;&ensp;方阵的迹满足下列性质：
+1. $\mathrm{tr}\ A^t=\mathrm{tr}\ A$
+2. $\mathrm{tr}\ (AB)=\mathrm{tr}\ (BA)$
+
+### 1.6 分块矩阵
+## §2&ensp;&ensp;可逆矩阵 
+### 2.1 可逆矩阵
+## §3&ensp;&ensp;矩阵的秩 
+### 3.1 向量组的秩
+### 3.2 行秩和列秩
+### 3.3 矩阵的秩
+## §4&ensp;&ensp;矩阵间的等价关系
+### 4.1 矩阵等价
+### 4.2 矩阵相似
+### 4.3 矩阵合同
+## §5&ensp;&ensp;矩阵函数
+
+
+# 第二章&ensp;&ensp;&ensp;&ensp;向量空间
+## §1&ensp;&ensp;向量空间
+
+### 1.1 向量空间
+&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 2.1.1</font>&ensp;&ensp;**向量空间**：设有数域$F$，$V$是一个非空集合。若$V$上定义有两种代数运算，满足
+1. 加法封闭性：$\forall a,b\in V,a+b=c\in V$；
+2. 数乘封闭性：$\forall\lambda\in F,a\in V,\lambda a\in V$；
+3. 加法结合律：$\forall a,b,c\in V,a+(b+c)=(a+b)+c$；
+4. 加法交换律：$\forall a,b\in V,ab\in V$；
+5. 存在零元：$\exists 0\in V,$使得$\forall a \in V$有$a+0=a$；
+6. 存在逆元：$\forall a\in V,\exists b\in V$使得$a+b=0$；
+7. 存在单位元：$\forall a\in V,\exists 1\in F$使得$1a=a$；
+8. 数乘结合律：$\forall \mu,\nu\in F,a\in V,\mu(\nu a)=(\mu\nu)a$；
+9. 数乘分配律1：$\forall\lambda\in F,a,b\in V,\lambda(a+b)=\lambda a+\lambda b$；
+10. 数乘分配律2:$\forall \mu,\nu\in F,a\in V,(\mu+\nu)a=\mu a+\nu a$；
+
+&ensp;&ensp;&ensp;&ensp;可以证明以下四个定理：
+&ensp;&ensp;&ensp;&ensp;<font color="red">定理 2.1.1</font>&ensp;&ensp;**零元唯一**
 <font color="orange">证明：</font> 设$0$和$0'$都是向量空间$V$的零元，则$\forall a\in V:$
 
 $$ a+0=a=a+0'\Longrightarrow 0=0'$$
@@ -1001,7 +1116,8 @@ $$ \mu^i=\left\{\begin{align*}
     T'^{j}_{\ \ \ i}\epsilon_{(k)}P^{k}_{\ \ j}&=P^{j}_{\ \ i}T^{k}_{\ \ j}\epsilon_{(k)}\\   
 \end{align*}</script><p>根据基的线性无关性消去基，于是有</p>
 <script type="math/tex; mode=display">T'^{j}_{\ \ \ i}P^{k}_{\ \ j}=P^{j}_{\ \ i}T^{k}_{\ \ j}</script><script type="math/tex; mode=display">PT'=TP</script><p>由于过渡矩阵是可逆的，则</p>
-<script type="math/tex; mode=display">T'=P^{-1}TP</script><h2><span id="4enspensp向量空间的积和商">§4&ensp;&ensp;向量空间的积和商</span></h2><h3><span id="41-向量空间的积">4.1 向量空间的积</span></h3><p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 3.4.1</font>&ensp;&ensp;<strong>向量空间的积</strong>：$V_1,V_2,\cdots,V_n$均为定义在$F$上的向量空间，它们的积定义为它们的笛卡尔积，即</p>
+<script type="math/tex; mode=display">T'=P^{-1}TP</script><p>所以$T$和$T’$相似。</p>
+<h2><span id="4enspensp向量空间的积和商">§4&ensp;&ensp;向量空间的积和商</span></h2><h3><span id="41-向量空间的积">4.1 向量空间的积</span></h3><p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 3.4.1</font>&ensp;&ensp;<strong>向量空间的积</strong>：$V_1,V_2,\cdots,V_n$均为定义在$F$上的向量空间，它们的积定义为它们的笛卡尔积，即</p>
 <script type="math/tex; mode=display">V_1\times\cdots\times V_n=\{(a_{(1)},\cdots,a_{(n)}):a_{(i)}\in V_i\}</script><p>按组之间的加法，$V_1\times\cdots\times V_n$是$F$上的向量空间。</p>
 <p>&ensp;&ensp;&ensp;&ensp;<font color="red">定理 3.4.1</font>&ensp;&ensp;若$V_1,V_2,\cdots,V_n$是有限维的，则$V_1\times\cdots\times V_n$也是有限维的，且有</p>
 <script type="math/tex; mode=display">\mathrm{dim}\ V_1\times\cdots\times V_n=\sum_{i=1}^n\mathrm{dim}\ V_i</script><p><font color="orange">证明：</font>设$\{\epsilon_{i(n_i)}\}$为$V_i$的基，$\mathrm{dim}\ V_i=n_i$。$a_{(j)}=a^{\ i}_{(j)}\epsilon_{j(i)}\in V_j$，</p>
@@ -1294,7 +1410,8 @@ $$ \mu^i=\left\{\begin{align*}
 (\eta_{(1)},\epsilon_{(1)})&\cdots&(\eta_{(1)},\epsilon_{(n)})\\
 \vdots&\ddots&\vdots\\
 (\eta_{(n)},\epsilon_{(1)})&\cdots&(\eta_{(n)},\epsilon_{(n)})
-\end{bmatrix}</script><h3><span id="17-内积空间上的线性泛函">1.7 内积空间上的线性泛函</span></h3><h2><span id="2enspensp正交补">§2&ensp;&ensp;正交补</span></h2><h3><span id="21-正交补">2.1 正交补</span></h3><h3><span id="22-正交投影">2.2 正交投影</span></h3><h2><span id="3enspensp欧氏空间">§3&ensp;&ensp;欧氏空间</span></h2><h3><span id="31-正交变换">3.1 正交变换</span></h3><h3><span id="32-正交变换群">3.2 正交变换群</span></h3><h3><span id="33-对称变换">3.3 对称变换</span></h3><h2><span id="4enspensp闵可夫斯基空间">§4&ensp;&ensp;闵可夫斯基空间</span></h2><h3><span id="41">4.1</span></h3><h2><span id="5enspensp辛空间">§5&ensp;&ensp;辛空间</span></h2><h3><span id="51">5.1</span></h3><h2><span id="6enspensp希尔伯特空间">§6&ensp;&ensp;希尔伯特空间</span></h2><h3><span id="61">6.1</span></h3><h1><span id="第五章enspenspenspensp算子的本征值">第五章&ensp;&ensp;&ensp;&ensp;算子的本征值</span></h1><h2><span id="1enspensp不变子空间">§1&ensp;&ensp;不变子空间</span></h2><h3><span id="11-不变子空间">1.1 不变子空间</span></h3><h3><span id="12-一维不变子空间">1.2 一维不变子空间</span></h3><h3><span id="13-二维不变子空间">1.3 二维不变子空间</span></h3><h2><span id="2enspensp本征值">§2&ensp;&ensp;本征值</span></h2><h3><span id="21-本征值">2.1 本征值</span></h3><h3><span id="22">2.2</span></h3><h2><span id="3enspensp算子的多项式">§3&ensp;&ensp;算子的多项式</span></h2><h2><span id="4enspensp本征空间">§4&ensp;&ensp;本征空间</span></h2><h2><span id="5enspensp对角化">§5&ensp;&ensp;对角化</span></h2><h1><span id="第六章enspenspenspensp内积空间上的算子">第六章&ensp;&ensp;&ensp;&ensp;内积空间上的算子</span></h1><h2><span id="1enspensp伴随与厄米算子">§1&ensp;&ensp;伴随与厄米算子</span></h2><h2><span id="2enspensp正规算子">§2&ensp;&ensp;正规算子</span></h2><h2><span id="3enspensp谱定理">§3&ensp;&ensp;谱定理</span></h2><h2><span id="4enspensp正算子">§4&ensp;&ensp;正算子</span></h2><h2><span id="5enspensp等距同构">§5&ensp;&ensp;等距同构</span></h2><h2><span id="6enspensp极分解">§6&ensp;&ensp;极分解</span></h2><h2><span id="7enspensp奇异值分解">§7&ensp;&ensp;奇异值分解</span></h2><h1><span id="第七章enspenspenspensp复向量空间上的算子">第七章&ensp;&ensp;&ensp;&ensp;复向量空间上的算子</span></h1><h2><span id="1enspensp算子幂的零空间">§1&ensp;&ensp;算子幂的零空间</span></h2><h2><span id="2enspensp广义本征向量">§2&ensp;&ensp;广义本征向量</span></h2><h2><span id="3enspensp幂零算子">§3&ensp;&ensp;幂零算子</span></h2><h2><span id="4enspensp复向量空间上算子的刻画">§4&ensp;&ensp;复向量空间上算子的刻画</span></h2><h2><span id="5enspensp若尔当形">§5&ensp;&ensp;若尔当形</span></h2><h1><span id="第八章enspenspenspensp实向量空间上的算子">第八章&ensp;&ensp;&ensp;&ensp;实向量空间上的算子</span></h1><h2><span id="1enspensp复化">§1&ensp;&ensp;复化</span></h2><h2><span id="2enspensp实向量空间上的正规算子">§2&ensp;&ensp;实向量空间上的正规算子</span></h2><h1><span id="第九章enspenspenspensp线性代数">第九章&ensp;&ensp;&ensp;&ensp;线性代数</span></h1><h2><span id="1enspensp双线性函数">§1&ensp;&ensp;双线性函数</span></h2><h2><span id="2enspensp二次型">§2&ensp;&ensp;二次型</span></h2><h2><span id="3enspensp正定二次型">§3&ensp;&ensp;正定二次型</span></h2><h2><span id="4enspensp厄米型">§4&ensp;&ensp;厄米型</span></h2><h2><span id="5enspensp多重线性映射">§5&ensp;&ensp;多重线性映射</span></h2><h2><span id="6enspensp张量积">§6&ensp;&ensp;张量积</span></h2><h2><span id="7enspensp张量">§7&ensp;&ensp;张量</span></h2><h2><span id="8enspensp外代数">§8&ensp;&ensp;外代数</span></h2><h2><span id="9enspensp克利福德代数">§9&ensp;&ensp;克利福德代数</span></h2><h2><span id="10enspensp格拉斯曼代数">§10&ensp;&ensp;格拉斯曼代数</span></h2><h1><span id="第十章enspenspenspensp线性方程组">第十章&ensp;&ensp;&ensp;&ensp;线性方程组</span></h1><h2><span id="1enspensp高斯消元法">§1&ensp;&ensp;高斯消元法</span></h2>
+\end{bmatrix}</script><h2><span id="2enspensp正交补">§2&ensp;&ensp;正交补</span></h2><h3><span id="21-正交补">2.1 正交补</span></h3><h3><span id="22-正交投影">2.2 正交投影</span></h3><h2><span id="3enspensp欧氏空间">§3&ensp;&ensp;欧氏空间</span></h2><h3><span id="31-欧式空间">3.1 欧式空间</span></h3><p>&ensp;&ensp;&ensp;&ensp;<font color="blue">定义 4.3.1</font>&ensp;&ensp;<strong>欧氏空间</strong>：定义在实数域上的酉空间空间称为欧氏空间。</p>
+<h3><span id="32-正交变换">3.2 正交变换</span></h3><h3><span id="33-正交变换群">3.3 正交变换群</span></h3><h3><span id="34-对称变换">3.4 对称变换</span></h3><h2><span id="4enspensp闵可夫斯基空间">§4&ensp;&ensp;闵可夫斯基空间</span></h2><h3><span id="41">4.1</span></h3><h2><span id="5enspensp辛空间">§5&ensp;&ensp;辛空间</span></h2><h3><span id="51">5.1</span></h3><h2><span id="6enspensp希尔伯特空间">§6&ensp;&ensp;希尔伯特空间</span></h2><h3><span id="61">6.1</span></h3><h1><span id="第五章enspenspenspensp算子的本征值">第五章&ensp;&ensp;&ensp;&ensp;算子的本征值</span></h1><h2><span id="1enspensp不变子空间">§1&ensp;&ensp;不变子空间</span></h2><h3><span id="11-不变子空间">1.1 不变子空间</span></h3><h3><span id="12-一维不变子空间">1.2 一维不变子空间</span></h3><h3><span id="13-二维不变子空间">1.3 二维不变子空间</span></h3><h2><span id="2enspensp本征值">§2&ensp;&ensp;本征值</span></h2><h3><span id="21-本征值">2.1 本征值</span></h3><h3><span id="22">2.2</span></h3><h2><span id="3enspensp算子的多项式">§3&ensp;&ensp;算子的多项式</span></h2><h2><span id="4enspensp本征空间">§4&ensp;&ensp;本征空间</span></h2><h2><span id="5enspensp对角化">§5&ensp;&ensp;对角化</span></h2><h1><span id="第六章enspenspenspensp内积空间上的算子">第六章&ensp;&ensp;&ensp;&ensp;内积空间上的算子</span></h1><h2><span id="1enspensp伴随与厄米算子">§1&ensp;&ensp;伴随与厄米算子</span></h2><h2><span id="2enspensp正规算子">§2&ensp;&ensp;正规算子</span></h2><h2><span id="3enspensp谱定理">§3&ensp;&ensp;谱定理</span></h2><h2><span id="4enspensp正算子">§4&ensp;&ensp;正算子</span></h2><h2><span id="5enspensp等距同构">§5&ensp;&ensp;等距同构</span></h2><h2><span id="6enspensp极分解">§6&ensp;&ensp;极分解</span></h2><h2><span id="7enspensp奇异值分解">§7&ensp;&ensp;奇异值分解</span></h2><h1><span id="第七章enspenspenspensp复向量空间上的算子">第七章&ensp;&ensp;&ensp;&ensp;复向量空间上的算子</span></h1><h2><span id="1enspensp算子幂的零空间">§1&ensp;&ensp;算子幂的零空间</span></h2><h2><span id="2enspensp广义本征向量">§2&ensp;&ensp;广义本征向量</span></h2><h2><span id="3enspensp幂零算子">§3&ensp;&ensp;幂零算子</span></h2><h2><span id="4enspensp复向量空间上算子的刻画">§4&ensp;&ensp;复向量空间上算子的刻画</span></h2><h2><span id="5enspensp若尔当形">§5&ensp;&ensp;若尔当形</span></h2><h1><span id="第八章enspenspenspensp实向量空间上的算子">第八章&ensp;&ensp;&ensp;&ensp;实向量空间上的算子</span></h1><h2><span id="1enspensp复化">§1&ensp;&ensp;复化</span></h2><h2><span id="2enspensp实向量空间上的正规算子">§2&ensp;&ensp;实向量空间上的正规算子</span></h2><h1><span id="第九章enspenspenspensp线性代数">第九章&ensp;&ensp;&ensp;&ensp;线性代数</span></h1><h2><span id="1enspensp双线性函数">§1&ensp;&ensp;双线性函数</span></h2><h2><span id="2enspensp二次型">§2&ensp;&ensp;二次型</span></h2><h2><span id="3enspensp正定二次型">§3&ensp;&ensp;正定二次型</span></h2><h2><span id="4enspensp厄米型">§4&ensp;&ensp;厄米型</span></h2><h2><span id="5enspensp多重线性映射">§5&ensp;&ensp;多重线性映射</span></h2><h2><span id="6enspensp张量积">§6&ensp;&ensp;张量积</span></h2><h2><span id="7enspensp张量">§7&ensp;&ensp;张量</span></h2><h2><span id="8enspensp外代数">§8&ensp;&ensp;外代数</span></h2><h2><span id="9enspensp克利福德代数">§9&ensp;&ensp;克利福德代数</span></h2><h2><span id="10enspensp格拉斯曼代数">§10&ensp;&ensp;格拉斯曼代数</span></h2><h1><span id="第十章enspenspenspensp线性方程组">第十章&ensp;&ensp;&ensp;&ensp;线性方程组</span></h1><h2><span id="1enspensp高斯消元法">§1&ensp;&ensp;高斯消元法</span></h2>
     </div>
 
     
@@ -1312,10 +1429,7 @@ $$ \mu^i=\left\{\begin{align*}
 
         
     <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="prev" title="热物理概念笔记">
-      <i class="fa fa-chevron-left"></i> 热物理概念笔记
-    </a></div>
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
     <a href="/2022/05/17/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="next" title="电磁学笔记">
       电磁学笔记 <i class="fa fa-chevron-right"></i>
@@ -1378,7 +1492,7 @@ $$ \mu^i=\left\{\begin{align*}
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">预备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">集合和映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">关系和分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">常见代数系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">指标计算规则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">第一章    矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">§1  矩阵的定义及运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.1.</span> <span class="nav-text">1.1 矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.2.</span> <span class="nav-text">1.2 矩阵的线性运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.3.</span> <span class="nav-text">1.3 矩阵的乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.4.</span> <span class="nav-text">1.4 矩阵的转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.5.</span> <span class="nav-text">1.5 矩阵的行列式和迹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.6.</span> <span class="nav-text">1.6 分块矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">§2  可逆矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.1 可逆矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.3.</span> <span class="nav-text">§3  矩阵的秩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.1 向量组的秩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.2 行秩和列秩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.3 矩阵的秩</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.4.</span> <span class="nav-text">§4  矩阵间的等价关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.4.1.</span> <span class="nav-text">4.1 矩阵的初等变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.4.2.</span> <span class="nav-text">4.2 矩阵等价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.4.3.</span> <span class="nav-text">4.3 矩阵相似</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.4.4.</span> <span class="nav-text">4.4 矩阵合同</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.5.</span> <span class="nav-text">§5  矩阵函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">第二章    向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.1.</span> <span class="nav-text">§1  向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.1.1.</span> <span class="nav-text">1.1 向量空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.2.</span> <span class="nav-text">§4  基与维数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.2.1.</span> <span class="nav-text">4.1 基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.2.2.</span> <span class="nav-text">4.3 维数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.2.3.</span> <span class="nav-text">4.3 坐标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">第三章    线性映射</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">§1  线性映射</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.1.</span> <span class="nav-text">1.1 线性映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.2.</span> <span class="nav-text">1.2 线性映射的乘积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.3.</span> <span class="nav-text">1.3 线性映射的矩阵表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.2.</span> <span class="nav-text">§2  零空间与值域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.2.1.</span> <span class="nav-text">2.1 零空间与值域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.2.2.</span> <span class="nav-text">2.2 线性映射基本定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.3.</span> <span class="nav-text">§3  向量空间的同构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.1.</span> <span class="nav-text">3.1 可逆的线性映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.2.</span> <span class="nav-text">3.2 同构的向量空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.3.</span> <span class="nav-text">3.3 线性算子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.4.</span> <span class="nav-text">§4  向量空间的积和商</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.4.1.</span> <span class="nav-text">4.1 向量空间的积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.4.2.</span> <span class="nav-text">4.2 向量空间的积和直和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.4.3.</span> <span class="nav-text">4.3 商空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text">§5  对偶向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.5.1.</span> <span class="nav-text">5.1 对偶向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.5.2.</span> <span class="nav-text">5.2 对偶映射</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">第四章    内积空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.1.</span> <span class="nav-text">§1  内积与范数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.1.</span> <span class="nav-text">1.1 内积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.2.</span> <span class="nav-text">1.2 范数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.3.</span> <span class="nav-text">1.3 度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.4.</span> <span class="nav-text">1.4 标准正交基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.5.</span> <span class="nav-text">1.5 格拉姆-施密特正交化过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.6.</span> <span class="nav-text">1.6 标准正交基间的基变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.7.</span> <span class="nav-text">1.7 内积空间上的线性泛函</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.2.</span> <span class="nav-text">§2  正交补</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.2.1.</span> <span class="nav-text">2.1 正交补</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.2.2.</span> <span class="nav-text">2.2 正交投影</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.3.</span> <span class="nav-text">§3  欧氏空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.3.1.</span> <span class="nav-text">3.1 正交变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.3.2.</span> <span class="nav-text">3.2 正交变换群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.3.3.</span> <span class="nav-text">3.3 对称变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.4.</span> <span class="nav-text">§4  闵可夫斯基空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.4.1.</span> <span class="nav-text">4.1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.5.</span> <span class="nav-text">§5  辛空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.5.1.</span> <span class="nav-text">5.1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.6.</span> <span class="nav-text">§6  希尔伯特空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.6.1.</span> <span class="nav-text">6.1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">第五章    算子的本征值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.1.</span> <span class="nav-text">§1  不变子空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">7.1.1.</span> <span class="nav-text">1.1 不变子空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">7.1.2.</span> <span class="nav-text">1.2 一维不变子空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">7.1.3.</span> <span class="nav-text">1.3 二维不变子空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.2.</span> <span class="nav-text">§2  本征值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">7.2.1.</span> <span class="nav-text">2.1 本征值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">7.2.2.</span> <span class="nav-text">2.2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.3.</span> <span class="nav-text">§3  算子的多项式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.4.</span> <span class="nav-text">§4  本征空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.5.</span> <span class="nav-text">§5  对角化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">第六章    内积空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.1.</span> <span class="nav-text">§1  伴随与厄米算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.2.</span> <span class="nav-text">§2  正规算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.3.</span> <span class="nav-text">§3  谱定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.4.</span> <span class="nav-text">§4  正算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.5.</span> <span class="nav-text">§5  等距同构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.6.</span> <span class="nav-text">§6  极分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.7.</span> <span class="nav-text">§7  奇异值分解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">第七章    复向量空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.1.</span> <span class="nav-text">§1  算子幂的零空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.2.</span> <span class="nav-text">§2  广义本征向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.3.</span> <span class="nav-text">§3  幂零算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.4.</span> <span class="nav-text">§4  复向量空间上算子的刻画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.5.</span> <span class="nav-text">§5  若尔当形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text">第八章    实向量空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.1.</span> <span class="nav-text">§1  复化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.2.</span> <span class="nav-text">§2  实向量空间上的正规算子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">11.</span> <span class="nav-text">第九章    线性代数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.1.</span> <span class="nav-text">§1  双线性函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.2.</span> <span class="nav-text">§2  二次型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.3.</span> <span class="nav-text">§3  正定二次型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.4.</span> <span class="nav-text">§4  厄米型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.5.</span> <span class="nav-text">§5  多重线性映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.6.</span> <span class="nav-text">§6  张量积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.7.</span> <span class="nav-text">§7  张量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.8.</span> <span class="nav-text">§8  外代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.9.</span> <span class="nav-text">§9  克利福德代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.10.</span> <span class="nav-text">§10  格拉斯曼代数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">12.</span> <span class="nav-text">第十章    线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">12.1.</span> <span class="nav-text">§1  高斯消元法</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">预备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text">集合和映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.2.</span> <span class="nav-text">关系和分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.3.</span> <span class="nav-text">常见代数系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.4.</span> <span class="nav-text">指标计算规则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">第一章    矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text">§1  矩阵的定义及运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.1.</span> <span class="nav-text">1.1 矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.2.</span> <span class="nav-text">1.2 矩阵的线性运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.1.3.</span> <span class="nav-text">1.3 矩阵的乘法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text">§4  基与维数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.2.1.</span> <span class="nav-text">4.1 基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.2.2.</span> <span class="nav-text">4.3 维数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.2.3.</span> <span class="nav-text">4.3 坐标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">第三章    线性映射</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.1.</span> <span class="nav-text">§1  线性映射</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.1.1.</span> <span class="nav-text">1.1 线性映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.1.2.</span> <span class="nav-text">1.2 线性映射的乘积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.1.3.</span> <span class="nav-text">1.3 线性映射的矩阵表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.2.</span> <span class="nav-text">§2  零空间与值域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.2.1.</span> <span class="nav-text">2.1 零空间与值域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.2.2.</span> <span class="nav-text">2.2 线性映射基本定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.3.</span> <span class="nav-text">§3  向量空间的同构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.3.1.</span> <span class="nav-text">3.1 可逆的线性映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.3.2.</span> <span class="nav-text">3.2 同构的向量空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.3.3.</span> <span class="nav-text">3.3 线性算子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.4.</span> <span class="nav-text">§4  向量空间的积和商</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.4.1.</span> <span class="nav-text">4.1 向量空间的积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.4.2.</span> <span class="nav-text">4.2 向量空间的积和直和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.4.3.</span> <span class="nav-text">4.3 商空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.5.</span> <span class="nav-text">§5  对偶向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.5.1.</span> <span class="nav-text">5.1 对偶向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.5.2.</span> <span class="nav-text">5.2 对偶映射</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">第四章    内积空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text">§1  内积与范数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.1.</span> <span class="nav-text">1.1 内积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.2.</span> <span class="nav-text">1.2 范数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.3.</span> <span class="nav-text">1.3 度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.4.</span> <span class="nav-text">1.4 标准正交基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.5.</span> <span class="nav-text">1.5 格拉姆-施密特正交化过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.6.</span> <span class="nav-text">1.6 标准正交基间的基变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.2.</span> <span class="nav-text">§2  正交补</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.2.1.</span> <span class="nav-text">2.1 正交补</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.2.2.</span> <span class="nav-text">2.2 正交投影</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.3.</span> <span class="nav-text">§3  欧氏空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.1.</span> <span class="nav-text">3.1 欧式空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.2.</span> <span class="nav-text">3.2 正交变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.3.</span> <span class="nav-text">3.3 正交变换群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.4.</span> <span class="nav-text">3.4 对称变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.4.</span> <span class="nav-text">§4  闵可夫斯基空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.4.1.</span> <span class="nav-text">4.1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.5.</span> <span class="nav-text">§5  辛空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.5.1.</span> <span class="nav-text">5.1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.6.</span> <span class="nav-text">§6  希尔伯特空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.6.1.</span> <span class="nav-text">6.1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">第五章    算子的本征值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.1.</span> <span class="nav-text">§1  不变子空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.1.</span> <span class="nav-text">1.1 不变子空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.2.</span> <span class="nav-text">1.2 一维不变子空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.1.3.</span> <span class="nav-text">1.3 二维不变子空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.2.</span> <span class="nav-text">§2  本征值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.2.1.</span> <span class="nav-text">2.1 本征值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.2.2.</span> <span class="nav-text">2.2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.3.</span> <span class="nav-text">§3  算子的多项式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.4.</span> <span class="nav-text">§4  本征空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">6.5.</span> <span class="nav-text">§5  对角化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">第六章    内积空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.1.</span> <span class="nav-text">§1  伴随与厄米算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.2.</span> <span class="nav-text">§2  正规算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.3.</span> <span class="nav-text">§3  谱定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.4.</span> <span class="nav-text">§4  正算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.5.</span> <span class="nav-text">§5  等距同构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.6.</span> <span class="nav-text">§6  极分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">7.7.</span> <span class="nav-text">§7  奇异值分解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">第七章    复向量空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.1.</span> <span class="nav-text">§1  算子幂的零空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.2.</span> <span class="nav-text">§2  广义本征向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.3.</span> <span class="nav-text">§3  幂零算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.4.</span> <span class="nav-text">§4  复向量空间上算子的刻画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">8.5.</span> <span class="nav-text">§5  若尔当形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">第八章    实向量空间上的算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.1.</span> <span class="nav-text">§1  复化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.2.</span> <span class="nav-text">§2  实向量空间上的正规算子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text">第九章    线性代数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.1.</span> <span class="nav-text">§1  双线性函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.2.</span> <span class="nav-text">§2  二次型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.3.</span> <span class="nav-text">§3  正定二次型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.4.</span> <span class="nav-text">§4  厄米型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.5.</span> <span class="nav-text">§5  多重线性映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.6.</span> <span class="nav-text">§6  张量积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.7.</span> <span class="nav-text">§7  张量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.8.</span> <span class="nav-text">§8  外代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.9.</span> <span class="nav-text">§9  克利福德代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">10.10.</span> <span class="nav-text">§10  格拉斯曼代数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">11.</span> <span class="nav-text">第十章    线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">11.1.</span> <span class="nav-text">§1  高斯消元法</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
