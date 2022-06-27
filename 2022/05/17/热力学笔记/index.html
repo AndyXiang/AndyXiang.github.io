@@ -29,7 +29,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/.com//卡诺热机.png">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-14T13:06:16.376Z">
+<meta property="article:modified_time" content="2022-06-27T14:32:14.846Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Phys">
 <meta property="article:tag" content="热力学">
@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-14 21:06:16" itemprop="dateModified" datetime="2022-06-14T21:06:16+08:00">2022-06-14</time>
+                <time title="Modified: 2022-06-27 22:32:14" itemprop="dateModified" datetime="2022-06-27T22:32:14+08:00">2022-06-27</time>
               </span>
 
           
@@ -787,9 +787,9 @@
 \end{align*}</script><p>即总的配分函数为各个部分配分函数的乘积。</p>
 <h2><span id="36enspensp理想气体的统计力学">§36&ensp;&ensp;理想气体的统计力学</span></h2><p>&ensp;&ensp;&ensp;&ensp;现在让我们来重新考虑理想气体的问题。我们知道理想气体要求分子之间没有相互作用，因此分子之间就是无耦合的。所以系统的配分函数就应该是单粒子的配分函数的幂次，指数为分子数。那我们现在的任务就是求出单粒子的配分函数。</p>
 <p>&ensp;&ensp;&ensp;&ensp;（虽然比较突然，但我认为合适的方法是直接引入量子力学）现在假设我们要研究的是处于边长为$L$的三维势阱中的粒子，根据薛定谔方程</p>
-<script type="math/tex; mode=display">i\hbar\frac{\partial \psi}{\partial t}=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi \tag{36.1}</script><p>这是一个非常经典且简单的问题。我们的边界条件取为势阱边界及边界之外的波函数为0，则方程（36.1）的解为</p>
-<script type="math/tex; mode=display">\psi(x,y,z)=\left(\frac{2}{L}\right)^{3/2}\sin\left(\frac{n_x\pi}{L}\right)\sin\left(\frac{n_y\pi}{L}\right)\sin\left(\frac{n_z\pi}{L}\right) \tag{36.2}</script><p>其中$n_x,n_y,n_z=0,\cdots$为正整数。现在粒子的态就可用三个量子数$n_x,n_y,n_z$来标记，这正好对应着$3$维的动量相空间，粒子的动量为$\pmb{k}=(\frac{n_x\pi}{L},\frac{n_y\pi}{L},\frac{n_z\pi}{L})$。</p>
-<p>&ensp;&ensp;&ensp;&ensp;动量处于$k$与$k+\mathrm{d}k$之间的态数为</p>
+<script type="math/tex; mode=display">i\hbar\frac{\partial \psi}{\partial t}=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi \tag{36.1}</script><p>这是一个非常经典且简单的问题。我们的边界条件取为势阱边界及边界之外的波函数为0，则方程（36.1）的解可以表示为下面这个式子的叠加</p>
+<script type="math/tex; mode=display">\psi(x,y,z)=\left(\frac{2}{L}\right)^{3/2}\sin\left(\frac{n_x\pi}{L}\right)\sin\left(\frac{n_y\pi}{L}\right)\sin\left(\frac{n_z\pi}{L}\right) \tag{36.2}</script><p>其中$n_x,n_y,n_z=0,\cdots$为正整数。现在粒子的态就可用三个量子数$n_x,n_y,n_z$来标记，这正好对应着$3$维的动量相空间，粒子的波矢为$\pmb{k}=(\frac{n_x\pi}{L},\frac{n_y\pi}{L},\frac{n_z\pi}{L})$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;波矢处于$k$与$k+\mathrm{d}k$之间的态数为</p>
 <script type="math/tex; mode=display">\begin{align*}
     g(k)\mathrm{d}k&=\frac{\frac{1}{8}\times4\pi k^2\mathrm{d}k}{\left(\frac{\pi}{L}\right)^3}\\
     &=\frac{L^3k^2\mathrm{d}k}{2\pi^2}\tag{36.3}  
@@ -817,30 +817,75 @@
 <script type="math/tex; mode=display">\begin{align*}
     F&=-\frac{1}{\beta}\ln Z\\
     &=-k_BT\left[N\ln V-\ln N!+\frac{3N}{2}\left(\ln \frac{m}{2\pi \hbar^2}+\ln k_BT\right)\right]\tag{36.13} 
-\end{align*}</script><p>压强为</p>
+\end{align*}</script><p>利用斯特林公式$\ln N!\approx N\ln N-N$，则亥姆霍兹函数的另一个表达式为</p>
+<script type="math/tex; mode=display">F=Nk_BT[\ln (n\lambda_{th}^3)-1]\tag{36.13}</script><p>压强为</p>
 <script type="math/tex; mode=display">\begin{align*}
     p&=-\left(\frac{\partial F}{\partial V}\right)_T\\
-    &=\frac{Nk_BT}{V}  \tag{36.13} 
+    &=\frac{Nk_BT}{V}  \tag{36.14} 
 \end{align*}</script><p>这正是理想气体状态方程。</p>
 <h2><span id="37enspensp化学势">§37&ensp;&ensp;化学势</span></h2><p>&ensp;&ensp;&ensp;&ensp;现在让我们来关注一个粒子数可变的系统。如果向系统中加入一个粒子而不改变系统的体积和熵，而内能将改变一个量，那么这个改变量就称为化学势。因此这时内能的微分表达式应该改写为</p>
 <script type="math/tex; mode=display">\mathrm{d}U=T\mathrm{d}S-p\mathrm{d}V+\mu\mathrm{d}N  \tag{37.1}</script><p>于是化学势可写为</p>
-<script type="math/tex; mode=display">\mu=\left(\frac{\partial U}{\partial N}\right)_{S,V}\tag{37.2}</script><p>&ensp;&ensp;&ensp;&ensp;由式（37.1）我们可以看到，一个粒子数可变的体系的熵变可以写为</p>
-<script type="math/tex; mode=display">\mathrm{d}S=\frac{\mathrm{d}U}{T}+\frac{p\mathrm{d}V}{T}-\frac{\mu\mathrm{d}N}{T}\tag{37.3}</script><p>如果我们考虑两个可以交换热量和粒子的系统，总系统的熵变为</p>
+<script type="math/tex; mode=display">\mu=\left(\frac{\partial U}{\partial N}\right)_{S,V}\tag{37.2}</script><p>同时，利用各热力学势之间的微分关系，我们可以得到</p>
+<script type="math/tex; mode=display">\mu=\left(\frac{\partial F}{\partial N}\right)_{V,T}=\left(\frac{\partial G}{\partial N}\right)_{p,T}\tag{37.3}</script><p>&ensp;&ensp;&ensp;&ensp;由式（37.1）我们可以看到，一个粒子数可变的体系的熵变可以写为</p>
+<script type="math/tex; mode=display">\mathrm{d}S=\frac{\mathrm{d}U}{T}+\frac{p\mathrm{d}V}{T}-\frac{\mu\mathrm{d}N}{T}\tag{37.4}</script><p>如果我们考虑两个可以交换热量和粒子的系统，总系统的熵变为</p>
 <script type="math/tex; mode=display">\begin{align*}
     \mathrm{d}S&=\mathrm{d}S_1+\mathrm{d}S_2\\
     &=\frac{\mathrm{d}U}{T_1}-\frac{\mu_1\mathrm{d}N}{T_1}+\frac{(-\mathrm{d}U)}{T_2}-\frac{\mu_2(-\mathrm{d}N)}{T_2}\\
-    &=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)\mathrm{d}U-\left(\frac{\mu_1}{T_1}-\frac{\mu_2}{T_2}\right)\mathrm{d}N\tag{37.4}
+    &=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)\mathrm{d}U-\left(\frac{\mu_1}{T_1}-\frac{\mu_2}{T_2}\right)\mathrm{d}N\tag{37.5}
 \end{align*}</script><p>如果二者的温度相同，那么由熵增原理可得</p>
 <script type="math/tex; mode=display">\mu_1>\mu_2\to \mathrm{d}N<0</script><script type="math/tex; mode=display">\mu_1<\mu_2\to \mathrm{d}N>0</script><p>即粒子从化学势高的系统流向化学势低的系统。</p>
 <p>&ensp;&ensp;&ensp;&ensp;我们之前研究了满足玻尔兹曼分布的系统的配分函数，而玻尔兹曼分布只适用于正则系统。现在，我们来研究巨正则系统的配分函数。巨正则系统指与大热源、大粒子源连结的系统。    </p>
 <p>&ensp;&ensp;&ensp;&ensp;假设系统的内能和粒子数分别为$\epsilon,N$，而源的内能和粒子数为$U-\epsilon,\mathscr{N}-N$。假设$U\gg \epsilon,\mathscr{N}\gg N$。利用泰勒展开，将源的熵写为</p>
 <script type="math/tex; mode=display">\begin{align*}
-    S(U-\epsilon,\mathscr{N}-N)&=S(U,\mathscr{N})-\epsilon\left(\frac{\partial S}{\partial U}\right)_{\mathscr{N},V}-N\left(\frac{\partial S}{\partial N}\right)_{U,V}\tag{37.5}   
+    S(U-\epsilon,\mathscr{N}-N)&=S(U,\mathscr{N})-\epsilon\left(\frac{\partial S}{\partial U}\right)_{\mathscr{N},V}-N\left(\frac{\partial S}{\partial N}\right)_{U,V}\tag{37.6}   
 \end{align*}</script><p>利用式（37.3）可得</p>
-<script type="math/tex; mode=display">S(U-\epsilon,\mathscr{N}-N)=S(U,\mathscr{N})-\frac{\epsilon-\mu N}{T}\tag{37.6}</script><p>我们知道系统选择某一特定宏观态的概率正比于该宏观态得微观态数$\Omega$。由$S=k_B\ln\Omega$可得</p>
-<script type="math/tex; mode=display">P(\epsilon,N)\propto e^{\frac{S(U-\epsilon,\mathscr{N}-N)}{k_B}}\propto e^{\frac{\mu N-\epsilon}{k_BT}}\tag{37.7}</script><p>这称为<strong>吉布斯分布</strong>，这种情况下的系综称为巨正则系综。对应的配分函数称为<strong>巨配分函数</strong></p>
-<script type="math/tex; mode=display">\mathcal{Z}=\sum_{N=0}^\infty\sum_\alpha e^{\beta(\mu N-E_\alpha)} \tag{37.8}</script><p>它表示先对粒子数为$N$得系统的各个态求和，在对不同粒子数的系统求和。</p>
-<h2><span id="38enspensp光子">§38&ensp;&ensp;光子</span></h2><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
+<script type="math/tex; mode=display">S(U-\epsilon,\mathscr{N}-N)=S(U,\mathscr{N})-\frac{\epsilon-\mu N}{T}\tag{37.7}</script><p>我们知道系统选择某一特定宏观态的概率正比于该宏观态得微观态数$\Omega$。由$S=k_B\ln\Omega$可得</p>
+<script type="math/tex; mode=display">P(\epsilon,N)\propto e^{\frac{S(U-\epsilon,\mathscr{N}-N)}{k_B}}\propto e^{\frac{\mu N-\epsilon}{k_BT}}\tag{37.8}</script><p>这称为<strong>吉布斯分布</strong>，这种情况下的系综称为巨正则系综。对应的配分函数称为<strong>巨配分函数</strong></p>
+<script type="math/tex; mode=display">\mathcal{Z}=\sum_{N=0}^\infty\sum_\alpha e^{\beta(\mu N-E_\alpha)} \tag{37.9}</script><p>它表示先对粒子数为$N$得系统的各个态求和，在对不同粒子数的系统求和。</p>
+<p>&ensp;&ensp;&ensp;&ensp;使用巨配分函数可以导出巨正则系综的许多热力学量：</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \langle N\rangle&=\sum_i N_i  P_i=k_BT\left(\frac{\partial \mathcal{Z}}{\partial \mu}\right)_\beta \tag{37.10}
+\end{align*}</script><script type="math/tex; mode=display">U=\sum_iE_iP_i=-\left(\frac{\partial \mathcal{Z}}{\partial \beta}\right)_\mu+\mu N\tag{37.11}</script><script type="math/tex; mode=display">S=-k_B\sum_iP_i\ln P_i=\frac{U-\mu N+k_BT\ln \mathcal{Z}}{T} \tag{37.12}</script><p>&ensp;&ensp;&ensp;&ensp;根据巨配分函数，我们定义一个新的态函数：巨势$\Phi_G$</p>
+<script type="math/tex; mode=display">\Phi_G=-k_BT\ln \mathcal{Z}\tag{37.13}</script><p>由式（37.11）可知</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \Phi_G&=U-TS-\mu N\\
+    &=F-\mu N  \tag{37.14} 
+\end{align*}</script><p>因此巨势确实是一个态函数。巨势的微分为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    \mathrm{d}\Phi_G&=\mathrm{d}F-\mu \mathrm{d}N-N\mathrm{d}\mu\\
+    &=-S\mathrm{d}T-p\mathrm{d}V-N\mathrm{d}\mu\tag{37.15}
+\end{align*}</script><h2><span id="38enspensp光子">§38&ensp;&ensp;光子</span></h2><p>&ensp;&ensp;&ensp;&ensp;这一节我们将考虑电磁辐射的热力学。</p>
+<p>&ensp;&ensp;&ensp;&ensp;首先我们将考虑处于体积为$V$的三维势阱（称为空窖）中的一团光子气体，温度维持在$T$。光子气体与窖壁达到热平衡，即形成电磁驻波。设这时共有$N$个光子，则窖中的能量密度为</p>
+<script type="math/tex; mode=display">u=\frac{N\hbar\omega}{V}=n\hbar \omega\tag{38.1}</script><p>其中的$\hbar \omega$为单个光子的平均能量。由动理学可知，粒子气体的压强为$p=\frac{1}{3}nm\langle v^2\rangle$，而对于光子，压强表示为</p>
+<script type="math/tex; mode=display">p=\frac{1}{3}nmc^2=\frac{1}{3}n\hbar\omega\tag{38.2}</script><p>同时，窖壁上的的光子通量为</p>
+<script type="math/tex; mode=display">\varPhi=\frac{1}{4}n\langle v\rangle=\frac{1}{4}nc \tag{38.3}</script><p>因此，这团光子气体在窖壁上的辐射功率为</p>
+<script type="math/tex; mode=display">F=\hbar\omega\varPhi=\frac{1}{4}uc\tag{38.4}</script><p>&ensp;&ensp;&ensp;&ensp;下面我们来推导<strong>斯特潘-玻尔兹曼定律</strong>，它给出了一定温度的物体的在单位面积上的电磁辐射功率。利用热力学第一定律，有</p>
+<script type="math/tex; mode=display">\left(\frac{\partial U}{\partial V}\right)_T=T\left(\frac{\partial S}{\partial V}\right)_T-p\tag{38.5}</script><script type="math/tex; mode=display">\begin{align*}
+    \mathrm{LHS}=u\tag{38.6}   
+\end{align*}</script><script type="math/tex; mode=display">\begin{align*}
+    \mathrm{RHS}&=T\left(\frac{\partial p}{\partial T}\right)_V-p\\
+    &=\frac{T}{3}\left(\frac{\partial u}{\partial T}\right)_V-\frac{u}{3}\tag{38.7}   
+\end{align*}</script><p>于是可以得到一个能量密度关于温度的微分方程</p>
+<script type="math/tex; mode=display">u=\frac{T}{4}\left(\frac{\partial u}{\partial T}\right)_V\tag{38.8}</script><p>解之得</p>
+<script type="math/tex; mode=display">u=AT^4\tag{38.9}</script><p>将其带入式（38.4）可得</p>
+<script type="math/tex; mode=display">F=\frac{1}{4}uc=\sigma T^4\tag{38.10}</script><p>其中$\sigma=\frac{Ac}{4}$称为斯特潘-玻尔兹曼常量。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我们知道，光子的能量正比于它的频率$\omega$。因此，当我们想得到光子的能量时，我们需要研究频率处于区间$(\omega,\omega+\mathrm{d}\omega)$中的光子数量以及其对应的能量密度，则总能量密度为</p>
+<script type="math/tex; mode=display">u=\int_0^\infty u_\omega \mathrm{d}\omega\tag{38.11}</script><p>空窖中的光子气体形成电磁驻波，而空窖中的电磁波可以用简谐振子。以电场部分为例，它满足波动方程</p>
+<script type="math/tex; mode=display">\nabla^2\pmb{E}=\frac{1}{c^2}\frac{\partial^2 \pmb{E}}{\partial t^2} \tag{38.12}</script><p>边界条件取为空窖外电磁波为0。它的解可以表示为</p>
+<script type="math/tex; mode=display">E_x=A\sin\left(\frac{n_x\pi}{L}\right)\sin\left(\frac{n_y\pi}{L}\right)\sin\left(\frac{n_z\pi}{L}\right)\tag{38.13}</script><p>因此光子的态密度为</p>
+<script type="math/tex; mode=display">g(k)\mathrm{d}k=\frac{1/8\times4\pi k^2\mathrm{d}k}{(\pi/L)^3}\times 2=\frac{Vk^2\mathrm{d}k}{\pi^2}\tag{38.14}</script><p>其次，光子的色散关系为</p>
+<script type="math/tex; mode=display">\omega =ck\tag{38.15}</script><p>于是光子的态密度用频率表示为</p>
+<script type="math/tex; mode=display">g(\omega)\mathrm{d}\omega=g(k)\mathrm{d}k=\frac{V\omega^2\mathrm{d}\omega}{\pi^2c^3} \tag{38.16}</script><p>简谐振子的能级系统为$(n+\frac{1}{2})\hbar \omega,n=0,1,\cdots$，于是振子的配分函数为</p>
+<script type="math/tex; mode=display">Z=\sum_{n=1}^\infty e^{-\beta(n+\frac{1}{2})\hbar\omega}=\frac{e^{-\frac{1}{2}\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}}\tag{38.17}</script><p>于是频率为$\omega$的振子的内能为</p>
+<script type="math/tex; mode=display">U=-\frac{\partial \ln Z}{\partial \beta}=\hbar\omega\left(\frac{1}{2}+\frac{1}{e^{\beta\hbar\omega}-1}\right) \tag{38.18}</script><p>于是我们可以计算光子气体的内能的平均值</p>
+<script type="math/tex; mode=display">U=\int_0^\infty g(\omega)\mathrm{d}\omega\hbar\omega\left(\frac{1}{2}+\frac{1}{e^{\beta\hbar\omega}-1}\right)\tag{38.19}</script><p>但这个表达式还有一点问题：其中的$1/2$的项代表的是振子的零点能，而它总是发散的。当然，我们可以通过调整能量零点来避开这个发散。于是</p>
+<script type="math/tex; mode=display">\begin{align*}
+    U&=\int_0^\infty \frac{V\omega^2\mathrm{d}\omega}{\pi^2c^3} \frac{\hbar\omega}{e^{\beta\hbar\omega}-1}\\
+    &=\frac{\hbar V}{\pi^2c^3}\int_0^\infty\frac{\omega^3\mathrm{d}\omega}{e^{\beta\hbar\omega}-1}\\
+    &=\frac{V\pi^2k_B^4}{15c^3\hbar^3}T^4\tag{38.20}
+\end{align*}</script><p>于是光子气体的能量密度为</p>
+<script type="math/tex; mode=display">u=\frac{\pi^2k_B^4}{15c^3\hbar^3}T^4\tag{38.21}</script><p>所以斯特潘-玻尔兹曼常量为</p>
+<script type="math/tex; mode=display">\sigma= \frac{\pi^2k_B^4}{60c^2\hbar^3}=5.67\times 10^{-8}\mathrm{W\cdot m^{-2}\cdot K^{-4}}\tag{38.22}</script><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
 <script type="math/tex; mode=display">pV_m=RT \tag{40.1}</script><p>然而，实际气体的行为并不完全类似于此。首先，气体在低温或高压的情况下会液化，这是理想气体方程所无法描述的行为；而在极端高压的情况下，分子间的相互作用不再能够忽略。这促使我们去寻找更接近实际的气体模型。</p>
 <p>&ensp;&ensp;&ensp;&ensp;最常用的是<strong>范德瓦尔斯气体</strong>，它是最简单的实际气体模型。在理想气体的基础上，它增加了两个假设：（1）分子间存在微弱的吸引力；（2）分子的体积不可忽略。范德瓦尔斯气体的状态方程为</p>
 <script type="math/tex; mode=display">\left(p+\frac{a}{V_m^2}\right)(V_m-b)=RT\tag{40.2}</script><p>该方程中的$a$是分子间相互作用的参数，$b$是考虑了分子的有限体积的参数。</p>
@@ -975,8 +1020,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/17/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="prev" title="电磁学笔记">
-      <i class="fa fa-chevron-left"></i> 电磁学笔记
+    <a href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="prev" title="线性代数">
+      <i class="fa fa-chevron-left"></i> 线性代数
     </a></div>
       <div class="post-nav-item">
     <a href="/2022/05/18/HEXO+Github%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="Hexo+Github创建博客">
