@@ -29,7 +29,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/.com//卡诺热机.png">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-27T14:32:14.846Z">
+<meta property="article:modified_time" content="2022-06-28T08:25:43.889Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Phys">
 <meta property="article:tag" content="热力学">
@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-27 22:32:14" itemprop="dateModified" datetime="2022-06-27T22:32:14+08:00">2022-06-27</time>
+                <time title="Modified: 2022-06-28 16:25:43" itemprop="dateModified" datetime="2022-06-28T16:25:43+08:00">2022-06-28</time>
               </span>
 
           
@@ -884,8 +884,20 @@
     &=\frac{\hbar V}{\pi^2c^3}\int_0^\infty\frac{\omega^3\mathrm{d}\omega}{e^{\beta\hbar\omega}-1}\\
     &=\frac{V\pi^2k_B^4}{15c^3\hbar^3}T^4\tag{38.20}
 \end{align*}</script><p>于是光子气体的能量密度为</p>
-<script type="math/tex; mode=display">u=\frac{\pi^2k_B^4}{15c^3\hbar^3}T^4\tag{38.21}</script><p>所以斯特潘-玻尔兹曼常量为</p>
-<script type="math/tex; mode=display">\sigma= \frac{\pi^2k_B^4}{60c^2\hbar^3}=5.67\times 10^{-8}\mathrm{W\cdot m^{-2}\cdot K^{-4}}\tag{38.22}</script><h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
+<script type="math/tex; mode=display">u=\frac{\pi^2k_B^4}{15c^3\hbar^3}T^4\tag{38.21}</script><p>谱能量密度为</p>
+<script type="math/tex; mode=display">u_\omega=\frac{\hbar}{\pi^2c^3}\frac{\omega^3}{e^{\beta\hbar\omega}-1}\tag{38.22}</script><p>所以斯特潘-玻尔兹曼常量为</p>
+<script type="math/tex; mode=display">\sigma= \frac{\pi^2k_B^4}{60c^2\hbar^3}=5.67\times 10^{-8}\mathrm{W\cdot m^{-2}\cdot K^{-4}}\tag{38.23}</script><p>&ensp;&ensp;&ensp;&ensp;接下来我们来研究空窖的表面会怎样吸收和辐射外界的电磁波。我们定义谱吸收率$\alpha_\omega$为空窖表面对频率为$\omega$的电磁波的吸收率，定义谱辐射射$e_\omega$，$e_\omega\mathrm{d}\omega$代表空窖表面对频率处于区间$(\omega,\omega+\mathrm{d}\omega)$的电磁波的单位面积上的辐射功率。</p>
+<p>&ensp;&ensp;&ensp;&ensp;假设入射的电磁波的谱能量密度为$u_\omega$，则单位面积上的吸收功率为</p>
+<script type="math/tex; mode=display">\frac{\alpha_\omega u_\omega c\mathrm{d}\omega}{4} \tag{38.24}</script><p>在平衡状态下，辐射功率与吸收功率应该相等，于是有</p>
+<script type="math/tex; mode=display">\frac{e_\omega}{\alpha_\omega}=\frac{cu_\omega}{4} \tag{38.25}</script><p>式（38.24）称为<strong>基尔霍夫定律</strong>。如果我们固定频率和温度，则上述比值也是固定的。它表明，“良好的吸收体是良好的辐射体”。</p>
+<p>&ensp;&ensp;&ensp;&ensp;一个理想黑体定义为对所以频率都有$\alpha_\omega=1$的物体。式（38.22）给出的能量分布称为<strong>黑体分布</strong>。它用波长可以表示为</p>
+<script type="math/tex; mode=display">u_\lambda=\frac{8\pi h c}{\lambda^5}\frac{1}{e^{\beta hc/\lambda}-1} \tag{38.26}</script><p>关于这个分布，我们有几点需要注意：</p>
+<ol>
+<li>在长波区域，即$\beta hc/\lambda\ll 1$时，指数项可以表示为<script type="math/tex; mode=display">e^{\beta hc/\lambda}-1\approx \frac{\beta hc}{\lambda} \tag{38.27}</script></li>
+</ol>
+<p>于是谱能量密度可以表示为</p>
+<script type="math/tex; mode=display">u_\lambda=\frac{8\pi k_BT}{\lambda^4} \tag{38.28}</script><p>这个式子称为<strong>瑞利-金斯公式</strong>。它是在不使用量子力学导出的黑体辐射公式。显然，它在短波区域出现发散现象，所以对其积分得到的总能量密度也是发散的。由于短波区域等价于高频区域，因此这个发散现象称为紫外灾难。</p>
+<h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
 <script type="math/tex; mode=display">pV_m=RT \tag{40.1}</script><p>然而，实际气体的行为并不完全类似于此。首先，气体在低温或高压的情况下会液化，这是理想气体方程所无法描述的行为；而在极端高压的情况下，分子间的相互作用不再能够忽略。这促使我们去寻找更接近实际的气体模型。</p>
 <p>&ensp;&ensp;&ensp;&ensp;最常用的是<strong>范德瓦尔斯气体</strong>，它是最简单的实际气体模型。在理想气体的基础上，它增加了两个假设：（1）分子间存在微弱的吸引力；（2）分子的体积不可忽略。范德瓦尔斯气体的状态方程为</p>
 <script type="math/tex; mode=display">\left(p+\frac{a}{V_m^2}\right)(V_m-b)=RT\tag{40.2}</script><p>该方程中的$a$是分子间相互作用的参数，$b$是考虑了分子的有限体积的参数。</p>
@@ -1019,13 +1031,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="prev" title="线性代数">
-      <i class="fa fa-chevron-left"></i> 线性代数
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/05/18/HEXO+Github%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="Hexo+Github创建博客">
-      Hexo+Github创建博客 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/17/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="next" title="电磁学笔记">
+      电磁学笔记 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
