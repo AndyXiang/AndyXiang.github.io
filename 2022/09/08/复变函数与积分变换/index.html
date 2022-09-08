@@ -28,7 +28,7 @@
 <meta property="og:description" content="复变函数与积分变换">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-09-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-08T02:54:22.736Z">
+<meta property="article:modified_time" content="2022-09-08T03:01:23.065Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Math">
 <meta property="article:tag" content="复变函数">
@@ -182,7 +182,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-09-08 00:00:00 / Modified: 10:54:22" itemprop="dateCreated datePublished" datetime="2022-09-08T00:00:00+08:00">2022-09-08</time>
+              <time title="Created: 2022-09-08 00:00:00 / Modified: 11:01:23" itemprop="dateCreated datePublished" datetime="2022-09-08T00:00:00+08:00">2022-09-08</time>
             </span>
 
           
@@ -225,7 +225,7 @@
 <p>&ensp;&ensp;&ensp;&ensp;复数的n次方根有n个。<script type="math/tex">z^{\frac{1}{n}}=(re^{i\theta})^\frac{1}{n}=r^\frac{1}{n}e^{i\frac{\theta}{n}}</script><br>则由辐角的不确定性可以得到。同时这也反映了<strong>代数基本定理</strong> :n次方程必有n个复数根。</p>
 <p>&ensp;&ensp;&ensp;&ensp;有两个较为特殊的复数:零和无穷大。它们的模分别为0和无穷大,辐角均无准确定义。0与原点对应,无穷大与无穷远点对应。</p>
 <p>&ensp;&ensp;&ensp;&ensp;复数中无穷远为一个点。这个事实可由复平面与三维球面的同构性得到:复平面上的点和三维球面的点一一对应。我们连接复平面上的点和球面的北极N点,这条直线与球面的交点就是复平面上的点的对应点。当我们在复平面上以任意路径走向无穷远时,球面上的点总是无限地靠近北极。因此,我们可以将复平面上的无穷远处视作一个点。</p>
-<p>&ensp;&ensp;&ensp;&ensp;<strong>共轭复数</strong>是指这样的复数(与$\alpha$对应的):其实部与$\alpha$相同,虚部与$\alpha$相反,记作$\alpha$。易知:</p>
+<p>&ensp;&ensp;&ensp;&ensp;<strong>共轭复数</strong>是指这样的复数(与$\alpha$对应的):其实部与$\alpha$相同,虚部与$\alpha$相反,记作$\alpha^*$。易知:</p>
 <script type="math/tex; mode=display">\alpha\alpha^*=r^2</script><p>&ensp;&ensp;&ensp;&ensp;由于一个复数可以看作一个二元实数组,则对复数的研究往往归结为一对实数的研究。例如一个复数序列的极限就看作两个实序列的极限: </p>
 <script type="math/tex; mode=display">\lim_{n\to \infty}z_n=\lim_{n\to\infty}(x_n+iy_n)</script><h3><span id="2enspenspenspensp复变函数"><font color="red">§2&ensp;&ensp;&ensp;&ensp;复变函数</font></span></h3><p>&ensp;&ensp;&ensp;&ensp;复变函数与实函数类似,是定义在一个点集上的某种对应关系,记作 </p>
 <script type="math/tex; mode=display">\alpha=f(z)</script><p>&ensp;&ensp;&ensp;&ensp;但复变函数仍有一些不一样的地方 :</p>
@@ -256,19 +256,18 @@
 <script type="math/tex; mode=display">\sin z=\frac{1}{2i}(e^{iz}-e^{-iz})</script><script type="math/tex; mode=display">\cos z=\frac{1}{2}(e^{iz}+e^{-iz})</script></li>
 <li><p>双曲函数</p>
 <script type="math/tex; mode=display">\mathrm{sh}\ z=\frac{1}{2}(e^z-e^{-z})</script><script type="math/tex; mode=display">\mathrm{ch}\ z=\frac{1}{2}(e^z+e^{-z})</script></li>
-<li>对数函数<pre><code>$$\ln z=\ln(re^&#123;i\theta&#125;)=\ln r+i\theta$$
-</code></pre></li>
+<li>对数函数<script type="math/tex; mode=display">\ln z=\ln(re^{i\theta})=\ln r+i\theta</script></li>
 </ol>
 <p>&ensp;&ensp;&ensp;&ensp;以上给出的各复变函数中,有几处与其实函数的对应是由区别的:</p>
 <ol>
-<li><p>三角函数的模可以大于1。</p>
-<script type="math/tex; mode=display">|\sin z|=\frac{1}{2}\sqrt{(e^{2y}+e^{-2y})+2(\sin^2 x-\cos^2 x)}</script><script type="math/tex; mode=display">|\cos z|=\frac{1}{2}\sqrt{(e^{2y}+e^{-2y})-2(\sin^2 x-\cos^2 x)}</script></li>
+<li>三角函数的模可以大于1。<script type="math/tex; mode=display">|\sin z|=\frac{1}{2}\sqrt{(e^{2y}+e^{-2y})+2(\sin^2 x-\cos^2 x)}</script></li>
+</ol>
+<script type="math/tex; mode=display">|\cos z|=\frac{1}{2}\sqrt{(e^{2y}+e^{-2y})-2(\sin^2 x-\cos^2 x)}</script><ol>
 <li>对数函数有无穷个函数值。这是由于辐角可以有无数个值。负数的对数也是有意义的。</li>
 </ol>
 <p>&ensp;&ensp;&ensp;&ensp;将复变函数的实部和虚部分别记为$u(x,y),v(x,y)$,则对复变函数的研究可以归结到一对实二元函数的研究上去。例如,复变函数$f(z)$在$z_0=x_0+iy_0$点连续可归结为一对二元实函数$u(x,y),v(x,y)$ 分别在点$(x_0,y_0)$连续。</p>
 <h3><span id="3enspenspenspensp复变函数的导数"><font color="red">§3&ensp;&ensp;&ensp;&ensp;复变函数的导数</font></span></h3><p>&ensp;&ensp;&ensp;&ensp;设定义在区域$B$上的单值函数$w=f(z)$在$B$上的某点$z_0$的极限</p>
-<pre><code>$$\lim_&#123;z\to z_0&#125;\frac&#123;f(z)-f(z_0)&#125;&#123;z-z_0&#125;$$
-</code></pre><p>存在且与$z\to z_0$的方式无关。则称$f(z)$在点$z_0$<strong>可导(单演)</strong>,该极限称为函数$f(z)$在点$z_0$的<strong>导数</strong>。</p>
+<script type="math/tex; mode=display">\lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}</script><p>存在且与$z\to z_0$的方式无关。则称$f(z)$在点$z_0$<strong>可导(单演)</strong>,该极限称为函数$f(z)$在点$z_0$的<strong>导数</strong>。</p>
 <p>&ensp;&ensp;&ensp;&ensp;由于复变函数的导数的定义与实函数的导数的定义类似,可以证明,对实变函数适用的各性质和公式同样也适用于复变函数。</p>
 <p>&ensp;&ensp;&ensp;&ensp;但是,复变函数的导数的要求比实变函数的要求严格的多。这是因为实变函数的变量$\Delta x$只能沿实轴趋向0,而复变函数要求复变量$\Delta z$沿复平面上任意曲线逼近0而极限不变。通过分别研究$\Delta z$沿实轴和虚轴趋向0的两种情况,我们可以得到复变函数可导的<strong>必要条件:柯西—黎曼方程(C-R条件)</strong> :</p>
 <script type="math/tex; mode=display">\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}.</script><hr>
@@ -277,11 +276,10 @@
 $$\begin{align*}\lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}&=\lim_{\Delta x\to 0}\Big[\frac{u(x+\Delta x,y)-u(x,y)}{\Delta x}+i\frac{v(x+\Delta x,y)-v(x,y)}{\Delta x}\Big]\\&=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}. \end{align*}$$
 
 &ensp;&ensp;&ensp;&ensp;再考虑$\Delta z$沿虚轴趋向0,则$\Delta x=0,\Delta z=i\Delta y \to 0.$
-    $$\begin{align*}
+$$\begin{align*}
     \lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}&=\lim_{\Delta y\to 0}\Big[\frac{u(x,y+\Delta y)-u(x,y)}{i\Delta y}+i\frac{v(x,y+\Delta y)-v(x,y)}{i\Delta y}\Big]\\
     &=\frac{\partial v}{\partial y}-i\frac{\partial u}{\partial y}. 
-    \end{align*}$$
-
+\end{align*}$$
 
 上述两个极限应该相等,则我们就得到了C-R方程。
 
@@ -289,18 +287,19 @@ $$\begin{align*}\lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}&=\lim_{\Delta x\to 0}\B
 
 &ensp;&ensp;&ensp;&ensp;复变函数$f(z)$可导的充分必要条件:$f(z)$ 的偏导数$\frac{\partial u}{\partial x},\frac{\partial v}{\partial y},\frac{\partial u}{\partial y},\frac{\partial v}{\partial x}$都存在且连续,并且满足C-R方程。
 
+
 ---
 
 <font color="orange">推导</font>
 必要性已得,下面我们只证明充分性。
-    $$\begin{align*}\Delta u&=\frac{\partial u}{\partial x}\Delta x+\frac{\partial u}{\partial y}\Delta y+o(\Delta x)+o(\Delta y),\\ \Delta v&=\frac{\partial v}{\partial x}\Delta x+\frac{\partial v}{\partial y}\Delta y+o(\Delta x)+o(\Delta y),\\\Delta f&=\Delta u+i\Delta v,\Delta z=\Delta x+i\Delta y.\end{align*}$$
+$$\begin{align*}\Delta u&=\frac{\partial u}{\partial x}\Delta x+\frac{\partial u}{\partial y}\Delta y+o(\Delta x)+o(\Delta y),\\ \Delta v&=\frac{\partial v}{\partial x}\Delta x+\frac{\partial v}{\partial y}\Delta y+o(\Delta x)+o(\Delta y),\\\Delta f&=\Delta u+i\Delta v,\Delta z=\Delta x+i\Delta y.\end{align*}$$
 则
-    $$\begin{align*}
+$$\begin{align*}
     f'(z)&=\lim_{z\to z_0}\frac{\Delta f}{\Delta z}\\&=\lim_{\Delta z\to 0}\frac{\frac{\partial u}{\partial x}\Delta x+\frac{\partial u}{\partial y}\Delta y+i(\frac{\partial v}{\partial x}\Delta x+\frac{\partial v}{\partial y}\Delta y)}{\Delta x+i\Delta y}\\
-    \end{align*}$$
+\end{align*}$$
 
 代入C-R方程:
-    $$\begin{align*}f'(z)&=\lim_{\Delta z\to 0}\frac{\frac{\partial u}{\partial x}(\Delta x+i\Delta y)+i\frac{\partial v}{\partial x}(\Delta x+i\Delta y)}{\Delta x+i\Delta y}\\ &=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=\frac{\partial v}{\partial y}-i\frac{\partial u}{\partial y}\end{align*}$$
+$$\begin{align*}f'(z)&=\lim_{\Delta z\to 0}\frac{\frac{\partial u}{\partial x}(\Delta x+i\Delta y)+i\frac{\partial v}{\partial x}(\Delta x+i\Delta y)}{\Delta x+i\Delta y}\\ &=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=\frac{\partial v}{\partial y}-i\frac{\partial u}{\partial y}\end{align*}$$
 证毕。
 
 ---
@@ -322,16 +321,17 @@ $$ \mathrm{arg}~\mathrm{d}w=\mathrm{arg}[f'(z)\mathrm{d}z]=\mathrm{arg}~f'(z)+\m
 
 即导数的模$|f'(z)|$给出了将微元$\mathrm{d}z$映射到$\mathrm{d}w$的伸缩率,而导数的辐角则给出了映射的偏转角。
 
+
+
 ### <font color="red">§4&ensp;&ensp;&ensp;&ensp;解析函数</font>
-&ensp;&ensp;&ensp;&ensp;若函数$f(z)$在点$z_0$及其领域上处处可导,则称$f(z)$在$z_0$处**解析**。若$f(z)$在区域$B$上每一点都解析,则称$f(z)$是$B$上的**解析函数**。
 
-&ensp;&ensp;&ensp;&ensp;若函数在某点无定义,或有定义但不可导,或可导但不解析,则称该点为函数的**奇点**.
-
-&ensp;&ensp;&ensp;&ensp;解析函数是一类具有特殊性质的函数:
-1. 若函数$f(z)=u+iv$在区域$B$上解析,则$u(x,y)=C_1,v(x,y)=C_2$是$B$上的正交曲线族.
-
----
-
+<p>&ensp;&ensp;&ensp;&ensp;若函数$f(z)$在点$z_0$及其领域上处处可导,则称$f(z)$在$z_0$处<strong>解析</strong>。若$f(z)$在区域$B$上每一点都解析,则称$f(z)$是$B$上的<strong>解析函数</strong>。</p>
+<p>&ensp;&ensp;&ensp;&ensp;若函数在某点无定义,或有定义但不可导,或可导但不解析,则称该点为函数的<strong>奇点</strong>.</p>
+<p>&ensp;&ensp;&ensp;&ensp;解析函数是一类具有特殊性质的函数:</p>
+<ol>
+<li>若函数$f(z)=u+iv$在区域$B$上解析,则$u(x,y)=C_1,v(x,y)=C_2$是$B$上的正交曲线族.</li>
+</ol>
+<hr>
 <font color="orange">证明</font>
 &ensp;&ensp;&ensp;&ensp;将C-R方程两边分别相乘,即
 $$\frac{\partial u}{\partial x}\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}=0$$
@@ -339,9 +339,10 @@ $$\frac{\partial u}{\partial x}\frac{\partial v}{\partial x}+\frac{\partial u}{\
 
 ---
 
-
 2. 若函数$f(z)=u+iv$在区域$B$上解析,则函数$u,v$均是区域$B$上的**调和函数**.
+
 ---
+
 <font color="orange">推导</font>
 之后我们将证明,某个区域上的解析函数在这个区域上有任意阶导数.因此其实部与虚部的二阶偏导数也存在.将C-R方程
 
@@ -349,8 +350,6 @@ $$\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\frac{\partial u}{
 
 的第一个式子两边对$x$求导,第二个式子两边对$y$求导,然后再相加,就可得到
 $$\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}=\nabla^2 u=0,\frac{\partial^2v}{\partial x^2}+\frac{\partial^2v}{\partial y^2}=\nabla^2v=0$$
-
----
 
 
 
@@ -366,13 +365,11 @@ $$\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}=\nabla^2 u=0
 &ensp;&ensp;&ensp;&ensp;实际上,引入**黎曼曲面**的概念,可以让我们将多值函数无歧义地定义为单值函数.黎曼曲面是一个一维复流形,常常可以看作多个复平面进行“粘接”后的结果.
 
 ### <font color="red">§6&ensp;&ensp;&ensp;&ensp;解析函数的保角性</font>
-&ensp;&ensp;&ensp;&ensp;复变函数是两个复点集之间的映射,而解析函数另一特殊的性质即:复变函数$w=f(z)$可保证两个点集$z,w$仍是区域,区域的边界点仍是边界点,边界的内部区域仍是内部区域。或者说,解析函数是一类**保角变换**(除了$f(z)=const$)。
 
-&ensp;&ensp;&ensp;&ensp;根据解析函数的导数的几何意义，我们可以看出，解析函数对应的保角变换意味着复平面上的两条曲线间的夹角在变换下保持不变。因此,我们可以通过选择合适的解析函数$w=f(z)$使得$z$平面上具有复杂几何形状的区域变换为$w$平面上的简单几何形状的区域。
-
-&ensp;&ensp;&ensp;&ensp;在物理上,我们特别关心拉普拉斯算符在解析函数 $w=u+iv=f(z)$ 所代表的变换 $(x,y)\to(u,v)$下的性质:
-根据偏导数的链式法则;
-$$\begin{align*}
+<p>&ensp;&ensp;&ensp;&ensp;复变函数是两个复点集之间的映射,而解析函数另一特殊的性质即:复变函数$w=f(z)$可保证两个点集$z,w$仍是区域,区域的边界点仍是边界点,边界的内部区域仍是内部区域。或者说,解析函数是一类<strong>保角变换</strong>(除了$f(z)=const$)。</p>
+<p>&ensp;&ensp;&ensp;&ensp;根据解析函数的导数的几何意义，我们可以看出，解析函数对应的保角变换意味着复平面上的两条曲线间的夹角在变换下保持不变。因此,我们可以通过选择合适的解析函数$w=f(z)$使得$z$平面上具有复杂几何形状的区域变换为$w$平面上的简单几何形状的区域。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在物理上,我们特别关心拉普拉斯算符在解析函数 $w=u+iv=f(z)$ 所代表的变换 $(x,y)\to(u,v)$下的性质:<br>根据偏导数的链式法则;</p>
+<script type="math/tex; mode=display">\begin{align*}
     \frac{\partial}{\partial x}&=\frac{\partial u}{\partial x}\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}\frac{\partial}{\partial v}\\
     \frac{\partial}{\partial y}&=\frac{\partial u}{\partial y}\frac{\partial}{\partial u}+\frac{\partial v}{\partial y}\frac{\partial}{\partial v}\\
     \frac{\partial^2}{\partial x^2}&=\frac{\partial}{\partial x}(\frac{\partial u}{\partial x}\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}\frac{\partial}{\partial v})\\
@@ -380,41 +377,22 @@ $$\begin{align*}
     &=\frac{\partial^2u}{\partial x^2}\frac{\partial}{\partial u}+\frac{\partial^2v}{\partial x^2}\frac{\partial}{\partial v}+\frac{\partial u}{\partial x}(\frac{\partial u}{\partial x}\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}\frac{\partial}{\partial v})\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}(\frac{\partial u}{\partial x}\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}\frac{\partial}{\partial v})\frac{\partial}{\partial v}\\
     &=\frac{\partial^2u}{\partial x^2}\frac{\partial}{\partial u}+\frac{\partial^2v}{\partial x^2}\frac{\partial}{\partial v}+\Big(\frac{\partial u}{\partial x}\Big)^2\frac{\partial^2}{\partial u^2}+\Big(\frac{\partial v}{\partial x}\Big)^2\frac{\partial^2 }{\partial v^2}+2\frac{\partial u}{\partial x}\frac{\partial v}{\partial x}\frac{\partial^2}{\partial u\partial v}\\
     \frac{\partial^2}{\partial y^2}&=\frac{\partial^2u}{\partial y^2}\frac{\partial}{\partial u}+\frac{\partial^2v}{\partial y^2}\frac{\partial}{\partial v}+\Big(\frac{\partial u}{\partial y}\Big)^2\frac{\partial^2 }{\partial u^2}+\Big(\frac{\partial v}{\partial y}\Big)^2\frac{\partial^2}{\partial v^2}+2\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}\frac{\partial^2}{\partial u\partial v}
-\end{align*}$$
-
-所以
-$$\begin{align*}
+\end{align*}</script><p>所以</p>
+<script type="math/tex; mode=display">\begin{align*}
     \nabla^2&=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}\\
     &=(\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2})\frac{\partial}{\partial u}+(\frac{\partial^2v}{\partial x^2}+\frac{\partial^2v}{\partial y^2})\frac{\partial}{\partial v}\\
     &+2(\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}+\frac{\partial u}{\partial x}\frac{\partial v}{\partial x})\frac{\partial^2}{\partial u\partial v}+\Bigg[\Big(\frac{\partial u}{\partial x}\Big)^2+\Big(\frac{\partial u}{\partial y}\Big)^2\Bigg]\frac{\partial^2 }{\partial u^2}+\Bigg[\Big(\frac{\partial v}{\partial x}\Big)^2+\Big(\frac{\partial v}{\partial y}\Big)^2\Bigg]\frac{\partial^2 }{\partial v^2}
-\end{align*}$$
-
-其中,前三项都为0。后两项中
-$$\begin{align*}
+\end{align*}</script><p>其中,前三项都为0。后两项中</p>
+<script type="math/tex; mode=display">\begin{align*}
     \Big(\frac{\partial u}{\partial x}\Big)^2+\Big(\frac{\partial u}{\partial y}\Big)^2=\Big(\frac{\partial v}{\partial x}\Big)^2+\Big(\frac{\partial v}{\partial y}\Big)^2=|f'(z)|^2
-\end{align*}$$
-
-所以
-$$\nabla^2=|f'(z)|^2\Big(\frac{\partial^2 }{\partial u^2}+\frac{\partial^2 }{\partial v^2}\Big)$$
-
-因此,二维拉普拉斯方程、二维泊松方程和二维亥姆霍兹方程都在解析函数的保角变换下保持不变($f'(z)\neq0$)。所以我们可以用适当的保角变换来简化求解方程的区域,简化我们的运算过程。
-
-### <font color="red">§7&ensp;&ensp;&ensp;&ensp;复变积分</font>
-&ensp;&ensp;&ensp;&ensp;复变积分是复平面$C$上的线积分。
-
-&ensp;&ensp;&ensp;&ensp;复变积分可以看作是两个实函数线积分的有序组合
-$$\int_C f(z)\mathrm{d}z=\int_C (u+iv)(\mathrm{d}x+i\mathrm{d}y)=\int_C (u\mathrm{d}x-v\mathrm{d}y)+i\int_C (v\mathrm{d}x+u\mathrm{d}y)$$
-
-&ensp;&ensp;&ensp;&ensp;由实变线积分的知识可知,如果$C$是分段光滑曲线,$f(z)$是$C$上的连续函数,则复变积分一定存在。
-
-### <font color="red">§8&ensp;&ensp;&ensp;&ensp;单连通区域的柯西定理</font>
-&ensp;&ensp;&ensp;&ensp;单连通区域:在区域内作任何简单闭合围道,围道内的点都属于该区域。不满足上述条件的区域成为复连通区域。
-
-**单连通区域的柯西定理**：如果函数$f(z)$在单连通区域$\overline{G}$内解析，则沿$\overline{G}$内任何一个分段光滑的闭合围道$C$，有
-$$ \oint_Cf(z)\mathrm{d}z=0 $$
-
----
-
+\end{align*}</script><p>所以</p>
+<script type="math/tex; mode=display">\nabla^2=|f'(z)|^2\Big(\frac{\partial^2 }{\partial u^2}+\frac{\partial^2 }{\partial v^2}\Big)</script><p>因此,二维拉普拉斯方程、二维泊松方程和二维亥姆霍兹方程都在解析函数的保角变换下保持不变($f’(z)\neq0$)。所以我们可以用适当的保角变换来简化求解方程的区域,简化我们的运算过程。</p>
+<h3><span id="7enspenspenspensp复变积分"><font color="red">§7&ensp;&ensp;&ensp;&ensp;复变积分</font></span></h3><p>&ensp;&ensp;&ensp;&ensp;复变积分是复平面$C$上的线积分。</p>
+<p>&ensp;&ensp;&ensp;&ensp;复变积分可以看作是两个实函数线积分的有序组合</p>
+<script type="math/tex; mode=display">\int_C f(z)\mathrm{d}z=\int_C (u+iv)(\mathrm{d}x+i\mathrm{d}y)=\int_C (u\mathrm{d}x-v\mathrm{d}y)+i\int_C (v\mathrm{d}x+u\mathrm{d}y)</script><p>&ensp;&ensp;&ensp;&ensp;由实变线积分的知识可知,如果$C$是分段光滑曲线,$f(z)$是$C$上的连续函数,则复变积分一定存在。</p>
+<h3><span id="8enspenspenspensp单连通区域的柯西定理"><font color="red">§8&ensp;&ensp;&ensp;&ensp;单连通区域的柯西定理</font></span></h3><p>&ensp;&ensp;&ensp;&ensp;单连通区域:在区域内作任何简单闭合围道,围道内的点都属于该区域。不满足上述条件的区域成为复连通区域。</p>
+<p><strong>单连通区域的柯西定理</strong>：如果函数$f(z)$在单连通区域$\overline{G}$内解析，则沿$\overline{G}$内任何一个分段光滑的闭合围道$C$，有</p>
+<script type="math/tex; mode=display">\oint_Cf(z)\mathrm{d}z=0</script><hr>
 <font color="orange">证明</font>
 这里仅给出一个基于更强的条件的证明。假设$f'(z)$在$\overline{G}$上连续。则根据格林公式和CR方程
 $$ \begin{align*}
@@ -650,7 +628,7 @@ $$ f^{(n)}(z)=\frac{n!}{2\pi i}\oint_l\frac{f(\xi)}{(\xi-z)^{n+1}}\mathrm{d}\xi 
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">复变函数与积分变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.1.</span> <span class="nav-text">§1    复数与复数运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.2.</span> <span class="nav-text">§2    复变函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.3.</span> <span class="nav-text">§3    复变函数的导数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.4.</span> <span class="nav-text">§12    幂级数</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">复变函数与积分变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.1.</span> <span class="nav-text">§1    复数与复数运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.2.</span> <span class="nav-text">§2    复变函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.3.</span> <span class="nav-text">§3    复变函数的导数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.4.</span> <span class="nav-text">§7    复变积分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.5.</span> <span class="nav-text">§8    单连通区域的柯西定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.6.</span> <span class="nav-text">§12    幂级数</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
