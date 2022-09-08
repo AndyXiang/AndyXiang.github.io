@@ -152,7 +152,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/29/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -166,7 +166,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/08/29/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2022/09/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/" class="post-title-link" itemprop="url">复变函数与积分变换</a>
         </h2>
 
         <div class="post-meta">
@@ -175,16 +175,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2022-08-29 20:14:14" itemprop="dateCreated datePublished" datetime="2022-08-29T20:14:14+08:00">2022-08-29</time>
+              <time title="Created: 2022-09-08 00:00:00 / Modified: 10:52:41" itemprop="dateCreated datePublished" datetime="2022-09-08T00:00:00+08:00">2022-09-08</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-08 10:16:44" itemprop="dateModified" datetime="2022-09-08T10:16:44+08:00">2022-09-08</time>
-              </span>
 
           
 
@@ -197,121 +191,81 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1><span id="牛顿力学">牛顿力学</span></h1><h2><span id="1enspensp约束与自由度">§1&ensp;&ensp;约束与自由度</span></h2><p>&ensp;&ensp;&ensp;&ensp;力学要研究的是如何描述和预测一个系统。用于描述一个系统的最基本的物理量就是具有长度量纲的坐标$\pmb{x}$。为了对坐标进行预测，我们通常会使用坐标对时间的变化率，即速度$\pmb{v}=\frac{\mathrm{d} \pmb{x}}{\mathrm{d} t}$。如果想要预测速度，就需要速度对时间的变化率，即加速度$\pmb{a}=\frac{\mathrm{d} \pmb{v}}{\mathrm{d} t}$。然而这个迭代不能永远的持续下去，否则永远无法完成预测的任务，我们也不能随意地指定坐标的某一阶导数为常数。</p>
-<p>&ensp;&ensp;&ensp;&ensp;幸运的是，自然在坐标的二阶导时就完成了闭环，即牛顿第二定律</p>
-<script type="math/tex; mode=display">m\pmb{a}=\pmb{F}(\pmb{x},\pmb{v}) \tag{1}</script><p>&ensp;&ensp;&ensp;&ensp;三维空间中的坐标有三个分量，例如使用笛卡尔坐标系，则$\pmb{x}=(x,y,z)$。于是，为了描述一个具有$N$个质点的系统，我们需要$3N$个变量。然而这$N$个变量通常不是独立的，而是由<strong>约束方程</strong>所联系起来的。</p>
-<p>&ensp;&ensp;&ensp;&ensp;部分约束仅对系统的位型有要求，约束方程仅与坐标坐标有关</p>
-<script type="math/tex; mode=display">f(\pmb{x}_1,\cdots,\pmb{x}_N,t)=0， \tag{2}</script><p>这种约束称为<strong>几何约束</strong>。部分约束同时对系统的位型与速度有要求，约束方程与坐标和速度有关</p>
-<script type="math/tex; mode=display">f(\pmb{x}_1,\cdots,\pmb{x}_N,\pmb{v}_1,\cdots,\pmb{v}_N,t)=0 \tag{3}</script><p>这种约束称为<strong>运动约束</strong>或<strong>微分约束</strong>。事实上，几何约束可以转化为运动约束，将式$(2)$对时间求导，得</p>
-<script type="math/tex; mode=display">\sum_{i=1}^N\frac{\partial f}{\partial \pmb{x}_i}\pmb{v}_i+\frac{\partial f}{\partial t}=0，\tag{4}</script><p>就得到了一个运动约束。反之，有些运动约束可以通过积分变为几何约束。因此，可积分的运动约束和几何约束合称<strong>完整约束</strong>。不可积分的运动约束也称为<strong>非完整约束</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;同时，根据约束方程是否显含时间可将约束分为<strong>定常约束</strong>和<strong>不定常约束</strong>。此外，约束还分为<strong>双侧约束</strong>和<strong>单侧约束</strong>。其中，单侧约束的约束方程通常表现为不等式，也称为约束<strong>不等式</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;只受完整约束的系统称为<strong>完整系统</strong>，除完整约束外还受不完整约束的系统就称为<strong>非完整系统</strong>。对于完整系统，我们可以通过积分将运动约束全部转化为几何约束，再根据所有约束方程解出非独立变量。假设共有$t$个完整约束，则唯一确定系统的独立变量的个数为$3N-t$。这些独立变量又称为完整系统的<strong>自由度</strong>。注意，有时为了更简便的描述系统，我们的自由度可以不是具有长度量纲的物理量。非完整系统的自由度的定义有些复杂，这里暂时不进行讨论。</p>
-<h2><span id="2enspensp广义坐标与广义速度">§2&ensp;&ensp;广义坐标与广义速度</span></h2><p>&ensp;&ensp;&ensp;&ensp;确定了完整系统的$s$个自由度后，我们可以选择$s$个独立变量$q_1,\cdots,q_s$来描述系统。这$s$个变量称为<strong>广义坐标</strong>。广义坐标对时间的导数称为广义速度$\dot{q}_1,\cdots,\dot{q}_s$。</p>
-<h2><span id="3enspensp非完整系统">§3&ensp;&ensp;非完整系统</span></h2><p>&ensp;&ensp;&ensp;&ensp;假设非完整系统有$a$个完整约束与$b$个非完整约束。于是系统的自由度为$3N-a$，需要选择$s=3N-a$个广义坐标，于是对应的就有$s$个广义速度。而$b$个非完整约束就会对这$s$个广义速度有要求，独立的广义速度的数量为$s-b=3N-a-b=t$。 $t$称为<strong>无限小运动中的自由度</strong>，第一节中定义的自由度为<strong>有限运动中的自由度</strong>。</p>
-<h2><span id="4enspensp虚功原理与达朗贝尔原理">§4&ensp;&ensp;虚功原理与达朗贝尔原理</span></h2><p>&ensp;&ensp;&ensp;&ensp;根据牛顿定律，一切影响系统运动的因素都归结于力，于是约束作用也可以视作力。迫使系统满足力学约束的力称为<strong>约束力</strong>。除约束力外的所有力称为<strong>主动力</strong>，分别记为$\pmb{N}_i$与$\pmb{F}_i$。</p>
-<p>&ensp;&ensp;&ensp;&ensp;为了充分考虑约束对系统运动的限制，我们引入<strong>虚位移</strong>。虚位移对应所有被约束方程所允许的微小位移，记作$\delta \pmb{r}_i$。虚位移区别于真实位移元$\mathrm{d}\pmb{r}_i$的是，真实位移是满足运动定律的，且对应时间微元$\mathrm{d}t$，而虚位移绝大多数是不满足运动定律的，且不对应时间微元，即考虑虚位移时，时间是被“冻结”了的。对于定常约束，真实位移是虚位移中的一个，而对于非定常约束，真实位移并非虚位移中的一个。</p>
-<p>&ensp;&ensp;&ensp;&ensp;设有$n$个质点的系统，其受$a$个完整约束，约束方程为</p>
-<script type="math/tex; mode=display">f_i(\pmb{r}_1,\cdots,\pmb{r}_n,t)=0~~~~(i=1,\cdots,a) \tag{1}</script><p>引入虚位移$\delta \pmb{r}_i$，于是约束方程变为</p>
-<script type="math/tex; mode=display">f_i(\pmb{r}_1+\delta\pmb{r}_1,\cdots,\pmb{r}_n+\delta\pmb{r}_n,t)=0 \tag{2}</script><p>对小量$\delta\pmb{r}_i$作泰勒展开，并略去二阶以上项，得</p>
-<script type="math/tex; mode=display">\sum_{k=0}^n\nabla f_i\cdot \delta\pmb{r}_k=0\tag{3}</script><p>式$(3)$为虚位移满足的方程。</p>
-<p>&ensp;&ensp;&ensp;&ensp;当系统发生虚位移时，我们可以计算虚位移对应的<strong>虚功</strong>：</p>
-<script type="math/tex; mode=display">\delta W=\sum_{i=1}^n(\pmb{N}_i+\pmb{F}_i)\cdot \delta\pmb{r}_i~~~~(i=1,\cdots,n)  \tag{4}</script><p>如果约束满足</p>
-<script type="math/tex; mode=display">\sum_{i=1}^n\pmb{N}_i\cdot\delta\pmb{r}_i=0\tag{5}</script><p>则称为<strong>理想约束</strong>。对于仅受理想约束的系统，如果它处于平衡状态，则有</p>
-<script type="math/tex; mode=display">\pmb{F}_i+\pmb{N}_i=0 \tag{6}</script><p>于是有</p>
-<script type="math/tex; mode=display">\sum_{i=1}^n\pmb{F}_i\cdot\delta\pmb{r}_i=-\sum_{i=1}^n\pmb{N}_i\cdot\delta\pmb{r}_i=0\tag{7}</script><p>上式说明，对于一个仅受理想约束的平衡系统，所有主动力的虚功之和为0。这称为<strong>虚功原理</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;以上为解决静力学的虚功原理，下面我们来到处解决动力学问题的<strong>达朗贝尔原理</strong>。对于，动力学问题，核心的方程为牛顿第二定律方程</p>
-<script type="math/tex; mode=display">\pmb{F}_i+\pmb{N}_i=m_i\ddot{\pmb{r}}_i \tag{8}</script><p>我们引入<strong>惯性力</strong>这一概念</p>
-<script type="math/tex; mode=display">\pmb{F}_I=-m\ddot{\pmb{r}} \tag{9}</script><p>则方程$(8)$可以改写为</p>
-<script type="math/tex; mode=display">\pmb{F}_i+\pmb{N}_i+\pmb{F}_{Ii}=0\tag{10}</script><p>这一改动的物理本质是，我们选择一个具有加速度的参考系，使其与系统相对静止，则在该参考系中，系统可以看作受力平衡，于是就把动力学问题转化为一个静力学问题。我们利用虚功原理，就有</p>
-<script type="math/tex; mode=display">\sum_{i=1}^n(\pmb{F}_i+\pmb{F}_{Ii})\cdot\delta\pmb{r}_i=0\tag{11}</script><h2><span id="5enspensp用广义坐标表示的虚功原理和达朗贝尔原理">§5&ensp;&ensp;用广义坐标表示的虚功原理和达朗贝尔原理</span></h2><p>&ensp;&ensp;&ensp;&ensp;上一节中，我们已经得到了虚功原理和达朗贝尔原理。但如果我们尝试去实际使用时，就会发现，由于我们所选择的虚位移具有很大的任意性，并不能直接甩掉虚位移而得到平衡条件。这里的问题在于，虚位移之间并不是完全独立的。否则，我们可以直接利用其独立性得到方程 $\pmb{F}_i=0$。</p>
-<p>&ensp;&ensp;&ensp;&ensp;为解决这个困难，我们可以使用广义坐标。对于自由度为$s$的系统，我们可以用$s$个广义坐标去表示位移</p>
-<script type="math/tex; mode=display">\pmb{r}_i=\pmb{r}_i(q_1,\cdots,q_s,t)~~~~(i=1,\cdots,n)\tag{1}</script><p>于是虚位移也可以用广义坐标的虚位移——<strong>广义虚位移</strong>来表示，即</p>
-<script type="math/tex; mode=display">\delta\pmb{r}_i=\sum_{j=1}^s\frac{\partial \pmb{r}_i}{\partial q_j}\delta q_j \tag{2}</script><p>于是虚功原理可以表示为</p>
-<script type="math/tex; mode=display">\sum_{j=1}^s\sum_{i=1}^n\pmb{F}_i\cdot\frac{\partial \pmb{r}_i}{\partial q_j}\delta q_j=0\tag{3}</script><p>引入记号</p>
-<script type="math/tex; mode=display">Q_j=\sum_{i=1}^n\pmb{F}_i\cdot\frac{\partial \pmb{r}_i}{\partial q_j}\tag{4}</script><p>$Q_j$称为<strong>广义力</strong>。由于广义坐标不一定是长度的量纲，所以广义力也不一定是力的量纲。虚功原理可以写为</p>
-<script type="math/tex; mode=display">\sum_{i=1}^sQ_i\delta q_i=0\tag{5}</script><p>由于广义虚位移之间都是独立的，所以我们现在可以直接写出平衡条件：</p>
-<script type="math/tex; mode=display">Q_i=0 \tag{6}</script><h1><span id="拉格朗日力学">拉格朗日力学</span></h1><h2><span id="6enspensp拉格朗日方程">§6&ensp;&ensp;拉格朗日方程</span></h2><p>&ensp;&ensp;&ensp;&ensp;这一章之后，我们不再从牛顿运动定律出发，而是从<strong>最小作用量原理</strong>出发来导出我们的理论体系。根据这个原理，每个力学系统可以用一个确定的函数来表示，它是系统广义坐标、广义速度和时间的函数（这里我们借用上一章中的广义坐标的概念，不再重复说明）</p>
-<script type="math/tex; mode=display">L(q_1,\cdots,q_s,\dot{q}_1,\cdots,\dot{q}_s,t) \tag{1}</script><p>或简记为$L(q,\dot{q},t)$。今后我们将不加说明的使用这种记号。这个函数称为<strong>拉格朗日函数</strong>，也可简称为拉氏量。</p>
-<p>&ensp;&ensp;&ensp;&ensp;现在假设我们对我们的系统写出了上述的函数。首先，为了得到系统的运动方程，我们假设广义坐标、广义速度和时间为独立的变量。如果我们固定系统的初态和末态：$\{q^{(1)},\dot{q}^{(1)},t_1\},\{q^{(2)},\dot{q}^{(2)},t_2\}$。系统的可能的运动过程为连接这两点（$2s+1$维空间中的点）的曲线段，这样的曲线段有无数条，而我们可以预料物体的真实的运动对应着唯一的一条曲线段。</p>
-<p>&ensp;&ensp;&ensp;&ensp;现在，最小作用量原理断言，如果我们计算拉格朗日函数在每一条曲线段上的积分</p>
-<script type="math/tex; mode=display">S=\int_{t_1}^{t_2}L(q,\dot{q},t)\mathrm{d}t \tag{2}</script><p>真实运动过程的积分值必定是其中最小的。这个积分称为系统的<strong>作用量</strong>，因此这个第一性原理就称为最小作用量原理。</p>
-<p>&ensp;&ensp;&ensp;&ensp;可以看出，这个积分可以看作是一个泛函，它将$(2s+1)$维空间中的曲线段映射为一个函数$S(q,\dot{q})$。接下来我们的任务就是求出这个函数的最小值。这里我将使用<strong>变分法</strong>来求解。</p>
-<p>&ensp;&ensp;&ensp;&ensp;我们假设函数$q=q(t),\dot{q}=\dot{q}(t)$是使得系统作用量取得最小值的函数组。必须承认，这里有滥用记号的行为。以$q=q(t)$为例，前一个$q$指代系统的广义坐标，是与时间无关的独立变量，后一个$q$指代某一个具体函数，它将$t$映射到”正确“的广义坐标上。这一说明对其他情况也成立。</p>
-<p>&ensp;&ensp;如果$\{q(t),\dot{q}(t)\}$是使得$S$取得最小值的函数组，那么用任意其他函数取代它们都会使得$S$增大。这里，我们考虑无限小的增量</p>
-<script type="math/tex; mode=display">q(t)+\delta q(t),\dot{q}+\delta \dot{q}(t)</script><p>当然，由于我们固定了曲线段的端点，所以</p>
-<script type="math/tex; mode=display">\delta q(t_1)=\delta q(t_2)=0 \tag{3}</script><p>用$q(t)+\delta q(t)$代替$q(t)$使$S$产生的增量为</p>
-<script type="math/tex; mode=display">\delta S=\int_{t_1}^{t_2}L(q+\delta q,\dot{q}+\delta \dot{q},t)\mathrm{d}t-\int_{t_1}^{t_2}L(q,\dot{q},t)\mathrm{d}t \tag{4}</script><p>我们将被积函数展开为$\delta q,\delta \dot{q}$的幂级数，略去二阶及以上项，可得</p>
-<script type="math/tex; mode=display">\delta S = \int_{t_1}^{t_2}\left(\frac{\partial L}{\partial q}\delta q+\frac{\partial L}{\partial \dot{q}}\delta\dot{q}\right)\mathrm{d}t\tag{5}</script><p>于是最小作用量原理可以写为</p>
-<script type="math/tex; mode=display">\int_{t_1}^{t_2}\left(\frac{\partial L}{\partial q}\delta q+\frac{\partial L}{\partial \dot{q}}\delta\dot{q}\right)\mathrm{d}t=0\tag{6}</script><p>注意到</p>
-<script type="math/tex; mode=display">\delta\dot{q}=\frac{\mathrm{d} }{\mathrm{d} t}\delta q\tag{7}</script><p>于是积分式的第二项可以利用分部积分改写为</p>
-<script type="math/tex; mode=display">\begin{align*}
-    \int_{t_1}^{t_2}\frac{\partial L}{\partial \dot{q}}\delta\dot{q}\mathrm{d}t&=\int_{t_1}^{t_2}\frac{\partial L}{\partial \dot{q}}\mathrm{d}\delta q\\
-    &=\frac{\partial L}{\partial \dot{q}}\delta q\bigg|_{t_1}^{t_2}-\int_{t_1}^{t_2}\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial L}{\partial \dot{q}}\delta q\mathrm{d}t\tag{8}
-\end{align*}</script><p>其中第一项为0。整理得</p>
-<script type="math/tex; mode=display">\int_{t_1}^{t_2}\left(\frac{\partial L}{\partial q}-\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial L}{\partial \dot{q}}\right)\delta q\mathrm{d}t=0\tag{9}</script><p>由于$\delta q$的选择是任意的，因此这个等式只有当括号里的式子恒等于0才可能成立，于是我们就得到了</p>
-<script type="math/tex; mode=display">\frac{\partial L}{\partial q}-\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial L}{\partial \dot{q}}=0\tag{10}</script><p>这就是我们要寻找的运动方程，它称为<strong>拉格朗日方程</strong>。如果我们知道系统的拉氏量，代入式（10）就可以得到系统的运动方程。</p>
-<h2><span id="7enspensp拉氏量">§7&ensp;&ensp;拉氏量</span></h2><p>&ensp;&ensp;&ensp;&ensp;这一节我们来导出拉氏量的一般形式。首先仅研究自由粒子的情形。我们假设粒子在参考系$S$中以速度$\pmb{v}$运动，对应的拉氏量为$L(\pmb{v})$，由于粒子是自由的，因此拉氏量应该与坐标无关。再假设有参考系$S’$相对$S$系以无限小速度$\pmb{\epsilon}$运动，粒子在该系中的速度为$\pmb{v}+\pmb{\epsilon}$，拉氏量为$L’$。由于空间的各向同性，拉氏量应该与速度的方向无关，则</p>
-<script type="math/tex; mode=display">L=L(v^2),L'=L(v^2+\pmb{v}\cdot\pmb{\epsilon})</script><p>将后者展开为$\pmb{\epsilon}$的幂级数得</p>
-<script type="math/tex; mode=display">L'=L(v^2)+2\frac{\partial L}{\partial v^2}\pmb{v}\cdot\pmb{\epsilon} \tag{1}</script><p>根据伽利略相对性原理，运动方程应该在任何惯性参考系中相同。而只有上式中第二项为关于时间和坐标的函数的全导数时才能保持运动方程不变，于是$\partial L/\partial v^2$与速度无关。则拉氏量与速度的平方成正比</p>
-<script type="math/tex; mode=display">L=\frac{m}{2}v^2</script><p>其中的$m/2$为比例系数。</p>
-<h2><span id="8enspensp从达朗贝尔原理出发">§8&ensp;&ensp;从达朗贝尔原理出发</span></h2><p>&ensp;&ensp;&ensp;&ensp;这一节我们从达朗贝尔原理出发来得到拉格朗日方程。尽管推导的结果是一样，但拉格朗日力学是独立于牛顿力学，下面的推导只是说明牛顿力学和拉格朗日力学在经典力学中是等价的。达朗贝尔原理为</p>
-<script type="math/tex; mode=display">(\pmb{F}_i-m\ddot{\pmb{x}}_i)\cdot\delta \pmb{x}_i=0 \tag{1}</script><p>注意我们使用了爱因斯坦求和约定：对所有重复的指标求和。由于虚位移通常是不独立的，所以我们用广义虚位移将其改写为</p>
-<script type="math/tex; mode=display">(\pmb{F}_i-m\ddot{\pmb{x}}_i)\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\delta q_j=0 \tag{2}</script><p>上式中的第一项可写为</p>
-<script type="math/tex; mode=display">\pmb{F}_i\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\delta q_j=Q_j\delta q_j \tag{3}</script><p>即广义力的形式。对第二项作以下处理</p>
-<script type="math/tex; mode=display">\begin{align*}
-    m\ddot{\pmb{x}}_i\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\delta q_j&=\frac{\mathrm{d} }{\mathrm{d} t}\left(m\dot{\pmb{x}}_i\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\delta q_j\right)-m\dot{\pmb{x}}_i\cdot\frac{\mathrm{d} }{\mathrm{d} t}\left(\frac{\partial \pmb{x}_i}{\partial q_j}\delta q_j\right)\\
-    &=\left[\frac{\mathrm{d} }{\mathrm{d} t}\left(m\dot{\pmb{x}}_i\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\right)-m\dot{\pmb{x}}_i\cdot\frac{\mathrm{d} }{\mathrm{d} t}\left(\frac{\partial \pmb{x}_i}{\partial q_j}\right)\right]\delta q_j \tag{4}
-\end{align*}</script><p>为了继续我们的推导，我们要先证明下面两个命题：</p>
-<script type="math/tex; mode=display">\frac{\partial \pmb{x}_i}{\partial q_j}=\frac{\partial \dot{\pmb{x}}_i}{\partial \dot{q_j}} \tag{5}</script><script type="math/tex; mode=display">\frac{\mathrm{d} }{\mathrm{d} t}\left(\frac{\partial \pmb{x}_i}{\partial q_j}\right)=\frac{\partial \dot{\pmb{x}_i}}{\partial q_j}\tag{6}</script><p>对于前者：</p>
-<script type="math/tex; mode=display">\begin{align*}
-    \frac{\partial \dot{\pmb{x}_i}}{\partial \dot{q_j}}&=\frac{\partial }{\partial \dot{q_j}}\frac{\mathrm{d} \pmb{x}_i}{\mathrm{d} t}\\
-    &=\frac{\partial }{\partial \dot{q_j}}\left(\frac{\partial \pmb{x}_i}{\partial t}+\frac{\partial \pmb{x}_i}{\partial q_k}\dot{q}_k\right)\\
-    &=\frac{\partial^2 \pmb{x}_i}{\partial t\partial \dot{q}_j}+\frac{\partial^2 \pmb{x}_i}{\partial q_k\partial \dot{q}_j}\dot{q}_k+\frac{\partial \pmb{x}_i}{\partial q_k}\frac{\partial \dot{q}_k}{\partial \dot{q}_j}
-\end{align*}</script><p>其中，由于$\pmb{x}_i$仅为广义坐标和时间的函数，于是第一、二项为0；同时，广义速度之间也应该是独立的，所以${\partial \dot{q}_k}/{\partial \dot{q}_j}=\delta_{kj}$。于是</p>
-<script type="math/tex; mode=display">\begin{align*}
-    \frac{\partial \dot{\pmb{x}}_i}{\partial \dot{q_j}}&=\frac{\partial \pmb{x}_i}{\partial q_k}\delta_{kj}=\frac{\partial \pmb{x}_i}{\partial q_j}  
-\end{align*}</script><p>对于第二个命题：</p>
-<script type="math/tex; mode=display">\begin{align*}
-    \frac{\partial \dot{\pmb{x}}_i}{\partial q_j}&=\frac{\partial }{\partial q_j}\frac{\mathrm{d} \pmb{x}_i}{\mathrm{d} t}\\
-    &=\frac{\partial }{\partial {q_j}}\left(\frac{\partial \pmb{x}_i}{\partial t}+\frac{\partial \pmb{x}_i}{\partial q_k}\dot{q}_k\right)\\
-    &=\frac{\partial^2 \pmb{x}_i}{\partial t\partial {q}_j}+\frac{\partial^2 \pmb{x}_i}{\partial q_k\partial {q}_j}\dot{q}_k+\frac{\partial \pmb{x}_i}{\partial q_k}\frac{\partial \dot{q}_k}{\partial {q}_j}
-\end{align*}</script><p>由于广义坐标和广义速度之间是独立的，所以最后一项为0，于是</p>
-<script type="math/tex; mode=display">\frac{\partial \dot{\pmb{x}_i}}{\partial q_j}=\frac{\partial^2 \pmb{x}_i}{\partial t\partial {q}_j}+\frac{\partial }{\partial q_k}\frac{\partial \pmb{x}_i}{\partial {q}_j}\dot{q}_k= \frac{\mathrm{d} }{\mathrm{d} t}\left(\frac{\partial \pmb{x}_i}{\partial q_j}\right)</script><p>于是式（3）可化为</p>
-<script type="math/tex; mode=display">\begin{align*}
-    m\ddot{\pmb{x}}_i\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\delta q_j&=\left[\frac{\mathrm{d} }{\mathrm{d} t}\left(m\dot{\pmb{x}}_i\cdot\frac{\partial \dot{\pmb{x}_i}}{\partial \dot{q_j}}\right)-m\dot{\pmb{x}}_i\cdot\frac{\partial \dot{\pmb{x}}_i}{\partial q_j}\right]\delta q_j \\
-    &=\left\{\frac{\mathrm{d} }{\mathrm{d} t}\left[\frac{\partial }{\partial \dot{q_j}}\left(\frac{1}{2}m\dot{\pmb{x}}_i^2\right)\right]-\frac{\partial}{\partial q_j}\left(\frac{1}{2}m\dot{\pmb{x}}_i^2\right)\right\}\delta q_j  \tag{7}
-\end{align*}</script><p>我们知道系统的动能为</p>
-<script type="math/tex; mode=display">T=\frac{1}{2}m\dot{\pmb{x}}_i^2\tag{8}</script><p>于是</p>
-<script type="math/tex; mode=display">m\ddot{\pmb{x}}_i\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\delta q_j=\left(\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial T}{\partial \dot{q_j}}-\frac{\partial T}{\partial q_j}\right)\delta q_j \tag{9}</script><p>将式（3）和式(9)代入（2）式得</p>
-<script type="math/tex; mode=display">\left[Q_j-\left(\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial T}{\partial \dot{q_j}}-\frac{\partial T}{\partial q_j}\right)\right]\delta q_j=0\tag{10}</script><p>由于广义虚位移是独立的，所以式（10）恒等于0的充要条件为其所以广义虚位移的系数都为0，即</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial T}{\partial \dot{q_j}}-\frac{\partial T}{\partial q_j}=Q_j\tag{11}</script><p>对于主动力全为保守力的情况，我们有</p>
-<script type="math/tex; mode=display">\begin{align*}
-    Q_j&=\pmb{F}_i\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\\
-    &=-\frac{\partial V}{\partial \pmb{x}_i}\cdot\frac{\partial \pmb{x}_i}{\partial q_j}\\
-    &=-\frac{\partial V}{\partial q_j} \tag{12}  
-\end{align*}</script><p>其中的$V$为保守力的势能。所以式（11）又可以化为</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial T}{\partial \dot{q_j}}-\frac{\partial T}{\partial q_j}= -\frac{\partial V}{\partial q_j}\tag{13}</script><p>由于势能只是广义坐标和时间的函数，所以</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial V}{\partial \dot{q_j}}=0</script><p>代入就得到了</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial (T-V)}{\partial \dot{q_j}}-\frac{\partial (T-V)}{\partial q_j}=0</script><p>定义一个新的函数$L=T-V$，则</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial L}{\partial \dot{q_j}}-\frac{\partial L}{\partial q_j}=0</script><p>我们就得到了拉格朗日方程和拉格朗日函数的形式。</p>
-<h2><span id="9enspensp守恒定律">§9&ensp;&ensp;守恒定律</span></h2><p>&ensp;&ensp;&ensp;&ensp;由对称性导出的守恒律可以大大简化我们的计算。</p>
-<p>&ensp;&ensp;&ensp;&ensp;由于时间具有平移对称性，所以封闭系统的拉氏量不显含时间，则</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} L}{\mathrm{d} t}=\frac{\partial L}{\partial q_i}\dot{q}_i+\frac{\partial L}{\partial \dot{q}_i}\ddot{q}_i \tag{1}</script><p>代入拉格朗日方程</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} L}{\mathrm{d} t}=\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial L}{\partial \dot{q}_i}\dot{q}_i+\frac{\partial L}{\partial \dot{q}_i}\frac{\mathrm{d} \dot{q}}{\mathrm{d} t}=\frac{\mathrm{d} }{\mathrm{d} t}\left(\frac{\partial L}{\partial \dot{q}_i}\dot{q}_i\right) \tag{2}</script><p>即</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} }{\mathrm{d} t}\left(\dot{q}_i\frac{\partial L}{\partial \dot{q}_i}-L\right)=0 \tag{3}</script><p>称守恒量</p>
-<script type="math/tex; mode=display">E=\dot{q}_i\frac{\partial L}{\partial \dot{q}_i}-L \tag{4}</script><p>为系统的<strong>能量</strong>。将$L=T(q,\dot{q})-U(q)$代入，则有</p>
-<script type="math/tex; mode=display">E=\dot{q}_i\frac{\partial T}{\partial \dot{q}_i}-T+U \tag{5}</script><p>如果$T$是广义速度的二次齐次函数，根据齐次函数的欧拉定理可得</p>
-<script type="math/tex; mode=display">E=2T-T+U=T+U\tag{6}</script><p>&ensp;&ensp;&ensp;&ensp;由于空间具有平移对称性，则如果系统有一无限小位移$\delta q$时，系统的拉氏量应该不发生变化，即$\delta L=0$。则有</p>
-<script type="math/tex; mode=display">\begin{align*}
-    \delta L&=\frac{\partial L}{\partial q_i}\delta q_i+\frac{\partial L}{\partial \dot{q}_i}\delta \dot{q}_i\\
-    &=\frac{\mathrm{d} }{\mathrm{d} t}\frac{\partial L}{\partial \dot{q}_i}\delta q_i+\frac{\partial L}{\partial \dot{q}_i}\frac{\mathrm{d} \delta q_i}{\mathrm{d} t}\\
-    &=\frac{\mathrm{d} }{\mathrm{d} t}\left(\frac{\partial L}{\partial \dot{q}_i}\right)\delta q_i\\
-    &=0
-\end{align*}</script><p>由于$\delta q_i$是任意的，则有</p>
-<script type="math/tex; mode=display">\frac{\mathrm{d} }{\mathrm{d} t}\left(\frac{\partial L}{\partial \dot{q}_i}\right)=0 \tag{7}</script><p>称守恒量</p>
-<script type="math/tex; mode=display">p_i=\frac{\partial L}{\partial \dot{q}_i} \tag{8}</script><p>为系统的<strong>广义动量</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;当广义速度的量纲为$[L][T]^{-1}$时，广义动量回到牛顿力学中的动量；当广义速度的量纲为$[T]^{-1}$时，广义动量回到牛顿力学中的角动量。</p>
+          <h1 id="复变函数与积分变换"><a href="#复变函数与积分变换" class="headerlink" title="复变函数与积分变换"></a>复变函数与积分变换</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
 
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/08/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andy Xiang">
+      <meta itemprop="description" content="日々私たちが过ごしている日常というのは、実は奇迹の连続なのかもしれん。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/08/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/" class="post-title-link" itemprop="url">理论力学</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-09-08 00:00:00 / Modified: 10:52:01" itemprop="dateCreated datePublished" datetime="2022-09-08T00:00:00+08:00">2022-09-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/08/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -402,7 +356,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -416,7 +370,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/05/17/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/" class="post-title-link" itemprop="url">电磁学笔记</a>
+            <a href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="post-title-link" itemprop="url">线性代数</a>
         </h2>
 
         <div class="post-meta">
@@ -433,7 +387,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-08 10:35:40" itemprop="dateModified" datetime="2022-09-08T10:35:40+08:00">2022-09-08</time>
+                <time title="Modified: 2022-06-23 16:15:45" itemprop="dateModified" datetime="2022-06-23T16:15:45+08:00">2022-06-23</time>
               </span>
 
           
@@ -447,384 +401,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <span id="more"></span>
-<!-- toc -->
-<ul>
-<li><a href="#font-colorblue复变函数font"><font color="blue">复变函数</font></a><ul>
-<li><a href="#font-colorgreen复变函数font"><font color="green">复变函数</font></a><ul>
-<li><a href="#font-colorred1enspenspenspensp复数与复数运算font"><font color="red">§1&ensp;&ensp;&ensp;&ensp;复数与复数运算</font></a></li>
-<li><a href="#font-colorred2enspenspenspensp复变函数font"><font color="red">§2&ensp;&ensp;&ensp;&ensp;复变函数</font></a></li>
-<li><a href="#font-colorred3enspenspenspensp复变函数的导数font"><font color="red">§3&ensp;&ensp;&ensp;&ensp;复变函数的导数</font></a></li>
-<li><a href="#font-colorred4enspenspenspensp解析函数font"><font color="red">§4&ensp;&ensp;&ensp;&ensp;解析函数</font></a></li>
-<li><a href="#font-colorred5enspenspenspensp多值函数font"><font color="red">§5&ensp;&ensp;&ensp;&ensp;多值函数</font></a></li>
-<li><a href="#font-colorred6enspenspenspensp解析函数的保角性font"><font color="red">§6&ensp;&ensp;&ensp;&ensp;解析函数的保角性</font></a></li>
-<li><a href="#font-colorred7enspenspenspensp复变积分font"><font color="red">§7&ensp;&ensp;&ensp;&ensp;复变积分</font></a></li>
-<li><a href="#font-colorred8enspenspenspensp单连通区域的柯西定理font"><font color="red">§8&ensp;&ensp;&ensp;&ensp;单连通区域的柯西定理</font></a></li>
-<li><a href="#font-colorred9enspenspenspensp复连通区域的柯西定理font"><font color="red">§9&ensp;&ensp;&ensp;&ensp;复连通区域的柯西定理</font></a></li>
-<li><a href="#font-colorred10enspenspenspensp柯西公式font"><font color="red">§10&ensp;&ensp;&ensp;&ensp;柯西公式</font></a></li>
-<li><a href="#font-colorred11enspenspenspensp复数项级数font"><font color="red">§11&ensp;&ensp;&ensp;&ensp;复数项级数</font></a></li>
-<li><a href="#font-colorred12enspenspenspensp幂级数font"><font color="red">§12&ensp;&ensp;&ensp;&ensp;幂级数</font></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-<h1><span id="复变函数"><font color="blue">复变函数</font></span></h1><hr>
-<h2><span id="复变函数"><font color="green">复变函数</font></span></h2><hr>
-<h3><span id="1enspenspenspensp复数与复数运算"><font color="red">§1&ensp;&ensp;&ensp;&ensp;复数与复数运算</font></span></h3><p>&ensp;&ensp;&ensp;&ensp;一个复数就是一个二元实数组,因此可以看作一个矢量。这个矢量可以用二维笛卡尔平面上的一个有向线段来表示,这个平面就称为<strong>复平面</strong>。这种表示方法称为复数的代数式 :<script type="math/tex">\alpha=x+iy</script></p>
-<p>&ensp;&ensp;&ensp;&ensp;改用极坐标系去表示一个复数,通过极坐标和笛卡尔坐标之间的关系 :<script type="math/tex">r=\sqrt{x^2+y^2}</script> <script type="math/tex">\theta=arctan\frac{y}{x}</script>我们可以将复数写作 :<script type="math/tex">\alpha=r(\cos\theta+i\sin\theta)=re^{i\theta}</script></p>
-<p>这种表示方法称为复数的<strong>辐角表示</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;常将$r$称为复数的模,记作 :<script type="math/tex">r=|\alpha|</script><br>值得注意的是,辐角表示中的$\theta$有多个值,每个值之间相差$2\pi$的整数倍。记作 :<script type="math/tex">\theta=\mathrm{Arg}\ \alpha</script></p>
-<p>&ensp;&ensp;&ensp;&ensp;复数的n次方根有n个。<script type="math/tex">z^{\frac{1}{n}}=(re^{i\theta})^\frac{1}{n}=r^\frac{1}{n}e^{i\frac{\theta}{n}}</script><br>则由辐角的不确定性可以得到。同时这也反映了<strong>代数基本定理</strong> :n次方程必有n个复数根。</p>
-<p>&ensp;&ensp;&ensp;&ensp;有两个较为特殊的复数:零和无穷大。它们的模分别为0和无穷大,辐角均无准确定义。0与原点对应,无穷大与无穷远点对应。</p>
-<p>&ensp;&ensp;&ensp;&ensp;复数中无穷远为一个点。这个事实可由复平面与三维球面的同构性得到:复平面上的点和三维球面的点一一对应。我们连接复平面上的点和球面的北极N点,这条直线与球面的交点就是复平面上的点的对应点。当我们在复平面上以任意路径走向无穷远时,球面上的点总是无限地靠近北极。因此,我们可以将复平面上的无穷远处视作一个点。</p>
-<p>&ensp;&ensp;&ensp;&ensp;<strong>共轭复数</strong>是指这样的复数(与$\alpha$对应的):其实部与$\alpha$相同,虚部与$\alpha$相反,记作$\alpha^<em>$。易知 : $$\alpha\alpha^</em>=r^2$$</p>
-<p>&ensp;&ensp;&ensp;&ensp;由于一个复数可以看作一个二元实数组,则对复数的研究往往归结为一对实数的研究。例如一个复数序列的极限就看作两个实序列的极限: </p>
-<pre><code>$$\lim_&#123;n\to \infty&#125;z_n=\lim_&#123;n\to\infty&#125;(x_n+iy_n)$$
-</code></pre><h3><span id="2enspenspenspensp复变函数"><font color="red">§2&ensp;&ensp;&ensp;&ensp;复变函数</font></span></h3><p>&ensp;&ensp;&ensp;&ensp;复变函数与实函数类似,是定义在一个点集上的某种对应关系,记作 </p>
-<pre><code>$$\alpha=f(z)$$
-</code></pre><p>&ensp;&ensp;&ensp;&ensp;但复变函数仍有一些不一样的地方 :</p>
-<ol>
-<li>复变函数可以有多个函数值;</li>
-<li>复变函数的定义域不是一般的点集,而是被称为<strong>区域</strong>的特殊点集。</li>
-</ol>
-<p>&ensp;&ensp;&ensp;&ensp;为了介绍区域的概念,先引入一些辅助概念 :</p>
-<ol>
-<li><strong>邻域</strong> : 以复数$z_0$为圆心,以任意小实数$\epsilon$为半径画圆,则圆内所有点的集合即为$z_0$的一个邻域。</li>
-<li><strong>内点</strong> : 若$z_0$及其所有邻域都属于点集$E$,则说$z_0$是$E$的内点。</li>
-<li><strong>外点</strong> : 若$z_0$及其邻域都不属于点集$E$,且存在邻域与点集无交集,则称$z_0$是$E$的外点。</li>
-<li><strong>边界点</strong> : 若$z_0$的每个邻域都与点集$E$有交集,则称$z_0$为点集的边界点。边界点既不是内点,也不是外点。边界点的全体称为点集的<strong>边界线</strong>。</li>
-</ol>
-<p>&ensp;&ensp;&ensp;&ensp;<strong>区域</strong>是指这样的点集:</p>
-<ol>
-<li>全由内点构成;</li>
-<li>具有连通性,即该点集中的任意两点都可以用折线连接,且折线上的所有点都是点集的元素。</li>
-</ol>
-<p>&ensp;&ensp;&ensp;&ensp;区域以及其边界线的并集称为一个<strong>闭区域</strong></p>
-<p>&ensp;&ensp;&ensp;&ensp;规定外边界线的正方向为逆时针,内边界线的正方向为顺时针(沿着边界线的正方向走,区域总在左手边)。</p>
-<p>&ensp;&ensp;&ensp;&ensp;复变函数例:</p>
-<ol>
-<li>多项式<script type="math/tex; mode=display">a_0+a_1z+a_2z^2+\cdots+a_nz^n(n为正整数)</script></li>
-<li>幂函数:<script type="math/tex; mode=display">z^\alpha=(re^{i\theta})^{(a+bi)}=e^{a\ln r-b\theta}\Big(\cos(b\ln r)+i\sin(b\ln r)\Big)\Big(\cos(a\theta)+i\sin(a\theta)\Big)</script></li>
-<li>指数函数<script type="math/tex; mode=display">e^z=e^{x+iy}=e^x(\cos y+i\sin y)</script></li>
-<li><p>三角函数</p>
-<script type="math/tex; mode=display">\sin z=\frac{1}{2i}(e^{iz}-e^{-iz})</script><script type="math/tex; mode=display">\cos z=\frac{1}{2}(e^{iz}+e^{-iz})</script></li>
-<li><p>双曲函数</p>
-<script type="math/tex; mode=display">\mathrm{sh}\ z=\frac{1}{2}(e^z-e^{-z})</script><script type="math/tex; mode=display">\mathrm{ch}\ z=\frac{1}{2}(e^z+e^{-z})</script></li>
-<li>对数函数<pre><code>$$\ln z=\ln(re^&#123;i\theta&#125;)=\ln r+i\theta$$
-</code></pre></li>
-</ol>
-<p>&ensp;&ensp;&ensp;&ensp;以上给出的各复变函数中,有几处与其实函数的对应是由区别的:</p>
-<ol>
-<li><p>三角函数的模可以大于1。</p>
-<script type="math/tex; mode=display">|\sin z|=\frac{1}{2}\sqrt{(e^{2y}+e^{-2y})+2(\sin^2 x-\cos^2 x)}</script><script type="math/tex; mode=display">|\cos z|=\frac{1}{2}\sqrt{(e^{2y}+e^{-2y})-2(\sin^2 x-\cos^2 x)}</script></li>
-<li>对数函数有无穷个函数值。这是由于辐角可以有无数个值。负数的对数也是有意义的。</li>
-</ol>
-<p>&ensp;&ensp;&ensp;&ensp;将复变函数的实部和虚部分别记为$u(x,y),v(x,y)$,则对复变函数的研究可以归结到一对实二元函数的研究上去。例如,复变函数$f(z)$在$z_0=x_0+iy_0$点连续可归结为一对二元实函数$u(x,y),v(x,y)$ 分别在点$(x_0,y_0)$连续。</p>
-<h3><span id="3enspenspenspensp复变函数的导数"><font color="red">§3&ensp;&ensp;&ensp;&ensp;复变函数的导数</font></span></h3><p>&ensp;&ensp;&ensp;&ensp;设定义在区域$B$上的单值函数$w=f(z)$在$B$上的某点$z_0$的极限</p>
-<pre><code>$$\lim_&#123;z\to z_0&#125;\frac&#123;f(z)-f(z_0)&#125;&#123;z-z_0&#125;$$
-</code></pre><p>存在且与$z\to z_0$的方式无关。则称$f(z)$在点$z_0$<strong>可导(单演)</strong>,该极限称为函数$f(z)$在点$z_0$的<strong>导数</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;由于复变函数的导数的定义与实函数的导数的定义类似,可以证明,对实变函数适用的各性质和公式同样也适用于复变函数。</p>
-<p>&ensp;&ensp;&ensp;&ensp;但是,复变函数的导数的要求比实变函数的要求严格的多。这是因为实变函数的变量$\Delta x$只能沿实轴趋向0,而复变函数要求复变量$\Delta z$沿复平面上任意曲线逼近0而极限不变。通过分别研究$\Delta z$沿实轴和虚轴趋向0的两种情况,我们可以得到复变函数可导的<strong>必要条件:柯西—黎曼方程(C-R条件)</strong> :</p>
-<script type="math/tex; mode=display">\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}.</script><hr>
-<font color="orange">推导</font>
-&ensp;&ensp;&ensp;&ensp;先考虑$\Delta z$沿实轴趋向0,则$\Delta y=0,\Delta z=\Delta x \to 0.$
-$$\begin{align*}\lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}&=\lim_{\Delta x\to 0}\Big[\frac{u(x+\Delta x,y)-u(x,y)}{\Delta x}+i\frac{v(x+\Delta x,y)-v(x,y)}{\Delta x}\Big]\\&=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}. \end{align*}$$
-
-&ensp;&ensp;&ensp;&ensp;再考虑$\Delta z$沿虚轴趋向0,则$\Delta x=0,\Delta z=i\Delta y \to 0.$
-    $$\begin{align*}
-    \lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}&=\lim_{\Delta y\to 0}\Big[\frac{u(x,y+\Delta y)-u(x,y)}{i\Delta y}+i\frac{v(x,y+\Delta y)-v(x,y)}{i\Delta y}\Big]\\
-    &=\frac{\partial v}{\partial y}-i\frac{\partial u}{\partial y}. 
-    \end{align*}$$
-
-
-上述两个极限应该相等,则我们就得到了C-R方程。
-
----
-
-&ensp;&ensp;&ensp;&ensp;复变函数$f(z)$可导的充分必要条件:$f(z)$ 的偏导数$\frac{\partial u}{\partial x},\frac{\partial v}{\partial y},\frac{\partial u}{\partial y},\frac{\partial v}{\partial x}$都存在且连续,并且满足C-R方程。
-
----
-
-<font color="orange">推导</font>
-必要性已得,下面我们只证明充分性。
-    $$\begin{align*}\Delta u&=\frac{\partial u}{\partial x}\Delta x+\frac{\partial u}{\partial y}\Delta y+o(\Delta x)+o(\Delta y),\\ \Delta v&=\frac{\partial v}{\partial x}\Delta x+\frac{\partial v}{\partial y}\Delta y+o(\Delta x)+o(\Delta y),\\\Delta f&=\Delta u+i\Delta v,\Delta z=\Delta x+i\Delta y.\end{align*}$$
-则
-    $$\begin{align*}
-    f'(z)&=\lim_{z\to z_0}\frac{\Delta f}{\Delta z}\\&=\lim_{\Delta z\to 0}\frac{\frac{\partial u}{\partial x}\Delta x+\frac{\partial u}{\partial y}\Delta y+i(\frac{\partial v}{\partial x}\Delta x+\frac{\partial v}{\partial y}\Delta y)}{\Delta x+i\Delta y}\\
-    \end{align*}$$
-
-代入C-R方程:
-    $$\begin{align*}f'(z)&=\lim_{\Delta z\to 0}\frac{\frac{\partial u}{\partial x}(\Delta x+i\Delta y)+i\frac{\partial v}{\partial x}(\Delta x+i\Delta y)}{\Delta x+i\Delta y}\\ &=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=\frac{\partial v}{\partial y}-i\frac{\partial u}{\partial y}\end{align*}$$
-证毕。
-
----
-
-&ensp;&ensp;&ensp;&ensp;极坐标系中的C-R方程写作 :
-$$\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial\theta},\frac{\partial u}{\partial\theta}=-r\frac{\partial v}{\partial r}.$$
-
-&ensp;&ensp;&ensp;&ensp;复变函数导数在极坐标下的公式为
-
-$$f'(z)=\frac{r}{z}(\frac{\partial u}{\partial r}+i\frac{\partial v}{\partial r})=\frac{1}{z}(\frac{\partial v}{\partial \theta}-i\frac{\partial u}{\partial \theta})$$
-
-&ensp;&ensp;&ensp;&ensp;设$w=f(z)$，于是有
-$$ \mathrm{d}w=f'(z)\mathrm{d}z $$
-
-分别对上式取模与辐角，就得到
-$$ |\mathrm{d}w|=|f'(z)\mathrm{d}z|=|f'(z)|~|\mathrm{d}z| $$
-
-$$ \mathrm{arg}~\mathrm{d}w=\mathrm{arg}[f'(z)\mathrm{d}z]=\mathrm{arg}~f'(z)+\mathrm{arg~d}z $$
-
-即导数的模$|f'(z)|$给出了将微元$\mathrm{d}z$映射到$\mathrm{d}w$的伸缩率,而导数的辐角则给出了映射的偏转角。
-
-### <font color="red">§4&ensp;&ensp;&ensp;&ensp;解析函数</font>
-&ensp;&ensp;&ensp;&ensp;若函数$f(z)$在点$z_0$及其领域上处处可导,则称$f(z)$在$z_0$处**解析**。若$f(z)$在区域$B$上每一点都解析,则称$f(z)$是$B$上的**解析函数**。
-
-&ensp;&ensp;&ensp;&ensp;若函数在某点无定义,或有定义但不可导,或可导但不解析,则称该点为函数的**奇点**.
-
-&ensp;&ensp;&ensp;&ensp;解析函数是一类具有特殊性质的函数:
-1. 若函数$f(z)=u+iv$在区域$B$上解析,则$u(x,y)=C_1,v(x,y)=C_2$是$B$上的正交曲线族.
-
----
-
-<font color="orange">证明</font>
-&ensp;&ensp;&ensp;&ensp;将C-R方程两边分别相乘,即
-$$\frac{\partial u}{\partial x}\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}=0$$
-上式可看作梯度$\nabla u$与$\nabla v$正交,而这两个梯度正是曲线族$u(x,y)=C_1,v(x,y)=C_2$的法向矢量,则可得结论.
-
----
-
-
-2. 若函数$f(z)=u+iv$在区域$B$上解析,则函数$u,v$均是区域$B$上的**调和函数**.
----
-<font color="orange">推导</font>
-之后我们将证明,某个区域上的解析函数在这个区域上有任意阶导数.因此其实部与虚部的二阶偏导数也存在.将C-R方程
-
-$$\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$$
-
-的第一个式子两边对$x$求导,第二个式子两边对$y$求导,然后再相加,就可得到
-$$\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}=\nabla^2 u=0,\frac{\partial^2v}{\partial x^2}+\frac{\partial^2v}{\partial y^2}=\nabla^2v=0$$
-
----
-
-
-
-### <font color="red">§5&ensp;&ensp;&ensp;&ensp;多值函数</font>
-&ensp;&ensp;&ensp;&ensp;对于例如根式函数与对数函数这样的多值函数来说,其在一些点有多个函数值,当$z$绕这些点一周回到原点时,函数值常常是不同的,这些点就称为**枝点**。最简单的多值函数是根式函数与对数函数，其余的多值函数都可以用这两种函数来表示。
-
-&ensp;&ensp;&ensp;&ensp;为了确定多值函数的函数值与自变量的关系，一种较简单的方法是规定宗量的辐角的范围。以根式函数$w=\sqrt{z-a}$为例，当宗量$z-a$的辐角的范围被确定后，函数值$w$的辐角的范围也就确定了。通过这种方法，可以将多值函数分割为多个单值分枝。 
-
-&ensp;&ensp;&ensp;&ensp;当$z$绕枝点n周后函数值回到原值,则称该枝点为$n-1$阶枝点。
-
-&ensp;&ensp;&ensp;&ensp;将多值函数划分为单值函数的过程的实质就是限制$z$的变化方式.作一割线连接函数的两个枝点,使其无法单独绕一个枝点一周,就相当于划分了单值分枝。
-
-&ensp;&ensp;&ensp;&ensp;实际上,引入**黎曼曲面**的概念,可以让我们将多值函数无歧义地定义为单值函数.黎曼曲面是一个一维复流形,常常可以看作多个复平面进行“粘接”后的结果.
-
-### <font color="red">§6&ensp;&ensp;&ensp;&ensp;解析函数的保角性</font>
-&ensp;&ensp;&ensp;&ensp;复变函数是两个复点集之间的映射,而解析函数另一特殊的性质即:复变函数$w=f(z)$可保证两个点集$z,w$仍是区域,区域的边界点仍是边界点,边界的内部区域仍是内部区域。或者说,解析函数是一类**保角变换**(除了$f(z)=const$)。
-
-&ensp;&ensp;&ensp;&ensp;根据解析函数的导数的几何意义，我们可以看出，解析函数对应的保角变换意味着复平面上的两条曲线间的夹角在变换下保持不变。因此,我们可以通过选择合适的解析函数$w=f(z)$使得$z$平面上具有复杂几何形状的区域变换为$w$平面上的简单几何形状的区域。
-
-&ensp;&ensp;&ensp;&ensp;在物理上,我们特别关心拉普拉斯算符在解析函数 $w=u+iv=f(z)$ 所代表的变换 $(x,y)\to(u,v)$下的性质:
-根据偏导数的链式法则;
-$$\begin{align*}
-    \frac{\partial}{\partial x}&=\frac{\partial u}{\partial x}\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}\frac{\partial}{\partial v}\\
-    \frac{\partial}{\partial y}&=\frac{\partial u}{\partial y}\frac{\partial}{\partial u}+\frac{\partial v}{\partial y}\frac{\partial}{\partial v}\\
-    \frac{\partial^2}{\partial x^2}&=\frac{\partial}{\partial x}(\frac{\partial u}{\partial x}\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}\frac{\partial}{\partial v})\\
-    &=\frac{\partial^2u}{\partial x^2}\frac{\partial}{\partial u}+\frac{\partial u}{\partial x}\frac{\partial}{\partial x}\frac{\partial}{\partial u}+\frac{\partial^2v}{\partial x^2}\frac{\partial}{\partial v}+\frac{\partial v}{\partial x}\frac{\partial}{\partial x}\frac{\partial}{\partial v}\\
-    &=\frac{\partial^2u}{\partial x^2}\frac{\partial}{\partial u}+\frac{\partial^2v}{\partial x^2}\frac{\partial}{\partial v}+\frac{\partial u}{\partial x}(\frac{\partial u}{\partial x}\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}\frac{\partial}{\partial v})\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}(\frac{\partial u}{\partial x}\frac{\partial}{\partial u}+\frac{\partial v}{\partial x}\frac{\partial}{\partial v})\frac{\partial}{\partial v}\\
-    &=\frac{\partial^2u}{\partial x^2}\frac{\partial}{\partial u}+\frac{\partial^2v}{\partial x^2}\frac{\partial}{\partial v}+\Big(\frac{\partial u}{\partial x}\Big)^2\frac{\partial^2}{\partial u^2}+\Big(\frac{\partial v}{\partial x}\Big)^2\frac{\partial^2 }{\partial v^2}+2\frac{\partial u}{\partial x}\frac{\partial v}{\partial x}\frac{\partial^2}{\partial u\partial v}\\
-    \frac{\partial^2}{\partial y^2}&=\frac{\partial^2u}{\partial y^2}\frac{\partial}{\partial u}+\frac{\partial^2v}{\partial y^2}\frac{\partial}{\partial v}+\Big(\frac{\partial u}{\partial y}\Big)^2\frac{\partial^2 }{\partial u^2}+\Big(\frac{\partial v}{\partial y}\Big)^2\frac{\partial^2}{\partial v^2}+2\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}\frac{\partial^2}{\partial u\partial v}
-\end{align*}$$
-
-所以
-$$\begin{align*}
-    \nabla^2&=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}\\
-    &=(\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2})\frac{\partial}{\partial u}+(\frac{\partial^2v}{\partial x^2}+\frac{\partial^2v}{\partial y^2})\frac{\partial}{\partial v}\\
-    &+2(\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}+\frac{\partial u}{\partial x}\frac{\partial v}{\partial x})\frac{\partial^2}{\partial u\partial v}+\Bigg[\Big(\frac{\partial u}{\partial x}\Big)^2+\Big(\frac{\partial u}{\partial y}\Big)^2\Bigg]\frac{\partial^2 }{\partial u^2}+\Bigg[\Big(\frac{\partial v}{\partial x}\Big)^2+\Big(\frac{\partial v}{\partial y}\Big)^2\Bigg]\frac{\partial^2 }{\partial v^2}
-\end{align*}$$
-
-其中,前三项都为0。后两项中
-$$\begin{align*}
-    \Big(\frac{\partial u}{\partial x}\Big)^2+\Big(\frac{\partial u}{\partial y}\Big)^2=\Big(\frac{\partial v}{\partial x}\Big)^2+\Big(\frac{\partial v}{\partial y}\Big)^2=|f'(z)|^2
-\end{align*}$$
-
-所以
-$$\nabla^2=|f'(z)|^2\Big(\frac{\partial^2 }{\partial u^2}+\frac{\partial^2 }{\partial v^2}\Big)$$
-
-因此,二维拉普拉斯方程、二维泊松方程和二维亥姆霍兹方程都在解析函数的保角变换下保持不变($f'(z)\neq0$)。所以我们可以用适当的保角变换来简化求解方程的区域,简化我们的运算过程。
-
-### <font color="red">§7&ensp;&ensp;&ensp;&ensp;复变积分</font>
-&ensp;&ensp;&ensp;&ensp;复变积分是复平面$C$上的线积分。
-
-&ensp;&ensp;&ensp;&ensp;复变积分可以看作是两个实函数线积分的有序组合
-$$\int_C f(z)\mathrm{d}z=\int_C (u+iv)(\mathrm{d}x+i\mathrm{d}y)=\int_C (u\mathrm{d}x-v\mathrm{d}y)+i\int_C (v\mathrm{d}x+u\mathrm{d}y)$$
-
-&ensp;&ensp;&ensp;&ensp;由实变线积分的知识可知,如果$C$是分段光滑曲线,$f(z)$是$C$上的连续函数,则复变积分一定存在。
-
-### <font color="red">§8&ensp;&ensp;&ensp;&ensp;单连通区域的柯西定理</font>
-&ensp;&ensp;&ensp;&ensp;单连通区域:在区域内作任何简单闭合围道,围道内的点都属于该区域。不满足上述条件的区域成为复连通区域。
-
-**单连通区域的柯西定理**：如果函数$f(z)$在单连通区域$\overline{G}$内解析，则沿$\overline{G}$内任何一个分段光滑的闭合围道$C$，有
-$$ \oint_Cf(z)\mathrm{d}z=0 $$
-
----
-
-<font color="orange">证明</font>
-这里仅给出一个基于更强的条件的证明。假设$f'(z)$在$\overline{G}$上连续。则根据格林公式和CR方程
-$$ \begin{align*}
-    \oint_Cf(z)\mathrm{d}z&=\oint_C(u\mathrm{d}x-v\mathrm{d}y)+i\oint_C(v\mathrm{d}x+u\mathrm{d}y)\\
-    &=-\iint_{\overline{G}}\left(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\right)\mathrm{d}x\mathrm{d}y+i\iint_{\overline{G}}\left(\frac{\partial u}{\partial x}-\frac{\partial v}{\partial y}\right)\mathrm{d}x\mathrm{d}y\\
-    &=0
-\end{align*} $$
-
----
-
-&ensp;&ensp;&ensp;&ensp;需要指出的是，这里的单连通区域必须是有界区域，不能包含无穷远点。同时，柯西定理的成立条件可以减弱为：$f(z)$在区域$G$上解析，在$\overline{G}=G+C$上连续，其中$C$为$G$的边界。
-
-&ensp;&ensp;&ensp;&ensp;由柯西定理可以立即得到以下推论：若$f(z)$在单连通区域$\overline{G}$上解析，则复变积分$\int_Cf(z)\mathrm{d}z$与路径无关。
-
-&ensp;&ensp;&ensp;&ensp;同时，根据以上推论，如果我们固定路径$C$的起点，而以路径的终点$z$作为自变量，则作为积分上限的函数
-$$ \int_{z_0}^zf(z)\mathrm{d}z=F(z) $$
-
-是区域上的单值函数，称为函数$f(z)$的不定积分。且
-$$ F'(z)=f(z) $$
-
-
-### <font color="red">§9&ensp;&ensp;&ensp;&ensp;复连通区域的柯西定理</font>
-
-<p>&ensp;&ensp;&ensp;&ensp;柯西定理要求函数在区域内解析，那么当函数在区域内存在奇点时，柯西定理便不再成立。现在，我们来导出复连通区域上的柯西定理，这样，我们就可以从区域内将包围奇点的区域划去，从而保证函数在区域上解析。</p>
-<p><strong>复连通区域的柯西定理</strong>：设$f(z)$是复连通区域$\bar{G}$上的单值解析函数，则</p>
-<script type="math/tex; mode=display">\oint_{C_0}f(z)\mathrm{d}z=\sum_{i=1}^n\oint_{C_i}f(z)\mathrm{d}z</script><p>其中$C_0,C_1,\cdots,C_n$为构成复连通区域的边界的各个分段光滑闭合曲线，$C_1,\cdots,C_n$都包在区域的内部，且积分路径的方向都相同。</p>
-<hr>
-<font color="orange">证明：</font>
-&ensp;&ensp;&ensp;&ensp;不妨将所有积分路径的方向取为逆时针方向。作合适的割线将$C_1,\cdots,C_n$和$C_0$连接起来，形成一个新的单连通区域$\bar{G}'$，则函数$f(z)$在$\bar{G}'$上满足单连通区域的柯西定理。于是有
-
-$$\begin{align*}
-    &\oint_{C_0}f(z)\mathrm{d}z+\int_{a_1}^{b_1}f(z)\mathrm{d}z+\oint_{C_1^-}f(z)\mathrm{d}z+\\
-    &\int_{b_1}^{a_1}f(z)\mathrm{d}z+\cdots+\int_{a_n}^{b_n}f(z)\mathrm{d}z+\oint_{C_n^-}f(z)\mathrm{d}z\\
-    &+\int_{b_n}^{a_n}f(z)\mathrm{d}z=0  
-\end{align*}$$
-
-由于$f(z)$是单值函数，则沿同一割线两岸的积分值相互抵消，即
-$$ \int_{a_i}^{b_i}f(z)\mathrm{d}z+\int_{b_i}^{a_i}f(z)\mathrm{d}z=0 $$
-
-所以
-$$ \oint_{C_0}f(z)\mathrm{d}z+\oint_{C_1^-}f(z)\mathrm{d}z+\cdots+\oint_{C_n^-}f(z)\mathrm{d}z=0 $$
-
-注意到内部边界的正方向为顺时针，于是
-$$ \oint_{C_0}f(z)\mathrm{d}z=\sum_{i=1}^n\oint_{C_i}f(z)\mathrm{d}z $$
-
----
-
-&ensp;&ensp;&ensp;&ensp;根据复连通区域上的柯西定理，我们可以看到，如果所有内部边界不变，则无论外边界怎样变换，只要$f(z)\mathrm{d}z$在变换后的区域上仍然是解析的，则它在外边界上的积分不变。
-
-&ensp;&ensp;&ensp;&ensp;下面给出一个非常重要的例题。
-
----
-<font color="green">例：</font>计算积分
-$$ I=\oint_L(z-a)^n\mathrm{d}z $$
-
-其中$n$为整数。
-
-**解**&ensp;&ensp;&ensp;&ensp;当$n\geq 0$时，$f(z)=(z-a)^n$在复平面上解析，则$I=0$。
-
-&ensp;&ensp;&ensp;&ensp;当$n=-1$，$f(z)$有唯一奇点$z_0=a$。若回路$L$不包含$z_0$，则$f(z)$在区域上解析，$I=0$。若回路包含奇点，则可作一以奇点为圆心、半径为$R$的圆$S$，则
-$$\begin{align*}
-    I&=\oint_S\frac{\mathrm{d}z}{z-a}  \\
-    &=\oint_S \frac{\mathrm{d}(a+R\mathrm{e}^{i\varphi})}{R\mathrm{e}^{i\varphi}}\\
-    &=2\pi i
-\end{align*}$$
-
-&ensp;&ensp;&ensp;&ensp;当$n<-1$，$f(z)$有唯一奇点$z_0=a$。若回路$l$不包含$z_0$，则$f(z)$在区域上解析，$i=0$。若回路包含奇点，则可作一以奇点为圆心、半径为$r$的圆$s$，则 $$\begin{align*} i&="\oint_S(z-a)^n\mathrm{d}z" \\ &="\oint_S" r^n\mathrm{e}^{in\varphi}\mathrm{d}(a+r\mathrm{e}^{i\varphi})\\ |_0^{2\pi}\\ \end{align*}$$ 综上，当回路包含$z_0="a$时，积分值为" $$i="\left\{\begin{align*}" &0~~~~~~~~n\neq-1\\ &2\pi i~~~~~~~~n="-1" \end{align*}\right.$$ --- ### <font color="red">§10&ensp;&ensp;&ensp;&ensp;柯西公式
-
-<p>&ensp;&ensp;&ensp;&ensp;<strong>柯西公式</strong>：若$f(z)$在单连通区域$\bar{G}$上解析，$l$为其边界线，$a$为区域内的一点，则有</p>
-<script type="math/tex; mode=display">f(a)=\frac{1}{2\pi i}\oint_l\frac{f(z)}{z-a}\mathrm{d}z</script><hr>
-<font color="orange">证明：</font>
-&ensp;&ensp;&ensp;&ensp;首先注意到
-$$ f(a)=\frac{f(a)}{2\pi i}\oint_l\frac{1}{z-a}\mathrm{d}z=\frac{1}{2\pi i}\oint_l\frac{f(a)}{z-a}\mathrm{d}z $$
-
-于是我们只需要证明
-$$ \oint_l\frac{f(z)-f(a)}{z-a}\mathrm{d}z=0 $$
-
-就可以得到柯西公式。$z=a$一般是被积函数$[f(z)-f(a)]/(z-a)$的奇点，则我们可以利用柯西定理。以点$a$为圆心，作一小圆$S$，则
-$$ \oint_l\frac{f(z)-f(a)}{z-a}\mathrm{d}z=\oint_S\frac{f(z)-f(a)}{z-a}\mathrm{d}z $$
-
-若使$S$的半径趋于0，则$z$也会趋近于$a$。所以被积函数变为
-$$ \lim_{z\to a}\frac{f(z)-f(a)}{z-a}=\lim_{z\to a}f'(z)=f'(a) $$
-
-所以积分为
-$$\begin{align*}
-    \oint_l\frac{f(z)-f(a)}{z-a}\mathrm{d}z&=\lim_{r\to 0}\oint_S f'(a)\mathrm{d}z\\
-    &=2\pi f'(a)\lim_{r\to 0}r\\
-    &=0
-\end{align*}$$
-
-于是我们就得到了柯西公式。
-
----
-
-
-&ensp;&ensp;&ensp;&ensp;柯西公式将解析函数在区域内一点的值与它在边界上的积分联系到了一起，这是因为解析函数在各点的值通过CR方程相互联系着。因为$a$是任取的，因此也可以将柯西公式写为
-$$ f(z)=\frac{1}{2\pi i}\oint_l\frac{f(\xi)}{\xi-z}\mathrm{d}\xi $$
-
-&ensp;&ensp;&ensp;&ensp;当$f(z)$在$l$所围区域上存在奇点时，我们就需要考虑挖去奇点后的复连通区域，并将$l$重新取为复连通区域的所有边界。
-
-&ensp;&ensp;&ensp;&ensp;柯西公式有三个重要推论：
-1. 解析函数可求导任意多次。
-
----
-<font color="orange">证明：</font>
-&ensp;&ensp;&ensp;&ensp;由于柯西公式的自变量是区域的内点，而积分变量在区域的边界上，于是被积函数在积分区域上无奇点，则可以求导，于是
-$$ f'(z)=\frac{1!}{2\pi i}\oint_l\frac{f(\xi)}{(\xi - z)^2}\mathrm{d}\xi $$
-
-重复上述说明，反复求导可得
-$$ f^{(n)}(z)=\frac{n!}{2\pi i}\oint_l\frac{f(\xi)}{(\xi-z)^{n+1}}\mathrm{d}\xi $$
-
----
-
-2. 模数定理：假设$f(z)$在某个区域上解析，则$|f(z)|$只能在边界线$l$上取得最大值。
-
-3. 刘维尔定理：若$f(z)$在全平面上解析，且是有界的，则$f(z)$必为常数函数。
-
-### <font color="red">§11&ensp;&ensp;&ensp;&ensp;复数项级数</font>
-
-<p>设有复数项的无穷级数</p>
-<script type="math/tex; mode=display">\sum_{n=0}^\infty w_n=w_0+w_1+\cdots+w_n+\cdots</script><p>它的每一项可以分为实部与虚部</p>
-<script type="math/tex; mode=display">w_n=u_n+iv_n</script><p>于是复数项级数的收敛问题可以分解为两个实数项级数的收敛问题</p>
-<script type="math/tex; mode=display">\sum_{n=0}^\infty w_n=\sum_{n=0}^\infty u_n+i\sum_{n=0}^\infty v_n</script><p>许多实数项级数的性质与规律可以移用于复数项级数。</p>
-<hr>
-<p>&ensp;&ensp;&ensp;&ensp;<font color="green">例 </font>&ensp;&ensp;：1. 柯西收敛判据：级数收敛的充要条件时，对任意给定的小正数$\epsilon$，必有足够大的$N$存在，使得当$n&gt;N$时有</p>
-<script type="math/tex; mode=display">\left|\sum_{k=n+1}^{n+p}w_k\right|<\epsilon</script><p>其中$p$为任意正整数。</p>
-<ol>
-<li>几何级数<script type="math/tex; mode=display">\sum_{n=0}^\infty z^n</script></li>
-</ol>
-<p>当$|z|&lt;1$时该级数收敛于$\frac{1}{1-z}$，当$|z|\geq 1$时级数发散。</p>
-<ol>
-<li>$p$级数<script type="math/tex; mode=display">\sum_{n=1}^\infty\frac{1}{n^z}</script></li>
-</ol>
-<p>它又称黎曼$\zeta$函数。</p>
-<hr>
-<p>&ensp;&ensp;&ensp;&ensp;若复数项级数各项的模组成的级数</p>
-<script type="math/tex; mode=display">\sum_{n=0}^\infty \left|w_n\right|=\sum_{n=0}^\infty\sqrt{u_n^2+v_n^2}</script><p>收敛，则称该复数项级数<strong>绝对收敛</strong>。绝对收敛的级数必定收敛。</p>
-<p>&ensp;&ensp;设两个绝对收敛的级数</p>
-<script type="math/tex; mode=display">\sum_{n=0}^\infty p_n=A,\sum_{n=0}^\infty q_n=B</script><p>将它们逐项相乘，得</p>
-<script type="math/tex; mode=display">\sum_{n=0}^\infty \sum_{m=0}^\infty p_nq_m=\sum_{n=0}^\infty c_n</script><p>收敛于$AB$，其中</p>
-<script type="math/tex; mode=display">c_n=\sum_{k=0}^np_kq_{n-k}</script><p>这称为两个级数的<strong>柯西和</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;接下来讨论函数项级数</p>
-<script type="math/tex; mode=display">\sum_{n=0}^\infty w_n(z)=w_0(z)+w_1(z)+\cdots+w_n(z)+\cdots</script><p>若该级数在某个区域$B$或某条曲线$l$上的每个点上都收敛，则称该级数在$B$或$l$上收敛。应用柯西收敛判据，级数在$B$或$l$上收敛的充要条件是，对$B$或$l$上的每一点$z$和任意给定的一小实数$\epsilon$，存在足够大的$N(z)$，使得对于所有$n&gt;N(z)$，都有</p>
-<script type="math/tex; mode=display">\left|\sum_{k=n}^{n+p}w_k(z)\right|<\epsilon</script><p>其中$p$为任意正整数。如果$N$与$z$无关，则称级数在$B$或$l$上<strong>一致收敛</strong>。</p>
-<p>&ensp;&ensp;&ensp;&ensp;一致收敛的函数项级数有以下四条性质：</p>
-<ol>
-<li>若在$B$上一致收敛的级数的每一项$w_k(z)$都是$B$上的连续函数，则级数的和也是$B$上的连续函数。</li>
-<li><p>若在$l$上一致收敛的级数的每一项$w_k(z)$都是$l$上的连续函数，则级数的和也是$l$上的连续函数，且级数可以沿$l$逐项积分，即</p>
-<script type="math/tex; mode=display">\int_lw(z)\mathrm{d}z=\int_l \sum_{n=0}^\infty w_n(z)\mathrm{d}z=\sum_{n=0}^\infty\int_lw_n(z)\mathrm{d}z</script></li>
-<li><p>若级数$\sum_{n=0}^\infty w_n(z)$在$\bar{B}$上一致收敛且$w_n(z)$在$\bar{B}$上单值解析，则级数的和也是$\bar{B}$上的单值解析函数，且可以逐项求导，即</p>
-<script type="math/tex; mode=display">w^{(n)}(z)=\left(\sum_{k=0}^\infty w_k(z)\right)^{(n)}=\sum_{k=0}^\infty w_k^{(n)}(z)</script></li>
-</ol>
-<h3><span id="12enspenspenspensp幂级数"><font color="red">§12&ensp;&ensp;&ensp;&ensp;幂级数</font></span></h3><p>&ensp;&ensp;&ensp;&ensp;研究这样的函数项级数，它的各项都是幂函数</p>
-<script type="math/tex; mode=display">\sum_{n=1}^\infty a_n(z-z_0)^n</script></-1$，$f(z)$有唯一奇点$z_0=a$。若回路$l$不包含$z_0$，则$f(z)$在区域上解析，$i=0$。若回路包含奇点，则可作一以奇点为圆心、半径为$r$的圆$s$，则>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&ensp;&ensp;&ensp;&ensp;本文以《线性代数应该这样学》为基础，同时参考了蓝以中先生的《高等代数简明教程》、崔建伟先生的《数学物理方法基础——线性代数》。出于整合自己的知识，写了这篇笔记。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -983,78 +568,6 @@ $$ f^{(n)}(z)=\frac{n!}{2\pi i}\oint_l\frac{f(\xi)}{(\xi-z)^{n+1}}\mathrm{d}\xi 
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Andy Xiang">
-      <meta itemprop="description" content="日々私たちが过ごしている日常というのは、実は奇迹の连続なのかもしれん。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="post-title-link" itemprop="url">线性代数</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-05-17 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-17T00:00:00+08:00">2022-05-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-23 16:15:45" itemprop="dateModified" datetime="2022-06-23T16:15:45+08:00">2022-06-23</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&ensp;&ensp;&ensp;&ensp;本文以《线性代数应该这样学》为基础，同时参考了蓝以中先生的《高等代数简明教程》、崔建伟先生的《数学物理方法基础——线性代数》。出于整合自己的知识，写了这篇笔记。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
 
@@ -1126,7 +639,7 @@ $$ f^{(n)}(z)=\frac{n!}{2\pi i}\oint_l\frac{f(\xi)}{(\xi-z)^{n+1}}\mathrm{d}\xi 
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
