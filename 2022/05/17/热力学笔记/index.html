@@ -29,7 +29,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/.com//卡诺热机.png">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-28T08:25:43.889Z">
+<meta property="article:modified_time" content="2022-06-30T13:19:01.335Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Phys">
 <meta property="article:tag" content="热力学">
@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-28 16:25:43" itemprop="dateModified" datetime="2022-06-28T16:25:43+08:00">2022-06-28</time>
+                <time title="Modified: 2022-06-30 21:19:01" itemprop="dateModified" datetime="2022-06-30T21:19:01+08:00">2022-06-30</time>
               </span>
 
           
@@ -872,7 +872,7 @@
 <p>&ensp;&ensp;&ensp;&ensp;我们知道，光子的能量正比于它的频率$\omega$。因此，当我们想得到光子的能量时，我们需要研究频率处于区间$(\omega,\omega+\mathrm{d}\omega)$中的光子数量以及其对应的能量密度，则总能量密度为</p>
 <script type="math/tex; mode=display">u=\int_0^\infty u_\omega \mathrm{d}\omega\tag{38.11}</script><p>空窖中的光子气体形成电磁驻波，而空窖中的电磁波可以用简谐振子。以电场部分为例，它满足波动方程</p>
 <script type="math/tex; mode=display">\nabla^2\pmb{E}=\frac{1}{c^2}\frac{\partial^2 \pmb{E}}{\partial t^2} \tag{38.12}</script><p>边界条件取为空窖外电磁波为0。它的解可以表示为</p>
-<script type="math/tex; mode=display">E_x=A\sin\left(\frac{n_x\pi}{L}\right)\sin\left(\frac{n_y\pi}{L}\right)\sin\left(\frac{n_z\pi}{L}\right)\tag{38.13}</script><p>因此光子的态密度为</p>
+<script type="math/tex; mode=display">E_x=E_0\sin\left(\frac{n_x\pi}{L}\right)\sin\left(\frac{n_y\pi}{L}\right)\sin\left(\frac{n_z\pi}{L}\right)\tag{38.13}</script><p>因此光子的态密度为</p>
 <script type="math/tex; mode=display">g(k)\mathrm{d}k=\frac{1/8\times4\pi k^2\mathrm{d}k}{(\pi/L)^3}\times 2=\frac{Vk^2\mathrm{d}k}{\pi^2}\tag{38.14}</script><p>其次，光子的色散关系为</p>
 <script type="math/tex; mode=display">\omega =ck\tag{38.15}</script><p>于是光子的态密度用频率表示为</p>
 <script type="math/tex; mode=display">g(\omega)\mathrm{d}\omega=g(k)\mathrm{d}k=\frac{V\omega^2\mathrm{d}\omega}{\pi^2c^3} \tag{38.16}</script><p>简谐振子的能级系统为$(n+\frac{1}{2})\hbar \omega,n=0,1,\cdots$，于是振子的配分函数为</p>
@@ -897,7 +897,33 @@
 </ol>
 <p>于是谱能量密度可以表示为</p>
 <script type="math/tex; mode=display">u_\lambda=\frac{8\pi k_BT}{\lambda^4} \tag{38.28}</script><p>这个式子称为<strong>瑞利-金斯公式</strong>。它是在不使用量子力学导出的黑体辐射公式。显然，它在短波区域出现发散现象，所以对其积分得到的总能量密度也是发散的。由于短波区域等价于高频区域，因此这个发散现象称为紫外灾难。</p>
-<h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
+<h2><span id="39enspensp声子">§39&ensp;&ensp;声子</span></h2><p>&ensp;&ensp;&ensp;&ensp;在固体中，原子排列在晶格中，只能在晶格附近做振动，这种振动可以储存能量。与用光子描述电磁场的元激发类似，声子是量子化的格波。我们不是处理每个原子各自的振动，而是处理整个系统的简振模。每个简振模可以视作一个简谐振子，由此可以包含整数个能量量子，这些能量量子就称为声子。因此，一个固体的热力学性质可以通过与上一节处理光子的类似方法来得到。由于格波具有更复杂的色散性质，这里的问题将会更复杂。我们下面主要求解两个模型。</p>
+<p>&ensp;&ensp;&ensp;&ensp;首先是爱因斯坦模型。对于具有$N$个原子的固体来说，我们假设每个振动模具有相同的频率$\omega_E$，总共有$3N$个这样的振动模。我们假设这些简振模是相互独立的，于是系统的配分函数可以写为</p>
+<script type="math/tex; mode=display">Z=\prod_{k=1}^{3N}Z_k\tag{39.1}</script><p>其中的$Z_k$是单个模的配分函数。每个模可以看作一个简谐振子，于是</p>
+<script type="math/tex; mode=display">Z_k=\sum_{n=0}^\infty e^{-(n+\frac{1}{2})\hbar\omega_E\beta}=\frac{e^{-\frac{1}{2}\hbar\omega_E\beta}}{1-e^{-\hbar\omega_E\beta}} \tag{39.2}</script><p>所以</p>
+<script type="math/tex; mode=display">\ln Z=3N\ln Z_k=3N\left[-\frac{1}{2}\hbar\omega_E\beta-\ln\left(1-e^{-\hbar\omega_E\beta}\right)\right]\tag{39.3}</script><p>然后我们就可以得到固体的内能为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    U&=-\left(\frac{\partial \ln Z}{\partial \beta}\right)\\
+    &=\frac{3N}{2}\hbar\omega_E+\frac{3N}{e^{\hbar\omega_E\beta}-1}\hbar\omega_E\tag{39.4}
+\end{align*}</script><p>令$\hbar\omega_E=k_B\Theta_E$，$\Theta_E$具有温度的量纲，由模型中的频率$\omega_E$定标。所以固体的摩尔内能为</p>
+<script type="math/tex; mode=display">U_m=3R\Theta_E\left(\frac{1}{2}+\frac{1}{e^{\Theta_E/T}-1}\right) \tag{39.5}</script><p>在高温极限下，$U\to 3RT$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;接下来，我们来研究德拜模型。它假设格波的色散关系为</p>
+<script type="math/tex; mode=display">w=v_sq \tag{39.6}</script><p>其中的$q$为波矢，$v_s$为一定值。于是晶格振动的态密度为</p>
+<script type="math/tex; mode=display">g(q)\mathrm{d}q=\frac{3Vq^2\mathrm{d}q}{2\pi^2} \tag{39.7}</script><p>或写为</p>
+<script type="math/tex; mode=display">g(\omega)\mathrm{d}\omega=\frac{3V\omega^2\mathrm{d}\omega}{2\pi^2v_s^3}\tag{39.8}</script><p>但是这个函数是发散，所以，我们规定晶格振动有一个上限频率$\omega_D$，满足</p>
+<script type="math/tex; mode=display">\int_0^{\omega_D}g(\omega)\mathrm{d}\omega=3N\tag{39.9}</script><p>于是</p>
+<script type="math/tex; mode=display">\omega_D=\left(\frac{6N\pi^2v_s^3}{V}\right)^{\frac{1}{3}} \tag{39.10}</script><p>态密度可以重写为</p>
+<script type="math/tex; mode=display">g(\omega)\mathrm{d}\omega=\frac{9N\omega^2\mathrm{d}\omega}{\omega_D^3} \tag{39.11}</script><p>我们也可以定义德拜温度$\Theta_D=\hbar\omega_D/k_B$。</p>
+<p>&ensp;&ensp;&ensp;&ensp;德拜模型中，单个振动模的内能为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    U&=\int_0^{\omega_D}g(\omega)\mathrm{d}\omega\hbar\omega\left(\frac{1}{2}+\frac{1}{e^{\hbar\omega\beta}-1}\right)\\
+    &=\frac{9N\hbar}{\omega_D^3}\int_0^{\omega_D}\omega^3\left(\frac{1}{2}+\frac{1}{e^{\hbar\omega\beta}-1}\right) \mathrm{d}\omega\\
+    &=\frac{9N}{8}\hbar\omega_D+\frac{9N\hbar}{\omega_D^3}\int_0^{\omega_D}\frac{\omega^3\mathrm{d}\omega}{e^{\hbar\omega\beta}-1}\tag{39.12}   
+\end{align*}</script><p>于是固体的热容为</p>
+<script type="math/tex; mode=display">\begin{align*}
+    C&=\frac{\partial U}{\partial T}\\
+    &=\frac{9N\hbar}{\omega_D^3}  
+\end{align*}</script><h1><span id="第十一章enspenspenspensp真实气体"><center>第十一章&ensp;&ensp;&ensp;&ensp;真实气体</center></span></h1><h2><span id="40enspensp实际气体">§40&ensp;&ensp;实际气体</span></h2><p>&ensp;&ensp;&ensp;&ensp;我们已经花了很多时间来研究理想气体，其状态方程为</p>
 <script type="math/tex; mode=display">pV_m=RT \tag{40.1}</script><p>然而，实际气体的行为并不完全类似于此。首先，气体在低温或高压的情况下会液化，这是理想气体方程所无法描述的行为；而在极端高压的情况下，分子间的相互作用不再能够忽略。这促使我们去寻找更接近实际的气体模型。</p>
 <p>&ensp;&ensp;&ensp;&ensp;最常用的是<strong>范德瓦尔斯气体</strong>，它是最简单的实际气体模型。在理想气体的基础上，它增加了两个假设：（1）分子间存在微弱的吸引力；（2）分子的体积不可忽略。范德瓦尔斯气体的状态方程为</p>
 <script type="math/tex; mode=display">\left(p+\frac{a}{V_m^2}\right)(V_m-b)=RT\tag{40.2}</script><p>该方程中的$a$是分子间相互作用的参数，$b$是考虑了分子的有限体积的参数。</p>
@@ -1031,9 +1057,12 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/05/17/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="next" title="电磁学笔记">
+    <a href="/2022/05/17/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="prev" title="电磁学笔记">
+      <i class="fa fa-chevron-left"></i> 电磁学笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/17/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/" rel="next" title="电磁学笔记">
       电磁学笔记 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -1108,7 +1137,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

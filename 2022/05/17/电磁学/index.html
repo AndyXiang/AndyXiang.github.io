@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-30T12:35:08.365Z">
+<meta property="article:modified_time" content="2022-07-02T11:06:07.957Z">
 <meta property="article:author" content="Andy Xiang">
 <meta property="article:tag" content="Phys">
 <meta property="article:tag" content="电磁学">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-30 20:35:08" itemprop="dateModified" datetime="2022-06-30T20:35:08+08:00">2022-06-30</time>
+                <time title="Modified: 2022-07-02 19:06:07" itemprop="dateModified" datetime="2022-07-02T19:06:07+08:00">2022-07-02</time>
               </span>
 
           
@@ -466,12 +466,12 @@
 <p>&ensp;&ensp;&ensp;&ensp;引入辅助矢量电位移矢量$\pmb{D}=\epsilon_0\pmb{E}+\pmb{P}$，那么就有</p>
 <script type="math/tex; mode=display">\nabla\cdot\pmb{D}=\rho_0\tag{14.2}</script><p>对于前面所提到的线性各向异性介质，我们有</p>
 <script type="math/tex; mode=display">\pmb{D}=\epsilon\pmb{E} \tag{14.3}</script><p>使用电位移矢量的好处是高斯定理中只出现自由电荷，计算会较为简便.</p>
-<h2><span id="15enspensp边值关系">§15&ensp;&ensp;边值关系</span></h2><p>&ensp;&ensp;&ensp;&ensp;在研究电介质中的电场分布时，如果碰到介质的交界面时，$\pmb{E}$通常会发生突变.以下假设两种介质的介电常数分别为$\epsilon_1$和$\epsilon_2$，界面上有大小为$\sigma_e$的极化面电荷和$\sigma_0$的自由面电荷.</p>
-<p>&ensp;&ensp;&ensp;&ensp;在界面处作一圆柱形的高斯盒.取底面积趋于0的极限，可保证侧面与界面处处垂直.根据高斯定理</p>
-<script type="math/tex; mode=display">\nabla\cdot\pmb{D}=(\pmb{D}_2-\pmb{D}_1)\cdot\hat{\pmb{n}}=\sigma_0\tag{15.1}</script><p>或</p>
-<script type="math/tex; mode=display">\hat{\pmb{n}}\cdot(\pmb{E}_2-\pmb{E}_1)=\frac{\sigma_e}{\epsilon_0} \tag{15.2}</script><p>&ensp;&ensp;&ensp;&ensp;再构造一个无限小矩形回路，短边与界面垂直.根据环路定理</p>
-<script type="math/tex; mode=display">\nabla\times(\pmb{E}_2-\pmb{E}_1)=0</script><p>在边界处，散度可化为</p>
-<script type="math/tex; mode=display">\hat{\pmb{n}}\times(\pmb{E}_2-\pmb{E}_1)=0\tag{15.3}</script><h1><span id="第三章enspenspenspensp静电能"><center> 第三章&ensp;&ensp;&ensp;&ensp;静电能 </center></span></h1><h2><span id="16enspensp真空中的点电荷间的相互作用能">§16&ensp;&ensp;真空中的点电荷间的相互作用能</span></h2><p>&ensp;&ensp;&ensp;&ensp;设空间中$N$个点电荷分布，位矢为$q_i(i=1，\cdots，N)$，第$i$个电荷和第$j$个之间的间隔矢量记作$\pmb{r}_{ij}=-\pmb{r}_{ji}=\pmb{r}_j-\pmb{r}_i$.我们构建这个体系的过程可以看作从无穷远处一个个移入点电荷的过程.此时空间中已存在的电荷会对后来的电荷做功，因此这个体系储存了一定的能量.当移入第$j$个电荷时，前$j-1$个电荷对其做功</p>
+<h2><span id="15enspensp边值关系">§15&ensp;&ensp;边值关系</span></h2><p>&ensp;&ensp;&ensp;&ensp;在研究电介质中的电场分布时，如果碰到介质的交界面时，$\pmb{E}$通常会发生突变。以下假设两种介质的介电常数分别为$\epsilon_1$和$\epsilon_2$，界面上有大小为$\sigma_e$的极化面电荷和$\sigma_0$的自由面电荷。</p>
+<p>&ensp;&ensp;&ensp;&ensp;在界面处作一圆柱形的高斯盒。取底面积趋于0的极限，可保证侧面与界面处处垂直。根据高斯定理</p>
+<script type="math/tex; mode=display">\nabla\cdot\pmb{D}=\frac{(\pmb{D}_2-\pmb{D}_1)\cdot\hat{\pmb{n}}}{\mathrm{d}s}=\frac{\sigma_0}{\mathrm{d}s}\tag{15.1}</script><p>其中的$\hat{\pmb{n}}$为由1侧指向2侧的单位矢量，即</p>
+<script type="math/tex; mode=display">(\pmb{D}_2-\pmb{D}_1)\cdot\hat{\pmb{n}}=\sigma_0 \tag{15.2}</script><p>&ensp;&ensp;&ensp;&ensp;再构造一个跨越边界的无限小矩形回路，短边与界面垂直。根据环路定理</p>
+<script type="math/tex; mode=display">\nabla\times(\pmb{E}_2-\pmb{E}_1)=0 \tag{15.3}</script><p>即电场强度的平行于介质界面的分量连续：</p>
+<script type="math/tex; mode=display">E_2^{\vert\vert}-E_1^{\vert\vert}=0 \tag{15.4}</script><h1><span id="第三章enspenspenspensp静电能"><center> 第三章&ensp;&ensp;&ensp;&ensp;静电能 </center></span></h1><h2><span id="16enspensp真空中的点电荷间的相互作用能">§16&ensp;&ensp;真空中的点电荷间的相互作用能</span></h2><p>&ensp;&ensp;&ensp;&ensp;设空间中$N$个点电荷分布，位矢为$q_i(i=1，\cdots，N)$，第$i$个电荷和第$j$个之间的间隔矢量记作$\pmb{r}_{ij}=-\pmb{r}_{ji}=\pmb{r}_j-\pmb{r}_i$.我们构建这个体系的过程可以看作从无穷远处一个个移入点电荷的过程.此时空间中已存在的电荷会对后来的电荷做功，因此这个体系储存了一定的能量.当移入第$j$个电荷时，前$j-1$个电荷对其做功</p>
 <script type="math/tex; mode=display">\begin{align*}
     W_j&=\frac{q_j}{4\pi\epsilon_0}\sum_{i=1}^{j-1}\frac{q_j}{|\pmb{r}_{ij}|}\tag{16.1}
 \end{align*}</script><p>再对所有的$j$求和</p>
@@ -498,7 +498,12 @@
 \end{align*}</script><p>假设我们的积分区域为包含所有电荷的整个空间，则式（17.6）的前一项为0。再利用$\nabla\phi=-\pmb{E}$，则</p>
 <script type="math/tex; mode=display">W_E=\frac{\epsilon_0}{2}\iiint_V\pmb{E}^2\mathrm{d}V\tag{17.7}</script><p>我们可以定义电场的<strong>能量密度</strong>$w_E$</p>
 <script type="math/tex; mode=display">w_E=\frac{\epsilon_0\pmb{E}^2}{2}\tag{17.8}</script><p>&ensp;&ensp;&ensp;&ensp;对于电介质，我们同样可以定义能量密度</p>
-<script type="math/tex; mode=display">w_E=\frac{\epsilon\pmb{E}^2}{2}=\frac{\pmb{D}\cdot\pmb{E}}{2}\tag{17.9}</script><h1><span id="第四章enspenspenspensp静磁场"><center> 第四章&ensp;&ensp;&ensp;&ensp;静磁场 </center></span></h1><h2><span id="18enspensp-洛伦兹力">§18&ensp;&ensp; 洛伦兹力</span></h2><p>&ensp;&ensp;&ensp;&ensp;两条平行放置的载流导线，如果电流方向相同，则会产生相互吸引的力，若方向相反，则会产生相互排斥的力。这与只存在电场的情况显然不同。这说明存在新的相互作用，称之为<strong>磁力</strong>。对应的有<strong>磁场</strong>。假如空间中同时存在电场和磁场，则一个运动电荷所收到的力为</p>
+<script type="math/tex; mode=display">w_E=\frac{\epsilon\pmb{E}^2}{2}=\frac{\pmb{D}\cdot\pmb{E}}{2}\tag{17.9}</script><p>&ensp;&ensp;&ensp;&ensp;对于带电体系统，总电场是各个带电体产生的电场的矢量和$\pmb{E}=\sum_{i=1}^N\pmb{E}_i$，于是</p>
+<script type="math/tex; mode=display">\begin{align*}
+    w_E&=\frac{\epsilon_0}{2}\left(\sum_{i=1}^N\pmb{E}_i\right)\\
+    &=\frac{\epsilon_0}{2}\sum_{i=1}^N\pmb{E}_i^2+\frac{\epsilon_0}{2}\sum_{i=1}^N \sum_{j=1}^N\pmb{E}_i\cdot \pmb{E}_j   
+\end{align*}</script><p>前一项为自能，后一项为相互作用能。</p>
+<h1><span id="第四章enspenspenspensp静磁场"><center> 第四章&ensp;&ensp;&ensp;&ensp;静磁场 </center></span></h1><h2><span id="18enspensp-洛伦兹力">§18&ensp;&ensp; 洛伦兹力</span></h2><p>&ensp;&ensp;&ensp;&ensp;两条平行放置的载流导线，如果电流方向相同，则会产生相互吸引的力，若方向相反，则会产生相互排斥的力。这与只存在电场的情况显然不同。这说明存在新的相互作用，称之为<strong>磁力</strong>。对应的有<strong>磁场</strong>。假如空间中同时存在电场和磁场，则一个运动电荷所收到的力为</p>
 <script type="math/tex; mode=display">\pmb{F}=q(\pmb{E}+\pmb{v}\times\pmb{B})\tag{18.1}</script><p>这就是<strong>洛伦兹力定律</strong>。这是理论的一个基本原理，其正确性可由实验验证。</p>
 <p>&ensp;&ensp;&ensp;&ensp;由式（18.1）可以看出，磁力与粒子的速度时刻垂直，所以磁力并不能做功。即</p>
 <script type="math/tex; mode=display">\mathrm{d}W=\pmb{F}_{\mathrm{mag}}\cdot\mathrm{d}\pmb{l}=q(\pmb{v}\times\pmb{B})\cdot\pmb{v}\mathrm{d}t=0 \tag{18.2}</script><h2><span id="19enspensp电流与电流密度">§19&ensp;&ensp;电流与电流密度</span></h2><p>&ensp;&ensp;&ensp;&ensp;运动的电荷就会形成电流。电流的大小由单位时间内通过某一截面的总电荷量来衡量。如果导线中运动电荷的线密度为$\lambda$，其速度为$\pmb{v}$。电流实际上是一个矢量</p>
@@ -555,7 +560,8 @@
     \nabla\times\pmb{B}&=\frac{\mu_0}{4\pi}\iiint_V \left[ 4\pi \pmb{J}\delta\left(\frac{\pmb{r}-\pmb{r}'}{|\pmb{r}-\pmb{r}'|}\right)+3\nabla'\cdot\left(\pmb{J}\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}\right)\right]\mathrm{d}V'\\
     &=\mu_0\pmb{J}+\frac{3\mu_0}{4\pi}\iint_{\partial V}\pmb{J}\frac{x-x'}{|\pmb{r}-\pmb{r}'|^3}\cdot \mathrm{d}\pmb{S}'\\
     &=\mu_0\pmb{J}\tag{21.5}
-\end{align*}</script><p>我们将体积取为包含所有电流的区域，于是上式第二行第二项化作的面积分等于0，因为电流在边界面上为0.<br>使用斯托克斯定理，可以将它转化为积分形式</p>
+\end{align*}</script><p>我们将体积取为包含所有电流的区域，于是上式第二行第二项化作的面积分等于0，因为电流在边界面上为0。</p>
+<p>&ensp;&ensp;&ensp;&ensp;使用斯托克斯定理，可以将它转化为积分形式</p>
 <script type="math/tex; mode=display">\begin{align*}
     \iint_S(\nabla\times\pmb{B})\cdot\mathrm{d}\pmb{S}=\oint_{\partial S}\pmb{B}\cdot\mathrm{d}\pmb{l}&=\mu_0\iint_S\pmb{J}\cdot\mathrm{d}\pmb{S}\tag{21.6}
 \end{align*}</script><p>现在，$\iint_S\pmb{J}\cdot\mathrm{d}\pmb{S}$给出了穿过面$S$的所有电流的代数和$I$，所以</p>
@@ -1073,12 +1079,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="prev" title="热物理概念笔记">
-      <i class="fa fa-chevron-left"></i> 热物理概念笔记
+    <a href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="prev" title="线性代数">
+      <i class="fa fa-chevron-left"></i> 线性代数
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/17/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="next" title="线性代数">
-      线性代数 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/17/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="next" title="热物理概念笔记">
+      热物理概念笔记 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -1152,7 +1158,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
